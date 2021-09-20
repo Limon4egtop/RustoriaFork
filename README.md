@@ -1,2 +1,3 @@
 # russianHistoryXakaton
-for presentation
+
+Приложение для android на тему истории России
