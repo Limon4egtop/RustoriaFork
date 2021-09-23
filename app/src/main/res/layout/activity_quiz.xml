@@ -44,26 +44,26 @@
 
     <ImageView
         android:id="@+id/sred"
-    android:layout_width="140dp"
-    android:layout_height="140dp"
-    android:background="@drawable/rem_sred"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintHorizontal_bias="0.850"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent"
-    app:layout_constraintVertical_bias="0.580" />
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:background="@drawable/rem_sred"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.850"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.580" />
 
     <ImageView
         android:id="@+id/hard"
-    android:layout_width="140dp"
-    android:layout_height="140dp"
-    android:background="@drawable/rem_hard"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintHorizontal_bias="0.850"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent"
-    app:layout_constraintVertical_bias="0.880" />
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:background="@drawable/rem_hard"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.850"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.880" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

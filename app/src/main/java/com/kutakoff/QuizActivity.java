@@ -14,6 +14,7 @@ public class QuizActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz);
         ImageView easy = findViewById(R.id.easy);
+        ImageView sred = findViewById(R.id.sred);
         ImageView button_back = findViewById(R.id.button_back);
         button_back.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -25,6 +26,12 @@ public class QuizActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(QuizActivity.this, EasyPravilaActivity.class));
+            }
+        });
+        sred.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(QuizActivity.this, SredPravilaActivity.class));
             }
         });
     }
