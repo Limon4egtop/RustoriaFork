@@ -18,12 +18,16 @@
         <activity android:name=".FourthSredQuizActivity" />
         <activity android:name=".ThirdQuizActivity" />
         <activity android:name=".ThirdSredQuizActivity" />
+        <activity android:name=".ThirdHardQuizActivity" />
         <activity android:name=".SecondQuizActivity" />
         <activity android:name=".SecondSredQuizActivity" />
+        <activity android:name=".SecondHardQuizActivity" />
         <activity android:name=".FirstQuizActivity" />
         <activity android:name=".FirstSredQuizActivity" />
+        <activity android:name=".FirstHardQuizActivity" />
         <activity android:name=".EasyPravilaActivity" />
         <activity android:name=".SredPravilaActivity" />
+        <activity android:name=".HardPravilaActivity" />
         <activity android:name=".QuizActivity" />
         <activity android:name=".ChooseEventsActivity" />
         <activity android:name=".WebViewActivity" />
