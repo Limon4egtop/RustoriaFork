@@ -12,10 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Hakaton">
         <activity android:name=".ResultQuizActivity"></activity>
+        <activity android:name=".ResultHardQuizActivity"/>
         <activity android:name=".FiveQuizActivity" />
         <activity android:name=".FiveSredQuizActivity" />
         <activity android:name=".FourthQuizActivity" />
         <activity android:name=".FourthSredQuizActivity" />
+        <activity android:name=".FourthHardQuizActivity" />
         <activity android:name=".ThirdQuizActivity" />
         <activity android:name=".ThirdSredQuizActivity" />
         <activity android:name=".ThirdHardQuizActivity" />
