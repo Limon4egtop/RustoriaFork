@@ -77,7 +77,7 @@ public class FourthHardQuizActivity extends AppCompatActivity {
                 if (fourth_prav.isChecked()) {
                     Schet.plussa();
                 }
-                startActivity(new Intent(FourthHardQuizActivity.this, ResultHardQuizActivity.class));
+                startActivity(new Intent(FourthHardQuizActivity.this, FiveHardQuizActivity.class));
             }
         });
     }

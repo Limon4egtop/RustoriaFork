@@ -9,45 +9,45 @@
 
     <ImageView
         android:id="@+id/deyatels"
-        android:layout_width="140dp"
-        android:layout_height="140dp"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
         android:background="@drawable/rem_deya"
         android:text="Деятели"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.850"
+        app:layout_constraintHorizontal_bias="0.870"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.300" />
+        app:layout_constraintVertical_bias="0.430" />
 
     <ImageView
         android:id="@+id/events"
-        android:layout_width="140dp"
-        android:layout_height="140dp"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
         android:background="@drawable/rem_sob"
         android:text="События"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.850"
+        app:layout_constraintHorizontal_bias="0.870"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.600" />
+        app:layout_constraintVertical_bias="0.680" />
 
     <ImageView
         android:id="@+id/quiz"
-        android:layout_width="140dp"
-        android:layout_height="140dp"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:background="@drawable/rem_quiz"
         android:text="Квиз"
         android:textSize="23sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.850"
+        app:layout_constraintHorizontal_bias="0.870"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.900"
-        android:background="@drawable/rem_quiz"/>
+        app:layout_constraintVertical_bias="0.930" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -59,16 +59,23 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.099" />
+        app:layout_constraintVertical_bias="0.024" />
 
     <ImageView
-        android:id="@+id/button_back"
-        android:layout_width="93dp"
-        android:layout_height="66dp"    
-        android:background="@drawable/xakaton_button_back"
+        android:id="@+id/bitva_80"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:background="@drawable/nast_cccp"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.870"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.180"
+        tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

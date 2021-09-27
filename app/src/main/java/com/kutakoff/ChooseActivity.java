@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 
 public class ChooseActivity extends AppCompatActivity {
@@ -16,7 +17,7 @@ public class ChooseActivity extends AppCompatActivity {
         ImageView deyatels = findViewById(R.id.deyatels);
         ImageView events = findViewById(R.id.events);
         ImageView quiz = findViewById(R.id.quiz);
-        ImageView button_back = findViewById(R.id.button_back);
+        ImageView bitva_80 = findViewById(R.id.bitva_80);
         deyatels.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -35,10 +36,10 @@ public class ChooseActivity extends AppCompatActivity {
                 startActivity(new Intent(ChooseActivity.this, QuizActivity.class));
             }
         });
-        button_back.setOnClickListener(new View.OnClickListener() {
+        bitva_80.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(ChooseActivity.this, MainActivity.class));
+                startActivity(new Intent(ChooseActivity.this, Gogov_80Activity.class));
             }
         });
     }
