@@ -26,7 +26,7 @@ public class QuizActivity extends AppCompatActivity {
         easy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(QuizActivity.this, EasyPravilaActivity.class));
+                startActivity(new Intent(QuizActivity.this, FirstQuizActivity.class));
             }
         });
         sred.setOnClickListener(new View.OnClickListener() {
