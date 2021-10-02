@@ -110,7 +110,7 @@
                 app:layout_constraintHorizontal_bias="0.871"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.550"
+                app:layout_constraintVertical_bias="0.600"
                 tools:ignore="MissingConstraints" />
 
             <RadioButton
@@ -126,7 +126,7 @@
                 app:layout_constraintHorizontal_bias="0.871"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.450"
+                app:layout_constraintVertical_bias="0.475"
                 tools:ignore="MissingConstraints" />
 
             <RadioButton
@@ -142,7 +142,7 @@
                 app:layout_constraintHorizontal_bias="0.871"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.650"
+                app:layout_constraintVertical_bias="0.725"
                 tools:ignore="MissingConstraints" />
 
             <RadioButton
@@ -172,7 +172,7 @@
                 app:layout_constraintHorizontal_bias="0.837"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/first_prav"
-                app:layout_constraintVertical_bias="0.613" />
+                app:layout_constraintVertical_bias="0.760" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -231,7 +231,7 @@
                 app:layout_constraintHorizontal_bias="0.871"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.350"
+                app:layout_constraintVertical_bias="0.360"
                 tools:ignore="MissingConstraints" />
 
             <RadioButton
@@ -247,7 +247,7 @@
                 app:layout_constraintHorizontal_bias="0.871"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.650"
+                app:layout_constraintVertical_bias="0.690"
                 tools:ignore="MissingConstraints" />
 
             <RadioButton
@@ -263,7 +263,7 @@
                 app:layout_constraintHorizontal_bias="0.871"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.550"
+                app:layout_constraintVertical_bias="0.580"
                 tools:ignore="MissingConstraints" />
 
             <RadioButton
@@ -279,7 +279,7 @@
                 app:layout_constraintHorizontal_bias="0.871"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.450"
+                app:layout_constraintVertical_bias="0.470"
                 tools:ignore="MissingConstraints" />
 
             <Button
@@ -293,7 +293,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.826"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/second_neprav_2" />
+                app:layout_constraintVertical_bias="0.990"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -351,7 +351,7 @@
                 app:layout_constraintHorizontal_bias="0.871"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.425"
+                app:layout_constraintVertical_bias="0.450"
                 tools:ignore="MissingConstraints" />
 
             <RadioButton
@@ -367,7 +367,7 @@
                 app:layout_constraintHorizontal_bias="0.871"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.550"
+                app:layout_constraintVertical_bias="0.600"
                 tools:ignore="MissingConstraints" />
 
             <RadioButton
@@ -399,7 +399,7 @@
                 app:layout_constraintHorizontal_bias="0.871"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.675"
+                app:layout_constraintVertical_bias="0.750"
                 tools:ignore="MissingConstraints" />
 
             <Button
@@ -471,7 +471,7 @@
                 app:layout_constraintHorizontal_bias="0.871"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.544"
+                app:layout_constraintVertical_bias="0.600"
                 tools:ignore="MissingConstraints" />
 
             <RadioButton
@@ -487,7 +487,7 @@
                 app:layout_constraintHorizontal_bias="0.871"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.435"
+                app:layout_constraintVertical_bias="0.450"
                 tools:ignore="MissingConstraints" />
 
             <RadioButton
@@ -503,7 +503,7 @@
                 app:layout_constraintHorizontal_bias="0.871"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.320"
+                app:layout_constraintVertical_bias="0.300"
                 tools:ignore="MissingConstraints" />
 
             <RadioButton
@@ -519,7 +519,7 @@
                 app:layout_constraintHorizontal_bias="0.871"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.655"
+                app:layout_constraintVertical_bias="0.750"
                 tools:ignore="MissingConstraints" />
 
             <Button
@@ -533,7 +533,7 @@
                 app:layout_constraintHorizontal_bias="0.883"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/fourth_neprav_2"
-                app:layout_constraintVertical_bias="0.414" />
+                app:layout_constraintVertical_bias="0.550" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -591,7 +591,7 @@
                 app:layout_constraintHorizontal_bias="0.871"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.600"
+                app:layout_constraintVertical_bias="0.625"
                 tools:ignore="MissingConstraints" />
 
             <RadioButton
@@ -623,7 +623,7 @@
                 app:layout_constraintHorizontal_bias="0.871"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.400"
+                app:layout_constraintVertical_bias="0.375"
                 tools:ignore="MissingConstraints" />
 
             <RadioButton
@@ -639,7 +639,7 @@
                 app:layout_constraintHorizontal_bias="0.871"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.710"
+                app:layout_constraintVertical_bias="0.750"
                 tools:ignore="MissingConstraints" />
 
             <Button
@@ -726,7 +726,7 @@
                 app:layout_constraintHorizontal_bias="0.871"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.500"
+                app:layout_constraintVertical_bias="0.450"
                 tools:ignore="MissingConstraints" />
 
             <RadioButton
@@ -742,7 +742,7 @@
                 app:layout_constraintHorizontal_bias="0.871"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.400"
+                app:layout_constraintVertical_bias="0.300"
                 tools:ignore="MissingConstraints" />
 
             <RadioButton
@@ -758,7 +758,7 @@
                 app:layout_constraintHorizontal_bias="0.871"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.710"
+                app:layout_constraintVertical_bias="0.750"
                 tools:ignore="MissingConstraints" />
 
             <Button
@@ -830,7 +830,7 @@
                 app:layout_constraintHorizontal_bias="0.871"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.700"
+                app:layout_constraintVertical_bias="0.730"
                 tools:ignore="MissingConstraints" />
 
             <RadioButton
@@ -846,7 +846,7 @@
                 app:layout_constraintHorizontal_bias="0.871"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.500"
+                app:layout_constraintVertical_bias="0.510"
                 tools:ignore="MissingConstraints" />
 
             <RadioButton
@@ -862,7 +862,7 @@
                 app:layout_constraintHorizontal_bias="0.871"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.600"
+                app:layout_constraintVertical_bias="0.620"
                 tools:ignore="MissingConstraints" />
 
             <RadioButton
@@ -892,7 +892,7 @@
                 app:layout_constraintHorizontal_bias="0.818"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/seven_neprav_2"
-                app:layout_constraintVertical_bias="0.631" />
+                app:layout_constraintVertical_bias="0.691" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -950,7 +950,7 @@
                 app:layout_constraintHorizontal_bias="0.871"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.700"
+                app:layout_constraintVertical_bias="0.680"
                 tools:ignore="MissingConstraints" />
 
             <RadioButton
@@ -966,7 +966,7 @@
                 app:layout_constraintHorizontal_bias="0.871"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.600"
+                app:layout_constraintVertical_bias="0.570"
                 tools:ignore="MissingConstraints" />
 
             <RadioButton
@@ -982,7 +982,7 @@
                 app:layout_constraintHorizontal_bias="0.871"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.500"
+                app:layout_constraintVertical_bias="0.460"
                 tools:ignore="MissingConstraints" />
 
             <RadioButton
@@ -998,7 +998,7 @@
                 app:layout_constraintHorizontal_bias="0.871"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.400"
+                app:layout_constraintVertical_bias="0.350"
                 tools:ignore="MissingConstraints" />
 
             <Button

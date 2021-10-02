@@ -446,7 +446,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Какая из этих фраз принадлежит князю Святославу?"
+                android:text="Кому принадлежит фраза Иду на вы?"
                 android:textColor="@color/black"
                 android:textSize="28sp"
                 android:textStyle="bold"
@@ -461,7 +461,7 @@
                 android:id="@+id/fourth_neprav_2"
                 android:layout_width="190dp"
                 android:layout_height="wrap_content"
-                android:text="Кто на нас с мечем придет - от меча и погибнет"
+                android:text="Ярославу Мудрому"
                 android:textColor="@color/black"
                 android:textSize="23sp"
                 android:textStyle="bold"
@@ -470,14 +470,14 @@
                 app:layout_constraintHorizontal_bias="0.95"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.570"
+                app:layout_constraintVertical_bias="0.550"
                 tools:ignore="MissingConstraints" />
 
             <RadioButton
                 android:id="@+id/fourth_neprav_3"
                 android:layout_width="190dp"
                 android:layout_height="wrap_content"
-                android:text="Старых чти, как отца, а молодых - как братьев"
+                android:text="Князю Олегу"
                 android:textColor="@color/black"
                 android:textSize="23sp"
                 android:textStyle="bold"
@@ -486,14 +486,14 @@
                 app:layout_constraintHorizontal_bias="0.95"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.780"
+                app:layout_constraintVertical_bias="0.675"
                 tools:ignore="MissingConstraints" />
 
             <RadioButton
                 android:id="@+id/fourth_neprav"
                 android:layout_width="190dp"
                 android:layout_height="wrap_content"
-                android:text="Да каждый держит отчину свою"
+                android:text="Александру I"
                 android:textColor="@color/black"
                 android:textSize="25sp"
                 android:textStyle="bold"
@@ -502,23 +502,23 @@
                 app:layout_constraintHorizontal_bias="0.95"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.280"
+                app:layout_constraintVertical_bias="0.300"
                 tools:ignore="MissingConstraints" />
 
             <RadioButton
                 android:id="@+id/fourth_prav"
                 android:layout_width="170dp"
                 android:layout_height="wrap_content"
-                android:text="Иду на вы"
+                android:text="Князю Святославу"
                 android:textColor="@color/black"
-                android:textSize="25sp"
+                android:textSize="23sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.871"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.420"
+                app:layout_constraintVertical_bias="0.425"
                 tools:ignore="MissingConstraints" />
 
             <Button
