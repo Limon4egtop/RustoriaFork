@@ -79,5 +79,4 @@ public class SearchActivity extends AppCompatActivity {
         adapter=new ArrayAdapter<String>(this, R.layout.list_item, R.id.txtitem, listItems);
         listView.setAdapter(adapter);
     }
-
 }
