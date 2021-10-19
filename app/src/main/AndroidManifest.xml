@@ -11,8 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Hakaton">
-        <activity android:name=".Contr_Deyatels"></activity>
-        <activity android:name=".Contr_MainCommanders" />
+        <activity android:name=".MainDetailGo"></activity>
+        <activity android:name=".MainCommanders" />
         <activity android:name=".Godov80_2" />
         <activity android:name=".Godov80_1Activity" />
         <activity android:name=".Gogov_80Activity" />

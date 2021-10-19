@@ -19,7 +19,7 @@
         app:layout_constraintHorizontal_bias="0.871"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.250" />
+        app:layout_constraintVertical_bias="0.300" />
 
     <ImageView
         android:id="@+id/events"
@@ -33,7 +33,7 @@
         app:layout_constraintHorizontal_bias="0.87"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.550" />
+        app:layout_constraintVertical_bias="0.575" />
 
     <ImageView
         android:id="@+id/quiz"
@@ -49,19 +49,29 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.850" />
 
-    <ImageView
-        android:id="@+id/contr_detail"
+
+    <ListView
+        android:id="@+id/listview1"
         android:layout_width="140dp"
         android:layout_height="140dp"
         android:visibility="invisible"
-        android:background="@drawable/details"
-        android:textSize="20sp"
+        style="@style/CardView.Dark"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.871"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.250" />
+        app:layout_constraintVertical_bias="0.300"
+        android:background="@drawable/details"
+        tools:ignore="MissingConstraints">
+
+    </ListView>
+
+
+
+
+
+
 
     <ImageView
         android:id="@+id/contr_member"
@@ -75,7 +85,7 @@
         app:layout_constraintHorizontal_bias="0.87"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.550" />
+        app:layout_constraintVertical_bias="0.575" />
 
     <ImageView
         android:id="@+id/cont_quiz"
@@ -116,9 +126,10 @@
         android:thumb="@drawable/thumb"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.953"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.10"
         app:showText="true"
         app:track="@drawable/track" />
 
@@ -127,12 +138,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
-        android:text="Режим: Контрнаступление"
+        android:text="Режим: ИСТОРИЧЕСКИЙ ВОЕННЫЙ ПАРАД"
         android:textColor="@color/black"
         android:textSize="25sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.08" />

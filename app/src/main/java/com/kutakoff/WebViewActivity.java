@@ -15,11 +15,11 @@ public class WebViewActivity extends AppCompatActivity {
             String deyatel_name = getIntent().getExtras().getString("name");
             String url = "";
             switch (deyatel_name) {
-                case "Иван Грозный":
-                    url = "file:///android_asset/Ivan4.html";
-                    break;
                 case "Куликовская битва":
                     url = "file:///android_asset/kulikovskaya.html";
+                    break;
+                case "Иван Грозный":
+                    url = "file:///android_asset/Ivan4.html";
                     break;
                 case "Иван III":
                     url = "file:///android_asset/Ivan3.html";
@@ -117,11 +117,10 @@ public class WebViewActivity extends AppCompatActivity {
                 case "Нюрмбергский процесс":
                     url = "file:///android_asset/Nurnbergskiy_Process.html";
                     break;
-                case "Г.К.Жуков":
+                case "Детали":
                     url = "file:///android_asset/Nurnbergskiy_Process.html";
                     break;
             }
-
             WebView myWebView = (WebView) findViewById(R.id.webview);
             myWebView.loadUrl(url);
         }
