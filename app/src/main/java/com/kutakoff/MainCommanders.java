@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -23,6 +24,13 @@ public class MainCommanders extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_commanders);
         listView = findViewById(R.id.listview);
+        ImageView button_back = findViewById(R.id.button_back);
+        button_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
         initList();
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -47,9 +55,9 @@ public class MainCommanders extends AppCompatActivity {
     }
 
     public void initList(){
-        items=new String[]{"Г.К.Жуков", "И.С.Конёв", "С.К.Тимошенко", "Я.Т.Червиченко"};
+        items=new String[]{"Ген. Георгий Жуков", "Павел Артемьев", "Семён Буденный"};
         listItems=new ArrayList<>(Arrays.asList(items));
-        adapter=new ArrayAdapter<String>(this, R.layout.list_item, R.id.txtitem, listItems);
+        adapter=new ArrayAdapter<String>(this, R.layout.list_item2, R.id.txtitem, listItems);
         listView.setAdapter(adapter);
     }
 

@@ -75,6 +75,7 @@ public class ChooseEventsActivity extends AppCompatActivity {
 
     public void initList(){
         items=new String[]{"Куликовская битва","Отмена крепостного права","Гражданская война 1917-1922 гг.", "Курская битва", "Битва при Красном", "Холодная война", "Расстрел царской семьи", "Вечный мир с Польшей", "Распад СССР", "Брусиловский прорыв", "Северная война", "Взятие Парижа", "Марш-бросок на Притштину", "Смутное время", "Берлинская наступательная операция", "Любечский съезд", "Нюрмбергский процесс"};
+        Arrays.sort(items);
         listItems=new ArrayList<>(Arrays.asList(items));
         adapter=new ArrayAdapter<String>(this, R.layout.list_item, R.id.txtitem, listItems);
         listView.setAdapter(adapter);
