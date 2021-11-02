@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.Hakaton" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    <style name="Theme.Hakaton" parent="Theme.AppCompat.DayNight.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">#F0151BED</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>

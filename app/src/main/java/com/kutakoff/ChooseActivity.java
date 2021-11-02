@@ -1,6 +1,7 @@
 package com.kutakoff;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 import androidx.appcompat.widget.SwitchCompat;
 import android.content.Intent;
 import android.os.Bundle;
@@ -19,6 +20,7 @@ public class ChooseActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_choose);
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
         ImageView deyatels = findViewById(R.id.deyatels);
         ImageView events = findViewById(R.id.events);
         ImageView quiz = findViewById(R.id.quiz);

@@ -129,6 +129,12 @@ public class WebViewActivity extends AppCompatActivity {
                 case "Игорь Ририкович":
                     url = "file:///android_asset/Igor_Rurikovich.html";
                     break;
+                case "Ольга Мудрая":
+                    url = "file:///android_asset/Olga_Mudray.html";
+                    break;
+                case "Святослав Игоревич":
+                    url = "file:///android_asset/Svyatoslav_Igorevich.html";
+                    break;
             }
             WebView myWebView = (WebView) findViewById(R.id.webview);
             myWebView.loadUrl(url);
