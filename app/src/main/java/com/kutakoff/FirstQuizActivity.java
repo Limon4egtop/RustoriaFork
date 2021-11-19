@@ -89,6 +89,8 @@ public class FirstQuizActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (first_prav.isChecked()) {
                     Schet.plussa();
+                } else {
+                    Schet.setFirst();
                 }
                 SwipeRight();
             }
@@ -138,6 +140,8 @@ public class FirstQuizActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (second_prav.isChecked()) {
                     Schet.plussa();
+                } else {
+                    Schet.setSecond();
                 }
                 SwipeRight();
             }
@@ -187,6 +191,8 @@ public class FirstQuizActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (third_prav.isChecked()) {
                     Schet.plussa();
+                } else {
+                    Schet.setThird();
                 }
                 SwipeRight();
             }
@@ -236,6 +242,8 @@ public class FirstQuizActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (fourth_prav.isChecked()) {
                     Schet.plussa();
+                } else {
+                    Schet.setFourth();
                 }
                 SwipeRight();
             }
@@ -285,6 +293,8 @@ public class FirstQuizActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (five_prav.isChecked()) {
                     Schet.plussa();
+                } else {
+                    Schet.setFifth();
                 }
                 startActivity(new Intent(FirstQuizActivity.this, ResultQuizActivity.class));
             }

@@ -19,15 +19,28 @@
         android:id="@+id/textresult"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="280dp"
+        android:background="@drawable/white_pryamo"
         android:gravity="center"
         android:text=""
         android:textColor="@color/black"
         android:textSize="35sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:background="@drawable/white_pryamo"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/info"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/info"
+        app:layout_constraintBottom_toBottomOf="@+id/textresult"
+        app:layout_constraintEnd_toEndOf="@+id/textresult"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/textresult"
+        app:layout_constraintTop_toTopOf="@+id/textresult"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

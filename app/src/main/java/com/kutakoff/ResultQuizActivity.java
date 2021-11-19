@@ -1,10 +1,13 @@
 package com.kutakoff;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -16,24 +19,27 @@ public class ResultQuizActivity extends AppCompatActivity {
         setContentView(R.layout.activity_result_quiz);
         TextView textresult = findViewById(R.id.textresult);
         ImageView goHome = findViewById(R.id.goHome);
+        ImageView info = findViewById(R.id.info);
+
         if (Schet.getA() == 0) {
             textresult.setText("Ваш результат: 0/5. В следующий раз повезёт!");
-        }
-        if (Schet.getA() == 1) {
+        } else if (Schet.getA() == 1) {
             textresult.setText("Ваш результат: 1/5. В следующий раз повезёт!");
-        }
-        if (Schet.getA() == 2) {
+        } else if (Schet.getA() == 2) {
             textresult.setText("Ваш результат: 2/5. В следующий раз повезёт!");
-        }
-        if (Schet.getA() == 3) {
+        } else if (Schet.getA() == 3) {
             textresult.setText("Ваш результат: 3/5. Неплохо!");
-        }
-        if (Schet.getA() == 4) {
+        } else if (Schet.getA() == 4) {
             textresult.setText("Ваш результат: 4/5. Хорошо!");
-        }
-        if (Schet.getA() == 5) {
+        } else if (Schet.getA() == 5) {
             textresult.setText("Ваш результат: 5/5. Отлично, молодец!");
         }
+        info.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
         Schet.a = 0;
         goHome.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -42,4 +48,50 @@ public class ResultQuizActivity extends AppCompatActivity {
             }
         });
     }
+
+    public void onBackPressed() {
+        String first = "";
+        String second = "";
+        String third = "";
+        String fourth = "";
+        String fifth = "";
+        if (Schet.getFirst() == 1) {
+            first = "№1. Не правильно!";
+        } else {
+            first = "№1. Правильно!";
+        }
+        if (Schet.getSecond() == 1) {
+            second = "№2. Не правильно!";
+        } else {
+            second = "№2. Правильно!";
+        }
+        if (Schet.getThird() == 1) {
+            third = "№3. Не правильно!";
+        } else {
+            third = "№3. Правильно!";
+        }
+        if (Schet.getFourth() == 1) {
+            fourth = "№4. Не правильно!";
+        } else {
+            fourth = "№4. Правильно!";
+        }
+        if (Schet.getFifth() == 1) {
+            fifth = "№5. Не правильно!";
+        } else {
+            fifth = "№5. Правильно!";
+        }
+        Schet.first = 0;
+        Schet.second = 0;
+        Schet.third = 0;
+        Schet.fourth = 0;
+        Schet.fifth = 0;
+        new AlertDialog.Builder(this)
+                .setMessage(first + "\n" + second + "\n" + third + "\n" + fourth + "\n" + fifth)
+
+                .setCancelable(false)
+                .setPositiveButton("", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                    }
+                }).setNegativeButton("Закрыть", null).show();
+    };
 }
