@@ -45,6 +45,11 @@ public class ResultQuizActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(ResultQuizActivity.this, ChooseActivity.class));
+                Schet.first = 0;
+                Schet.second = 0;
+                Schet.third = 0;
+                Schet.fourth = 0;
+                Schet.fifth = 0;
             }
         });
     }
@@ -55,36 +60,31 @@ public class ResultQuizActivity extends AppCompatActivity {
         String third = "";
         String fourth = "";
         String fifth = "";
-        if (Schet.getFirst() == 1) {
-            first = "№1. Не правильно!";
-        } else {
-            first = "№1. Правильно!";
-        }
-        if (Schet.getSecond() == 1) {
-            second = "№2. Не правильно!";
-        } else {
-            second = "№2. Правильно!";
-        }
-        if (Schet.getThird() == 1) {
-            third = "№3. Не правильно!";
-        } else {
-            third = "№3. Правильно!";
-        }
-        if (Schet.getFourth() == 1) {
-            fourth = "№4. Не правильно!";
-        } else {
-            fourth = "№4. Правильно!";
-        }
-        if (Schet.getFifth() == 1) {
-            fifth = "№5. Не правильно!";
-        } else {
-            fifth = "№5. Правильно!";
-        }
-        Schet.first = 0;
-        Schet.second = 0;
-        Schet.third = 0;
-        Schet.fourth = 0;
-        Schet.fifth = 0;
+            if (Schet.first == 1) {
+                first = "№1. Не правильно!";
+            } else {
+                first = "№1. Правильно!";
+            }
+            if (Schet.second == 1) {
+                second = "№2. Не правильно!";
+            } else {
+                second = "№2. Правильно!";
+            }
+            if (Schet.third == 1) {
+                third = "№3. Не правильно!";
+            } else {
+                third = "№3. Правильно!";
+            }
+            if (Schet.fourth == 1) {
+                fourth = "№4. Не правильно!";
+            } else {
+                fourth = "№4. Правильно!";
+            }
+            if (Schet.fifth == 1) {
+                fifth = "№5. Не правильно!";
+            } else {
+                fifth = "№5. Правильно!";
+            }
         new AlertDialog.Builder(this)
                 .setMessage(first + "\n" + second + "\n" + third + "\n" + fourth + "\n" + fifth)
 

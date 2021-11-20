@@ -10,6 +10,55 @@ public class Schet {
     public static int third;
     public static int fourth;
     public static int fifth;
+    public static int firstQuiz;
+    public static int secondQuiz;
+    public static int thirdQuiz;
+    public static int fourthQuiz;
+    public static int fifthQuiz;
+
+    public static int getFirstQuiz() {
+        return firstQuiz;
+    }
+
+    public static void setFirstQuiz() {
+        firstQuiz++;
+    }
+
+    public static int getSecondQuiz() {
+        return secondQuiz;
+    }
+
+    public static void setSecondQuiz() {
+        secondQuiz++;
+    }
+
+    public static int getThirdQuiz() {
+        return thirdQuiz;
+    }
+
+    public static void setThirdQuiz() {
+        thirdQuiz++;
+    }
+
+    public static int getFourthQuiz() {
+        return fourthQuiz;
+    }
+
+    public static void setFourthQuiz() {
+        fourthQuiz++;
+    }
+
+    public static int getFifthQuiz() {
+        return fifthQuiz;
+    }
+
+    public static void setFifthQuiz() {
+        fifthQuiz++;
+    }
+
+
+
+
 
     public static void plussa() {
         a++;
