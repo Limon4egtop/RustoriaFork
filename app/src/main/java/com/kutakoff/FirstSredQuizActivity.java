@@ -18,7 +18,6 @@ import androidx.appcompat.app.AppCompatActivity;
 public class FirstSredQuizActivity extends AppCompatActivity {
 
     ViewFlipper flipper;
-
     Animation animFlipInForward;
     Animation animFlipOutForward;
     Animation animFlipInBackward;

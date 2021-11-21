@@ -2,7 +2,6 @@ package com.kutakoff;
 
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.graphics.Color;
@@ -19,7 +18,6 @@ import android.widget.ViewFlipper;
 public class FirstQuizActivity extends AppCompatActivity {
 
     ViewFlipper flipper;
-
     Animation animFlipInForward;
     Animation animFlipOutForward;
     Animation animFlipInBackward;
@@ -409,12 +407,6 @@ public class FirstQuizActivity extends AppCompatActivity {
         animFlipOutForward = AnimationUtils.loadAnimation(this, R.anim.flipout);
         animFlipInBackward = AnimationUtils.loadAnimation(this, R.anim.flipin_reverse);
         animFlipOutBackward = AnimationUtils.loadAnimation(this, R.anim.flipout_reverse);
-    }
-
-    private void SwipeLeft() {
-        flipper.setInAnimation(animFlipInBackward);
-        flipper.setOutAnimation(animFlipOutBackward);
-        flipper.showPrevious();
     }
 
     private void SwipeRight() {

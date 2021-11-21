@@ -2,11 +2,11 @@ package com.kutakoff;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -16,40 +16,31 @@ public class ResultHardQuizActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result_hard_quiz);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         TextView textresult = findViewById(R.id.textresult);
         ImageView goHome = findViewById(R.id.goHome);
         ImageView info = findViewById(R.id.info);
         if (Schet.getA() == 0) {
             textresult.setText("Ваш результат: 0/10. В следующий раз повезёт!");
-        }
-        if (Schet.getA() == 1) {
+        }else if (Schet.getA() == 1) {
             textresult.setText("Ваш результат: 1/10. В следующий раз повезёт!");
-        }
-        if (Schet.getA() == 2) {
+        }else if (Schet.getA() == 2) {
             textresult.setText("Ваш результат: 2/10. В следующий раз повезёт!");
-        }
-        if (Schet.getA() == 3) {
+        }else if (Schet.getA() == 3) {
             textresult.setText("Ваш результат: 3/10. В следующий раз повезёт!");
-        }
-        if (Schet.getA() == 4) {
+        }else if (Schet.getA() == 4) {
             textresult.setText("Ваш результат: 4/10. Неплохо!");
-        }
-        if (Schet.getA() == 5) {
+        }else if (Schet.getA() == 5) {
             textresult.setText("Ваш результат: 5/10. Неплохо!");
-        }
-        if (Schet.getA() == 6) {
+        }else if (Schet.getA() == 6) {
             textresult.setText("Ваш результат: 6/10. Неплохо!");
-        }
-        if (Schet.getA() == 7) {
+        }else if (Schet.getA() == 7) {
             textresult.setText("Ваш результат: 7/10. Хорошо!");
-        }
-        if (Schet.getA() == 8) {
+        }else if (Schet.getA() == 8) {
             textresult.setText("Ваш результат: 8/10. Хорошо!");
-        }
-        if (Schet.getA() == 9) {
+        }else if (Schet.getA() == 9) {
             textresult.setText("Ваш результат: 9/10. Отлично, молодец!");
-        }
-        if (Schet.getA() == 10) {
+        }else if (Schet.getA() == 10) {
             textresult.setText("Ваш результат: 10/10. Отлично, молодец!");
         }
         Schet.a = 0;

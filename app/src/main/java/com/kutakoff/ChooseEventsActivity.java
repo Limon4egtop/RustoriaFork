@@ -1,9 +1,8 @@
 package com.kutakoff;
 
 import androidx.appcompat.app.AppCompatActivity;
-
-import android.app.Activity;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -26,13 +25,12 @@ public class ChooseEventsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         setContentView(R.layout.activity_choose_events);
         listView = findViewById(R.id.listview);
         editText = findViewById(R.id.txtsearch);
         initList();
-
         editText.addTextChangedListener(new TextWatcher() {
-
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
             }
@@ -49,7 +47,6 @@ public class ChooseEventsActivity extends AppCompatActivity {
             public void afterTextChanged(Editable s) {
             }
         });
-
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -80,5 +77,4 @@ public class ChooseEventsActivity extends AppCompatActivity {
         adapter=new ArrayAdapter<String>(this, R.layout.list_item, R.id.txtitem, listItems);
         listView.setAdapter(adapter);
     }
-
 }

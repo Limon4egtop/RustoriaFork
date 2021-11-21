@@ -14,9 +14,7 @@
         <activity
             android:name=".DetailsActivity"
             android:label="@string/title_activity_details"
-            android:theme="@style/Theme.Hakaton.NoActionBar"></activity>
-        <activity android:name=".Moscow_ParadActivity" />
-        <activity android:name=".MainCommanders" />
+            android:theme="@style/Theme.Hakaton.NoActionBar" />
         <activity android:name=".ResultQuizActivity" />
         <activity android:name=".ResultHardQuizActivity" />
         <activity android:name=".FirstQuizActivity" />
@@ -30,10 +28,8 @@
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
     </application>
-
 </manifest>

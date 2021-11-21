@@ -12,13 +12,11 @@ import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.ViewFlipper;
-
 import androidx.appcompat.app.AppCompatActivity;
 
 public class FirstHardQuizActivity extends AppCompatActivity {
 
     ViewFlipper flipper;
-
     Animation animFlipInForward;
     Animation animFlipOutForward;
     Animation animFlipInBackward;
