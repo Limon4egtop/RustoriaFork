@@ -4,15 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.appcompat.widget.SwitchCompat;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.ListView;
-import java.util.ArrayList;
-import java.util.Arrays;
 
 public class ChooseActivity extends AppCompatActivity {
 
@@ -20,7 +15,7 @@ public class ChooseActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_choose);
-        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         ImageView deyatels = findViewById(R.id.deyatels);
         ImageView events = findViewById(R.id.events);
         ImageView quiz = findViewById(R.id.quiz);
@@ -44,12 +39,6 @@ public class ChooseActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(ChooseActivity.this, QuizActivity.class));
-            }
-        });
-        contrMember.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(ChooseActivity.this, MainCommanders.class));
             }
         });
         contrDetail.setOnClickListener(new View.OnClickListener() {
