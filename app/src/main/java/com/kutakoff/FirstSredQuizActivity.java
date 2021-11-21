@@ -505,12 +505,6 @@ public class FirstSredQuizActivity extends AppCompatActivity {
         animFlipOutBackward = AnimationUtils.loadAnimation(this, R.anim.flipout_reverse);
     }
 
-    private void SwipeLeft() {
-        flipper.setInAnimation(animFlipInBackward);
-        flipper.setOutAnimation(animFlipOutBackward);
-        flipper.showPrevious();
-    }
-
     private void SwipeRight() {
         flipper.setInAnimation(animFlipInForward);
         flipper.setOutAnimation(animFlipOutForward);
