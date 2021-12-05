@@ -465,7 +465,7 @@ public class SecondEasyQuizActivity extends AppCompatActivity {
                         @Override
                         public void onClick(View v) {
                             Schet.sixthQuiz = 0;
-                            startActivity(new Intent(SecondEasyQuizActivity.this, ResultQuizActivity.class));
+                            startActivity(new Intent(SecondEasyQuizActivity.this, ChooseActivity.class));
                         }
                     });
                 } else {
