@@ -1,7 +1,6 @@
 package com.kutakoff;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.app.AppCompatDelegate;
 import androidx.appcompat.widget.SwitchCompat;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
@@ -19,10 +18,10 @@ public class ChooseActivity extends AppCompatActivity {
         ImageView deyatels = findViewById(R.id.deyatels);
         ImageView events = findViewById(R.id.events);
         ImageView quiz = findViewById(R.id.quiz);
-        ImageView contrMember = findViewById(R.id.contr_member);
-        ImageView contQuiz = findViewById(R.id.cont_quiz);
+        ImageView easy = findViewById(R.id.easy);
+        ImageView sred = findViewById(R.id.sred);
+        ImageView hard = findViewById(R.id.hard);
         SwitchCompat contrMode = findViewById(R.id.contr_mode);
-        ImageView contrDetail = findViewById(R.id.contr_detail);
         deyatels.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -41,10 +40,22 @@ public class ChooseActivity extends AppCompatActivity {
                 startActivity(new Intent(ChooseActivity.this, QuizActivity.class));
             }
         });
-        contrDetail.setOnClickListener(new View.OnClickListener() {
+        easy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(ChooseActivity.this, DetailsActivity.class));
+                startActivity(new Intent(ChooseActivity.this, SecondEasyQuizActivity.class));
+            }
+        });
+        sred.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(ChooseActivity.this, SecondSredQuizActivity.class));
+            }
+        });
+        hard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(ChooseActivity.this, SecondHardQuizActivity.class));
             }
         });
         contrMode.setOnClickListener(new View.OnClickListener() {
@@ -55,9 +66,9 @@ public class ChooseActivity extends AppCompatActivity {
                 deyatels.setVisibility(contInvisible);
                 events.setVisibility(contInvisible);
                 quiz.setVisibility(contInvisible);
-                contrMember.setVisibility(contVisible);
-                contQuiz.setVisibility(contVisible);
-                contrDetail.setVisibility(contVisible);
+                easy.setVisibility(contVisible);
+                sred.setVisibility(contVisible);
+                hard.setVisibility(contVisible);
             }
         });
     }

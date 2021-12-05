@@ -2,6 +2,7 @@ package com.kutakoff;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
@@ -31,7 +32,9 @@ public class ResultQuizActivity extends AppCompatActivity {
         } else if (Schet.getA() == 4) {
             textresult.setText("Ваш результат: 4/5. Хорошо!");
         } else if (Schet.getA() == 5) {
-            textresult.setText("Ваш результат: 5/5. Отлично, молодец!");
+            textresult.setText("Ваш результат: 5/5. Хорошо!");
+        } else if (Schet.getA() == 6) {
+            textresult.setText("Ваш результат: 6/6. Отлично, молодец!");
         }
         info.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -49,6 +52,7 @@ public class ResultQuizActivity extends AppCompatActivity {
                 Schet.third = 0;
                 Schet.fourth = 0;
                 Schet.fifth = 0;
+                Schet.sixth = 0;
             }
         });
     }
@@ -59,38 +63,46 @@ public class ResultQuizActivity extends AppCompatActivity {
         String third = "";
         String fourth = "";
         String fifth = "";
-            if (Schet.first == 1) {
-                first = "№1. Не правильно!";
-            } else {
-                first = "№1. Правильно!";
-            }
-            if (Schet.second == 1) {
-                second = "№2. Не правильно!";
-            } else {
-                second = "№2. Правильно!";
-            }
-            if (Schet.third == 1) {
-                third = "№3. Не правильно!";
-            } else {
-                third = "№3. Правильно!";
-            }
-            if (Schet.fourth == 1) {
-                fourth = "№4. Не правильно!";
-            } else {
-                fourth = "№4. Правильно!";
-            }
-            if (Schet.fifth == 1) {
-                fifth = "№5. Не правильно!";
-            } else {
-                fifth = "№5. Правильно!";
-            }
+        String sixth = "";
+        if (Schet.first == 1) {
+            first = "№1. Не правильно!";
+        } else {
+            first = "№1. Правильно!";
+        }
+        if (Schet.second == 1) {
+            second = "№2. Не правильно!";
+        } else {
+            second = "№2. Правильно!";
+        }
+        if (Schet.third == 1) {
+            third = "№3. Не правильно!";
+        } else {
+            third = "№3. Правильно!";
+        }
+        if (Schet.fourth == 1) {
+            fourth = "№4. Не правильно!";
+        } else {
+            fourth = "№4. Правильно!";
+        }
+        if (Schet.fifth == 1) {
+            fifth = "№5. Не правильно!";
+        } else {
+            fifth = "№5. Правильно!";
+        }
+        if (Schet.fifth == 1) {
+            fifth = "№6. Не правильно!";
+        } else {
+            fifth = "№6. Правильно!";
+        }
         new AlertDialog.Builder(this)
-                .setMessage(first + "\n" + second + "\n" + third + "\n" + fourth + "\n" + fifth)
+                .setMessage(first + "\n" + second + "\n" + third + "\n" + fourth + "\n" + fifth + "\n" + sixth)
 
                 .setCancelable(false)
                 .setPositiveButton("", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                     }
                 }).setNegativeButton("Закрыть", null).show();
-    };
+    }
+
+    ;
 }

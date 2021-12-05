@@ -137,7 +137,7 @@ public class WebViewActivity extends AppCompatActivity {
                 case "Ярополк Святославич":
                     url = "file:///android_asset/Yaropolk_Svyatoslavich.html";
                     break;
-                case "Владимир Святославич(Владимир красное солнышко)":
+                case "Владимир Святой(Владимир красное солнышко)":
                     url = "file:///android_asset/Vladimir_Red_Sun.html";
                     break;
                 case "Святополк Окаянный":
