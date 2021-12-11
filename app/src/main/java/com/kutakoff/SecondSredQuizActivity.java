@@ -1,6 +1,5 @@
 package com.kutakoff;
 
-
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.graphics.Color;
@@ -47,6 +46,7 @@ public class SecondSredQuizActivity extends AppCompatActivity {
         RadioButton first_prav = findViewById(R.id.first_prav);
         RadioButton first_neprav = findViewById(R.id.first_neprav);
         RadioButton first_neprav_2 = findViewById(R.id.first_neprav_2);
+        RadioButton first_neprav_3 = findViewById(R.id.first_neprav_3);
         Button check = findViewById(R.id.check);
         TextView firstTextResult = findViewById(R.id.firstTextResult);
         ImageView firstNext = findViewById(R.id.firstNext);
@@ -59,6 +59,7 @@ public class SecondSredQuizActivity extends AppCompatActivity {
                     }
                     first_neprav.setChecked(false);
                     first_neprav_2.setChecked(false);
+                    first_neprav_3.setChecked(false);
                 } else {
                     check.setVisibility(View.INVISIBLE);
                 }
@@ -73,6 +74,7 @@ public class SecondSredQuizActivity extends AppCompatActivity {
                     }
                     first_prav.setChecked(false);
                     first_neprav_2.setChecked(false);
+                    first_neprav_3.setChecked(false);
                 } else {
                     check.setVisibility(View.INVISIBLE);
                 }
@@ -85,6 +87,22 @@ public class SecondSredQuizActivity extends AppCompatActivity {
                     if (Schet.firstQuiz == 0) {
                         check.setVisibility(View.VISIBLE);
                     }
+                    first_neprav_3.setChecked(false);
+                    first_neprav.setChecked(false);
+                    first_prav.setChecked(false);
+                } else {
+                    check.setVisibility(View.INVISIBLE);
+                }
+            }
+        });
+        first_neprav_3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (first_neprav_3.isChecked()) {
+                    if (Schet.firstQuiz == 0) {
+                        check.setVisibility(View.VISIBLE);
+                    }
+                    first_neprav_2.setChecked(false);
                     first_neprav.setChecked(false);
                     first_prav.setChecked(false);
                 } else {
@@ -119,6 +137,7 @@ public class SecondSredQuizActivity extends AppCompatActivity {
         RadioButton second_prav = findViewById(R.id.second_prav);
         RadioButton second_neprav = findViewById(R.id.second_neprav);
         RadioButton second_neprav_2 = findViewById(R.id.second_neprav_2);
+        RadioButton second_neprav_3 = findViewById(R.id.second_neprav_3);
         Button check_2 = findViewById(R.id.check_2);
         TextView secondTextResult = findViewById(R.id.secondTextResult);
         ImageView secondNext = findViewById(R.id.secondNext);
@@ -131,6 +150,7 @@ public class SecondSredQuizActivity extends AppCompatActivity {
                     }
                     second_neprav.setChecked(false);
                     second_neprav_2.setChecked(false);
+                    second_neprav_3.setChecked(false);
                 } else {
                     check_2.setVisibility(View.INVISIBLE);
                 }
@@ -145,6 +165,7 @@ public class SecondSredQuizActivity extends AppCompatActivity {
                     }
                     second_prav.setChecked(false);
                     second_neprav_2.setChecked(false);
+                    second_neprav_3.setChecked(false);
                 } else {
                     check_2.setVisibility(View.INVISIBLE);
                 }
@@ -158,6 +179,22 @@ public class SecondSredQuizActivity extends AppCompatActivity {
                         check_2.setVisibility(View.VISIBLE);
                     }
                     second_neprav.setChecked(false);
+                    second_neprav_3.setChecked(false);
+                    second_prav.setChecked(false);
+                } else {
+                    check_2.setVisibility(View.INVISIBLE);
+                }
+            }
+        });
+        second_neprav_3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (second_neprav_3.isChecked()) {
+                    if (Schet.secondQuiz == 0) {
+                        check_2.setVisibility(View.VISIBLE);
+                    }
+                    second_neprav.setChecked(false);
+                    second_neprav_2.setChecked(false);
                     second_prav.setChecked(false);
                 } else {
                     check_2.setVisibility(View.INVISIBLE);
@@ -191,6 +228,7 @@ public class SecondSredQuizActivity extends AppCompatActivity {
         RadioButton third_prav = findViewById(R.id.third_prav);
         RadioButton third_neprav = findViewById(R.id.third_neprav);
         RadioButton third_neprav_2 = findViewById(R.id.third_neprav_2);
+        RadioButton third_neprav_3 = findViewById(R.id.third_neprav_3);
         Button check_3 = findViewById(R.id.check_3);
         TextView thirdTextResult = findViewById(R.id.thirdTextResult);
         ImageView thirdNext = findViewById(R.id.thirdNext);
@@ -203,6 +241,7 @@ public class SecondSredQuizActivity extends AppCompatActivity {
                     }
                     third_neprav.setChecked(false);
                     third_neprav_2.setChecked(false);
+                    third_neprav_3.setChecked(false);
                 } else {
                     check_3.setVisibility(View.INVISIBLE);
                 }
@@ -217,6 +256,7 @@ public class SecondSredQuizActivity extends AppCompatActivity {
                     }
                     third_prav.setChecked(false);
                     third_neprav_2.setChecked(false);
+                    third_neprav_3.setChecked(false);
                 } else {
                     check_3.setVisibility(View.INVISIBLE);
                 }
@@ -230,6 +270,22 @@ public class SecondSredQuizActivity extends AppCompatActivity {
                         check_3.setVisibility(View.VISIBLE);
                     }
                     third_neprav.setChecked(false);
+                    third_neprav_3.setChecked(false);
+                    third_prav.setChecked(false);
+                } else {
+                    check_3.setVisibility(View.INVISIBLE);
+                }
+            }
+        });
+        third_neprav_3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (third_neprav_3.isChecked()) {
+                    if (Schet.thirdQuiz == 0) {
+                        check_3.setVisibility(View.VISIBLE);
+                    }
+                    third_neprav.setChecked(false);
+                    third_neprav_2.setChecked(false);
                     third_prav.setChecked(false);
                 } else {
                     check_3.setVisibility(View.INVISIBLE);
@@ -248,7 +304,7 @@ public class SecondSredQuizActivity extends AppCompatActivity {
                     thirdNext.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
-                            Schet.thirdQuiz = 0;
+                            Schet.firstQuiz = 0;
                             SwipeRight();
                         }
                     });
@@ -263,6 +319,7 @@ public class SecondSredQuizActivity extends AppCompatActivity {
         RadioButton fourth_prav = findViewById(R.id.fourth_prav);
         RadioButton fourth_neprav = findViewById(R.id.fourth_neprav);
         RadioButton fourth_neprav_2 = findViewById(R.id.fourth_neprav_2);
+        RadioButton fourth_neprav_3 = findViewById(R.id.fourth_neprav_3);
         Button check_4 = findViewById(R.id.check_4);
         TextView fourthTextResult = findViewById(R.id.fourthTextResult);
         ImageView fourthNext = findViewById(R.id.fourthNext);
@@ -275,6 +332,7 @@ public class SecondSredQuizActivity extends AppCompatActivity {
                     }
                     fourth_neprav.setChecked(false);
                     fourth_neprav_2.setChecked(false);
+                    fourth_neprav_3.setChecked(false);
                 } else {
                     check_4.setVisibility(View.INVISIBLE);
                 }
@@ -289,6 +347,7 @@ public class SecondSredQuizActivity extends AppCompatActivity {
                     }
                     fourth_prav.setChecked(false);
                     fourth_neprav_2.setChecked(false);
+                    fourth_neprav_3.setChecked(false);
                 } else {
                     check_4.setVisibility(View.INVISIBLE);
                 }
@@ -302,6 +361,22 @@ public class SecondSredQuizActivity extends AppCompatActivity {
                         check_4.setVisibility(View.VISIBLE);
                     }
                     fourth_neprav.setChecked(false);
+                    fourth_neprav_3.setChecked(false);
+                    fourth_prav.setChecked(false);
+                } else {
+                    check_4.setVisibility(View.INVISIBLE);
+                }
+            }
+        });
+        fourth_neprav_3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (fourth_neprav_3.isChecked()) {
+                    if (Schet.fourthQuiz == 0) {
+                        check_4.setVisibility(View.VISIBLE);
+                    }
+                    fourth_neprav.setChecked(false);
+                    fourth_neprav_2.setChecked(false);
                     fourth_prav.setChecked(false);
                 } else {
                     check_4.setVisibility(View.INVISIBLE);
@@ -313,10 +388,10 @@ public class SecondSredQuizActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (fourth_prav.isChecked()) {
                     Schet.plussa();
-                    check_4.setVisibility(View.INVISIBLE);
-                    fourthNext.setVisibility(View.VISIBLE);
                     fourthTextResult.setTextColor(Color.GREEN);
                     fourthTextResult.setText("Правильно!");
+                    check_4.setVisibility(View.INVISIBLE);
+                    fourthNext.setVisibility(View.VISIBLE);
                     fourthNext.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
@@ -335,6 +410,7 @@ public class SecondSredQuizActivity extends AppCompatActivity {
         RadioButton five_prav = findViewById(R.id.five_prav);
         RadioButton five_neprav = findViewById(R.id.five_neprav);
         RadioButton five_neprav_2 = findViewById(R.id.five_neprav_2);
+        RadioButton five_neprav_3 = findViewById(R.id.five_neprav_3);
         Button check_5 = findViewById(R.id.check_5);
         TextView fifthTextResult = findViewById(R.id.fifthTextResult);
         ImageView fifthNext = findViewById(R.id.fifthNext);
@@ -347,6 +423,7 @@ public class SecondSredQuizActivity extends AppCompatActivity {
                     }
                     five_neprav.setChecked(false);
                     five_neprav_2.setChecked(false);
+                    five_neprav_3.setChecked(false);
                 } else {
                     check_5.setVisibility(View.INVISIBLE);
                 }
@@ -361,6 +438,7 @@ public class SecondSredQuizActivity extends AppCompatActivity {
                     }
                     five_prav.setChecked(false);
                     five_neprav_2.setChecked(false);
+                    five_neprav_3.setChecked(false);
                 } else {
                     check_5.setVisibility(View.INVISIBLE);
                 }
@@ -374,6 +452,22 @@ public class SecondSredQuizActivity extends AppCompatActivity {
                         check_5.setVisibility(View.VISIBLE);
                     }
                     five_neprav.setChecked(false);
+                    five_neprav_3.setChecked(false);
+                    five_prav.setChecked(false);
+                } else {
+                    check_5.setVisibility(View.INVISIBLE);
+                }
+            }
+        });
+        five_neprav_3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (five_neprav_3.isChecked()) {
+                    if (Schet.fifthQuiz == 0) {
+                        check_5.setVisibility(View.VISIBLE);
+                    }
+                    five_neprav.setChecked(false);
+                    five_neprav_2.setChecked(false);
                     five_prav.setChecked(false);
                 } else {
                     check_5.setVisibility(View.INVISIBLE);
@@ -385,10 +479,10 @@ public class SecondSredQuizActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (five_prav.isChecked()) {
                     Schet.plussa();
-                    check_5.setVisibility(View.INVISIBLE);
-                    fifthNext.setVisibility(View.VISIBLE);
                     fifthTextResult.setTextColor(Color.GREEN);
                     fifthTextResult.setText("Правильно!");
+                    check_5.setVisibility(View.INVISIBLE);
+                    fifthNext.setVisibility(View.VISIBLE);
                     fifthNext.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
@@ -407,6 +501,7 @@ public class SecondSredQuizActivity extends AppCompatActivity {
         RadioButton six_prav = findViewById(R.id.six_prav);
         RadioButton six_neprav = findViewById(R.id.six_neprav);
         RadioButton six_neprav_2 = findViewById(R.id.six_neprav_2);
+        RadioButton six_neprav_3 = findViewById(R.id.six_neprav_3);
         Button check_6 = findViewById(R.id.check_6);
         TextView sixthTextResult = findViewById(R.id.sixthTextResult);
         ImageView sixthNext = findViewById(R.id.sixthNext);
@@ -419,6 +514,7 @@ public class SecondSredQuizActivity extends AppCompatActivity {
                     }
                     six_neprav.setChecked(false);
                     six_neprav_2.setChecked(false);
+                    six_neprav_3.setChecked(false);
                 } else {
                     check_6.setVisibility(View.INVISIBLE);
                 }
@@ -433,6 +529,7 @@ public class SecondSredQuizActivity extends AppCompatActivity {
                     }
                     six_prav.setChecked(false);
                     six_neprav_2.setChecked(false);
+                    six_neprav_3.setChecked(false);
                 } else {
                     check_6.setVisibility(View.INVISIBLE);
                 }
@@ -446,6 +543,22 @@ public class SecondSredQuizActivity extends AppCompatActivity {
                         check_6.setVisibility(View.VISIBLE);
                     }
                     six_neprav.setChecked(false);
+                    six_neprav_3.setChecked(false);
+                    six_prav.setChecked(false);
+                } else {
+                    check_6.setVisibility(View.INVISIBLE);
+                }
+            }
+        });
+        six_neprav_3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (six_neprav_3.isChecked()) {
+                    if (Schet.sixthQuiz == 0) {
+                        check_6.setVisibility(View.VISIBLE);
+                    }
+                    six_neprav.setChecked(false);
+                    six_neprav_2.setChecked(false);
                     six_prav.setChecked(false);
                 } else {
                     check_6.setVisibility(View.INVISIBLE);
@@ -457,15 +570,15 @@ public class SecondSredQuizActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (six_prav.isChecked()) {
                     Schet.plussa();
-                    check_6.setVisibility(View.INVISIBLE);
-                    sixthNext.setVisibility(View.VISIBLE);
                     sixthTextResult.setTextColor(Color.GREEN);
                     sixthTextResult.setText("Правильно!");
+                    check_6.setVisibility(View.INVISIBLE);
+                    sixthNext.setVisibility(View.VISIBLE);
                     sixthNext.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
                             Schet.sixthQuiz = 0;
-                            startActivity(new Intent(SecondSredQuizActivity.this, ResultQuizActivity.class));
+                            startActivity(new Intent(SecondSredQuizActivity.this, ChooseActivity.class));
                         }
                     });
                 } else {

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -9,18 +9,14 @@
     <ViewFlipper
         android:id="@+id/viewflipper"
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent">
+        android:layout_height="fill_parent"
+        tools:ignore="MissingConstraints">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:background="#FFFFFF"
             android:orientation="vertical">
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/nice_rus_bq" />
 
             <ImageView
                 android:id="@+id/textView"
@@ -64,14 +60,14 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@drawable/nice_rus_bq" />
+                android:background="@drawable/first_task" />
 
             <TextView
-                android:id="@+id/textView2"
+                android:id="@+id/textView1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Сколько прошло лет с рождения Жукова:"
+                android:text="Кем был Рокоссовский по происхождению?"
                 android:textColor="@color/black"
                 android:textSize="32sp"
                 android:textStyle="bold"
@@ -79,7 +75,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.078" />
+                app:layout_constraintVertical_bias="0.140" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -91,7 +87,7 @@
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintHorizontal_bias="0.500"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.01" />
@@ -100,48 +96,64 @@
                 android:id="@+id/first_neprav_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="120"
+                android:text="Украинец"
                 android:textColor="@color/black"
                 android:textSize="30sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.671"
+                app:layout_constraintHorizontal_bias="0.450"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.400"
+                app:layout_constraintVertical_bias="0.760"
                 tools:ignore="MissingConstraints" />
 
             <RadioButton
                 android:id="@+id/first_neprav"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="130"
+                android:text="Литовец"
                 android:textColor="@color/black"
                 android:textSize="30sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.671"
+                app:layout_constraintHorizontal_bias="0.450"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.650"
+                app:layout_constraintVertical_bias="0.655"
+                tools:ignore="MissingConstraints" />
+
+            <RadioButton
+                android:id="@+id/first_neprav_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Немец"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.450"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.550"
                 tools:ignore="MissingConstraints" />
 
             <RadioButton
                 android:id="@+id/first_prav"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="125"
+                android:text="Поляк"
                 android:textColor="@color/black"
                 android:textSize="30sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.671"
+                app:layout_constraintHorizontal_bias="0.450"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.525"
+                app:layout_constraintVertical_bias="0.866"
                 tools:ignore="MissingConstraints" />
 
             <Button
@@ -152,45 +164,37 @@
                 android:visibility="invisible"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.793"
+                app:layout_constraintHorizontal_bias="0.500"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/first_prav"
-                app:layout_constraintVertical_bias="0.380" />
+                app:layout_constraintVertical_bias="0.325" />
 
             <TextView
                 android:id="@+id/firstTextResult"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center"
                 android:textSize="30sp"
                 android:textStyle="bold"
+                android:gravity="center"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@id/textView2"
-                app:layout_constraintVertical_bias="0.130"
+                app:layout_constraintTop_toTopOf="@id/textView1"
+                app:layout_constraintVertical_bias="0.175"
                 tools:ignore="MissingConstraints" />
 
             <ImageView
                 android:id="@+id/firstNext"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
                 android:background="@drawable/button_next"
                 android:visibility="invisible"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.793"
+                app:layout_constraintHorizontal_bias="0.830"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/first_prav"
-                app:layout_constraintVertical_bias="0.380" />
-
-            <ImageView
-                android:layout_width="150dp"
-                android:layout_height="100dp"
-                android:background="@drawable/first_row"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                tools:ignore="MissingConstraints" />
+                app:layout_constraintVertical_bias="0.365" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -203,23 +207,23 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@drawable/nice_rus_bq" />
+                android:background="@drawable/first_task" />
 
             <TextView
-                android:id="@id/textView3"
+                android:id="@+id/textView3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Какой профессии обучался Жуков в Москве:"
+                android:text="По какому обвинению был арестован Рокоссовский в 1937 г?"
                 android:textColor="@color/black"
                 android:textSize="28sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintHorizontal_bias="0.495"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.081" />
+                app:layout_constraintVertical_bias="0.110" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -231,57 +235,73 @@
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintHorizontal_bias="0.500"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.01" />
 
             <RadioButton
                 android:id="@+id/second_neprav_2"
-                android:layout_width="170dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Гончар"
+                android:text="Кража госбюджета"
                 android:textColor="@color/black"
                 android:textSize="25sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.871"
+                app:layout_constraintHorizontal_bias="0.100"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.550"
+                app:layout_constraintVertical_bias="0.861"
                 tools:ignore="MissingConstraints" />
 
             <RadioButton
                 android:id="@+id/second_neprav"
-                android:layout_width="170dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Учитель"
+                android:text="Покушение на И.В.Сталина"
                 android:textColor="@color/black"
                 android:textSize="25sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.871"
+                app:layout_constraintHorizontal_bias="0.110"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.450"
+                app:layout_constraintVertical_bias="0.650"
+                tools:ignore="MissingConstraints" />
+
+            <RadioButton
+                android:id="@+id/second_neprav_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Причина неизвестна"
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.100"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.757"
                 tools:ignore="MissingConstraints" />
 
             <RadioButton
                 android:id="@+id/second_prav"
-                android:layout_width="170dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Скорняк"
+                android:text="Связь с разведками \nЯпонии и Польши"
                 android:textColor="@color/black"
                 android:textSize="25sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.871"
+                app:layout_constraintHorizontal_bias="0.105"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.650"
+                app:layout_constraintVertical_bias="0.550"
                 tools:ignore="MissingConstraints" />
 
             <Button
@@ -292,45 +312,37 @@
                 android:visibility="invisible"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.793"
+                app:layout_constraintHorizontal_bias="0.500"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/second_prav"
-                app:layout_constraintVertical_bias="0.350" />
+                app:layout_constraintTop_toBottomOf="@+id/second_neprav_2"
+                app:layout_constraintVertical_bias="0.370" />
 
             <TextView
                 android:id="@+id/secondTextResult"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center"
                 android:textSize="30sp"
                 android:textStyle="bold"
+                android:gravity="center"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@id/textView3"
-                app:layout_constraintVertical_bias="0.115"
+                app:layout_constraintVertical_bias="0.180"
                 tools:ignore="MissingConstraints" />
 
             <ImageView
                 android:id="@+id/secondNext"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
                 android:background="@drawable/button_next"
                 android:visibility="invisible"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.793"
+                app:layout_constraintHorizontal_bias="0.830"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/second_prav"
-                app:layout_constraintVertical_bias="0.350" />
-
-            <ImageView
-                android:layout_width="150dp"
-                android:layout_height="100dp"
-                android:background="@drawable/second_row"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                tools:ignore="MissingConstraints" />
+                app:layout_constraintVertical_bias="0.950" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -343,14 +355,14 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@drawable/nice_rus_bq" />
+                android:background="@drawable/first_row_new" />
 
             <TextView
                 android:id="@+id/textView4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Сколько раз Жуков получал звезду Героя Советского Союза:"
+                android:text="После какого события Сталин стал называть К.К. Рокоссовского по его имени и отчеству:"
                 android:textColor="@color/black"
                 android:textSize="28sp"
                 android:textStyle="bold"
@@ -378,50 +390,66 @@
 
             <RadioButton
                 android:id="@+id/third_neprav_2"
-                android:layout_width="170dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="5"
+                android:text="Битва за Москву"
                 android:textColor="@color/black"
-                android:textSize="30sp"
+                android:textSize="25sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.871"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.650"
-                tools:ignore="MissingConstraints" />
-
-            <RadioButton
-                android:id="@+id/third_neprav"
-                android:layout_width="170dp"
-                android:layout_height="wrap_content"
-                android:text="3"
-                android:textColor="@color/black"
-                android:textSize="30sp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.871"
+                app:layout_constraintHorizontal_bias="0.100"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.450"
                 tools:ignore="MissingConstraints" />
 
             <RadioButton
-                android:id="@+id/third_prav"
-                android:layout_width="170dp"
+                android:id="@+id/third_neprav_3"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="4"
+                android:text="Курская битва"
                 android:textColor="@color/black"
-                android:textSize="30sp"
+                android:textSize="25sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.871"
+                app:layout_constraintHorizontal_bias="0.100"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.550"
+                tools:ignore="MissingConstraints" />
+
+            <RadioButton
+                android:id="@+id/third_neprav"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Сталинградская битва"
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.100"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.350"
+                tools:ignore="MissingConstraints" />
+
+            <RadioButton
+                android:id="@+id/third_prav"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Операция „Багратион”"
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.100"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.650"
                 tools:ignore="MissingConstraints" />
 
             <Button
@@ -435,20 +463,20 @@
                 app:layout_constraintHorizontal_bias="0.826"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/third_prav"
-                app:layout_constraintVertical_bias="0.330" />
+                app:layout_constraintVertical_bias="0.272" />
 
             <TextView
                 android:id="@+id/thirdTextResult"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center"
                 android:textSize="30sp"
                 android:textStyle="bold"
+                android:gravity="center"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@id/textView4"
-                app:layout_constraintVertical_bias="0.150"
+                app:layout_constraintVertical_bias="0.110"
                 tools:ignore="MissingConstraints" />
 
             <ImageView
@@ -462,7 +490,7 @@
                 app:layout_constraintHorizontal_bias="0.826"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/third_prav"
-                app:layout_constraintVertical_bias="0.330" />
+                app:layout_constraintVertical_bias="0.272" />
 
             <ImageView
                 android:layout_width="150dp"
@@ -483,14 +511,14 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@drawable/nice_rus_bq" />
+                android:background="@drawable/zhukov" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="Вопрос №4"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textSize="30sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -505,7 +533,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="После чего Жукову было присвоено звание Маршала Советского Союза:"
+                android:text="Кому принадлежит фраза Иду на вы?"
                 android:textColor="@color/black"
                 android:textSize="28sp"
                 android:textStyle="bold"
@@ -518,50 +546,66 @@
 
             <RadioButton
                 android:id="@+id/fourth_neprav_2"
-                android:layout_width="180dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Поход на Бессарабию"
+                android:text="Ярославу Мудрому"
                 android:textColor="@color/black"
-                android:textSize="25sp"
+                android:textSize="23sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.850"
+                app:layout_constraintHorizontal_bias="0.100"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.700"
+                app:layout_constraintVertical_bias="0.625"
                 tools:ignore="MissingConstraints" />
 
             <RadioButton
-                android:id="@+id/fourth_prav"
-                android:layout_width="180dp"
+                android:id="@+id/fourth_neprav_3"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Прорыв блокады Ленинграда"
+                android:text="Князю Олегу"
                 android:textColor="@color/black"
-                android:textSize="25sp"
+                android:textSize="23sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.850"
+                app:layout_constraintHorizontal_bias="0.100"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.350"
+                app:layout_constraintVertical_bias="0.750"
                 tools:ignore="MissingConstraints" />
 
             <RadioButton
                 android:id="@+id/fourth_neprav"
-                android:layout_width="180dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Контрнаступление под Москвой"
+                android:text="Александру I"
                 android:textColor="@color/black"
                 android:textSize="25sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.850"
+                app:layout_constraintHorizontal_bias="0.100"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.525"
+                app:layout_constraintVertical_bias="0.375"
+                tools:ignore="MissingConstraints" />
+
+            <RadioButton
+                android:id="@+id/fourth_prav"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Князю Святославу"
+                android:textColor="@color/black"
+                android:textSize="23sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.100"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.500"
                 tools:ignore="MissingConstraints" />
 
             <Button
@@ -572,24 +616,23 @@
                 android:visibility="invisible"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.793"
+                app:layout_constraintHorizontal_bias="0.883"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/fourth_neprav_2"
-                app:layout_constraintVertical_bias="0.281" />
+                app:layout_constraintVertical_bias="0.642" />
 
             <TextView
                 android:id="@+id/fourthTextResult"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center"
                 android:textSize="30sp"
                 android:textStyle="bold"
+                android:gravity="center"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.700"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@id/textView5"
-                app:layout_constraintVertical_bias="0.185"
+                app:layout_constraintVertical_bias="0.110"
                 tools:ignore="MissingConstraints" />
 
             <ImageView
@@ -600,10 +643,10 @@
                 android:visibility="invisible"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.793"
+                app:layout_constraintHorizontal_bias="0.883"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/fourth_neprav_2"
-                app:layout_constraintVertical_bias="0.281" />
+                app:layout_constraintVertical_bias="0.642" />
 
             <ImageView
                 android:layout_width="150dp"
@@ -624,14 +667,14 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@drawable/nice_rus_bq" />
+                android:background="@drawable/zhukov" />
 
             <TextView
                 android:id="@+id/textView6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Жуков министр обороны СССР в:"
+                android:text="Назовите крепость, которая связана с контратакой 13-й роты 226-ого Землянского полка 24 июля 1915 г."
                 android:textColor="@color/black"
                 android:textSize="28sp"
                 android:textStyle="bold"
@@ -658,32 +701,32 @@
                 app:layout_constraintVertical_bias="0.01" />
 
             <RadioButton
-                android:id="@+id/five_neprav_2"
-                android:layout_width="170dp"
+                android:id="@+id/five_neprav_3"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="1957-1569 гг."
-                android:textColor="@color/black"
-                android:textSize="23sp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.871"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.700"
-                tools:ignore="MissingConstraints" />
-
-            <RadioButton
-                android:id="@+id/five_neprav"
-                android:layout_width="170dp"
-                android:layout_height="wrap_content"
-                android:text="1945-1953 гг."
+                android:text="Бретская"
                 android:textColor="@color/black"
                 android:textSize="25sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.871"
+                app:layout_constraintHorizontal_bias="0.100"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.600"
+                tools:ignore="MissingConstraints" />
+
+            <RadioButton
+                android:id="@+id/five_neprav"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Кёнигсберг"
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.100"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.400"
@@ -691,18 +734,34 @@
 
             <RadioButton
                 android:id="@+id/five_prav"
-                android:layout_width="170dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="1955-1957 гг."
+                android:text="Осовец"
                 android:textColor="@color/black"
                 android:textSize="25sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.871"
+                app:layout_constraintHorizontal_bias="0.100"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.550"
+                app:layout_constraintVertical_bias="0.500"
+                tools:ignore="MissingConstraints" />
+
+            <RadioButton
+                android:id="@+id/five_neprav_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ивангородская"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.100"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.710"
                 tools:ignore="MissingConstraints" />
 
             <Button
@@ -713,24 +772,23 @@
                 android:visibility="invisible"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.793"
+                app:layout_constraintHorizontal_bias="0.883"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/five_neprav_2"
-                app:layout_constraintVertical_bias="0.281" />
+                app:layout_constraintVertical_bias="0.303" />
 
             <TextView
                 android:id="@+id/fifthTextResult"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center"
                 android:textSize="30sp"
                 android:textStyle="bold"
+                android:gravity="center"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.650"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@id/textView6"
-                app:layout_constraintVertical_bias="0.155"
+                app:layout_constraintVertical_bias="0.225"
                 tools:ignore="MissingConstraints" />
 
             <ImageView
@@ -741,10 +799,10 @@
                 android:visibility="invisible"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.793"
+                app:layout_constraintHorizontal_bias="0.883"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/five_neprav_2"
-                app:layout_constraintVertical_bias="0.281" />
+                app:layout_constraintVertical_bias="0.303" />
 
             <ImageView
                 android:layout_width="150dp"
@@ -765,14 +823,14 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@drawable/nice_rus_bq" />
+                android:background="@drawable/zhukov" />
 
             <TextView
                 android:id="@+id/textView7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Мемуары Жукова назывались:"
+                android:text="Назовите крепость, которая связана с контратакой 13-й роты 226-ого Землянского полка 24 июля 1915 г."
                 android:textColor="@color/black"
                 android:textSize="28sp"
                 android:textStyle="bold"
@@ -799,51 +857,67 @@
                 app:layout_constraintVertical_bias="0.01" />
 
             <RadioButton
-                android:id="@+id/six_neprav_2"
-                android:layout_width="190dp"
+                android:id="@+id/six_neprav_3"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="„Так началась война”"
+                android:text="Бретская"
                 android:textColor="@color/black"
                 android:textSize="25sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.850"
+                app:layout_constraintHorizontal_bias="0.100"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.750"
+                app:layout_constraintVertical_bias="0.600"
                 tools:ignore="MissingConstraints" />
 
             <RadioButton
                 android:id="@+id/six_neprav"
-                android:layout_width="190dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="„Воспоминания без цензуры”"
+                android:text="Кёнигсберг"
                 android:textColor="@color/black"
                 android:textSize="25sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.850"
+                app:layout_constraintHorizontal_bias="0.100"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.350"
+                app:layout_constraintVertical_bias="0.400"
                 tools:ignore="MissingConstraints" />
 
             <RadioButton
                 android:id="@+id/six_prav"
-                android:layout_width="190dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="„Воспоминания и размышления”"
+                android:text="Осовец"
                 android:textColor="@color/black"
                 android:textSize="25sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.850"
+                app:layout_constraintHorizontal_bias="0.100"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.550"
+                app:layout_constraintVertical_bias="0.500"
+                tools:ignore="MissingConstraints" />
+
+            <RadioButton
+                android:id="@+id/six_neprav_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ивангородская"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.100"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.710"
                 tools:ignore="MissingConstraints" />
 
             <Button
@@ -854,38 +928,37 @@
                 android:visibility="invisible"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.793"
+                app:layout_constraintHorizontal_bias="0.883"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/six_neprav_2"
-                app:layout_constraintVertical_bias="0.281" />
+                app:layout_constraintVertical_bias="0.303" />
 
             <TextView
                 android:id="@+id/sixthTextResult"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center"
                 android:textSize="30sp"
                 android:textStyle="bold"
+                android:gravity="center"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.750"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@id/textView7"
-                app:layout_constraintVertical_bias="0.160"
+                app:layout_constraintVertical_bias="0.225"
                 tools:ignore="MissingConstraints" />
 
             <ImageView
                 android:id="@+id/sixthNext"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
-                android:background="@drawable/xakaton_home"
+                android:background="@drawable/home_blue"
                 android:visibility="invisible"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.793"
+                app:layout_constraintHorizontal_bias="0.883"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/six_neprav_2"
-                app:layout_constraintVertical_bias="0.281" />
+                app:layout_constraintVertical_bias="0.303" />
 
             <ImageView
                 android:layout_width="150dp"
@@ -899,4 +972,4 @@
 
     </ViewFlipper>
 
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
