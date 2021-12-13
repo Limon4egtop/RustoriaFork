@@ -304,7 +304,7 @@ public class SecondSredQuizActivity extends AppCompatActivity {
                     thirdNext.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
-                            Schet.firstQuiz = 0;
+                            Schet.thirdQuiz = 0;
                             SwipeRight();
                         }
                     });
