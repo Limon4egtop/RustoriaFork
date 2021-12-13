@@ -21,7 +21,7 @@
                 android:id="@+id/textView"
                 android:layout_width="350dp"
                 android:layout_height="550dp"
-                android:background="@drawable/rem_pravila"
+                android:background="@drawable/easy_quiz_rules"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.491"
@@ -190,7 +190,7 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@drawable/second_tasks" />
+                android:background="@drawable/second_second_choose_tasks" />
 
             <TextView
                 android:id="@id/textView3"
@@ -322,7 +322,7 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@drawable/second_tasks" />
+                android:background="@drawable/second_third_choose_tasks" />
 
             <TextView
                 android:id="@+id/textView4"
@@ -586,7 +586,7 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@drawable/second_tasks" />
+                android:background="@drawable/second_second_choose_tasks" />
 
             <TextView
                 android:id="@+id/textView6"
@@ -718,7 +718,7 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@drawable/second_tasks" />
+                android:background="@drawable/second_third_choose_tasks" />
 
             <TextView
                 android:id="@+id/textView7"

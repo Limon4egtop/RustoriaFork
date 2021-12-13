@@ -22,7 +22,7 @@
                 android:id="@+id/textView"
                 android:layout_width="350dp"
                 android:layout_height="550dp"
-                android:background="@drawable/xakaton_sred_pravilo"
+                android:background="@drawable/medium_quiz_rules"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.491"
@@ -121,7 +121,7 @@
                 app:layout_constraintHorizontal_bias="0.100"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.654"
+                app:layout_constraintVertical_bias="0.866"
                 tools:ignore="MissingConstraints" />
 
             <RadioButton
@@ -153,7 +153,7 @@
                 app:layout_constraintHorizontal_bias="0.100"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.866"
+                app:layout_constraintVertical_bias="0.652"
                 tools:ignore="MissingConstraints" />
 
             <Button
@@ -166,7 +166,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.500"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/first_prav"
+                app:layout_constraintTop_toBottomOf="@+id/first_neprav"
                 app:layout_constraintVertical_bias="0.325" />
 
             <TextView
@@ -180,7 +180,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@id/textView1"
-                app:layout_constraintVertical_bias="0.175"
+                app:layout_constraintVertical_bias="0.150"
                 tools:ignore="MissingConstraints" />
 
             <ImageView
@@ -193,7 +193,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.830"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/first_prav"
+                app:layout_constraintTop_toBottomOf="@+id/first_neprav"
                 app:layout_constraintVertical_bias="0.650" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -207,7 +207,7 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@drawable/first_task" />
+                android:background="@drawable/second_choose_tasks" />
 
             <TextView
                 android:id="@+id/textView3"
@@ -355,7 +355,7 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@drawable/first_task" />
+                android:background="@drawable/third_choose_tasks" />
 
             <TextView
                 android:id="@+id/textView4"
@@ -433,7 +433,7 @@
                 app:layout_constraintHorizontal_bias="0.280"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.547"
+                app:layout_constraintVertical_bias="0.863"
                 tools:ignore="MissingConstraints" />
 
             <RadioButton
@@ -449,7 +449,7 @@
                 app:layout_constraintHorizontal_bias="0.280"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.863"
+                app:layout_constraintVertical_bias="0.547"
                 tools:ignore="MissingConstraints" />
 
             <Button
@@ -462,7 +462,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.500"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/third_prav"
+                app:layout_constraintTop_toBottomOf="@+id/third_neprav"
                 app:layout_constraintVertical_bias="0.300" />
 
             <TextView
@@ -489,7 +489,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.826"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/third_prav"
+                app:layout_constraintTop_toBottomOf="@+id/third_neprav"
                 app:layout_constraintVertical_bias="0.600" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -651,7 +651,7 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@drawable/first_task" />
+                android:background="@drawable/second_choose_tasks" />
 
             <TextView
                 android:id="@+id/textView6"
@@ -729,7 +729,7 @@
                 app:layout_constraintHorizontal_bias="0.100"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.656"
+                app:layout_constraintVertical_bias="0.878"
                 tools:ignore="MissingConstraints" />
 
             <RadioButton
@@ -745,7 +745,7 @@
                 app:layout_constraintHorizontal_bias="0.100"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.862"
+                app:layout_constraintVertical_bias="0.650"
                 tools:ignore="MissingConstraints" />
 
             <Button
@@ -758,7 +758,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.500"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/five_neprav_2"
+                app:layout_constraintTop_toBottomOf="@+id/five_prav"
                 app:layout_constraintVertical_bias="0.303" />
 
             <TextView
@@ -785,7 +785,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.883"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/five_neprav_2"
+                app:layout_constraintTop_toBottomOf="@+id/five_prav"
                 app:layout_constraintVertical_bias="0.650" />
 
 
@@ -800,7 +800,7 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@drawable/first_task" />
+                android:background="@drawable/third_choose_tasks" />
 
             <TextView
                 android:id="@+id/textView7"
