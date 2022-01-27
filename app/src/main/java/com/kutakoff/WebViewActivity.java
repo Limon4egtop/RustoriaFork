@@ -23,7 +23,7 @@ public class WebViewActivity extends AppCompatActivity {
                 case "Иван III":
                     url = "file:///android_asset/Ivan3.html";
                     break;
-                case "Александр III Миротворец":
+                case "Александр III":
                     url = "file:///android_asset/Alexander3.html";
                     break;
                 case "Иван Фёдоров":
@@ -41,7 +41,7 @@ public class WebViewActivity extends AppCompatActivity {
                 case "Сергий Радонежский":
                     url = "file:///android_asset/Sergiy_Radonezskiy.html";
                     break;
-                case "Лжедмитрий II Тушинский вор":
+                case "Лжедмитрий II":
                     url = "file:///android_asset/Lzhedmitriy2.html";
                     break;
                 case "Никита Хрущев":
@@ -65,7 +65,7 @@ public class WebViewActivity extends AppCompatActivity {
                 case "Даниил Московский":
                     url = "file:///android_asset/Daniil_Moscowskiy.html";
                     break;
-                case "Алексaндр I":
+                case "Александр I":
                     url = "file:///android_asset/Alexander1.html";
                     break;
                 case "Отмена крепостного права":
@@ -142,6 +142,27 @@ public class WebViewActivity extends AppCompatActivity {
                     break;
                 case "Святополк Окаянный":
                     url = "file:///android_asset/Svyatopolk_Okayanniy.html";
+                    break;
+                case "Пётр I":
+                    url = "file:///android_asset/Petr_first.html";
+                    break;
+                case "Михаил Федорович":
+                    url = "file:///android_asset/Michail_Fedorovich.html";
+                    break;
+                case "Алексей Михайлович":
+                    url = "file:///android_asset/Alexey_Michailovich.html";
+                    break;
+                case "Борис Годунов":
+                    url = "file:///android_asset/Boris_Godunov.html";
+                    break;
+                case "Лжедмитрий I":
+                    url = "file:///android_asset/Lzhedmitriy1.html";
+                    break;
+                case "Василий IV":
+                    url = "file:///android_asset/Vasiliy4.html";
+                    break;
+                case "Федор III":
+                    url = "file:///android_asset/Fedor3.html";
                     break;
             }
             WebView myWebView = (WebView) findViewById(R.id.webview);

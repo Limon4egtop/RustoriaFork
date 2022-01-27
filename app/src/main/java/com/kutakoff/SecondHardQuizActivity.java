@@ -116,7 +116,7 @@ public class SecondHardQuizActivity extends AppCompatActivity {
                 if (first_prav.isChecked()) {
                     Schet.plussa();
                     check.setVisibility(View.INVISIBLE);
-                    firstNext.setVisibility(View.VISIBLE);
+                    firstNext.setVisibility(View.VISIBLE); 
                     firstTextResult.setTextColor(Color.GREEN);
                     firstTextResult.setText("Правильно!");
                     firstNext.setOnClickListener(new View.OnClickListener() {

@@ -623,7 +623,7 @@
                 android:id="@+id/five_neprav_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="1957-1569 гг."
+                android:text="1957-1969 гг."
                 android:textColor="@color/black"
                 android:textSize="35sp"
                 android:textStyle="bold"
