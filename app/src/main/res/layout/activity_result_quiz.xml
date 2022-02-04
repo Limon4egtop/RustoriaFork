@@ -29,17 +29,4 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/info"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:background="@drawable/info"
-        app:layout_constraintBottom_toBottomOf="@+id/textresult"
-        app:layout_constraintEnd_toEndOf="@+id/textresult"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/textresult"
-        app:layout_constraintTop_toTopOf="@+id/textresult"
-        app:layout_constraintVertical_bias="1.0"
-        tools:ignore="MissingConstraints" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>

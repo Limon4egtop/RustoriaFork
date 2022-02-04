@@ -20,30 +20,30 @@ public class ResultHardQuizActivity extends AppCompatActivity {
         TextView textresult = findViewById(R.id.textresult);
         ImageView goHome = findViewById(R.id.goHome);
         ImageView info = findViewById(R.id.info);
-        if (Schet.getA() == 0) {
+        if (Count.getA() == 0) {
             textresult.setText("Ваш результат: 0/10. В следующий раз повезёт!");
-        }else if (Schet.getA() == 1) {
+        }else if (Count.getA() == 1) {
             textresult.setText("Ваш результат: 1/10. В следующий раз повезёт!");
-        }else if (Schet.getA() == 2) {
+        }else if (Count.getA() == 2) {
             textresult.setText("Ваш результат: 2/10. В следующий раз повезёт!");
-        }else if (Schet.getA() == 3) {
+        }else if (Count.getA() == 3) {
             textresult.setText("Ваш результат: 3/10. В следующий раз повезёт!");
-        }else if (Schet.getA() == 4) {
+        }else if (Count.getA() == 4) {
             textresult.setText("Ваш результат: 4/10. Неплохо!");
-        }else if (Schet.getA() == 5) {
+        }else if (Count.getA() == 5) {
             textresult.setText("Ваш результат: 5/10. Неплохо!");
-        }else if (Schet.getA() == 6) {
+        }else if (Count.getA() == 6) {
             textresult.setText("Ваш результат: 6/10. Неплохо!");
-        }else if (Schet.getA() == 7) {
+        }else if (Count.getA() == 7) {
             textresult.setText("Ваш результат: 7/10. Хорошо!");
-        }else if (Schet.getA() == 8) {
+        }else if (Count.getA() == 8) {
             textresult.setText("Ваш результат: 8/10. Хорошо!");
-        }else if (Schet.getA() == 9) {
+        }else if (Count.getA() == 9) {
             textresult.setText("Ваш результат: 9/10. Отлично, молодец!");
-        }else if (Schet.getA() == 10) {
+        }else if (Count.getA() == 10) {
             textresult.setText("Ваш результат: 10/10. Отлично, молодец!");
         }
-        Schet.a = 0;
+        Count.a = 0;
         info.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -54,16 +54,16 @@ public class ResultHardQuizActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(ResultHardQuizActivity.this, ChooseActivity.class));
-                Schet.first = 0;
-                Schet.second = 0;
-                Schet.third = 0;
-                Schet.fourth = 0;
-                Schet.fifth = 0;
-                Schet.sixth = 0;
-                Schet.seventh = 0;
-                Schet.eight = 0;
-                Schet.ninth = 0;
-                Schet.tenth = 0;
+                Count.first = 0;
+                Count.second = 0;
+                Count.third = 0;
+                Count.fourth = 0;
+                Count.fifth = 0;
+                Count.sixth = 0;
+                Count.seventh = 0;
+                Count.eight = 0;
+                Count.ninth = 0;
+                Count.tenth = 0;
             }
         });
     }
@@ -79,52 +79,52 @@ public class ResultHardQuizActivity extends AppCompatActivity {
         String eight = "";
         String ninth = "";
         String tenth = "";
-        if (Schet.first == 1) {
+        if (Count.first == 1) {
             first = "№1. Не правильно!";
         } else {
             first = "№1. Правильно!";
         }
-        if (Schet.second == 1) {
+        if (Count.second == 1) {
             second = "№2. Не правильно!";
         } else {
             second = "№2. Правильно!";
         }
-        if (Schet.third == 1) {
+        if (Count.third == 1) {
             third = "№3. Не правильно!";
         } else {
             third = "№3. Правильно!";
         }
-        if (Schet.fourth == 1) {
+        if (Count.fourth == 1) {
             fourth = "№4. Не правильно!";
         } else {
             fourth = "№4. Правильно!";
         }
-        if (Schet.fifth == 1) {
+        if (Count.fifth == 1) {
             fifth = "№5. Не правильно!";
         } else {
             fifth = "№5. Правильно!";
         }
-        if (Schet.sixth == 1) {
+        if (Count.sixth == 1) {
             sixth = "№6. Не правильно!";
         } else {
             sixth = "№6. Правильно!";
         }
-        if (Schet.seventh == 1) {
+        if (Count.seventh == 1) {
             seventh = "№7. Не правильно!";
         } else {
             seventh = "№7. Правильно!";
         }
-        if (Schet.eight == 1) {
+        if (Count.eight == 1) {
             eight = "№8. Не правильно!";
         } else {
             eight = "№8. Правильно!";
         }
-        if (Schet.ninth == 1) {
+        if (Count.ninth == 1) {
             ninth = "№9. Не правильно!";
         } else {
             ninth = "№9. Правильно!";
         }
-        if (Schet.tenth == 1) {
+        if (Count.tenth == 1) {
             tenth = "№10. Не правильно!";
         } else {
             tenth = "№10. Правильно!";

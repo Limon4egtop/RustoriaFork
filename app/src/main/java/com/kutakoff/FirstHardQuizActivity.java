@@ -53,7 +53,7 @@ public class FirstHardQuizActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (first_prav.isChecked()) {
-                    if (Schet.firstQuiz == 0) {
+                    if (Count.firstQuiz == 0) {
                         check.setVisibility(View.VISIBLE);
                     }
                     first_neprav.setChecked(false);
@@ -68,7 +68,7 @@ public class FirstHardQuizActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (first_neprav.isChecked()) {
-                    if (Schet.firstQuiz == 0) {
+                    if (Count.firstQuiz == 0) {
                         check.setVisibility(View.VISIBLE);
                     }
                     first_prav.setChecked(false);
@@ -83,7 +83,7 @@ public class FirstHardQuizActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (first_neprav_2.isChecked()) {
-                    if (Schet.firstQuiz == 0) {
+                    if (Count.firstQuiz == 0) {
                         check.setVisibility(View.VISIBLE);
                     }
                     first_neprav_3.setChecked(false);
@@ -98,7 +98,7 @@ public class FirstHardQuizActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (first_neprav_3.isChecked()) {
-                    if (Schet.firstQuiz == 0) {
+                    if (Count.firstQuiz == 0) {
                         check.setVisibility(View.VISIBLE);
                     }
                     first_neprav_2.setChecked(false);
@@ -113,21 +113,21 @@ public class FirstHardQuizActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (first_prav.isChecked()) {
-                    Schet.plussa();
+                    Count.plussa();
                     firstTextResult.setTextColor(Color.GREEN);
                     firstTextResult.setText("Правильно!");
                 } else {
-                    Schet.setFirst();
+                    Count.setFirst();
                     firstTextResult.setTextColor(Color.RED);
                     firstTextResult.setText("Не правильно!");
                 }
-                Schet.setFirstQuiz();
+                Count.setFirstQuiz();
                 check.setVisibility(View.INVISIBLE);
                 firstNext.setVisibility(View.VISIBLE);
                 firstNext.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Schet.firstQuiz = 0;
+                        Count.firstQuiz = 0;
                         SwipeRight();
                     }
                 });
@@ -144,7 +144,7 @@ public class FirstHardQuizActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (second_prav.isChecked()) {
-                    if (Schet.secondQuiz == 0) {
+                    if (Count.secondQuiz == 0) {
                         check_2.setVisibility(View.VISIBLE);
                     }
                     second_neprav.setChecked(false);
@@ -159,7 +159,7 @@ public class FirstHardQuizActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (second_neprav.isChecked()) {
-                    if (Schet.secondQuiz == 0) {
+                    if (Count.secondQuiz == 0) {
                         check_2.setVisibility(View.VISIBLE);
                     }
                     second_prav.setChecked(false);
@@ -174,7 +174,7 @@ public class FirstHardQuizActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (second_neprav_2.isChecked()) {
-                    if (Schet.secondQuiz == 0) {
+                    if (Count.secondQuiz == 0) {
                         check_2.setVisibility(View.VISIBLE);
                     }
                     second_neprav.setChecked(false);
@@ -189,7 +189,7 @@ public class FirstHardQuizActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (second_neprav_3.isChecked()) {
-                    if (Schet.secondQuiz == 0) {
+                    if (Count.secondQuiz == 0) {
                         check_2.setVisibility(View.VISIBLE);
                     }
                     second_neprav.setChecked(false);
@@ -204,21 +204,21 @@ public class FirstHardQuizActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (second_prav.isChecked()) {
-                    Schet.plussa();
+                    Count.plussa();
                     secondTextResult.setTextColor(Color.GREEN);
                     secondTextResult.setText("Правильно!");
                 } else {
-                    Schet.setSecond();
+                    Count.setSecond();
                     secondTextResult.setTextColor(Color.RED);
                     secondTextResult.setText("Не правильно!");
                 }
-                Schet.setSecondQuiz();
+                Count.setSecondQuiz();
                 check_2.setVisibility(View.INVISIBLE);
                 secondNext.setVisibility(View.VISIBLE);
                 secondNext.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Schet.secondQuiz = 0;
+                        Count.secondQuiz = 0;
                         SwipeRight();
                     }
                 });
@@ -235,7 +235,7 @@ public class FirstHardQuizActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (third_prav.isChecked()) {
-                    if (Schet.thirdQuiz == 0) {
+                    if (Count.thirdQuiz == 0) {
                         check_3.setVisibility(View.VISIBLE);
                     }
                     third_neprav.setChecked(false);
@@ -250,7 +250,7 @@ public class FirstHardQuizActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (third_neprav.isChecked()) {
-                    if (Schet.thirdQuiz == 0) {
+                    if (Count.thirdQuiz == 0) {
                         check_3.setVisibility(View.VISIBLE);
                     }
                     third_prav.setChecked(false);
@@ -265,7 +265,7 @@ public class FirstHardQuizActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (third_neprav_2.isChecked()) {
-                    if (Schet.thirdQuiz == 0) {
+                    if (Count.thirdQuiz == 0) {
                         check_3.setVisibility(View.VISIBLE);
                     }
                     third_neprav.setChecked(false);
@@ -280,7 +280,7 @@ public class FirstHardQuizActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (third_neprav_3.isChecked()) {
-                    if (Schet.thirdQuiz == 0) {
+                    if (Count.thirdQuiz == 0) {
                         check_3.setVisibility(View.VISIBLE);
                     }
                     third_neprav.setChecked(false);
@@ -295,21 +295,21 @@ public class FirstHardQuizActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (third_prav.isChecked()) {
-                    Schet.plussa();
+                    Count.plussa();
                     thirdTextResult.setTextColor(Color.GREEN);
                     thirdTextResult.setText("Правильно!");
                 } else {
-                    Schet.setThird();
+                    Count.setThird();
                     thirdTextResult.setTextColor(Color.RED);
                     thirdTextResult.setText("Не правильно!");
                 }
-                Schet.setThirdQuiz();
+                Count.setThirdQuiz();
                 check_3.setVisibility(View.INVISIBLE);
                 thirdNext.setVisibility(View.VISIBLE);
                 thirdNext.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Schet.thirdQuiz = 0;
+                        Count.thirdQuiz = 0;
                         SwipeRight();
                     }
                 });
@@ -326,7 +326,7 @@ public class FirstHardQuizActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (fourth_prav.isChecked()) {
-                    if (Schet.fourthQuiz == 0) {
+                    if (Count.fourthQuiz == 0) {
                         check_4.setVisibility(View.VISIBLE);
                     }
                     fourth_neprav.setChecked(false);
@@ -341,7 +341,7 @@ public class FirstHardQuizActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (fourth_neprav.isChecked()) {
-                    if (Schet.fourthQuiz == 0) {
+                    if (Count.fourthQuiz == 0) {
                         check_4.setVisibility(View.VISIBLE);
                     }
                     fourth_prav.setChecked(false);
@@ -356,7 +356,7 @@ public class FirstHardQuizActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (fourth_neprav_2.isChecked()) {
-                    if (Schet.fourthQuiz == 0) {
+                    if (Count.fourthQuiz == 0) {
                         check_4.setVisibility(View.VISIBLE);
                     }
                     fourth_neprav.setChecked(false);
@@ -371,7 +371,7 @@ public class FirstHardQuizActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (fourth_neprav_3.isChecked()) {
-                    if (Schet.fourthQuiz == 0) {
+                    if (Count.fourthQuiz == 0) {
                         check_4.setVisibility(View.VISIBLE);
                     }
                     fourth_neprav.setChecked(false);
@@ -386,21 +386,21 @@ public class FirstHardQuizActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (fourth_prav.isChecked()) {
-                    Schet.plussa();
+                    Count.plussa();
                     fourthTextResult.setTextColor(Color.GREEN);
                     fourthTextResult.setText("Правильно!");
                 } else {
-                    Schet.setFourth();
+                    Count.setFourth();
                     fourthTextResult.setTextColor(Color.RED);
                     fourthTextResult.setText("Не правильно!");
                 }
-                Schet.setFourthQuiz();
+                Count.setFourthQuiz();
                 check_4.setVisibility(View.INVISIBLE);
                 fourthNext.setVisibility(View.VISIBLE);
                 fourthNext.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Schet.fourthQuiz = 0;
+                        Count.fourthQuiz = 0;
                         SwipeRight();
                     }
                 });
@@ -417,7 +417,7 @@ public class FirstHardQuizActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (five_prav.isChecked()) {
-                    if (Schet.fifthQuiz == 0) {
+                    if (Count.fifthQuiz == 0) {
                         check_5.setVisibility(View.VISIBLE);
                     }
                     five_neprav.setChecked(false);
@@ -432,7 +432,7 @@ public class FirstHardQuizActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (five_neprav.isChecked()) {
-                    if (Schet.fifthQuiz == 0) {
+                    if (Count.fifthQuiz == 0) {
                         check_5.setVisibility(View.VISIBLE);
                     }
                     five_prav.setChecked(false);
@@ -447,7 +447,7 @@ public class FirstHardQuizActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (five_neprav_2.isChecked()) {
-                    if (Schet.fifthQuiz == 0) {
+                    if (Count.fifthQuiz == 0) {
                         check_5.setVisibility(View.VISIBLE);
                     }
                     five_neprav.setChecked(false);
@@ -462,7 +462,7 @@ public class FirstHardQuizActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (five_neprav_3.isChecked()) {
-                    if (Schet.fifthQuiz == 0) {
+                    if (Count.fifthQuiz == 0) {
                         check_5.setVisibility(View.VISIBLE);
                     }
                     five_neprav.setChecked(false);
@@ -477,21 +477,21 @@ public class FirstHardQuizActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (five_prav.isChecked()) {
-                    Schet.plussa();
+                    Count.plussa();
                     fifthTextResult.setTextColor(Color.GREEN);
                     fifthTextResult.setText("Правильно!");
                 } else {
-                    Schet.setFifth();
+                    Count.setFifth();
                     fifthTextResult.setTextColor(Color.RED);
                     fifthTextResult.setText("Не правильно!");
                 }
-                Schet.setFifthQuiz();
+                Count.setFifthQuiz();
                 check_5.setVisibility(View.INVISIBLE);
                 fifthNext.setVisibility(View.VISIBLE);
                 fifthNext.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Schet.fifthQuiz = 0;
+                        Count.fifthQuiz = 0;
                         SwipeRight();
                     }
                 });
@@ -508,7 +508,7 @@ public class FirstHardQuizActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (six_prav.isChecked()) {
-                    if (Schet.sixthQuiz == 0) {
+                    if (Count.sixthQuiz == 0) {
                         check_6.setVisibility(View.VISIBLE);
                     }
                     six_neprav.setChecked(false);
@@ -523,7 +523,7 @@ public class FirstHardQuizActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (six_neprav.isChecked()) {
-                    if (Schet.sixthQuiz == 0) {
+                    if (Count.sixthQuiz == 0) {
                         check_6.setVisibility(View.VISIBLE);
                     }
                     six_prav.setChecked(false);
@@ -538,7 +538,7 @@ public class FirstHardQuizActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (six_neprav_2.isChecked()) {
-                    if (Schet.sixthQuiz == 0) {
+                    if (Count.sixthQuiz == 0) {
                         check_6.setVisibility(View.VISIBLE);
                     }
                     six_neprav.setChecked(false);
@@ -553,7 +553,7 @@ public class FirstHardQuizActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (six_neprav_3.isChecked()) {
-                    if (Schet.sixthQuiz == 0) {
+                    if (Count.sixthQuiz == 0) {
                         check_6.setVisibility(View.VISIBLE);
                     }
                     six_neprav.setChecked(false);
@@ -568,21 +568,21 @@ public class FirstHardQuizActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (six_prav.isChecked()) {
-                    Schet.plussa();
+                    Count.plussa();
                     sixthTextResult.setTextColor(Color.GREEN);
                     sixthTextResult.setText("Правильно!");
                 } else {
-                    Schet.setSixth();
+                    Count.setSixth();
                     sixthTextResult.setTextColor(Color.RED);
                     sixthTextResult.setText("Не правильно!");
                 }
-                Schet.setSixthQuiz();
+                Count.setSixthQuiz();
                 check_6.setVisibility(View.INVISIBLE);
                 sixthNext.setVisibility(View.VISIBLE);
                 sixthNext.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Schet.sixthQuiz = 0;
+                        Count.sixthQuiz = 0;
                         SwipeRight();
                     }
                 });
@@ -599,7 +599,7 @@ public class FirstHardQuizActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (seven_prav.isChecked()) {
-                    if (Schet.seventhQuiz == 0) {
+                    if (Count.seventhQuiz == 0) {
                         check_7.setVisibility(View.VISIBLE);
                     }
                     seven_neprav.setChecked(false);
@@ -614,7 +614,7 @@ public class FirstHardQuizActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (seven_neprav.isChecked()) {
-                    if (Schet.seventhQuiz == 0) {
+                    if (Count.seventhQuiz == 0) {
                         check_7.setVisibility(View.VISIBLE);
                     }
                     seven_prav.setChecked(false);
@@ -629,7 +629,7 @@ public class FirstHardQuizActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (seven_neprav_2.isChecked()) {
-                    if (Schet.seventhQuiz == 0) {
+                    if (Count.seventhQuiz == 0) {
                         check_7.setVisibility(View.VISIBLE);
                     }
                     seven_neprav.setChecked(false);
@@ -644,7 +644,7 @@ public class FirstHardQuizActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (seven_neprav_3.isChecked()) {
-                    if (Schet.seventhQuiz == 0) {
+                    if (Count.seventhQuiz == 0) {
                         check_7.setVisibility(View.VISIBLE);
                     }
                     seven_neprav.setChecked(false);
@@ -659,21 +659,21 @@ public class FirstHardQuizActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (seven_prav.isChecked()) {
-                    Schet.plussa();
+                    Count.plussa();
                     seventhTextResult.setTextColor(Color.GREEN);
                     seventhTextResult.setText("Правильно!");
                 } else {
-                    Schet.setSeventh();
+                    Count.setSeventh();
                     seventhTextResult.setTextColor(Color.RED);
                     seventhTextResult.setText("Не правильно!");
                 }
-                Schet.setSeventhQuiz();
+                Count.setSeventhQuiz();
                 check_7.setVisibility(View.INVISIBLE);
                 seventhNext.setVisibility(View.VISIBLE);
                 seventhNext.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Schet.seventhQuiz = 0;
+                        Count.seventhQuiz = 0;
                         SwipeRight();
                     }
                 });
@@ -690,7 +690,7 @@ public class FirstHardQuizActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (eight_prav.isChecked()) {
-                    if (Schet.eightQuiz == 0) {
+                    if (Count.eightQuiz == 0) {
                         check_8.setVisibility(View.VISIBLE);
                     }
                     eight_neprav.setChecked(false);
@@ -705,7 +705,7 @@ public class FirstHardQuizActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (eight_neprav.isChecked()) {
-                    if (Schet.eightQuiz == 0) {
+                    if (Count.eightQuiz == 0) {
                         check_8.setVisibility(View.VISIBLE);
                     }
                     eight_prav.setChecked(false);
@@ -720,7 +720,7 @@ public class FirstHardQuizActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (eight_neprav_2.isChecked()) {
-                    if (Schet.eightQuiz == 0) {
+                    if (Count.eightQuiz == 0) {
                         check_8.setVisibility(View.VISIBLE);
                     }
                     eight_neprav.setChecked(false);
@@ -735,7 +735,7 @@ public class FirstHardQuizActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (eight_neprav_3.isChecked()) {
-                    if (Schet.eightQuiz == 0) {
+                    if (Count.eightQuiz == 0) {
                         check_8.setVisibility(View.VISIBLE);
                     }
                     eight_neprav.setChecked(false);
@@ -750,21 +750,21 @@ public class FirstHardQuizActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (eight_prav.isChecked()) {
-                    Schet.plussa();
+                    Count.plussa();
                     eightTextResult.setTextColor(Color.GREEN);
                     eightTextResult.setText("Правильно!");
                 } else {
-                    Schet.setEight();
+                    Count.setEight();
                     eightTextResult.setTextColor(Color.RED);
                     eightTextResult.setText("Не правильно!");
                 }
-                Schet.setEightQuiz();
+                Count.setEightQuiz();
                 check_8.setVisibility(View.INVISIBLE);
                 eightNext.setVisibility(View.VISIBLE);
                 eightNext.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Schet.eightQuiz = 0;
+                        Count.eightQuiz = 0;
                         SwipeRight();
                     }
                 });
@@ -781,7 +781,7 @@ public class FirstHardQuizActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (nine_prav.isChecked()) {
-                    if (Schet.ninthQuiz == 0) {
+                    if (Count.ninthQuiz == 0) {
                         check_9.setVisibility(View.VISIBLE);
                     }
                     nine_neprav.setChecked(false);
@@ -796,7 +796,7 @@ public class FirstHardQuizActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (nine_neprav.isChecked()) {
-                    if (Schet.ninthQuiz == 0) {
+                    if (Count.ninthQuiz == 0) {
                         check_9.setVisibility(View.VISIBLE);
                     }
                     nine_prav.setChecked(false);
@@ -811,7 +811,7 @@ public class FirstHardQuizActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (nine_neprav_2.isChecked()) {
-                    if (Schet.ninthQuiz == 0) {
+                    if (Count.ninthQuiz == 0) {
                         check_9.setVisibility(View.VISIBLE);
                     }
                     nine_neprav.setChecked(false);
@@ -826,7 +826,7 @@ public class FirstHardQuizActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (nine_neprav_3.isChecked()) {
-                    if (Schet.ninthQuiz == 0) {
+                    if (Count.ninthQuiz == 0) {
                         check_9.setVisibility(View.VISIBLE);
                     }
                     nine_neprav.setChecked(false);
@@ -841,21 +841,21 @@ public class FirstHardQuizActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (nine_prav.isChecked()) {
-                    Schet.plussa();
+                    Count.plussa();
                     ninthTextResult.setTextColor(Color.GREEN);
                     ninthTextResult.setText("Правильно!");
                 } else {
-                    Schet.setNinth();
+                    Count.setNinth();
                     ninthTextResult.setTextColor(Color.RED);
                     ninthTextResult.setText("Не правильно!");
                 }
-                Schet.setNinthQuiz();
+                Count.setNinthQuiz();
                 check_9.setVisibility(View.INVISIBLE);
                 ninthNext.setVisibility(View.VISIBLE);
                 ninthNext.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Schet.ninthQuiz = 0;
+                        Count.ninthQuiz = 0;
                         SwipeRight();
                     }
                 });
@@ -872,7 +872,7 @@ public class FirstHardQuizActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (ten_prav.isChecked()) {
-                    if (Schet.tenthQuiz == 0) {
+                    if (Count.tenthQuiz == 0) {
                         check_10.setVisibility(View.VISIBLE);
                     }
                     ten_neprav.setChecked(false);
@@ -887,7 +887,7 @@ public class FirstHardQuizActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (ten_neprav.isChecked()) {
-                    if (Schet.tenthQuiz == 0) {
+                    if (Count.tenthQuiz == 0) {
                         check_10.setVisibility(View.VISIBLE);
                     }
                     ten_prav.setChecked(false);
@@ -902,7 +902,7 @@ public class FirstHardQuizActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (ten_neprav_2.isChecked()) {
-                    if (Schet.tenthQuiz == 0) {
+                    if (Count.tenthQuiz == 0) {
                         check_10.setVisibility(View.VISIBLE);
                     }
                     ten_neprav.setChecked(false);
@@ -917,7 +917,7 @@ public class FirstHardQuizActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (ten_neprav_3.isChecked()) {
-                    if (Schet.tenthQuiz == 0) {
+                    if (Count.tenthQuiz == 0) {
                         check_10.setVisibility(View.VISIBLE);
                     }
                     ten_neprav.setChecked(false);
@@ -932,21 +932,21 @@ public class FirstHardQuizActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (ten_prav.isChecked()) {
-                    Schet.plussa();
+                    Count.plussa();
                     tenthTextResult.setTextColor(Color.GREEN);
                     tenthTextResult.setText("Правильно!");
                 } else {
-                    Schet.setTenth();
+                    Count.setTenth();
                     tenthTextResult.setTextColor(Color.RED);
                     tenthTextResult.setText("Не правильно!");
                 }
-                Schet.setTenthQuiz();
+                Count.setTenthQuiz();
                 check_10.setVisibility(View.INVISIBLE);
                 tenthNext.setVisibility(View.VISIBLE);
                 tenthNext.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Schet.tenthQuiz = 0;
+                        Count.tenthQuiz = 0;
                         startActivity(new Intent(FirstHardQuizActivity.this, ResultHardQuizActivity.class));
                     }
                 });

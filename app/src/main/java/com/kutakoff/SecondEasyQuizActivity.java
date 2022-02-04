@@ -54,7 +54,7 @@ public class SecondEasyQuizActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (first_prav.isChecked()) {
-                    if (Schet.firstQuiz == 0) {
+                    if (Count.firstQuiz == 0) {
                         check.setVisibility(View.VISIBLE);
                     }
                     first_neprav.setChecked(false);
@@ -68,7 +68,7 @@ public class SecondEasyQuizActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (first_neprav.isChecked()) {
-                    if (Schet.firstQuiz == 0) {
+                    if (Count.firstQuiz == 0) {
                         check.setVisibility(View.VISIBLE);
                     }
                     first_prav.setChecked(false);
@@ -82,7 +82,7 @@ public class SecondEasyQuizActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (first_neprav_2.isChecked()) {
-                    if (Schet.firstQuiz == 0) {
+                    if (Count.firstQuiz == 0) {
                         check.setVisibility(View.VISIBLE);
                     }
                     first_neprav.setChecked(false);
@@ -96,7 +96,7 @@ public class SecondEasyQuizActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (first_prav.isChecked()) {
-                    Schet.plussa();
+                    Count.plussa();
                     check.setVisibility(View.INVISIBLE);
                     firstNext.setVisibility(View.VISIBLE);
                     firstTextResult.setTextColor(Color.GREEN);
@@ -104,16 +104,16 @@ public class SecondEasyQuizActivity extends AppCompatActivity {
                     firstNext.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
-                            Schet.firstQuiz = 0;
+                            Count.firstQuiz = 0;
                             SwipeRight();
                         }
                     });
                 } else {
-                    Schet.setFirst();
+                    Count.setFirst();
                     firstTextResult.setTextColor(Color.RED);
                     firstTextResult.setText("Не правильно!");
                 }
-                Schet.setFirstQuiz();
+                Count.setFirstQuiz();
             }
         });
         RadioButton second_prav = findViewById(R.id.second_prav);
@@ -126,7 +126,7 @@ public class SecondEasyQuizActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (second_prav.isChecked()) {
-                    if (Schet.secondQuiz == 0) {
+                    if (Count.secondQuiz == 0) {
                         check_2.setVisibility(View.VISIBLE);
                     }
                     second_neprav.setChecked(false);
@@ -140,7 +140,7 @@ public class SecondEasyQuizActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (second_neprav.isChecked()) {
-                    if (Schet.secondQuiz == 0) {
+                    if (Count.secondQuiz == 0) {
                         check_2.setVisibility(View.VISIBLE);
                     }
                     second_prav.setChecked(false);
@@ -154,7 +154,7 @@ public class SecondEasyQuizActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (second_neprav_2.isChecked()) {
-                    if (Schet.secondQuiz == 0) {
+                    if (Count.secondQuiz == 0) {
                         check_2.setVisibility(View.VISIBLE);
                     }
                     second_neprav.setChecked(false);
@@ -168,7 +168,7 @@ public class SecondEasyQuizActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (second_prav.isChecked()) {
-                    Schet.plussa();
+                    Count.plussa();
                     check_2.setVisibility(View.INVISIBLE);
                     secondNext.setVisibility(View.VISIBLE);
                     secondTextResult.setTextColor(Color.GREEN);
@@ -176,16 +176,16 @@ public class SecondEasyQuizActivity extends AppCompatActivity {
                     secondNext.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
-                            Schet.secondQuiz = 0;
+                            Count.secondQuiz = 0;
                             SwipeRight();
                         }
                     });
                 } else {
-                    Schet.setSecond();
+                    Count.setSecond();
                     secondTextResult.setTextColor(Color.RED);
                     secondTextResult.setText("Не правильно!");
                 }
-                Schet.setSecondQuiz();
+                Count.setSecondQuiz();
             }
         });
         RadioButton third_prav = findViewById(R.id.third_prav);
@@ -198,7 +198,7 @@ public class SecondEasyQuizActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (third_prav.isChecked()) {
-                    if (Schet.thirdQuiz == 0) {
+                    if (Count.thirdQuiz == 0) {
                         check_3.setVisibility(View.VISIBLE);
                     }
                     third_neprav.setChecked(false);
@@ -212,7 +212,7 @@ public class SecondEasyQuizActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (third_neprav.isChecked()) {
-                    if (Schet.thirdQuiz == 0) {
+                    if (Count.thirdQuiz == 0) {
                         check_3.setVisibility(View.VISIBLE);
                     }
                     third_prav.setChecked(false);
@@ -226,7 +226,7 @@ public class SecondEasyQuizActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (third_neprav_2.isChecked()) {
-                    if (Schet.thirdQuiz == 0) {
+                    if (Count.thirdQuiz == 0) {
                         check_3.setVisibility(View.VISIBLE);
                     }
                     third_neprav.setChecked(false);
@@ -240,7 +240,7 @@ public class SecondEasyQuizActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (third_prav.isChecked()) {
-                    Schet.plussa();
+                    Count.plussa();
                     check_3.setVisibility(View.INVISIBLE);
                     thirdNext.setVisibility(View.VISIBLE);
                     thirdTextResult.setTextColor(Color.GREEN);
@@ -248,16 +248,16 @@ public class SecondEasyQuizActivity extends AppCompatActivity {
                     thirdNext.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
-                            Schet.thirdQuiz = 0;
+                            Count.thirdQuiz = 0;
                             SwipeRight();
                         }
                     });
                 } else {
-                    Schet.setThird();
+                    Count.setThird();
                     thirdTextResult.setTextColor(Color.RED);
                     thirdTextResult.setText("Не правильно!");
                 }
-                Schet.setThirdQuiz();
+                Count.setThirdQuiz();
             }
         });
         RadioButton fourth_prav = findViewById(R.id.fourth_prav);
@@ -270,7 +270,7 @@ public class SecondEasyQuizActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (fourth_prav.isChecked()) {
-                    if (Schet.fourthQuiz == 0) {
+                    if (Count.fourthQuiz == 0) {
                         check_4.setVisibility(View.VISIBLE);
                     }
                     fourth_neprav.setChecked(false);
@@ -284,7 +284,7 @@ public class SecondEasyQuizActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (fourth_neprav.isChecked()) {
-                    if (Schet.fourthQuiz == 0) {
+                    if (Count.fourthQuiz == 0) {
                         check_4.setVisibility(View.VISIBLE);
                     }
                     fourth_prav.setChecked(false);
@@ -298,7 +298,7 @@ public class SecondEasyQuizActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (fourth_neprav_2.isChecked()) {
-                    if (Schet.fourthQuiz == 0) {
+                    if (Count.fourthQuiz == 0) {
                         check_4.setVisibility(View.VISIBLE);
                     }
                     fourth_neprav.setChecked(false);
@@ -312,7 +312,7 @@ public class SecondEasyQuizActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (fourth_prav.isChecked()) {
-                    Schet.plussa();
+                    Count.plussa();
                     check_4.setVisibility(View.INVISIBLE);
                     fourthNext.setVisibility(View.VISIBLE);
                     fourthTextResult.setTextColor(Color.GREEN);
@@ -320,16 +320,16 @@ public class SecondEasyQuizActivity extends AppCompatActivity {
                     fourthNext.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
-                            Schet.fourthQuiz = 0;
+                            Count.fourthQuiz = 0;
                             SwipeRight();
                         }
                     });
                 } else {
-                    Schet.setFourth();
+                    Count.setFourth();
                     fourthTextResult.setTextColor(Color.RED);
                     fourthTextResult.setText("Не правильно!");
                 }
-                Schet.setFourthQuiz();
+                Count.setFourthQuiz();
             }
         });
         RadioButton five_prav = findViewById(R.id.five_prav);
@@ -342,7 +342,7 @@ public class SecondEasyQuizActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (five_prav.isChecked()) {
-                    if (Schet.fifthQuiz == 0) {
+                    if (Count.fifthQuiz == 0) {
                         check_5.setVisibility(View.VISIBLE);
                     }
                     five_neprav.setChecked(false);
@@ -356,7 +356,7 @@ public class SecondEasyQuizActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (five_neprav.isChecked()) {
-                    if (Schet.fifthQuiz == 0) {
+                    if (Count.fifthQuiz == 0) {
                         check_5.setVisibility(View.VISIBLE);
                     }
                     five_prav.setChecked(false);
@@ -370,7 +370,7 @@ public class SecondEasyQuizActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (five_neprav_2.isChecked()) {
-                    if (Schet.fifthQuiz == 0) {
+                    if (Count.fifthQuiz == 0) {
                         check_5.setVisibility(View.VISIBLE);
                     }
                     five_neprav.setChecked(false);
@@ -384,7 +384,7 @@ public class SecondEasyQuizActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (five_prav.isChecked()) {
-                    Schet.plussa();
+                    Count.plussa();
                     check_5.setVisibility(View.INVISIBLE);
                     fifthNext.setVisibility(View.VISIBLE);
                     fifthTextResult.setTextColor(Color.GREEN);
@@ -392,16 +392,16 @@ public class SecondEasyQuizActivity extends AppCompatActivity {
                     fifthNext.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
-                            Schet.fifthQuiz = 0;
+                            Count.fifthQuiz = 0;
                             SwipeRight();
                         }
                     });
                 } else {
-                    Schet.setFifth();
+                    Count.setFifth();
                     fifthTextResult.setTextColor(Color.RED);
                     fifthTextResult.setText("Не правильно!");
                 }
-                Schet.setFifthQuiz();
+                Count.setFifthQuiz();
             }
         });
         RadioButton six_prav = findViewById(R.id.six_prav);
@@ -414,7 +414,7 @@ public class SecondEasyQuizActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (six_prav.isChecked()) {
-                    if (Schet.sixthQuiz == 0) {
+                    if (Count.sixthQuiz == 0) {
                         check_6.setVisibility(View.VISIBLE);
                     }
                     six_neprav.setChecked(false);
@@ -428,7 +428,7 @@ public class SecondEasyQuizActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (six_neprav.isChecked()) {
-                    if (Schet.sixthQuiz == 0) {
+                    if (Count.sixthQuiz == 0) {
                         check_6.setVisibility(View.VISIBLE);
                     }
                     six_prav.setChecked(false);
@@ -442,7 +442,7 @@ public class SecondEasyQuizActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (six_neprav_2.isChecked()) {
-                    if (Schet.sixthQuiz == 0) {
+                    if (Count.sixthQuiz == 0) {
                         check_6.setVisibility(View.VISIBLE);
                     }
                     six_neprav.setChecked(false);
@@ -456,7 +456,7 @@ public class SecondEasyQuizActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (six_prav.isChecked()) {
-                    Schet.plussa();
+                    Count.plussa();
                     check_6.setVisibility(View.INVISIBLE);
                     sixthNext.setVisibility(View.VISIBLE);
                     sixthTextResult.setTextColor(Color.GREEN);
@@ -464,16 +464,16 @@ public class SecondEasyQuizActivity extends AppCompatActivity {
                     sixthNext.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
-                            Schet.sixthQuiz = 0;
+                            Count.sixthQuiz = 0;
                             startActivity(new Intent(SecondEasyQuizActivity.this, ChooseActivity.class));
                         }
                     });
                 } else {
-                    Schet.setSixth();
+                    Count.setSixth();
                     sixthTextResult.setTextColor(Color.RED);
                     sixthTextResult.setText("Не правильно!");
                 }
-                Schet.setSixthQuiz();
+                Count.setSixthQuiz();
             }
         });
         animFlipInForward = AnimationUtils.loadAnimation(this, R.anim.flipin);
