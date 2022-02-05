@@ -18,29 +18,9 @@ public class QuizActivity extends AppCompatActivity {
         ImageView sred = findViewById(R.id.sred);
         ImageView hard = findViewById(R.id.hard);
         ImageView button_back = findViewById(R.id.button_back);
-        button_back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                onBackPressed();
-            }
-        });
-        easy.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(QuizActivity.this, FirstQuizActivity.class));
-            }
-        });
-        sred.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(QuizActivity.this, FirstMediumQuizActivity.class));
-            }
-        });
-        hard.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(QuizActivity.this, FirstHardQuizActivity.class));
-            }
-        });
+        button_back.setOnClickListener(v -> onBackPressed());
+        easy.setOnClickListener(v -> startActivity(new Intent(QuizActivity.this, FirstQuizActivity.class)));
+        sred.setOnClickListener(v -> startActivity(new Intent(QuizActivity.this, FirstMediumQuizActivity.class)));
+        hard.setOnClickListener(v -> startActivity(new Intent(QuizActivity.this, FirstHardQuizActivity.class)));
     }
 }

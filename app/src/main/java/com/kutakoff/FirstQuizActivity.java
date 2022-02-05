@@ -66,6 +66,8 @@ public class FirstQuizActivity extends AppCompatActivity {
         Button fifthCheck = findViewById(R.id.check_5);
         ImageView fifthButtonNext = findViewById(R.id.fifthNext);
 
+        Count.isHardQuiz = false;
+
         start_quiz.setOnClickListener(v -> SwipeRight());
         button_back.setOnClickListener(v -> onBackPressed());
 

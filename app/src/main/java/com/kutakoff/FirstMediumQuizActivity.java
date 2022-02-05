@@ -26,7 +26,7 @@ public class FirstMediumQuizActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-        setContentView(R.layout.activity_first_sred_quiz);
+        setContentView(R.layout.activity_first_medium_quiz);
         flipper = findViewById(R.id.viewflipper);
         ImageView start_quiz = findViewById(R.id.start_quiz);
         ImageView button_back = findViewById(R.id.button_back);
@@ -70,6 +70,8 @@ public class FirstMediumQuizActivity extends AppCompatActivity {
         RadioButton fifthIncorrect_3 = findViewById(R.id.five_neprav_3);
         Button fifthCheck = findViewById(R.id.check_5);
         ImageView fifthButtonNext = findViewById(R.id.fifthNext);
+
+        Count.isHardQuiz = false;
 
         start_quiz.setOnClickListener(v -> SwipeRight());
         button_back.setOnClickListener(v -> onBackPressed());

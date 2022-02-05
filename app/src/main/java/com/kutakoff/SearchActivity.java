@@ -1,18 +1,16 @@
 package com.kutakoff;
 
 import androidx.appcompat.app.AppCompatActivity;
-        import android.content.Intent;
+import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
-        import android.text.Editable;
-        import android.text.TextWatcher;
-        import android.view.View;
-        import android.widget.AdapterView;
-        import android.widget.ArrayAdapter;
-        import android.widget.EditText;
-        import android.widget.ListView;
-        import java.util.ArrayList;
-        import java.util.Arrays;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.widget.ArrayAdapter;
+import android.widget.EditText;
+import android.widget.ListView;
+import java.util.ArrayList;
+import java.util.Arrays;
 
 public class SearchActivity extends AppCompatActivity {
 
@@ -37,41 +35,39 @@ public class SearchActivity extends AppCompatActivity {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                if(s.toString().equals("")){
+                if (s.toString().equals("")) {
                     initList();
                 } else {
                     searchItem(s.toString());
                 }
             }
+
             @Override
             public void afterTextChanged(Editable s) {
             }
         });
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                String deyatel_name = (String) parent.getItemAtPosition(position);
-                Bundle bundle = new Bundle();
-                bundle.putString("name", (String) parent.getItemAtPosition(position));
-                Intent intent = new Intent(SearchActivity.this, WebViewActivity.class);
-                intent.putExtras(bundle);
-                startActivity(intent, bundle);
-                editText.setText(deyatel_name);
-            }
+        listView.setOnItemClickListener((parent, view, position, id) -> {
+            String deyatel_name = (String) parent.getItemAtPosition(position);
+            Bundle bundle = new Bundle();
+            bundle.putString("name", (String) parent.getItemAtPosition(position));
+            Intent intent = new Intent(SearchActivity.this, WebViewActivity.class);
+            intent.putExtras(bundle);
+            startActivity(intent, bundle);
+            editText.setText(deyatel_name);
         });
     }
 
-    public void searchItem(String textToSearch){
-        for(String item:items){
-            if(!item.contains(textToSearch)){
+    public void searchItem(String textToSearch) {
+        for (String item : items) {
+            if (!item.contains(textToSearch)) {
                 listItems.remove(item);
             }
         }
         adapter.notifyDataSetChanged();
     }
 
-    public void initList(){
-        items=new String[]{"Иван Грозный","Иван III","Александр III", "Иван Фёдоров", "Георгий Жуков",
+    public void initList() {
+        items = new String[]{"Иван Грозный", "Иван III", "Александр III", "Иван Фёдоров", "Георгий Жуков",
                 "Иван I Калита", "Николай II", "Сергий Радонежский", "Лжедмитрий II", "Никита Хрущев",
                 "Елизавета Петровна", "Александр Невский", "Дмитрий Донской", "Климент Ворошилов",
                 "Нестор Летописец", "Даниил Московский", "Александр I", "Рюрик", "Олег Вещий",
@@ -79,8 +75,8 @@ public class SearchActivity extends AppCompatActivity {
                 "Владимир Святой(Владимир красное солнышко)", "Святополк Окаянный", "Пётр I",
                 "Михаил Федорович", "Алексей Михайлович", "Борис Годунов", "Лжедмитрий I",
                 "Василий IV", "Федор III", "Федор I", "Филарет", "Василий Голицын", "Ордин-Нащокин"};
-        listItems=new ArrayList<>(Arrays.asList(items));
-        adapter=new ArrayAdapter<String>(this, R.layout.list_item, R.id.txtitem, listItems);
+        listItems = new ArrayList<>(Arrays.asList(items));
+        adapter = new ArrayAdapter<>(this, R.layout.list_item, R.id.txtitem, listItems);
         listView.setAdapter(adapter);
     }
 }

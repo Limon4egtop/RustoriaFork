@@ -112,6 +112,8 @@ public class FirstHardQuizActivity extends AppCompatActivity {
         Button tenthCheck = findViewById(R.id.check_10);
         ImageView tenthButtonNext = findViewById(R.id.tenthNext);
 
+        Count.isHardQuiz = true;
+
         start_quiz.setOnClickListener(v -> SwipeRight());
         button_back.setOnClickListener(v -> onBackPressed());
 
@@ -194,7 +196,7 @@ public class FirstHardQuizActivity extends AppCompatActivity {
                 Count.count++;
                 if (Count.count == 10) {
                     startActivity(new Intent(FirstHardQuizActivity.this, ResultQuizActivity.class));
-                    Count.count = 0;
+                    Count.count = 1;
                 } else {
                     SwipeRight();
                 }

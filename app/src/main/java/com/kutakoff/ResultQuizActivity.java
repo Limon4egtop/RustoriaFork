@@ -1,7 +1,6 @@
 package com.kutakoff;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
@@ -19,7 +18,11 @@ public class ResultQuizActivity extends AppCompatActivity {
         ImageView goHome = findViewById(R.id.goHome);
         for (int aCount = 0; aCount <= 10; aCount++) {
             if (Count.getA() == aCount) {
-                textResult.setText("Ваш результат: " + aCount + "/10."); /// TODO: 05.02.2022 если приходим из FirstQuizActivity или из FirstMediumQuizActivity, то делаем aCount|5, а если приходим из FirstHardQuizActivity, то делаем aCount|10.
+                if (Count.isHardQuiz == true) {
+                    textResult.setText("Ваш результат: " + aCount + "/10.");
+                } else {
+                    textResult.setText("Ваш результат: " + aCount + "/5.");
+                }
             }
         }
         Count.a = 0;
