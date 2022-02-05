@@ -11,16 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Hakaton">
-        <activity android:name=".SecondEasyQuizActivity" />
-        <activity android:name=".SecondSredQuizActivity" />
-        <activity android:name=".SecondHardQuizActivity" />
-        <activity android:name=".DetailsActivity"
-            android:label="@string/title_activity_details"
-            android:theme="@style/Theme.Hakaton.NoActionBar" />
         <activity android:name=".ResultQuizActivity" />
-        <activity android:name=".ResultHardQuizActivity" />
         <activity android:name=".FirstQuizActivity" />
-        <activity android:name=".FirstSredQuizActivity" />
+        <activity android:name=".FirstMediumQuizActivity" />
         <activity android:name=".FirstHardQuizActivity" />
         <activity android:name=".QuizActivity" />
         <activity android:name=".ChooseEventsActivity" />

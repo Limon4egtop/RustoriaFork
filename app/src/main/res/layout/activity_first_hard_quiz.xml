@@ -842,7 +842,7 @@
                 android:id="@+id/six_neprav_3"
                 android:layout_width="170dp"
                 android:layout_height="wrap_content"
-                android:text="1505-1503 гг."
+                android:text="1469-1503 гг."
                 android:textColor="@color/black"
                 android:textSize="25sp"
                 android:textStyle="bold"

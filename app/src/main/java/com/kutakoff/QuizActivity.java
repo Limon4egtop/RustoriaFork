@@ -33,7 +33,7 @@ public class QuizActivity extends AppCompatActivity {
         sred.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(QuizActivity.this, FirstSredQuizActivity.class));
+                startActivity(new Intent(QuizActivity.this, FirstMediumQuizActivity.class));
             }
         });
         hard.setOnClickListener(new View.OnClickListener() {

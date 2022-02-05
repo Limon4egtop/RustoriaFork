@@ -1,10 +1,10 @@
 package com.kutakoff;
 
 import androidx.appcompat.app.AppCompatActivity;
+
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -14,28 +14,15 @@ public class ResultQuizActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result_quiz);
-        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_USER_PORTRAIT);
         TextView textResult = findViewById(R.id.textresult);
         ImageView goHome = findViewById(R.id.goHome);
-        if (Count.getA() == 0) {
-            textResult.setText("Ваш результат: 0/5. В следующий раз повезёт!");
-        } else if (Count.getA() == 1) {
-            textResult.setText("Ваш результат: 1/5. В следующий раз повезёт!");
-        } else if (Count.getA() == 2) {
-            textResult.setText("Ваш результат: 2/5. В следующий раз повезёт!");
-        } else if (Count.getA() == 3) {
-            textResult.setText("Ваш результат: 3/5. Неплохо!");
-        } else if (Count.getA() == 4) {
-            textResult.setText("Ваш результат: 4/5. Хорошо!");
-        } else if (Count.getA() == 5) {
-            textResult.setText("Ваш результат: 5/5. Хорошо!");
-        }
-        goHome.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(ResultQuizActivity.this, ChooseActivity.class));
-                Count.a = 0;
+        for (int aCount = 0; aCount <= 10; aCount++) {
+            if (Count.getA() == aCount) {
+                textResult.setText("Ваш результат: " + aCount + "/10."); /// TODO: 05.02.2022 если приходим из FirstQuizActivity или из FirstMediumQuizActivity, то делаем aCount|5, а если приходим из FirstHardQuizActivity, то делаем aCount|10.
             }
-        });
+        }
+        Count.a = 0;
+        goHome.setOnClickListener(v -> startActivity(new Intent(ResultQuizActivity.this, ChooseActivity.class)));
     }
 }

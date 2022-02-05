@@ -66,23 +66,15 @@ public class FirstQuizActivity extends AppCompatActivity {
         Button fifthCheck = findViewById(R.id.check_5);
         ImageView fifthButtonNext = findViewById(R.id.fifthNext);
 
-        start_quiz.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                SwipeRight();
-            }
-        });
-        button_back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                onBackPressed();
-            }
-        });
+        start_quiz.setOnClickListener(v -> SwipeRight());
+        button_back.setOnClickListener(v -> onBackPressed());
+
         AddQuestion(firstCorrect, firstIncorrect_1, firstIncorrect_2, firstCheck, firstButtonNext, textResult_1);
         AddQuestion(secondCorrect, secondIncorrect_1, secondIncorrect_2, secondCheck, secondButtonNext, textResult_2);
         AddQuestion(thirdCorrect, thirdIncorrect_1, thirdIncorrect_2, thirdCheck, thirdButtonNext, textResult_3);
         AddQuestion(fourthCorrect, fourthIncorrect_1, fourthIncorrect_2, fourthCheck, fourthButtonNext, textResult_4);
         AddQuestion(fifthCorrect, fifthIncorrect_1, fifthIncorrect_2, fifthCheck, fifthButtonNext, textResult_5);
+
         animFlipInForward = AnimationUtils.loadAnimation(this, R.anim.flipin);
         animFlipOutForward = AnimationUtils.loadAnimation(this, R.anim.flipout);
         animFlipInBackward = AnimationUtils.loadAnimation(this, R.anim.flipin_reverse);
@@ -96,69 +88,53 @@ public class FirstQuizActivity extends AppCompatActivity {
     }
 
     private void AddQuestion(RadioButton correct, RadioButton incorrect_1, RadioButton incorrect_2, Button check, ImageView button_next, TextView textResult) {
-        correct.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (correct.isChecked()) {
-                    if (!button_next.isShown()) {
-                        check.setVisibility(View.VISIBLE);
-                    }
-                    incorrect_1.setChecked(false);
-                    incorrect_2.setChecked(false);
+        correct.setOnClickListener(v -> {
+            if (correct.isChecked()) {
+                if (!button_next.isShown()) {
+                    check.setVisibility(View.VISIBLE);
                 }
+                incorrect_1.setChecked(false);
+                incorrect_2.setChecked(false);
             }
         });
-        incorrect_1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (incorrect_1.isChecked()) {
-                    if (!button_next.isShown()) {
-                        check.setVisibility(View.VISIBLE);
-                    }
-                    correct.setChecked(false);
-                    incorrect_2.setChecked(false);
+        incorrect_1.setOnClickListener(v -> {
+            if (incorrect_1.isChecked()) {
+                if (!button_next.isShown()) {
+                    check.setVisibility(View.VISIBLE);
                 }
+                correct.setChecked(false);
+                incorrect_2.setChecked(false);
             }
         });
-        incorrect_2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (incorrect_2.isChecked()) {
-                    if (!button_next.isShown()) {
-                        check.setVisibility(View.VISIBLE);
-                    }
-                    incorrect_1.setChecked(false);
-                    correct.setChecked(false);
+        incorrect_2.setOnClickListener(v -> {
+            if (incorrect_2.isChecked()) {
+                if (!button_next.isShown()) {
+                    check.setVisibility(View.VISIBLE);
                 }
+                incorrect_1.setChecked(false);
+                correct.setChecked(false);
             }
         });
-        check.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (correct.isChecked()) {
-                    Count.plussa();
-                    textResult.setText("Правильно!");
-                    textResult.setTextColor(Color.GREEN);
+        check.setOnClickListener(v -> {
+            if (correct.isChecked()) {
+                Count.plussa();
+                textResult.setText("Правильно!");
+                textResult.setTextColor(Color.GREEN);
+            } else {
+                textResult.setText("Не правильно!");
+                textResult.setTextColor(Color.RED);
+            }
+            check.setVisibility(View.INVISIBLE);
+            button_next.setVisibility(View.VISIBLE);
+            button_next.setOnClickListener(v1 -> {
+                Count.count++;
+                if (Count.count == 5) {
+                    startActivity(new Intent(FirstQuizActivity.this, ResultQuizActivity.class));
+                    Count.count = 0;
                 } else {
-                    Count.setFourth();
-                    textResult.setText("Не правильно!");
-                    textResult.setTextColor(Color.RED);
+                    SwipeRight();
                 }
-                check.setVisibility(View.INVISIBLE);
-                button_next.setVisibility(View.VISIBLE);
-                button_next.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Count.count++;
-                        if (Count.count == 5) {
-                            startActivity(new Intent(FirstQuizActivity.this, ResultQuizActivity.class));
-                            Count.count = 0;
-                        } else {
-                            SwipeRight();
-                        }
-                    }
-                });
-            }
+            });
         });
     }
 }
