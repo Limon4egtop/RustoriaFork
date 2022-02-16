@@ -14,7 +14,7 @@ import android.widget.TextView;
 import android.widget.ViewFlipper;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class FirstMediumQuizActivity extends AppCompatActivity {
+public class MainMediumQuizActivity extends AppCompatActivity {
 
     ViewFlipper flipper;
     Animation animFlipInForward;
@@ -26,7 +26,7 @@ public class FirstMediumQuizActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-        setContentView(R.layout.activity_first_medium_quiz);
+        setContentView(R.layout.activity_main_medium_quiz);
         flipper = findViewById(R.id.viewflipper);
         ImageView start_quiz = findViewById(R.id.start_quiz);
         ImageView button_back = findViewById(R.id.button_back);
@@ -149,7 +149,7 @@ public class FirstMediumQuizActivity extends AppCompatActivity {
             button_next.setOnClickListener(v1 -> {
                 Count.count++;
                 if (Count.count == 5) {
-                    startActivity(new Intent(FirstMediumQuizActivity.this, ResultQuizActivity.class));
+                    startActivity(new Intent(MainMediumQuizActivity.this, ResultQuizActivity.class));
                     Count.count = 0;
                 } else {
                     SwipeRight();

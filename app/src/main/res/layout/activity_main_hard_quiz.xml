@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/nice_rus_bq"
-    tools:context=".FirstHardQuizActivity">
+    tools:context=".MainHardQuizActivity">
 
     <ViewFlipper
         android:id="@+id/viewflipper"

@@ -30,23 +30,35 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.102" />
 
-
     <Spinner
         android:id="@+id/chooseQuiz"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:entries="@array/quizNames"
         android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.780"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        android:entries="@array/quizNames"
+        app:layout_constraintVertical_bias="0.015"
         tools:ignore="MissingConstraints" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Выберите нужный квиз"
+        android:textColor="@color/black"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chooseQuiz"
+        app:layout_constraintVertical_bias="0.035" />
+
     <ImageView
-        android:id="@+id/easy"
+        android:id="@+id/main_easy"
         android:layout_width="140dp"
         android:layout_height="140dp"
         android:background="@drawable/rem_easy"
@@ -58,7 +70,7 @@
         app:layout_constraintVertical_bias="0.300" />
 
     <ImageView
-        android:id="@+id/sred"
+        android:id="@+id/main_medium"
         android:layout_width="140dp"
         android:layout_height="140dp"
         android:background="@drawable/rem_sred"
@@ -70,7 +82,43 @@
         app:layout_constraintVertical_bias="0.575" />
 
     <ImageView
-        android:id="@+id/hard"
+        android:id="@+id/main_hard"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:background="@drawable/rem_hard"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.850"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.850" />
+
+    <ImageView
+        android:id="@+id/second_february_easy"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:background="@drawable/rem_easy"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.850"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.300" />
+
+    <ImageView
+        android:id="@+id/second_february_medium"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:background="@drawable/rem_sred"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.850"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.575" />
+
+    <ImageView
+        android:id="@+id/second_february_hard"
         android:layout_width="140dp"
         android:layout_height="140dp"
         android:background="@drawable/rem_hard"

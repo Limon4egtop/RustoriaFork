@@ -4,6 +4,5 @@
     <string-array name="quizNames">
         <item>Основной</item>
         <item>Хакатоновский</item>
-        <item>Крым России</item>
     </string-array>
 </resources>
