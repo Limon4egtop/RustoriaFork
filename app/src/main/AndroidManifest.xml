@@ -11,6 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Hakaton">
+        <activity android:name=".SecondFebruaryHardQuiz"></activity>
+        <activity android:name=".SecondFebruaryMediumQuiz" />
+        <activity android:name=".SecondFebruaryEasyQuiz" />
         <activity android:name=".ResultQuizActivity" />
         <activity android:name=".MainEasyQuizActivity" />
         <activity android:name=".MainMediumQuizActivity" />

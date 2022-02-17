@@ -44,6 +44,10 @@ public class QuizActivity extends AppCompatActivity implements AdapterView.OnIte
         main_easy.setOnClickListener(v -> startActivity(new Intent(QuizActivity.this, MainEasyQuizActivity.class)));
         main_medium.setOnClickListener(v -> startActivity(new Intent(QuizActivity.this, MainMediumQuizActivity.class)));
         main_hard.setOnClickListener(v -> startActivity(new Intent(QuizActivity.this, MainHardQuizActivity.class)));
+
+        second_february_easy.setOnClickListener(v -> startActivity(new Intent(QuizActivity.this, SecondFebruaryEasyQuiz.class)));
+        second_february_medium.setOnClickListener(v -> startActivity(new Intent(QuizActivity.this, SecondFebruaryMediumQuiz.class)));
+        second_february_hard.setOnClickListener(v -> startActivity(new Intent(QuizActivity.this, SecondFebruaryHardQuiz.class)));
     }
 
     @Override
