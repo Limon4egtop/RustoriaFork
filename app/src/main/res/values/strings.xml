@@ -3,6 +3,6 @@
     <string name="action_settings">Settings</string>
     <string-array name="quizNames">
         <item>Основной</item>
-        <item>Хакатоновский</item>
+        <item>2 февраля 1943г</item>
     </string-array>
 </resources>

@@ -9,12 +9,14 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class QuizActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
     ImageView
     main_easy, main_medium, main_hard,
-    second_february_easy, second_february_medium, second_february_hard;
+    second_february_start;
+    TextView quizSout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,14 +25,13 @@ public class QuizActivity extends AppCompatActivity implements AdapterView.OnIte
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         ImageView button_back = findViewById(R.id.button_back);
         Spinner spinner = findViewById(R.id.chooseQuiz);
+        quizSout = findViewById(R.id.quizSout);
 
         main_easy = findViewById(R.id.main_easy);
         main_medium = findViewById(R.id.main_medium);
         main_hard = findViewById(R.id.main_hard);
 
-        second_february_easy = findViewById(R.id.second_february_easy);
-        second_february_medium = findViewById(R.id.second_february_medium);
-        second_february_hard = findViewById(R.id.second_february_hard);
+        second_february_start = findViewById(R.id.second_february_start);
 
         String selected = spinner.getSelectedItem().toString();
         Toast.makeText(getApplicationContext(), selected, Toast.LENGTH_SHORT).show();
@@ -45,9 +46,7 @@ public class QuizActivity extends AppCompatActivity implements AdapterView.OnIte
         main_medium.setOnClickListener(v -> startActivity(new Intent(QuizActivity.this, MainMediumQuizActivity.class)));
         main_hard.setOnClickListener(v -> startActivity(new Intent(QuizActivity.this, MainHardQuizActivity.class)));
 
-        second_february_easy.setOnClickListener(v -> startActivity(new Intent(QuizActivity.this, SecondFebruaryEasyQuiz.class)));
-        second_february_medium.setOnClickListener(v -> startActivity(new Intent(QuizActivity.this, SecondFebruaryMediumQuiz.class)));
-        second_february_hard.setOnClickListener(v -> startActivity(new Intent(QuizActivity.this, SecondFebruaryHardQuiz.class)));
+        second_february_start.setOnClickListener(v -> startActivity(new Intent(QuizActivity.this, SecondFebruaryQuiz.class)));
     }
 
     @Override
@@ -57,17 +56,14 @@ public class QuizActivity extends AppCompatActivity implements AdapterView.OnIte
             main_easy.setVisibility(View.INVISIBLE);
             main_medium.setVisibility(View.INVISIBLE);
             main_hard.setVisibility(View.INVISIBLE);
-            second_february_easy.setVisibility(View.VISIBLE);
-            second_february_medium.setVisibility(View.VISIBLE);
-            second_february_hard.setVisibility(View.VISIBLE);
+            second_february_start.setVisibility(View.VISIBLE);
         } else {
             main_easy.setVisibility(View.VISIBLE);
             main_medium.setVisibility(View.VISIBLE);
             main_hard.setVisibility(View.VISIBLE);
-            second_february_easy.setVisibility(View.INVISIBLE);
-            second_february_medium.setVisibility(View.INVISIBLE);
-            second_february_hard.setVisibility(View.INVISIBLE);
+            second_february_start.setVisibility(View.INVISIBLE);
         }
+        quizSout.setText("Квиз: " + parent.getSelectedItem());
     }
 
     @Override

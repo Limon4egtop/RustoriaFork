@@ -71,7 +71,7 @@ public class ChooseEventsActivity extends AppCompatActivity {
                 "Курская битва", "Битва при Красном", "Холодная война", "Расстрел царской семьи",
                 "Вечный мир с Польшей", "Распад СССР", "Брусиловский прорыв", "Северная война",
                 "Взятие Парижа", "Марш-бросок на Притштину", "Смутное время", "Берлинская наступательная операция",
-                "Любечский съезд", "Нюрмбергский процесс"};
+                "Любечский съезд", "Нюрмбергский процесс", "Сталинградская битва"};
         Arrays.sort(items);
         listItems = new ArrayList<>(Arrays.asList(items));
         adapter = new ArrayAdapter<>(this, R.layout.list_item, R.id.txtitem, listItems);
