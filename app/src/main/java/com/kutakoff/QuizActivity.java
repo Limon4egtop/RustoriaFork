@@ -24,7 +24,6 @@ public class QuizActivity extends AppCompatActivity implements AdapterView.OnIte
         setContentView(R.layout.activity_quiz);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         ImageView button_back = findViewById(R.id.button_back);
-        Spinner spinner = findViewById(R.id.chooseQuiz);
         quizSout = findViewById(R.id.quizSout);
 
         main_easy = findViewById(R.id.main_easy);
@@ -32,6 +31,8 @@ public class QuizActivity extends AppCompatActivity implements AdapterView.OnIte
         main_hard = findViewById(R.id.main_hard);
 
         second_february_start = findViewById(R.id.second_february_start);
+
+        Spinner spinner = findViewById(R.id.chooseQuiz);
 
         String selected = spinner.getSelectedItem().toString();
         Toast.makeText(getApplicationContext(), selected, Toast.LENGTH_SHORT).show();
