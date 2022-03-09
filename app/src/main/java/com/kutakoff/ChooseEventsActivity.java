@@ -1,14 +1,20 @@
 package com.kutakoff;
 
 import androidx.appcompat.app.AppCompatActivity;
+
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.Spinner;
+import android.widget.Toast;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -17,17 +23,20 @@ public class ChooseEventsActivity extends AppCompatActivity {
     String[] items;
     ArrayList<String> listItems;
     ArrayAdapter<String> adapter;
-    ListView listView;
     EditText editText;
+    ListView all;
+    ListView century;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         setContentView(R.layout.activity_choose_events);
-        listView = findViewById(R.id.listview);
+        all = findViewById(R.id.all);
+        century = findViewById(R.id.century);
         editText = findViewById(R.id.txtsearch);
         initList();
+        initListCentury();
         editText.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -46,7 +55,7 @@ public class ChooseEventsActivity extends AppCompatActivity {
             public void afterTextChanged(Editable s) {
             }
         });
-        listView.setOnItemClickListener((parent, view, position, id) -> {
+        all.setOnItemClickListener((parent, view, position, id) -> {
             String deyatel_name = (String) parent.getItemAtPosition(position);
             Bundle bundle = new Bundle();
             bundle.putString("name", (String) parent.getItemAtPosition(position));
@@ -54,6 +63,39 @@ public class ChooseEventsActivity extends AppCompatActivity {
             intent.putExtras(bundle);
             startActivity(intent, bundle);
             editText.setText(deyatel_name);
+        });
+        century.setOnItemClickListener((parent, view, position, id) -> {
+            String deyatel_name = (String) parent.getItemAtPosition(position);
+            Bundle bundle = new Bundle();
+            bundle.putString("name", (String) parent.getItemAtPosition(position));
+            Intent intent = new Intent(ChooseEventsActivity.this, WebViewActivity.class);
+            intent.putExtras(bundle);
+            startActivity(intent, bundle);
+            editText.setText(deyatel_name);
+        });
+
+        Spinner spinner = findViewById(R.id.chooseCentury);
+
+        String selected = spinner.getSelectedItem().toString();
+        Toast.makeText(getApplicationContext(), selected, Toast.LENGTH_SHORT).show();
+
+        ArrayAdapter adapter1 = ArrayAdapter.createFromResource(this, R.array.deyatels_search, R.layout.spinner_text);
+        adapter1.setDropDownViewResource(R.layout.spinner_dropbox_layout);
+        spinner.setAdapter(adapter1);
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                if (position == 1) {
+                    all.setVisibility(View.INVISIBLE);
+                    century.setVisibility(View.VISIBLE);
+                } else {
+                    all.setVisibility(View.VISIBLE);
+                    century.setVisibility(View.INVISIBLE);
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {}
         });
     }
 
@@ -75,6 +117,14 @@ public class ChooseEventsActivity extends AppCompatActivity {
         Arrays.sort(items);
         listItems = new ArrayList<>(Arrays.asList(items));
         adapter = new ArrayAdapter<>(this, R.layout.list_item, R.id.txtitem, listItems);
-        listView.setAdapter(adapter);
+        all.setAdapter(adapter);
+    }
+
+    public void initListCentury() {
+        items = new String[]{"Битва при Красном", "Распад СССР", "Сталинградская битва"};
+        Arrays.sort(items);
+        listItems = new ArrayList<>(Arrays.asList(items));
+        adapter = new ArrayAdapter<>(this, R.layout.list_item, R.id.txtitem, listItems);
+        century.setAdapter(adapter);
     }
 }

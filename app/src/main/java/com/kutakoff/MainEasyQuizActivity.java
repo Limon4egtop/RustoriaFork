@@ -120,11 +120,11 @@ public class MainEasyQuizActivity extends AppCompatActivity {
         check.setOnClickListener(v -> {
             if (correct.isChecked()) {
                 Count.plussa();
-                textResult.setText("Правильно!");
-                textResult.setTextColor(Color.GREEN);
+                correct.setBackgroundColor(Color.GREEN);
+            } else if (incorrect_1.isChecked()){
+                incorrect_1.setBackgroundColor(Color.RED);
             } else {
-                textResult.setText("Не правильно!");
-                textResult.setTextColor(Color.RED);
+                incorrect_2.setBackgroundColor(Color.RED);
             }
             check.setVisibility(View.INVISIBLE);
             button_next.setVisibility(View.VISIBLE);
