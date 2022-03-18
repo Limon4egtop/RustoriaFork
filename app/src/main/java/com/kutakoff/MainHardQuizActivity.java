@@ -25,7 +25,7 @@ public class MainHardQuizActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED);
         setContentView(R.layout.activity_main_hard_quiz);
         flipper = findViewById(R.id.viewflipper);
         ImageView start_quiz = findViewById(R.id.start_quiz);

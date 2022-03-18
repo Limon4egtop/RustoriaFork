@@ -13,7 +13,7 @@ public class ResultQuizActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result_quiz);
-        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_USER_PORTRAIT);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED);
         TextView textResult = findViewById(R.id.textresult);
         ImageView goHome = findViewById(R.id.goHome);
         for (int aCount = 0; aCount <= 10; aCount++) {
