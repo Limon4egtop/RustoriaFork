@@ -155,9 +155,9 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/first_prav"
+                app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintHorizontal_bias="0.793"
-                app:layout_constraintVertical_bias="0.7" />
+                app:layout_constraintVertical_bias="0.91" />
 
             <ImageView
                 android:id="@+id/firstNext"
@@ -168,9 +168,9 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/first_prav"
+                app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintHorizontal_bias="0.793"
-                app:layout_constraintVertical_bias="0.7" />
+                app:layout_constraintVertical_bias="0.91" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -270,9 +270,9 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/second_prav"
+                app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintHorizontal_bias="0.793"
-                app:layout_constraintVertical_bias="0.7" />
+                app:layout_constraintVertical_bias="0.91" />
 
             <ImageView
                 android:id="@+id/secondNext"
@@ -283,9 +283,9 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/second_prav"
+                app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintHorizontal_bias="0.793"
-                app:layout_constraintVertical_bias="0.7" />
+                app:layout_constraintVertical_bias="0.91" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -385,9 +385,9 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/third_prav"
-                app:layout_constraintHorizontal_bias="0.826"
-                app:layout_constraintVertical_bias="0.7" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintHorizontal_bias="0.793"
+                app:layout_constraintVertical_bias="0.91" />
 
             <ImageView
                 android:id="@+id/thirdNext"
@@ -398,9 +398,9 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/third_prav"
-                app:layout_constraintHorizontal_bias="0.826"
-                app:layout_constraintVertical_bias="0.7" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintHorizontal_bias="0.793"
+                app:layout_constraintVertical_bias="0.91" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -500,9 +500,9 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/fourth_neprav_2"
+                app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintHorizontal_bias="0.793"
-                app:layout_constraintVertical_bias="0.7" />
+                app:layout_constraintVertical_bias="0.91" />
 
             <ImageView
                 android:id="@+id/fourthNext"
@@ -513,9 +513,9 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/fourth_neprav_2"
+                app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintHorizontal_bias="0.793"
-                app:layout_constraintVertical_bias="0.7" />
+                app:layout_constraintVertical_bias="0.91" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -615,9 +615,9 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/five_neprav_2"
+                app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintHorizontal_bias="0.793"
-                app:layout_constraintVertical_bias="0.7" />
+                app:layout_constraintVertical_bias="0.91" />
 
             <ImageView
                 android:id="@+id/fifthNext"
@@ -628,9 +628,9 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/five_neprav_2"
+                app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintHorizontal_bias="0.793"
-                app:layout_constraintVertical_bias="0.7" />
+                app:layout_constraintVertical_bias="0.91" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

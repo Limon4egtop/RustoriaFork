@@ -142,7 +142,6 @@
                 app:layout_constraintHorizontal_bias="0.02"
                 app:layout_constraintVertical_bias="0.57" />
 
-
             <RadioButton
                 android:id="@+id/first_neprav_3"
                 android:layout_width="wrap_content"
@@ -168,9 +167,9 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintHorizontal_bias="0.793"
-                app:layout_constraintVertical_bias="0.3" />
+                app:layout_constraintVertical_bias="0.91" />
 
             <ImageView
                 android:id="@+id/firstNext"
@@ -181,9 +180,9 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintHorizontal_bias="0.793"
-                app:layout_constraintVertical_bias="0.3" />
+                app:layout_constraintVertical_bias="0.91" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -299,9 +298,9 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/second_prav"
+                app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintHorizontal_bias="0.793"
-                app:layout_constraintVertical_bias="0.7" />
+                app:layout_constraintVertical_bias="0.91" />
 
             <ImageView
                 android:id="@+id/secondNext"
@@ -312,9 +311,9 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/second_prav"
+                app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintHorizontal_bias="0.793"
-                app:layout_constraintVertical_bias="0.7" />
+                app:layout_constraintVertical_bias="0.91" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -430,9 +429,9 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/third_prav"
+                app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintHorizontal_bias="0.793"
-                app:layout_constraintVertical_bias="0.7" />
+                app:layout_constraintVertical_bias="0.91" />
 
             <ImageView
                 android:id="@+id/thirdNext"
@@ -443,9 +442,9 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/third_prav"
+                app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintHorizontal_bias="0.793"
-                app:layout_constraintVertical_bias="0.7" />
+                app:layout_constraintVertical_bias="0.91" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -561,9 +560,9 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/fourth_neprav_2"
+                app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintHorizontal_bias="0.793"
-                app:layout_constraintVertical_bias="0.7" />
+                app:layout_constraintVertical_bias="0.91" />
 
             <ImageView
                 android:id="@+id/fourthNext"
@@ -574,9 +573,9 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/fourth_neprav_2"
+                app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintHorizontal_bias="0.793"
-                app:layout_constraintVertical_bias="0.7" />
+                app:layout_constraintVertical_bias="0.91" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -609,9 +608,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Сколько длилась Бородинская битва 1812 г."
+                android:text="Сколько длилась Бородинская битва 1812 г?"
                 android:textColor="@color/black"
-                android:textSize="29sp"
+                android:textSize="30sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -693,9 +692,9 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/five_neprav_2"
+                app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintHorizontal_bias="0.793"
-                app:layout_constraintVertical_bias="0.7" />
+                app:layout_constraintVertical_bias="0.91" />
 
             <ImageView
                 android:id="@+id/fifthNext"
@@ -706,9 +705,9 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/five_neprav_2"
+                app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintHorizontal_bias="0.793"
-                app:layout_constraintVertical_bias="0.7" />
+                app:layout_constraintVertical_bias="0.91" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -740,7 +739,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text=" Даты правления \nВасилия I"
+                android:text="Какая дата правления Василия I?"
                 android:gravity="center"
                 android:textColor="@color/black"
                 android:textSize="32sp"
@@ -824,9 +823,9 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/six_neprav_2"
+                app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintHorizontal_bias="0.793"
-                app:layout_constraintVertical_bias="0.7" />
+                app:layout_constraintVertical_bias="0.91" />
 
             <ImageView
                 android:id="@+id/sixthNext"
@@ -837,9 +836,9 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/six_neprav_2"
+                app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintHorizontal_bias="0.793"
-                app:layout_constraintVertical_bias="0.7" />
+                app:layout_constraintVertical_bias="0.91" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -871,10 +870,10 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Сколько лет был Николаю II, когда он был убит?"
+                android:text="Сколько лет было Николаю II, когда он был убит?"
                 android:gravity="center"
                 android:textColor="@color/black"
-                android:textSize="30sp"
+                android:textSize="32sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -955,9 +954,9 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/seven_neprav_2"
+                app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintHorizontal_bias="0.793"
-                app:layout_constraintVertical_bias="0.7" />
+                app:layout_constraintVertical_bias="0.91" />
 
             <ImageView
                 android:id="@+id/seventhNext"
@@ -968,9 +967,9 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/seven_neprav_2"
+                app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintHorizontal_bias="0.793"
-                app:layout_constraintVertical_bias="0.7" />
+                app:layout_constraintVertical_bias="0.91" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -1086,9 +1085,9 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/eight_neprav_2"
+                app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintHorizontal_bias="0.793"
-                app:layout_constraintVertical_bias="0.7" />
+                app:layout_constraintVertical_bias="0.91" />
 
             <ImageView
                 android:id="@+id/eightNext"
@@ -1099,9 +1098,9 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/eight_neprav_2"
+                app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintHorizontal_bias="0.793"
-                app:layout_constraintVertical_bias="0.7" />
+                app:layout_constraintVertical_bias="0.91" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -1218,9 +1217,9 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/nine_neprav_2"
+                app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintHorizontal_bias="0.793"
-                app:layout_constraintVertical_bias="0.7" />
+                app:layout_constraintVertical_bias="0.91" />
 
             <ImageView
                 android:id="@+id/ninthNext"
@@ -1231,9 +1230,9 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/nine_neprav_2"
+                app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintHorizontal_bias="0.793"
-                app:layout_constraintVertical_bias="0.7" />
+                app:layout_constraintVertical_bias="0.91" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -1268,7 +1267,7 @@
                 android:text="Сколько было попыток покушения(включая роковую)?"
                 android:gravity="center"
                 android:textColor="@color/black"
-                android:textSize="29sp"
+                android:textSize="30sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -1349,9 +1348,9 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/ten_neprav_2"
+                app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintHorizontal_bias="0.793"
-                app:layout_constraintVertical_bias="0.7" />
+                app:layout_constraintVertical_bias="0.91" />
 
             <ImageView
                 android:id="@+id/tenthNext"
@@ -1362,9 +1361,9 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/ten_neprav_2"
+                app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintHorizontal_bias="0.793"
-                app:layout_constraintVertical_bias="0.7" />
+                app:layout_constraintVertical_bias="0.91" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

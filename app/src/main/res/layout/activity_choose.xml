@@ -18,8 +18,7 @@
         app:layout_constraintHorizontal_bias="0.87"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.280"
-        android:visibility="invisible" />
+        app:layout_constraintVertical_bias="0.280" />
 
     <ImageView
         android:id="@+id/events"
@@ -32,8 +31,7 @@
         app:layout_constraintHorizontal_bias="0.87"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.555"
-        android:visibility="invisible" />
+        app:layout_constraintVertical_bias="0.555" />
 
     <ImageView
         android:id="@+id/quiz"
@@ -46,8 +44,7 @@
         app:layout_constraintHorizontal_bias="0.87"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.830"
-        android:visibility="invisible" />
+        app:layout_constraintVertical_bias="0.830" />
 
     <TextView
         android:id="@+id/textView4"
@@ -64,57 +61,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.049" />
-
-    <ImageView
-        android:id="@+id/window"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/event_of_week"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:visibility="invisible"
-        tools:ignore="MissingConstraints" />
-
-    <ImageView
-        android:id="@+id/crest"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        android:background="@drawable/crest"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:visibility="invisible"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/go"
-        android:layout_width="150dp"
-        android:layout_height="50dp"
-        android:background="@drawable/go"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.16"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.942"
-        android:visibility="invisible"
-        tools:ignore="MissingConstraints" />
-
-    <ImageView
-        android:id="@+id/aboutEvent"
-        android:layout_width="150dp"
-        android:layout_height="50dp"
-        android:background="@drawable/about_event"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.865"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.942"
-        android:visibility="invisible"
-        tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

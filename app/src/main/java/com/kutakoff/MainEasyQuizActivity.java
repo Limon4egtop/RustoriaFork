@@ -1,7 +1,10 @@
 package com.kutakoff;
 
 import androidx.annotation.RequiresApi;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.content.res.ColorStateList;
@@ -98,14 +101,14 @@ public class MainEasyQuizActivity extends AppCompatActivity {
     private void changeTextColor(RadioButton first, RadioButton second) {
 
         ColorStateList colorStateList = new ColorStateList(
-                new int[][] {
-                                new int[]{-android.R.attr.state_enabled}, // Disabled
-                                new int[]{android.R.attr.state_enabled}   // Enabled
-                        },
-                new int[] {
-                                Color.GRAY, // disabled
-                                Color.WHITE   // enabled
-                        }
+                new int[][]{
+                        new int[]{-android.R.attr.state_enabled}, // Disabled
+                        new int[]{android.R.attr.state_enabled}   // Enabled
+                },
+                new int[]{
+                        Color.GRAY, // disabled
+                        Color.WHITE   // enabled
+                }
         );
 
         first.setEnabled(false);
@@ -151,4 +154,11 @@ public class MainEasyQuizActivity extends AppCompatActivity {
             }
         });
     }
+
+/*    public void onBackPressed() {
+        new AlertDialog.Builder(this)
+                .setMessage("Вы действительно хотите выйти из квиза? Весь прогресс будет утерян.")
+                .setCancelable(false)
+                .setPositiveButton("Да", (dialog, id) -> Count.count = 0).setPositiveButton("Да", (dialog, id) -> Count.a = 0).setPositiveButton("Да", (dialog, id) -> finish()).setNegativeButton("Нет", null).show();
+    }*/
 }
