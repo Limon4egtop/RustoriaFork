@@ -16,6 +16,9 @@
         <activity android:name=".MainEasyQuizActivity" />
         <activity android:name=".MainMediumQuizActivity" />
         <activity android:name=".MainHardQuizActivity" />
+        <activity android:name=".KrimEasyQuizActivity" />
+        <activity android:name=".KrimMediumQuizActivity" />
+        <activity android:name=".KrimHardQuizActivity" />
         <activity android:name=".QuizActivity" />
         <activity android:name=".ChooseEventsActivity" />
         <activity android:name=".WebViewActivity" />

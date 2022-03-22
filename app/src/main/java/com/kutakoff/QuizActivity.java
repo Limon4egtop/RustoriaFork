@@ -1,6 +1,7 @@
 package com.kutakoff;
 
 import androidx.appcompat.app.AppCompatActivity;
+
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
@@ -14,8 +15,8 @@ import android.widget.Toast;
 
 public class QuizActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
     ImageView
-    main_easy, main_medium, main_hard,
-    second_february_start;
+            main_easy, main_medium, main_hard,
+            second_february_start, krim_easy, krim_medium, krim_hard;
     TextView quizSout;
 
     @Override
@@ -31,6 +32,10 @@ public class QuizActivity extends AppCompatActivity implements AdapterView.OnIte
         main_hard = findViewById(R.id.main_hard);
 
         second_february_start = findViewById(R.id.second_february_start);
+
+        krim_easy = findViewById(R.id.krim_easy);
+        krim_medium = findViewById(R.id.krim_medium);
+        krim_hard = findViewById(R.id.krim_hard);
 
         Spinner spinner = findViewById(R.id.chooseQuiz);
 
@@ -48,6 +53,10 @@ public class QuizActivity extends AppCompatActivity implements AdapterView.OnIte
         main_hard.setOnClickListener(v -> startActivity(new Intent(QuizActivity.this, MainHardQuizActivity.class)));
 
         second_february_start.setOnClickListener(v -> startActivity(new Intent(QuizActivity.this, StalingradskayaBitvaQuizActivity.class)));
+
+        krim_easy.setOnClickListener(v -> startActivity(new Intent(QuizActivity.this, KrimEasyQuizActivity.class)));
+        krim_medium.setOnClickListener(v -> startActivity(new Intent(QuizActivity.this, KrimMediumQuizActivity.class)));
+        krim_hard.setOnClickListener(v -> startActivity(new Intent(QuizActivity.this, KrimHardQuizActivity.class)));
     }
 
     @Override
@@ -57,16 +66,37 @@ public class QuizActivity extends AppCompatActivity implements AdapterView.OnIte
             main_easy.setVisibility(View.INVISIBLE);
             main_medium.setVisibility(View.INVISIBLE);
             main_hard.setVisibility(View.INVISIBLE);
+
             second_february_start.setVisibility(View.VISIBLE);
+
+            krim_easy.setVisibility(View.INVISIBLE);
+            krim_medium.setVisibility(View.INVISIBLE);
+            krim_hard.setVisibility(View.INVISIBLE);
+        } else if (position == 2) {
+            main_easy.setVisibility(View.INVISIBLE);
+            main_medium.setVisibility(View.INVISIBLE);
+            main_hard.setVisibility(View.INVISIBLE);
+
+            second_february_start.setVisibility(View.INVISIBLE);
+
+            krim_easy.setVisibility(View.VISIBLE);
+            krim_medium.setVisibility(View.VISIBLE);
+            krim_hard.setVisibility(View.VISIBLE);
         } else {
             main_easy.setVisibility(View.VISIBLE);
             main_medium.setVisibility(View.VISIBLE);
             main_hard.setVisibility(View.VISIBLE);
+
             second_february_start.setVisibility(View.INVISIBLE);
+
+            krim_easy.setVisibility(View.INVISIBLE);
+            krim_medium.setVisibility(View.INVISIBLE);
+            krim_hard.setVisibility(View.INVISIBLE);
         }
         quizSout.setText("Квиз: " + parent.getSelectedItem());
     }
 
     @Override
-    public void onNothingSelected(AdapterView<?> parent) {}
+    public void onNothingSelected(AdapterView<?> parent) {
+    }
 }

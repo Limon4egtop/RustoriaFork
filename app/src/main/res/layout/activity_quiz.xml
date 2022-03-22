@@ -96,6 +96,45 @@
         app:layout_constraintVertical_bias="0.850" />
 
     <ImageView
+        android:id="@+id/krim_easy"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:background="@drawable/rem_easy"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_bias="0.850"
+        app:layout_constraintVertical_bias="0.300" />
+
+    <ImageView
+        android:id="@+id/krim_medium"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:background="@drawable/rem_sred"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_bias="0.850"
+        app:layout_constraintVertical_bias="0.575" />
+
+    <ImageView
+        android:id="@+id/krim_hard"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:background="@drawable/rem_hard"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_bias="0.850"
+        app:layout_constraintVertical_bias="0.850" />
+
+    <ImageView
         android:id="@+id/second_february_start"
         android:layout_width="150dp"
         android:layout_height="50dp"

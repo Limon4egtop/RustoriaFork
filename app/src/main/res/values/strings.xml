@@ -8,5 +8,6 @@
     <string-array name="quizNames">
         <item>Основной</item>
         <item>Сталинградская\nбитва</item>
+        <item>Крым России</item>
     </string-array>
 </resources>

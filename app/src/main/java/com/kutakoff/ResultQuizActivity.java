@@ -16,15 +16,15 @@ public class ResultQuizActivity extends AppCompatActivity {
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED);
         TextView textResult = findViewById(R.id.textresult);
         ImageView goHome = findViewById(R.id.goHome);
-        for (int aCount = 0; aCount <= 10; aCount++) {
-            if (Count.getA() == aCount) {
-                if (Count.isHardQuiz == true) {
-                    textResult.setText("Ваш результат: " + aCount + "/10.");
-                } else {
-                    textResult.setText("Ваш результат: " + aCount + "/5.");
-                }
-            }
+        if (Count.isHardQuiz) {
+            textResult.setText("Ваш результат: " + Count.getA() + "/10.");
+        } else if (Count.isSpecialQUiz) {
+            textResult.setText("Ваш результат: " + Count.getA() + "/6.");
+        } else {
+            textResult.setText("Ваш результат: " + Count.getA() + "/5.");
         }
+        Count.isHardQuiz = false;
+        Count.isSpecialQUiz = false;
         Count.a = 0;
         goHome.setOnClickListener(v -> startActivity(new Intent(ResultQuizActivity.this, ChooseActivity.class)));
     }
