@@ -27,7 +27,7 @@
                 android:id="@+id/rules"
                 android:layout_width="350dp"
                 android:layout_height="550dp"
-                android:background="@drawable/xakaton_sred_pravilo"
+                android:background="@drawable/special_krim_medium_rules"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -66,7 +66,6 @@
                 android:layout_height="match_parent"
                 android:background="@drawable/russian_flag_bq" />
 
-
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -79,7 +78,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.01" />
+                app:layout_constraintVertical_bias="0.0" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -341,7 +340,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.01" />
+                app:layout_constraintVertical_bias="0.0" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -472,7 +471,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.01" />
+                app:layout_constraintVertical_bias="0.0" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -603,7 +602,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.01" />
+                app:layout_constraintVertical_bias="0.0" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -652,10 +651,10 @@
                 app:layout_constraintVertical_bias="0.47" />
 
             <RadioButton
-                android:id="@+id/five_prav"
+                android:id="@+id/five_neprav_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Суворов"
+                android:text="Горчаков"
                 android:textColor="@color/white"
                 android:buttonTint="@color/white"
                 android:textSize="28sp"
@@ -668,10 +667,10 @@
                 app:layout_constraintVertical_bias="0.57" />
 
             <RadioButton
-                android:id="@+id/five_neprav_2"
+                android:id="@+id/five_prav"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Горчаков"
+                android:text="Суворов"
                 android:textColor="@color/white"
                 android:buttonTint="@color/white"
                 android:textSize="28sp"
@@ -734,7 +733,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.01" />
+                app:layout_constraintVertical_bias="0.0" />
 
             <TextView
                 android:layout_width="wrap_content"

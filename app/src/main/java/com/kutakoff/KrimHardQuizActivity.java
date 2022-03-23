@@ -76,35 +76,7 @@ public class KrimHardQuizActivity extends AppCompatActivity {
         ImageView sixthCheck = findViewById(R.id.check_6);
         ImageView sixthButtonNext = findViewById(R.id.sixthNext);
 
-        RadioButton seventhCorrect = findViewById(R.id.seven_prav);
-        RadioButton seventhIncorrect_1 = findViewById(R.id.seven_neprav);
-        RadioButton seventhIncorrect_2 = findViewById(R.id.seven_neprav_2);
-        RadioButton seventhIncorrect_3 = findViewById(R.id.seven_neprav_3);
-        ImageView seventhCheck = findViewById(R.id.check_7);
-        ImageView seventhButtonNext = findViewById(R.id.seventhNext);
-
-        RadioButton eightCorrect = findViewById(R.id.eight_prav);
-        RadioButton eightIncorrect_1 = findViewById(R.id.eight_neprav);
-        RadioButton eightIncorrect_2 = findViewById(R.id.eight_neprav_2);
-        RadioButton eightIncorrect_3 = findViewById(R.id.eight_neprav_3);
-        ImageView eightCheck = findViewById(R.id.check_8);
-        ImageView eightButtonNext = findViewById(R.id.eightNext);
-
-        RadioButton ninthCorrect = findViewById(R.id.nine_prav);
-        RadioButton ninthIncorrect_1 = findViewById(R.id.nine_neprav);
-        RadioButton ninthIncorrect_2 = findViewById(R.id.nine_neprav_2);
-        RadioButton ninthIncorrect_3 = findViewById(R.id.nine_neprav_3);
-        ImageView ninthCheck = findViewById(R.id.check_9);
-        ImageView ninthButtonNext = findViewById(R.id.ninthNext);
-
-        RadioButton tenthCorrect = findViewById(R.id.ten_prav);
-        RadioButton tenthIncorrect_1 = findViewById(R.id.ten_neprav);
-        RadioButton tenthIncorrect_2 = findViewById(R.id.ten_neprav_2);
-        RadioButton tenthIncorrect_3 = findViewById(R.id.ten_neprav_3);
-        ImageView tenthCheck = findViewById(R.id.check_10);
-        ImageView tenthButtonNext = findViewById(R.id.tenthNext);
-
-        Count.isHardQuiz = true;
+        Count.isSpecialQUiz = true;
 
         start_quiz.setOnClickListener(v -> SwipeRight());
         button_back.setOnClickListener(v -> onBackPressed());
@@ -115,10 +87,6 @@ public class KrimHardQuizActivity extends AppCompatActivity {
         addQuestion(fourthCorrect, fourthIncorrect_1, fourthIncorrect_2, fourthIncorrect_3, fourthCheck, fourthButtonNext);
         addQuestion(fifthCorrect, fifthIncorrect_1, fifthIncorrect_2, fifthIncorrect_3, fifthCheck, fifthButtonNext);
         addQuestion(sixthCorrect, sixthIncorrect_1, sixthIncorrect_2, sixthIncorrect_3, sixthCheck, sixthButtonNext);
-        addQuestion(seventhCorrect, seventhIncorrect_1, seventhIncorrect_2, seventhIncorrect_3, seventhCheck, seventhButtonNext);
-        addQuestion(eightCorrect, eightIncorrect_1, eightIncorrect_2, eightIncorrect_3, eightCheck, eightButtonNext);
-        addQuestion(ninthCorrect, ninthIncorrect_1, ninthIncorrect_2, ninthIncorrect_3, ninthCheck, ninthButtonNext);
-        addQuestion(tenthCorrect, tenthIncorrect_1, tenthIncorrect_2, tenthIncorrect_3, tenthCheck, tenthButtonNext);
 
         animFlipInForward = AnimationUtils.loadAnimation(this, R.anim.flipin);
         animFlipOutForward = AnimationUtils.loadAnimation(this, R.anim.flipout);
@@ -197,7 +165,7 @@ public class KrimHardQuizActivity extends AppCompatActivity {
         button_next.setVisibility(View.VISIBLE);
         button_next.setOnClickListener(v1 -> {
             Count.count++;
-            if (Count.count == 10) {
+            if (Count.count == 6) {
                 startActivity(new Intent(KrimHardQuizActivity.this, ResultQuizActivity.class));
                 Count.count = 0;
             } else {

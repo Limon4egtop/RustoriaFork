@@ -6,11 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".MainEasyQuizActivity">
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/first_row" />
-
     <ViewFlipper
         android:id="@+id/viewflipper"
         android:layout_width="fill_parent"
@@ -31,7 +26,7 @@
                 android:id="@+id/rules"
                 android:layout_width="350dp"
                 android:layout_height="550dp"
-                android:background="@drawable/rem_pravila"
+                android:background="@drawable/main_quiz_easy_rules"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"

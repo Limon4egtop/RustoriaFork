@@ -27,7 +27,7 @@
                 android:id="@+id/rules"
                 android:layout_width="350dp"
                 android:layout_height="550dp"
-                android:background="@drawable/xakaton_sred_pravilo"
+                android:background="@drawable/main_quiz_medium_rules"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
