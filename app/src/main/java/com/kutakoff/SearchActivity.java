@@ -22,7 +22,6 @@ public class SearchActivity extends AppCompatActivity {
     ArrayList<String> listItems;
     ArrayAdapter<String> adapter;
     ListView all;
-    ListView century;
     EditText editText;
 
     @Override
@@ -31,10 +30,8 @@ public class SearchActivity extends AppCompatActivity {
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED);
         setContentView(R.layout.activity_search);
         all = findViewById(R.id.all);
-        century = findViewById(R.id.century);
         editText = findViewById(R.id.txtsearch);
         initList();
-        initListCentury();
         editText.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -62,40 +59,6 @@ public class SearchActivity extends AppCompatActivity {
             startActivity(intent, bundle);
             editText.setText(deyatel_name);
         });
-        century.setOnItemClickListener((parent, view, position, id) -> {
-            String deyatel_name = (String) parent.getItemAtPosition(position);
-            Bundle bundle = new Bundle();
-            bundle.putString("name", (String) parent.getItemAtPosition(position));
-            Intent intent = new Intent(SearchActivity.this, WebViewActivity.class);
-            intent.putExtras(bundle);
-            startActivity(intent, bundle);
-            editText.setText(deyatel_name);
-        });
-        Spinner spinner = findViewById(R.id.chooseCentury);
-
-        String selected = spinner.getSelectedItem().toString();
-        Toast.makeText(getApplicationContext(), selected, Toast.LENGTH_SHORT).show();
-
-        ArrayAdapter adapter1 = ArrayAdapter.createFromResource(this, R.array.deyatels_search, R.layout.spinner_text);
-        adapter1.setDropDownViewResource(R.layout.spinner_dropbox_layout);
-        spinner.setAdapter(adapter1);
-        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                if (position == 1) {
-                    all.setVisibility(View.INVISIBLE);
-                    century.setVisibility(View.VISIBLE);
-                } else {
-                    all.setVisibility(View.VISIBLE);
-                    century.setVisibility(View.INVISIBLE);
-                }
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-
-            }
-        });
     }
 
     public void searchItem(String textToSearch) {
@@ -115,17 +78,9 @@ public class SearchActivity extends AppCompatActivity {
                 "Игорь Ририкович", "Ольга Мудрая", "Святослав Игоревич", "Ярополк Святославич",
                 "Владимир Святой(Владимир красное солнышко)", "Святополк Окаянный", "Пётр I",
                 "Михаил Федорович", "Алексей Михайлович", "Борис Годунов", "Лжедмитрий I",
-                "Василий IV", "Федор III", "Федор I", "Филарет", "Василий Голицын", "Ордин-Нащокин"};
-        Arrays.sort(items);
+                "Василий IV", "Федор III", "Федор I", "Филарет", "Василий Голицын", "Ордин-Нащокин", "Михаил Шеин", "Дмитрий Пожарский", "Малюта Скуратов"," "};
         listItems = new ArrayList<>(Arrays.asList(items));
         adapter = new ArrayAdapter<>(this, R.layout.list_item, R.id.txtitem, listItems);
         all.setAdapter(adapter);
-    }
-    public void initListCentury() {
-        items = new String[]{"Филарет", "Василий Голицын", "Ордин-Нащокин"};
-        Arrays.sort(items);
-        listItems = new ArrayList<>(Arrays.asList(items));
-        adapter = new ArrayAdapter<>(this, R.layout.list_item, R.id.txtitem, listItems);
-        century.setAdapter(adapter);
     }
 }
