@@ -20,10 +20,10 @@
         <activity android:name=".KrimMediumQuizActivity" />
         <activity android:name=".KrimHardQuizActivity" />
         <activity android:name=".QuizActivity" />
-        <activity android:name=".ChooseEventsActivity" />
+        <activity android:name=".SearchEventsActivity" />
         <activity android:name=".WebViewActivity" />
         <activity android:name=".ChooseActivity" />
-        <activity android:name=".SearchActivity" />
+        <activity android:name=".SearchFiguresActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

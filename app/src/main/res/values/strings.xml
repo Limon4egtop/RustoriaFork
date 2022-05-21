@@ -3,7 +3,13 @@
     <string name="action_settings">Settings</string>
     <string-array name="deyatels_search">
         <item>Все</item>
-        <item>Отдельно</item>
+        <item>11 век</item>
+        <item>14 век</item>
+        <item>16 век</item>
+        <item>17 век</item>
+        <item>18 век</item>
+        <item>19 век</item>
+        <item>20 век</item>
     </string-array>
     <string-array name="quizNames">
         <item>Основной</item>

@@ -6,17 +6,14 @@ import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
-import android.widget.Spinner;
-import android.widget.Toast;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class SearchActivity extends AppCompatActivity {
+public class SearchFiguresActivity extends AppCompatActivity {
 
     String[] items;
     ArrayList<String> listItems;
@@ -54,7 +51,7 @@ public class SearchActivity extends AppCompatActivity {
             String deyatel_name = (String) parent.getItemAtPosition(position);
             Bundle bundle = new Bundle();
             bundle.putString("name", (String) parent.getItemAtPosition(position));
-            Intent intent = new Intent(SearchActivity.this, WebViewActivity.class);
+            Intent intent = new Intent(SearchFiguresActivity.this, WebViewActivity.class);
             intent.putExtras(bundle);
             startActivity(intent, bundle);
             editText.setText(deyatel_name);
@@ -80,7 +77,7 @@ public class SearchActivity extends AppCompatActivity {
                 "Михаил Федорович", "Алексей Михайлович", "Борис Годунов", "Лжедмитрий I",
                 "Василий IV", "Федор III", "Федор I", "Филарет", "Василий Голицын", "Ордин-Нащокин",
                 "Михаил Шеин", "Дмитрий Пожарский", "Малюта Скуратов", "Григорий Отрепьев", "Борис Шереметев" ,
-                "Владислав IV", " "};
+                "Владислав IV", "test", " "};
         listItems = new ArrayList<>(Arrays.asList(items));
         adapter = new ArrayAdapter<>(this, R.layout.list_item, R.id.txtitem, listItems);
         all.setAdapter(adapter);
