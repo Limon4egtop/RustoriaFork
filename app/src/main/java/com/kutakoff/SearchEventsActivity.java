@@ -10,6 +10,7 @@ import android.text.TextWatcher;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Spinner;
@@ -37,7 +38,9 @@ public class SearchEventsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED);
-        setContentView(R.layout.activity_choose_events);
+        setContentView(R.layout.activity_search_events);
+        Button button_back = findViewById(R.id.button_back);
+        button_back.setOnClickListener(v -> onBackPressed());
         all = findViewById(R.id.all);
         elevenCentury = findViewById(R.id.elevenCentury);
         fourteenCentury = findViewById(R.id.fourteenCentury);

@@ -6,6 +6,14 @@
     android:orientation="vertical"
     tools:context=".SearchEventsActivity">
 
+    <Button
+        android:id="@+id/button_back"
+        android:layout_width="63dp"
+        android:layout_height="40dp"
+        android:background="@drawable/xakaton_button_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <Spinner
         android:id="@+id/chooseCentury"
         android:layout_width="wrap_content"
@@ -16,7 +24,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.022"
+        app:layout_constraintVertical_bias="0.016"
         tools:ignore="MissingConstraints" />
 
     <EditText

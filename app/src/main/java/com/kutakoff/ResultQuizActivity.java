@@ -16,12 +16,40 @@ public class ResultQuizActivity extends AppCompatActivity {
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED);
         TextView textResult = findViewById(R.id.textresult);
         ImageView goHome = findViewById(R.id.goHome);
+        String compliment = "";
         if (Count.isHardQuiz) {
-            textResult.setText("Ваш результат: " + Count.getA() + "/10.");
+            if (Count.getA() >= 0 && Count.getA() <= 2) {
+                compliment = "Попробуй ещё раз!";
+            } else if(Count.getA() >= 3 && Count.getA() <= 5) {
+                compliment = "Неплохо!";
+            } else if (Count.getA() >= 6 && Count.getA() <= 8) {
+                compliment = "Ты хорошо справился!";
+            } else if (Count.getA() == 9 || Count.getA() == 10) {
+                compliment = "Ты справился отлично!";
+            }
+            textResult.setText(compliment + "\nТвой результат: " + Count.getA() + "/10.");
         } else if (Count.isSpecialQUiz) {
-            textResult.setText("Ваш результат: " + Count.getA() + "/6.");
+            if (Count.getA() >= 0 && Count.getA() <= 1) {
+                compliment = "Попробуй ещё раз!";
+            } else if(Count.getA() >= 2 && Count.getA() <= 3) {
+                compliment = "Неплохо!";
+            } else if (Count.getA() == 4) {
+                compliment = "Ты хорошо справился!";
+            } else if (Count.getA() == 5 || Count.getA() == 6) {
+                compliment = "Ты справился отлично!";
+            }
+            textResult.setText(compliment + "\nТвой результат: " + Count.getA() + "/6.");
         } else {
-            textResult.setText("Ваш результат: " + Count.getA() + "/5.");
+            if (Count.getA() >= 0 && Count.getA() < 3) {
+                compliment = "Попробуй ещё раз!";
+            } else if(Count.getA() == 3) {
+                compliment = "А ты неплох!";
+            } else if (Count.getA() == 4) {
+                compliment = "Молодец, ты хорошо справился!";
+            } else if (Count.getA() == 5) {
+                compliment = "Молодец, ты справился отлично!";
+            }
+            textResult.setText(compliment + "\nТвой результат: " + Count.getA() + "/5.");
         }
         Count.isHardQuiz = false;
         Count.isSpecialQUiz = false;

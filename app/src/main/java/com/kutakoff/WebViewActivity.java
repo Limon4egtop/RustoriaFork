@@ -1,6 +1,9 @@
 package com.kutakoff;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.webkit.WebView;
 
@@ -196,9 +199,6 @@ public class WebViewActivity extends AppCompatActivity {
                     break;
                 case "Владислав IV":
                     url = "file:///android_asset/Vladislav_4.html";
-                    break;
-                case "test":
-                    url = "file:///android_asset/test.html";
                     break;
             }
             WebView myWebView = (WebView) findViewById(R.id.webview);

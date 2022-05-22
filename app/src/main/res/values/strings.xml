@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Hakaton</string>
+    <string name="app_name">Rustoria</string>
     <string name="action_settings">Settings</string>
     <string-array name="deyatels_search">
         <item>Все</item>
