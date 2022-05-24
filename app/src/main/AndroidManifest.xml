@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Hakaton">
-        <activity android:name=".TestActivity"></activity>
+        <activity android:name=".SearchFiguresActivity"></activity>
+        <activity android:name=".SearchEventsActivity" />
         <activity android:name=".StalingradskayaBitvaQuizActivity" />
         <activity android:name=".ResultQuizActivity" />
         <activity android:name=".MainEasyQuizActivity" />
@@ -21,10 +22,8 @@
         <activity android:name=".KrimMediumQuizActivity" />
         <activity android:name=".KrimHardQuizActivity" />
         <activity android:name=".QuizActivity" />
-        <activity android:name=".SearchEventsActivity" />
         <activity android:name=".WebViewActivity" />
         <activity android:name=".ChooseActivity" />
-        <activity android:name=".SearchFiguresActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

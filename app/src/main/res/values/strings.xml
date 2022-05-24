@@ -1,10 +1,13 @@
 <resources>
     <string name="app_name">Rustoria</string>
     <string name="action_settings">Settings</string>
-    <string-array name="deyatels_search">
+    <string-array name="centuries">
         <item>Все</item>
         <item>11 век</item>
+        <item>12 век</item>
+        <item>13 век</item>
         <item>14 век</item>
+        <item>15 век</item>
         <item>16 век</item>
         <item>17 век</item>
         <item>18 век</item>

@@ -3,28 +3,22 @@ package com.kutakoff;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.content.pm.ActivityInfo;
 import android.os.Bundle;
-import android.text.Editable;
-import android.text.TextWatcher;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.SearchView;
 import android.widget.Spinner;
 import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 
 public class SearchFiguresActivity extends AppCompatActivity {
 
-    String[] items;
-    ArrayList<String> listItems;
-    ArrayAdapter<String> adapter;
-    EditText editText;
     ListView all;
     ListView elevenCentury;
     ListView fourteenCentury;
@@ -34,14 +28,22 @@ public class SearchFiguresActivity extends AppCompatActivity {
     ListView nineteenCentury;
     ListView twentyCentury;
 
+    ArrayAdapter spinnerAdapter;
+    ArrayAdapter adapterAll;
+    ArrayAdapter adapterEleven;
+    ArrayAdapter adapterFourteen;
+    ArrayAdapter adapterSixteen;
+    ArrayAdapter adapterSeventeen;
+    ArrayAdapter adapterEighteen;
+    ArrayAdapter adapterNineteen;
+    ArrayAdapter adapterTwenty;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED);
         setContentView(R.layout.activity_search_figures);
-        Button button_back = findViewById(R.id.button_back);
-        button_back.setOnClickListener(v -> onBackPressed());
-        editText = findViewById(R.id.txtsearch);
+        Button button = findViewById(R.id.button_back);
+        Spinner spinner = findViewById(R.id.chooseCentury1);
         all = findViewById(R.id.all);
         elevenCentury = findViewById(R.id.elevenCentury);
         fourteenCentury = findViewById(R.id.fourteenCentury);
@@ -50,50 +52,57 @@ public class SearchFiguresActivity extends AppCompatActivity {
         eighteenCentury = findViewById(R.id.eighteenCentury);
         nineteenCentury = findViewById(R.id.nineteenCentury);
         twentyCentury = findViewById(R.id.twentyCentury);
-        editText = findViewById(R.id.txtsearch);
-        all();
-        elevenCentury();
-        fourteenCentury();
-        sixteenCentury();
-        seventeenCentury();
-        eighteenCentury();
-        nineteenCentury();
-        twentyCentury();
-        editText.addTextChangedListener(new TextWatcher() {
+        SearchView searchView = findViewById(R.id.searchView);
+
+        button.setOnClickListener(v -> onBackPressed());
+
+        ArrayList<String> listAll = new ArrayList<>();
+        ArrayList<String> listEleven = new ArrayList<>();
+        ArrayList<String> listFourteen = new ArrayList<>();
+        ArrayList<String> listSixteen = new ArrayList<>();
+        ArrayList<String> listSeventeen = new ArrayList<>();
+        ArrayList<String> listEighteen = new ArrayList<>();
+        ArrayList<String> listNineteen = new ArrayList<>();
+        ArrayList<String> listTwenty = new ArrayList<>();
+
+        fillArrayLists(listAll, listEleven, listFourteen, listSixteen, listSeventeen, listEighteen, listNineteen, listTwenty);
+        fillAdapters(listAll, listEleven, listFourteen, listSixteen, listSeventeen, listEighteen, listNineteen, listTwenty);
+
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+            public boolean onQueryTextSubmit(String query) {
+                return false;
             }
 
             @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                if (s.toString().equals("")) {
-                    all();
-                } else {
-                    searchItem(s.toString());
-                }
+            public boolean onQueryTextChange(String newText) {
+                adapterAll.getFilter().filter(newText);
+                adapterEleven.getFilter().filter(newText);
+                adapterFourteen.getFilter().filter(newText);
+                adapterSixteen.getFilter().filter(newText);
+                adapterSeventeen.getFilter().filter(newText);
+                adapterEighteen.getFilter().filter(newText);
+                adapterNineteen.getFilter().filter(newText);
+                adapterTwenty.getFilter().filter(newText);
+                return false;
             }
+        });
 
-            @Override
-            public void afterTextChanged(Editable s) {
-            }
-        });
-        all.setOnItemClickListener((parent, view, position, id) -> {
-            String deyatel_name = (String) parent.getItemAtPosition(position);
-            Bundle bundle = new Bundle();
-            bundle.putString("name", (String) parent.getItemAtPosition(position));
-            Intent intent = new Intent(SearchFiguresActivity.this, WebViewActivity.class);
-            intent.putExtras(bundle);
-            startActivity(intent, bundle);
-            editText.setText(deyatel_name);
-        });
-        Spinner spinner = findViewById(R.id.chooseCentury);
+        clickableList(all);
+        clickableList(elevenCentury);
+        clickableList(fourteenCentury);
+        clickableList(sixteenCentury);
+        clickableList(seventeenCentury);
+        clickableList(eighteenCentury);
+        clickableList(nineteenCentury);
+        clickableList(twentyCentury);
 
         String selected = spinner.getSelectedItem().toString();
         Toast.makeText(getApplicationContext(), selected, Toast.LENGTH_SHORT).show();
 
-        ArrayAdapter adapter1 = ArrayAdapter.createFromResource(this, R.array.deyatels_search, R.layout.spinner_text);
-        adapter1.setDropDownViewResource(R.layout.spinner_dropbox_layout);
-        spinner.setAdapter(adapter1);
+        spinnerAdapter = ArrayAdapter.createFromResource(this, R.array.centuries, R.layout.spinner_text);
+        spinnerAdapter.setDropDownViewResource(R.layout.spinner_dropbox_layout);
+        spinner.setAdapter(spinnerAdapter);
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -130,22 +139,12 @@ public class SearchFiguresActivity extends AppCompatActivity {
 
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
-
             }
         });
     }
 
-    public void searchItem(String textToSearch) {
-        for (String item : items) {
-            if (!item.contains(textToSearch)) {
-                listItems.remove(item);
-            }
-        }
-        adapter.notifyDataSetChanged();
-    }
-
-    public void all() {
-        items = new String[]{"Иван Грозный", "Иван III", "Александр III", "Иван Фёдоров", "Георгий Жуков",
+    private void fillArrayLists(ArrayList<String> all, ArrayList<String> elevenCentury, ArrayList<String> fourteenCentury, ArrayList<String> sixteenCentury, ArrayList<String> seventeenCentury, ArrayList<String> eighteenCentury, ArrayList<String> nineteenCentury, ArrayList<String> twentyCentury) {
+        all.addAll(Arrays.asList("Иван Грозный", "Иван III", "Александр III", "Иван Фёдоров", "Георгий Жуков",
                 "Иван I Калита", "Николай II", "Сергий Радонежский", "Лжедмитрий II", "Никита Хрущев",
                 "Елизавета Петровна", "Александр Невский", "Дмитрий Донской", "Климент Ворошилов",
                 "Нестор Летописец", "Даниил Московский", "Александр I", "Рюрик", "Олег Вещий",
@@ -154,68 +153,31 @@ public class SearchFiguresActivity extends AppCompatActivity {
                 "Михаил Федорович", "Алексей Михайлович", "Борис Годунов", "Лжедмитрий I",
                 "Василий IV", "Федор III", "Федор I", "Филарет", "Василий Голицын", "Ордин-Нащокин",
                 "Михаил Шеин", "Дмитрий Пожарский", "Малюта Скуратов", "Григорий Отрепьев", "Борис Шереметев",
-                "Владислав IV"};
-        listItems = new ArrayList<>(Arrays.asList(items));
-        adapter = new ArrayAdapter<>(this, R.layout.list_item, R.id.txtitem, listItems);
-        all.setAdapter(adapter);
-    }
+                "Владислав IV"));
+        Collections.sort(all);
 
-    public void elevenCentury() {
-        items = new String[]{"Любечский съезд"};
-        Arrays.sort(items);
-        listItems = new ArrayList<>(Arrays.asList(items));
-        adapter = new ArrayAdapter<>(this, R.layout.list_item, R.id.txtitem, listItems);
-        elevenCentury.setAdapter(adapter);
-    }
+        elevenCentury.addAll(Arrays.asList("Любечский съезд"));
+        Collections.sort(elevenCentury);
 
-    public void fourteenCentury() {
-        items = new String[]{"Куликовская битва"};
-        Arrays.sort(items);
-        listItems = new ArrayList<>(Arrays.asList(items));
-        adapter = new ArrayAdapter<>(this, R.layout.list_item, R.id.txtitem, listItems);
-        fourteenCentury.setAdapter(adapter);
-    }
+        fourteenCentury.addAll(Arrays.asList("Куликовская битва"));
+        Collections.sort(fourteenCentury);
 
-    public void sixteenCentury() {
-        items = new String[]{"Смутное время"};
-        Arrays.sort(items);
-        listItems = new ArrayList<>(Arrays.asList(items));
-        adapter = new ArrayAdapter<>(this, R.layout.list_item, R.id.txtitem, listItems);
-        sixteenCentury.setAdapter(adapter);
-    }
+        sixteenCentury.addAll(Arrays.asList("Смутное время"));
+        Collections.sort(sixteenCentury);
 
-    public void seventeenCentury() {
-        items = new String[]{"Вечный мир с Польшей"};
-        Arrays.sort(items);
-        listItems = new ArrayList<>(Arrays.asList(items));
-        adapter = new ArrayAdapter<>(this, R.layout.list_item, R.id.txtitem, listItems);
-        seventeenCentury.setAdapter(adapter);
-    }
+        seventeenCentury.addAll(Arrays.asList("Вечный мир с Польшей"));
+        Collections.sort(seventeenCentury);
 
-    public void eighteenCentury() {
-        items = new String[]{"Северная война"};
-        Arrays.sort(items);
-        listItems = new ArrayList<>(Arrays.asList(items));
-        adapter = new ArrayAdapter<>(this, R.layout.list_item, R.id.txtitem, listItems);
-        eighteenCentury.setAdapter(adapter);
-    }
+        eighteenCentury.addAll(Arrays.asList("Северная война"));
+        Collections.sort(eighteenCentury);
 
-    public void nineteenCentury() {
-        items = new String[]{"Битва при Красном", "Взятие Парижа", "Отмена крепостного права"};
-        Arrays.sort(items);
-        listItems = new ArrayList<>(Arrays.asList(items));
-        adapter = new ArrayAdapter<>(this, R.layout.list_item, R.id.txtitem, listItems);
-        nineteenCentury.setAdapter(adapter);
-    }
+        nineteenCentury.addAll(Arrays.asList("Битва при Красном", "Взятие Парижа", "Отмена крепостного права"));
+        Collections.sort(nineteenCentury);
 
-    public void twentyCentury() {
-        items = new String[]{"Берлинская наступательная операция", "Брусиловский прорыв",
+        twentyCentury.addAll(Arrays.asList("Берлинская наступательная операция", "Брусиловский прорыв",
                 "Гражданская война 1917-1922 гг.", "Курская битва", "Марш-бросок на Притштину",
-                "Нюрмбергский процесс", "Распад СССР", "Расстрел царской семьи", "Сталинградская битва"};
-        Arrays.sort(items);
-        listItems = new ArrayList<>(Arrays.asList(items));
-        adapter = new ArrayAdapter<>(this, R.layout.list_item, R.id.txtitem, listItems);
-        twentyCentury.setAdapter(adapter);
+                "Нюрмбергский процесс", "Распад СССР", "Расстрел царской семьи", "Сталинградская битва"));
+        Collections.sort(twentyCentury);
     }
 
     private void visibilityListItems(ListView listViewVISIBLE, ListView listView1, ListView listView2, ListView listView3, ListView listView4, ListView listView5, ListView listView6, ListView listView7) {
@@ -227,5 +189,44 @@ public class SearchFiguresActivity extends AppCompatActivity {
         listView5.setVisibility(View.INVISIBLE);
         listView6.setVisibility(View.INVISIBLE);
         listView7.setVisibility(View.INVISIBLE);
+    }
+
+    private void clickableList(ListView listView) {
+        /**
+         * Метод для перехода в HTML
+         */
+        listView.setOnItemClickListener((parent, view, position, id) -> {
+            Bundle bundle = new Bundle();
+            bundle.putString("name", (String) parent.getItemAtPosition(position));
+            Intent intent = new Intent(SearchFiguresActivity.this, WebViewActivity.class);
+            intent.putExtras(bundle);
+            startActivity(intent, bundle);
+        });
+    }
+
+    private void fillAdapters(ArrayList<String> listAll, ArrayList<String> listEleven, ArrayList<String> listFourteen, ArrayList<String> listSixteen, ArrayList<String> listSeventeen, ArrayList<String> listEighteen, ArrayList<String> listNineteen, ArrayList<String> listTwenty) {
+        adapterAll = new ArrayAdapter(this, android.R.layout.simple_list_item_1, listAll);
+        all.setAdapter(adapterAll);
+
+        adapterEleven = new ArrayAdapter(this, android.R.layout.simple_list_item_1, listEleven);
+        elevenCentury.setAdapter(adapterEleven);
+
+        adapterFourteen = new ArrayAdapter(this, android.R.layout.simple_list_item_1, listFourteen);
+        fourteenCentury.setAdapter(adapterFourteen);
+
+        adapterSixteen = new ArrayAdapter(this, android.R.layout.simple_list_item_1, listSixteen);
+        sixteenCentury.setAdapter(adapterSixteen);
+
+        adapterSeventeen = new ArrayAdapter(this, android.R.layout.simple_list_item_1, listSeventeen);
+        seventeenCentury.setAdapter(adapterSeventeen);
+
+        adapterEighteen = new ArrayAdapter(this, android.R.layout.simple_list_item_1, listEighteen);
+        eighteenCentury.setAdapter(adapterEighteen);
+
+        adapterNineteen = new ArrayAdapter(this, android.R.layout.simple_list_item_1, listNineteen);
+        nineteenCentury.setAdapter(adapterNineteen);
+
+        adapterTwenty = new ArrayAdapter(this, android.R.layout.simple_list_item_1, listTwenty);
+        twentyCentury.setAdapter(adapterTwenty);
     }
 }
