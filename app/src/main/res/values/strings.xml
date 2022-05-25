@@ -14,9 +14,20 @@
         <item>19 век</item>
         <item>20 век</item>
     </string-array>
+    <string-array name="figures">
+        <item>Правители</item>
+        <item>Полководцы</item>
+        <item>Духовенство</item>
+        <item>Князья</item>
+        <item>Творчество</item>
+        <item>Дипломаты</item>
+        <item>Самозванцы</item>
+        <item>Захватчики</item>
+    </string-array>
     <string-array name="quizNames">
         <item>Основной</item>
         <item>Сталинградская\nбитва</item>
         <item>Крым России</item>
+        <item>Битвы при \nПетре I</item>
     </string-array>
 </resources>

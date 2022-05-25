@@ -62,36 +62,50 @@ public class QuizActivity extends AppCompatActivity implements AdapterView.OnIte
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         Toast.makeText(this, parent.getSelectedItem().toString(), Toast.LENGTH_SHORT).show();
-        if (position == 1) {
-            main_easy.setVisibility(View.INVISIBLE);
-            main_medium.setVisibility(View.INVISIBLE);
-            main_hard.setVisibility(View.INVISIBLE);
+        switch (position) {
+            case 0:
+                main_easy.setVisibility(View.VISIBLE);
+                main_medium.setVisibility(View.VISIBLE);
+                main_hard.setVisibility(View.VISIBLE);
 
-            second_february_start.setVisibility(View.VISIBLE);
+                second_february_start.setVisibility(View.INVISIBLE);
 
-            krim_easy.setVisibility(View.INVISIBLE);
-            krim_medium.setVisibility(View.INVISIBLE);
-            krim_hard.setVisibility(View.INVISIBLE);
-        } else if (position == 2) {
-            main_easy.setVisibility(View.INVISIBLE);
-            main_medium.setVisibility(View.INVISIBLE);
-            main_hard.setVisibility(View.INVISIBLE);
+                krim_easy.setVisibility(View.INVISIBLE);
+                krim_medium.setVisibility(View.INVISIBLE);
+                krim_hard.setVisibility(View.INVISIBLE);
+                break;
+            case 1:
+                main_easy.setVisibility(View.INVISIBLE);
+                main_medium.setVisibility(View.INVISIBLE);
+                main_hard.setVisibility(View.INVISIBLE);
 
-            second_february_start.setVisibility(View.INVISIBLE);
+                second_february_start.setVisibility(View.VISIBLE);
 
-            krim_easy.setVisibility(View.VISIBLE);
-            krim_medium.setVisibility(View.VISIBLE);
-            krim_hard.setVisibility(View.VISIBLE);
-        } else {
-            main_easy.setVisibility(View.VISIBLE);
-            main_medium.setVisibility(View.VISIBLE);
-            main_hard.setVisibility(View.VISIBLE);
+                krim_easy.setVisibility(View.INVISIBLE);
+                krim_medium.setVisibility(View.INVISIBLE);
+                krim_hard.setVisibility(View.INVISIBLE);
+                break;
+            case 2:
+                main_easy.setVisibility(View.INVISIBLE);
+                main_medium.setVisibility(View.INVISIBLE);
+                main_hard.setVisibility(View.INVISIBLE);
 
-            second_february_start.setVisibility(View.INVISIBLE);
+                second_february_start.setVisibility(View.INVISIBLE);
 
-            krim_easy.setVisibility(View.INVISIBLE);
-            krim_medium.setVisibility(View.INVISIBLE);
-            krim_hard.setVisibility(View.INVISIBLE);
+                krim_easy.setVisibility(View.VISIBLE);
+                krim_medium.setVisibility(View.VISIBLE);
+                krim_hard.setVisibility(View.VISIBLE);
+                break;
+            case 3:
+                main_easy.setVisibility(View.INVISIBLE);
+                main_medium.setVisibility(View.INVISIBLE);
+                main_hard.setVisibility(View.INVISIBLE);
+
+                second_february_start.setVisibility(View.INVISIBLE);
+
+                krim_easy.setVisibility(View.INVISIBLE);
+                krim_medium.setVisibility(View.INVISIBLE);
+                krim_hard.setVisibility(View.INVISIBLE);
         }
         quizSout.setText("Квиз: " + parent.getSelectedItem());
     }

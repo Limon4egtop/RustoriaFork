@@ -203,6 +203,48 @@ public class WebViewActivity extends AppCompatActivity {
                 case "поход Игоря Святославовича на половцев":
                     url = "file:///android_asset/poxod_Igora_Svyatoslavovicha.html";
                     break;
+                case "Судебник Ивана III":
+                    url = "file:///android_asset/Sudebnik_ivana3.html";
+                    break;
+                case "Битва на Калке":
+                    url = "file:///android_asset/Bitva_na_kalke.html";
+                    break;
+                case "Битва под Галичем":
+                    url = "file:///android_asset/Bitva_pod_galichem.html";
+                    break;
+                case "Невская битва":
+                    url = "file:///android_asset/Nevskaya_bitva.html";
+                    break;
+                case "Ледовое побоище":
+                    url = "file:///android_asset/Ledovoe_poboishe.html";
+                    break;
+                case "Нашествие Батыя":
+                    url = "file:///android_asset/Nashestvie_batiya.html";
+                    break;
+                case "Долобский съезд":
+                    url = "file:///android_asset/Dolobskiy_siezd.html";
+                    break;
+                case "Основание Москвы":
+                    url = "file:///android_asset/Osnovanie_moskvi.html";
+                    break;
+                case "Киевский поход 1169 года":
+                    url = "file:///android_asset/Kievskiy_poxod_1169.html";
+                    break;
+                case "Раковорская битва":
+                    url = "file:///android_asset/Rakovorskaya_bitva.html";
+                    break;
+                case "Битва на реке Сутени":
+                    url = "file:///android_asset/Bitva_na_reke_suteni.html";
+                    break;
+                case "Салницкая битва":
+                    url = "file:///android_asset/Salnickaya_bitva.html";
+                    break;
+                case "Киевское восстание 1113 года":
+                    url = "file:///android_asset/Kievskoe_vosstanie_1113.html";
+                    break;
+                case "Липицкая битва":
+                    url = "file:///android_asset/Lipeckaya_bitva.html";
+                    break;
             }
             WebView myWebView = (WebView) findViewById(R.id.webview);
             myWebView.loadUrl(url);
