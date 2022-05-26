@@ -19,17 +19,9 @@ import java.util.Collections;
 
 public class SearchEventsActivity extends AppCompatActivity {
 
-    ListView all;
-    ListView elevenCentury;
-    ListView twelveCentury;
-    ListView thirteenCentury;
-    ListView fourteenCentury;
-    ListView fifteenCentury;
-    ListView sixteenCentury;
-    ListView seventeenCentury;
-    ListView eighteenCentury;
-    ListView nineteenCentury;
-    ListView twentyCentury;
+    //all && 11-20
+    ListView[] centuries = new ListView[11];
+
 
     ArrayAdapter spinnerAdapter;
     ArrayAdapter adapterAll;
@@ -50,17 +42,17 @@ public class SearchEventsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_search_events);
         Button button = findViewById(R.id.button_back);
         Spinner spinner = findViewById(R.id.chooseCentury1);
-        all = findViewById(R.id.all);
-        elevenCentury = findViewById(R.id.elevenCentury);
-        twelveCentury = findViewById(R.id.twelveCentury);
-        thirteenCentury = findViewById(R.id.thirteenCentury);
-        fourteenCentury = findViewById(R.id.fourteenCentury);
-        fifteenCentury = findViewById(R.id.fifteenCentury);
-        sixteenCentury = findViewById(R.id.sixteenCentury);
-        seventeenCentury = findViewById(R.id.seventeenCentury);
-        eighteenCentury = findViewById(R.id.eighteenCentury);
-        nineteenCentury = findViewById(R.id.nineteenCentury);
-        twentyCentury = findViewById(R.id.twentyCentury);
+        centuries[0] = findViewById(R.id.all);
+        centuries[1] = findViewById(R.id.elevenCentury);
+        centuries[2] = findViewById(R.id.twelveCentury);
+        centuries[3] = findViewById(R.id.thirteenCentury);
+        centuries[4] = findViewById(R.id.fourteenCentury);
+        centuries[5] = findViewById(R.id.fifteenCentury);
+        centuries[6] = findViewById(R.id.sixteenCentury);
+        centuries[7] = findViewById(R.id.seventeenCentury);
+        centuries[8] = findViewById(R.id.eighteenCentury);
+        centuries[9] = findViewById(R.id.nineteenCentury);
+        centuries[10] = findViewById(R.id.twentyCentury);
         SearchView searchView = findViewById(R.id.searchView);
 
         button.setOnClickListener(v -> onBackPressed());
@@ -103,17 +95,9 @@ public class SearchEventsActivity extends AppCompatActivity {
             }
         });
 
-        clickableList(all);
-        clickableList(elevenCentury);
-        clickableList(twelveCentury);
-        clickableList(thirteenCentury);
-        clickableList(fourteenCentury);
-        clickableList(fifteenCentury);
-        clickableList(sixteenCentury);
-        clickableList(seventeenCentury);
-        clickableList(eighteenCentury);
-        clickableList(nineteenCentury);
-        clickableList(twentyCentury);
+        for (ListView listView : centuries) {
+            clickableList(listView);
+        }
 
         String selected = spinner.getSelectedItem().toString();
         Toast.makeText(getApplicationContext(), selected, Toast.LENGTH_SHORT).show();
@@ -127,41 +111,7 @@ public class SearchEventsActivity extends AppCompatActivity {
                 /**
                  * первый аргумент в методе visibilityListItem() - VISIBLE, остальные INVISIBLE
                  */
-                switch (position) {
-                    case 0:
-                        visibilityListItems(all, elevenCentury, twelveCentury, thirteenCentury, fourteenCentury, fifteenCentury, sixteenCentury, seventeenCentury, eighteenCentury, nineteenCentury, twentyCentury);
-                        break;
-                    case 1:
-                        visibilityListItems(elevenCentury, all, twelveCentury, thirteenCentury, fourteenCentury, fifteenCentury, sixteenCentury, seventeenCentury, eighteenCentury, nineteenCentury, twentyCentury);
-                        break;
-                    case 2:
-                        visibilityListItems(twelveCentury, all, elevenCentury, thirteenCentury, fourteenCentury, fifteenCentury, sixteenCentury, seventeenCentury, eighteenCentury, nineteenCentury, twentyCentury);
-                        break;
-                    case 3:
-                        visibilityListItems(thirteenCentury, all, elevenCentury, twelveCentury, fourteenCentury, fifteenCentury, sixteenCentury, seventeenCentury, eighteenCentury, nineteenCentury, twentyCentury);
-                        break;
-                    case 4:
-                        visibilityListItems(fourteenCentury, all, elevenCentury, twelveCentury, thirteenCentury, fifteenCentury, sixteenCentury, seventeenCentury, eighteenCentury, nineteenCentury, twentyCentury);
-                        break;
-                    case 5:
-                        visibilityListItems(fifteenCentury, all, elevenCentury, twelveCentury, thirteenCentury, fourteenCentury, sixteenCentury, seventeenCentury, eighteenCentury, nineteenCentury, twentyCentury);
-                        break;
-                    case 6:
-                        visibilityListItems(sixteenCentury, all, elevenCentury, twelveCentury, thirteenCentury, fourteenCentury, fifteenCentury, seventeenCentury, eighteenCentury, nineteenCentury, twentyCentury);
-                        break;
-                    case 7:
-                        visibilityListItems(seventeenCentury, all, elevenCentury, twelveCentury, thirteenCentury, fourteenCentury, fifteenCentury, sixteenCentury, eighteenCentury, nineteenCentury, twentyCentury);
-                        break;
-                    case 8:
-                        visibilityListItems(eighteenCentury, all, elevenCentury, twelveCentury, thirteenCentury, fourteenCentury, fifteenCentury, sixteenCentury, seventeenCentury, nineteenCentury, twentyCentury);
-                        break;
-                    case 9:
-                        visibilityListItems(nineteenCentury, all, elevenCentury, twelveCentury, thirteenCentury, fourteenCentury, fifteenCentury, sixteenCentury, seventeenCentury, eighteenCentury, twentyCentury);
-                        break;
-                    case 10:
-                        visibilityListItems(twentyCentury, all, elevenCentury, twelveCentury, thirteenCentury, fourteenCentury, fifteenCentury, sixteenCentury, seventeenCentury, eighteenCentury, nineteenCentury);
-                        break;
-                }
+                visibilityListItems(position);
             }
 
             @Override
@@ -184,7 +134,10 @@ public class SearchEventsActivity extends AppCompatActivity {
                 "Московско-новгородская война (1471)", "Стояние на реке Угре", "Битва на реке Судоме",
                 "Сражение при Листвене", "Битва на Нежатиной Ниве", "Битва на реке Суле", "Полоцкий поход Мстислава Великого (1127)",
                 "Взятие Рязани Батыем", "Неврюева рать", "Оборона Киева 1240 года", "Тверское восстание 1327 года",
-                "Сражение на реке Пьяне", "Нашествие Тохтамыша на Москву(1382)"));
+                "Сражение на реке Пьяне", "Нашествие Тохтамыша на Москву(1382)", "Московско-новгородская война (1477—1478)",
+                "Битва на реке Ведрошь", "Ливонская война (1558-1583)", "Битва при Молодях", "Плюсское перемирие",
+                "Восстание Болотникова", "Битва при Клушине", "Смоленская война", "Прутский поход", "Сражение при Гренгам",
+                "Отечественная война (1812)", "Русско-персидская война (1826—1828)"));
         Collections.sort(all);
 
         elevenCentury.addAll(Arrays.asList("Любечский съезд", "Битва на реке Судоме", "Сражение при Листвене",
@@ -207,19 +160,22 @@ public class SearchEventsActivity extends AppCompatActivity {
 
         fifteenCentury.addAll(Arrays.asList("Судебник Ивана III", "Битва под Галичем", "Нашествие Едигея",
                 "Шелонская битва(входит в Московско-новгородскую войну)", "Московско-новгородская война (1471)",
-                "Стояние на реке Угре"));
+                "Стояние на реке Угре", "Московско-новгородская война (1477—1478)"));
         Collections.sort(fifteenCentury);
 
-        sixteenCentury.addAll(Arrays.asList("Смутное время"));
+        sixteenCentury.addAll(Arrays.asList("Смутное время", "Битва на реке Ведрошь", "Ливонская война (1558-1583)",
+                "Битва при Молодях", "Плюсское перемирие"));
         Collections.sort(sixteenCentury);
 
-        seventeenCentury.addAll(Arrays.asList("Вечный мир с Польшей"));
+        seventeenCentury.addAll(Arrays.asList("Вечный мир с Польшей", "Восстание Болотникова", "Битва при Клушине",
+                "Смоленская война"));
         Collections.sort(seventeenCentury);
 
-        eighteenCentury.addAll(Arrays.asList("Северная война"));
+        eighteenCentury.addAll(Arrays.asList("Северная война", "Прутский поход", "Сражение при Гренгам"));
         Collections.sort(eighteenCentury);
 
-        nineteenCentury.addAll(Arrays.asList("Битва при Красном", "Взятие Парижа", "Отмена крепостного права"));
+        nineteenCentury.addAll(Arrays.asList("Битва при Красном", "Взятие Парижа", "Отмена крепостного права",
+                "Отечественная война (1812)", "Русско-персидская война (1826—1828)"));
         Collections.sort(nineteenCentury);
 
         twentyCentury.addAll(Arrays.asList("Берлинская наступательная операция", "Брусиловский прорыв",
@@ -228,18 +184,14 @@ public class SearchEventsActivity extends AppCompatActivity {
         Collections.sort(twentyCentury);
     }
 
-    private void visibilityListItems(ListView listViewVISIBLE, ListView listView1, ListView listView2, ListView listView3, ListView listView4, ListView listView5, ListView listView6, ListView listView7, ListView listView8, ListView listView9, ListView listView10) {
-        listViewVISIBLE.setVisibility(View.VISIBLE);
-        listView1.setVisibility(View.INVISIBLE);
-        listView2.setVisibility(View.INVISIBLE);
-        listView3.setVisibility(View.INVISIBLE);
-        listView4.setVisibility(View.INVISIBLE);
-        listView5.setVisibility(View.INVISIBLE);
-        listView6.setVisibility(View.INVISIBLE);
-        listView7.setVisibility(View.INVISIBLE);
-        listView8.setVisibility(View.INVISIBLE);
-        listView9.setVisibility(View.INVISIBLE);
-        listView10.setVisibility(View.INVISIBLE);
+    private void visibilityListItems(int num) {
+        for (int i = 0; i < centuries.length; i++) {
+            if (i != num) {
+                centuries[i].setVisibility(View.INVISIBLE);
+            } else {
+                centuries[num].setVisibility(View.VISIBLE);
+            }
+        }
     }
 
     private void clickableList(ListView listView) {
@@ -257,36 +209,36 @@ public class SearchEventsActivity extends AppCompatActivity {
 
     private void fillAdapters(ArrayList<String> listAll, ArrayList<String> listEleven, ArrayList<String> listTwelve, ArrayList<String> listThirteen, ArrayList<String> listFourteen, ArrayList<String> listFifteen, ArrayList<String> listSixteen, ArrayList<String> listSeventeen, ArrayList<String> listEighteen, ArrayList<String> listNineteen, ArrayList<String> listTwenty) {
         adapterAll = new ArrayAdapter(this, android.R.layout.simple_list_item_1, listAll);
-        all.setAdapter(adapterAll);
+        centuries[0].setAdapter(adapterAll);
 
         adapterEleven = new ArrayAdapter(this, android.R.layout.simple_list_item_1, listEleven);
-        elevenCentury.setAdapter(adapterEleven);
+        centuries[1].setAdapter(adapterEleven);
 
         adapterTwelve = new ArrayAdapter(this, android.R.layout.simple_list_item_1, listTwelve);
-        twelveCentury.setAdapter(adapterTwelve);
+        centuries[2].setAdapter(adapterTwelve);
 
         adapterThirteen = new ArrayAdapter(this, android.R.layout.simple_list_item_1, listThirteen);
-        thirteenCentury.setAdapter(adapterThirteen);
+        centuries[3].setAdapter(adapterThirteen);
 
         adapterFourteen = new ArrayAdapter(this, android.R.layout.simple_list_item_1, listFourteen);
-        fourteenCentury.setAdapter(adapterFourteen);
+        centuries[4].setAdapter(adapterFourteen);
 
         adapterFifteen = new ArrayAdapter(this, android.R.layout.simple_list_item_1, listFifteen);
-        fifteenCentury.setAdapter(adapterFifteen);
+        centuries[5].setAdapter(adapterFifteen);
 
         adapterSixteen = new ArrayAdapter(this, android.R.layout.simple_list_item_1, listSixteen);
-        sixteenCentury.setAdapter(adapterSixteen);
+        centuries[6].setAdapter(adapterSixteen);
 
         adapterSeventeen = new ArrayAdapter(this, android.R.layout.simple_list_item_1, listSeventeen);
-        seventeenCentury.setAdapter(adapterSeventeen);
+        centuries[7].setAdapter(adapterSeventeen);
 
         adapterEighteen = new ArrayAdapter(this, android.R.layout.simple_list_item_1, listEighteen);
-        eighteenCentury.setAdapter(adapterEighteen);
+        centuries[8].setAdapter(adapterEighteen);
 
         adapterNineteen = new ArrayAdapter(this, android.R.layout.simple_list_item_1, listNineteen);
-        nineteenCentury.setAdapter(adapterNineteen);
+        centuries[9].setAdapter(adapterNineteen);
 
         adapterTwenty = new ArrayAdapter(this, android.R.layout.simple_list_item_1, listTwenty);
-        twentyCentury.setAdapter(adapterTwenty);
+        centuries[10].setAdapter(adapterTwenty);
     }
 }

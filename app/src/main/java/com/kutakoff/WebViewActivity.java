@@ -293,6 +293,42 @@ public class WebViewActivity extends AppCompatActivity {
                 case "Нашествие Тохтамыша на Москву(1382)":
                     url = "file:///android_asset/Nashestvie_taxtamisha_1382.html";
                     break;
+                case "Московско-новгородская война (1477—1478)":
+                    url = "file:///android_asset/Moskovsko_novgorodskaya_voina_1477_1478.html";
+                    break;
+                case "Битва на реке Ведрошь":
+                    url = "file:///android_asset/Bitva_na_vedrosh.html";
+                    break;
+                case "Ливонская война (1558-1583)":
+                    url = "file:///android_asset/Livonskaya_bitva.html";
+                    break;
+                case "Битва при Молодях":
+                    url = "file:///android_asset/Bitva_pri_molodyax.html";
+                    break;
+                case "Плюсское перемирие":
+                    url = "file:///android_asset/Plusskoe_peremirie.html";
+                    break;
+                case "Восстание Болотникова":
+                    url = "file:///android_asset/Vosstanie_bolotnikova.html";
+                    break;
+                case "Битва при Клушине":
+                    url = "file:///android_asset/Bitva_pri_klushine.html";
+                    break;
+                case "Смоленская война":
+                    url = "file:///android_asset/Smolenskaya_voina.html";
+                    break;
+                case "Прутский поход":
+                    url = "file:///android_asset/Prutskiy_poxod.html";
+                    break;
+                case "Сражение при Гренгам":
+                    url = "file:///android_asset/Srajenie_pri_grengam.html";
+                    break;
+                case "Отечественная война (1812)":
+                    url = "file:///android_asset/Otechestvennaya_voina_1812.html";
+                    break;
+                case "Русско-персидская война (1826—1828)":
+                    url = "file:///android_asset/Russko_persidskaya_voina.html";
+                    break;
             }
             WebView myWebView = (WebView) findViewById(R.id.webview);
             myWebView.loadUrl(url);
