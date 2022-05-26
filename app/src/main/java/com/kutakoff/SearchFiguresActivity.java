@@ -20,53 +20,57 @@ import java.util.Collections;
 public class SearchFiguresActivity extends AppCompatActivity {
 
     ListView all;
-    ListView elevenCentury;
-    ListView fourteenCentury;
-    ListView sixteenCentury;
-    ListView seventeenCentury;
-    ListView eighteenCentury;
-    ListView nineteenCentury;
-    ListView twentyCentury;
+    ListView praviteli;
+    ListView polkovodci;
+    ListView duxovenstvo;
+    ListView knyazia;
+    ListView tvorchestvo;
+    ListView diplomati;
+    ListView samozvanci;
+    ListView zaxvatchiki;
 
     ArrayAdapter spinnerAdapter;
     ArrayAdapter adapterAll;
-    ArrayAdapter adapterEleven;
-    ArrayAdapter adapterFourteen;
-    ArrayAdapter adapterSixteen;
-    ArrayAdapter adapterSeventeen;
-    ArrayAdapter adapterEighteen;
-    ArrayAdapter adapterNineteen;
-    ArrayAdapter adapterTwenty;
+    ArrayAdapter adapterPraviteli;
+    ArrayAdapter adapterPolkovodci;
+    ArrayAdapter adapterDuxovenstvo;
+    ArrayAdapter adapterKnyazia;
+    ArrayAdapter adapterTvorchestvo;
+    ArrayAdapter adapterDiplomati;
+    ArrayAdapter adapterSamozvanci;
+    ArrayAdapter adapterZaxvatchiki;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search_figures);
         Button button = findViewById(R.id.button_back);
-        Spinner spinner = findViewById(R.id.chooseCentury1);
+        Spinner spinner = findViewById(R.id.chooseFigure);
         all = findViewById(R.id.all);
-        elevenCentury = findViewById(R.id.elevenCentury);
-        fourteenCentury = findViewById(R.id.fourteenCentury);
-        sixteenCentury = findViewById(R.id.sixteenCentury);
-        seventeenCentury = findViewById(R.id.seventeenCentury);
-        eighteenCentury = findViewById(R.id.eighteenCentury);
-        nineteenCentury = findViewById(R.id.nineteenCentury);
-        twentyCentury = findViewById(R.id.twentyCentury);
+        praviteli = findViewById(R.id.praviteli);
+        polkovodci = findViewById(R.id.polkovodci);
+        duxovenstvo = findViewById(R.id.duxovenstvo);
+        knyazia = findViewById(R.id.knyazia);
+        tvorchestvo = findViewById(R.id.tvorchestvo);
+        diplomati = findViewById(R.id.diplomati);
+        samozvanci = findViewById(R.id.samozvanci);
+        zaxvatchiki = findViewById(R.id.zaxvatchiki);
         SearchView searchView = findViewById(R.id.searchView);
 
         button.setOnClickListener(v -> onBackPressed());
 
         ArrayList<String> listAll = new ArrayList<>();
-        ArrayList<String> listEleven = new ArrayList<>();
-        ArrayList<String> listFourteen = new ArrayList<>();
-        ArrayList<String> listSixteen = new ArrayList<>();
-        ArrayList<String> listSeventeen = new ArrayList<>();
-        ArrayList<String> listEighteen = new ArrayList<>();
-        ArrayList<String> listNineteen = new ArrayList<>();
-        ArrayList<String> listTwenty = new ArrayList<>();
+        ArrayList<String> listPraviteli = new ArrayList<>();
+        ArrayList<String> listPolkovodci = new ArrayList<>();
+        ArrayList<String> listDuxovenstvo = new ArrayList<>();
+        ArrayList<String> listKnyazia = new ArrayList<>();
+        ArrayList<String> listTvorchestvo = new ArrayList<>();
+        ArrayList<String> listDiplomati = new ArrayList<>();
+        ArrayList<String> listSamozvanci = new ArrayList<>();
+        ArrayList<String> listZaxvatchiki = new ArrayList<>();
 
-        fillArrayLists(listAll, listEleven, listFourteen, listSixteen, listSeventeen, listEighteen, listNineteen, listTwenty);
-        fillAdapters(listAll, listEleven, listFourteen, listSixteen, listSeventeen, listEighteen, listNineteen, listTwenty);
+        fillArrayLists(listAll, listPraviteli, listPolkovodci, listDuxovenstvo, listKnyazia, listTvorchestvo, listDiplomati, listSamozvanci, listZaxvatchiki);
+        fillAdapters(listAll, listPraviteli, listPolkovodci, listDuxovenstvo, listKnyazia, listTvorchestvo, listDiplomati, listSamozvanci, listZaxvatchiki);
 
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
@@ -77,30 +81,32 @@ public class SearchFiguresActivity extends AppCompatActivity {
             @Override
             public boolean onQueryTextChange(String newText) {
                 adapterAll.getFilter().filter(newText);
-                adapterEleven.getFilter().filter(newText);
-                adapterFourteen.getFilter().filter(newText);
-                adapterSixteen.getFilter().filter(newText);
-                adapterSeventeen.getFilter().filter(newText);
-                adapterEighteen.getFilter().filter(newText);
-                adapterNineteen.getFilter().filter(newText);
-                adapterTwenty.getFilter().filter(newText);
+                adapterPraviteli.getFilter().filter(newText);
+                adapterPolkovodci.getFilter().filter(newText);
+                adapterDuxovenstvo.getFilter().filter(newText);
+                adapterKnyazia.getFilter().filter(newText);
+                adapterTvorchestvo.getFilter().filter(newText);
+                adapterDiplomati.getFilter().filter(newText);
+                adapterSamozvanci.getFilter().filter(newText);
+                adapterZaxvatchiki.getFilter().filter(newText);
                 return false;
             }
         });
 
         clickableList(all);
-        clickableList(elevenCentury);
-        clickableList(fourteenCentury);
-        clickableList(sixteenCentury);
-        clickableList(seventeenCentury);
-        clickableList(eighteenCentury);
-        clickableList(nineteenCentury);
-        clickableList(twentyCentury);
+        clickableList(praviteli);
+        clickableList(polkovodci);
+        clickableList(duxovenstvo);
+        clickableList(knyazia);
+        clickableList(tvorchestvo);
+        clickableList(diplomati);
+        clickableList(samozvanci);
+        clickableList(zaxvatchiki);
 
         String selected = spinner.getSelectedItem().toString();
         Toast.makeText(getApplicationContext(), selected, Toast.LENGTH_SHORT).show();
 
-        spinnerAdapter = ArrayAdapter.createFromResource(this, R.array.centuries, R.layout.spinner_text);
+        spinnerAdapter = ArrayAdapter.createFromResource(this, R.array.figures, R.layout.spinner_text);
         spinnerAdapter.setDropDownViewResource(R.layout.spinner_dropbox_layout);
         spinner.setAdapter(spinnerAdapter);
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -111,29 +117,31 @@ public class SearchFiguresActivity extends AppCompatActivity {
                  */
                 switch (position) {
                     case 0:
-                        visibilityListItems(all, elevenCentury, fourteenCentury, sixteenCentury, seventeenCentury, eighteenCentury, nineteenCentury, twentyCentury);
+                        visibilityListItems(all, praviteli, polkovodci, duxovenstvo, knyazia, tvorchestvo, diplomati, samozvanci, zaxvatchiki);
                         break;
                     case 1:
-                        visibilityListItems(elevenCentury, all, fourteenCentury, sixteenCentury, seventeenCentury, eighteenCentury, nineteenCentury, twentyCentury);
+                        visibilityListItems(praviteli, all, polkovodci, duxovenstvo, knyazia, tvorchestvo, diplomati, samozvanci, zaxvatchiki);
                         break;
                     case 2:
-                        visibilityListItems(fourteenCentury, all, elevenCentury, sixteenCentury, seventeenCentury, eighteenCentury, nineteenCentury, twentyCentury);
+                        visibilityListItems(polkovodci, all, praviteli, duxovenstvo, knyazia, tvorchestvo, diplomati, samozvanci, zaxvatchiki);
                         break;
                     case 3:
-                        visibilityListItems(sixteenCentury, all, elevenCentury, fourteenCentury, seventeenCentury, eighteenCentury, nineteenCentury, twentyCentury);
+                        visibilityListItems(duxovenstvo, all, praviteli, polkovodci, knyazia, tvorchestvo, diplomati, samozvanci, zaxvatchiki);
                         break;
                     case 4:
-                        visibilityListItems(seventeenCentury, all, elevenCentury, fourteenCentury, sixteenCentury, eighteenCentury, nineteenCentury, twentyCentury);
+                        visibilityListItems(knyazia, all, praviteli, polkovodci, duxovenstvo, tvorchestvo, diplomati, samozvanci, zaxvatchiki);
                         break;
                     case 5:
-                        visibilityListItems(eighteenCentury, all, elevenCentury, fourteenCentury, sixteenCentury, seventeenCentury, nineteenCentury, twentyCentury);
+                        visibilityListItems(tvorchestvo, all, praviteli, polkovodci, duxovenstvo, knyazia, diplomati, samozvanci, zaxvatchiki);
                         break;
                     case 6:
-                        visibilityListItems(nineteenCentury, all, elevenCentury, fourteenCentury, sixteenCentury, seventeenCentury, eighteenCentury, twentyCentury);
+                        visibilityListItems(diplomati, all, praviteli, polkovodci, duxovenstvo, knyazia, tvorchestvo, samozvanci, zaxvatchiki);
                         break;
                     case 7:
-                        visibilityListItems(twentyCentury, all, elevenCentury, fourteenCentury, sixteenCentury, seventeenCentury, eighteenCentury, nineteenCentury);
+                        visibilityListItems(samozvanci, all, praviteli, polkovodci, duxovenstvo, knyazia, tvorchestvo, diplomati, zaxvatchiki);
                         break;
+                    case 8:
+                        visibilityListItems(zaxvatchiki, samozvanci, all, praviteli, polkovodci, duxovenstvo, knyazia, tvorchestvo, diplomati);
                 }
             }
 
@@ -143,8 +151,8 @@ public class SearchFiguresActivity extends AppCompatActivity {
         });
     }
 
-    private void fillArrayLists(ArrayList<String> all, ArrayList<String> elevenCentury, ArrayList<String> fourteenCentury, ArrayList<String> sixteenCentury, ArrayList<String> seventeenCentury, ArrayList<String> eighteenCentury, ArrayList<String> nineteenCentury, ArrayList<String> twentyCentury) {
-        all.addAll(Arrays.asList("Иван Грозный", "Иван III", "Александр III", "Иван Фёдоров", "Георгий Жуков",
+    private void fillArrayLists(ArrayList<String> listAll, ArrayList<String> listPraviteli, ArrayList<String> listPolkovodci, ArrayList<String> listDuxovenstvo, ArrayList<String> listKnyazia, ArrayList<String> listTvorchestvo, ArrayList<String> listDiplomati, ArrayList<String> listSamozvanci, ArrayList<String> listZaxvatchiki) {
+        listAll.addAll(Arrays.asList("Иван Грозный", "Иван III", "Александр III", "Иван Фёдоров", "Георгий Жуков",
                 "Иван I Калита", "Николай II", "Сергий Радонежский", "Лжедмитрий II", "Никита Хрущев",
                 "Елизавета Петровна", "Александр Невский", "Дмитрий Донской", "Климент Ворошилов",
                 "Нестор Летописец", "Даниил Московский", "Александр I", "Рюрик", "Олег Вещий",
@@ -154,33 +162,38 @@ public class SearchFiguresActivity extends AppCompatActivity {
                 "Василий IV", "Федор III", "Федор I", "Филарет", "Василий Голицын", "Ордин-Нащокин",
                 "Михаил Шеин", "Дмитрий Пожарский", "Малюта Скуратов", "Григорий Отрепьев", "Борис Шереметев",
                 "Владислав IV"));
-        Collections.sort(all);
+        Collections.sort(listAll);
 
-        elevenCentury.addAll(Arrays.asList("Любечский съезд"));
-        Collections.sort(elevenCentury);
+        listPraviteli.addAll(Arrays.asList("Иван Грозный", "Иван III", "Александр III", "Иван I Калита", "Николай II",
+                "Никита Хрущев", "Елизавета Петровна", "Александр I", "Рюрик", "Олег Вещий", "Игорь Ририкович",
+                "Ольга Мудрая", "Святослав Игоревич", "Владимир Святой(Владимир красное солнышко)", "Пётр I",
+                "Михаил Федорович", "Алексей Михайлович", "Борис Годунов", "Василий IV", "Федор III", "Федор I"));
+        Collections.sort(listPraviteli);
 
-        fourteenCentury.addAll(Arrays.asList("Куликовская битва"));
-        Collections.sort(fourteenCentury);
+        listPolkovodci.addAll(Arrays.asList("Георгий Жуков", "Александр Невский", "Дмитрий Донской", "Климент Ворошилов",
+                "Михаил Шеин", "Дмитрий Пожарский", "Малюта Скуратов", "Борис Шереметев"));
+        Collections.sort(listPolkovodci);
 
-        sixteenCentury.addAll(Arrays.asList("Смутное время"));
-        Collections.sort(sixteenCentury);
+        listDuxovenstvo.addAll(Arrays.asList("Сергий Радонежский", "Нестор Летописец", "Филарет"));
+        Collections.sort(listDuxovenstvo);
 
-        seventeenCentury.addAll(Arrays.asList("Вечный мир с Польшей"));
-        Collections.sort(seventeenCentury);
+        listKnyazia.addAll(Arrays.asList("Александр Невский", "Дмитрий Донской", "Даниил Московский",
+                "Ярополк Святославич", "Святополк Окаянный", "Дмитрий Пожарский"));
+        Collections.sort(listKnyazia);
 
-        eighteenCentury.addAll(Arrays.asList("Северная война"));
-        Collections.sort(eighteenCentury);
+        listTvorchestvo.addAll(Arrays.asList("Иван Фёдоров", "Нестор Летописец"));
+        Collections.sort(listTvorchestvo);
 
-        nineteenCentury.addAll(Arrays.asList("Битва при Красном", "Взятие Парижа", "Отмена крепостного права"));
-        Collections.sort(nineteenCentury);
+        listDiplomati.addAll(Arrays.asList("Ордин-Нащокин", "Борис Шереметев"));
+        Collections.sort(listDiplomati);
 
-        twentyCentury.addAll(Arrays.asList("Берлинская наступательная операция", "Брусиловский прорыв",
-                "Гражданская война 1917-1922 гг.", "Курская битва", "Марш-бросок на Притштину",
-                "Нюрмбергский процесс", "Распад СССР", "Расстрел царской семьи", "Сталинградская битва"));
-        Collections.sort(twentyCentury);
+        listSamozvanci.addAll(Arrays.asList("Лжедмитрий I", "Лжедмитрий II"));
+
+        listZaxvatchiki.addAll(Arrays.asList("Владислав IV"));
+        Collections.sort(listZaxvatchiki);
     }
 
-    private void visibilityListItems(ListView listViewVISIBLE, ListView listView1, ListView listView2, ListView listView3, ListView listView4, ListView listView5, ListView listView6, ListView listView7) {
+    private void visibilityListItems(ListView listViewVISIBLE, ListView listView1, ListView listView2, ListView listView3, ListView listView4, ListView listView5, ListView listView6, ListView listView7, ListView listView8) {
         listViewVISIBLE.setVisibility(View.VISIBLE);
         listView1.setVisibility(View.INVISIBLE);
         listView2.setVisibility(View.INVISIBLE);
@@ -189,6 +202,7 @@ public class SearchFiguresActivity extends AppCompatActivity {
         listView5.setVisibility(View.INVISIBLE);
         listView6.setVisibility(View.INVISIBLE);
         listView7.setVisibility(View.INVISIBLE);
+        listView8.setVisibility(View.INVISIBLE);
     }
 
     private void clickableList(ListView listView) {
@@ -204,29 +218,32 @@ public class SearchFiguresActivity extends AppCompatActivity {
         });
     }
 
-    private void fillAdapters(ArrayList<String> listAll, ArrayList<String> listEleven, ArrayList<String> listFourteen, ArrayList<String> listSixteen, ArrayList<String> listSeventeen, ArrayList<String> listEighteen, ArrayList<String> listNineteen, ArrayList<String> listTwenty) {
+    private void fillAdapters(ArrayList<String> listAll, ArrayList<String> listPraviteli, ArrayList<String> listPolkovodci, ArrayList<String> listDuxovenstvo, ArrayList<String> listKnyazia, ArrayList<String> listTvorchestvo, ArrayList<String> listDiplomati, ArrayList<String> listSamozvanci, ArrayList<String> listZaxvatchiki) {
         adapterAll = new ArrayAdapter(this, android.R.layout.simple_list_item_1, listAll);
         all.setAdapter(adapterAll);
 
-        adapterEleven = new ArrayAdapter(this, android.R.layout.simple_list_item_1, listEleven);
-        elevenCentury.setAdapter(adapterEleven);
+        adapterPraviteli = new ArrayAdapter(this, android.R.layout.simple_list_item_1, listPraviteli);
+        praviteli.setAdapter(adapterPraviteli);
 
-        adapterFourteen = new ArrayAdapter(this, android.R.layout.simple_list_item_1, listFourteen);
-        fourteenCentury.setAdapter(adapterFourteen);
+        adapterPolkovodci = new ArrayAdapter(this, android.R.layout.simple_list_item_1, listPolkovodci);
+        polkovodci.setAdapter(adapterPolkovodci);
 
-        adapterSixteen = new ArrayAdapter(this, android.R.layout.simple_list_item_1, listSixteen);
-        sixteenCentury.setAdapter(adapterSixteen);
+        adapterDuxovenstvo = new ArrayAdapter(this, android.R.layout.simple_list_item_1, listDuxovenstvo);
+        duxovenstvo.setAdapter(adapterDuxovenstvo);
 
-        adapterSeventeen = new ArrayAdapter(this, android.R.layout.simple_list_item_1, listSeventeen);
-        seventeenCentury.setAdapter(adapterSeventeen);
+        adapterKnyazia = new ArrayAdapter(this, android.R.layout.simple_list_item_1, listKnyazia);
+        knyazia.setAdapter(adapterKnyazia);
 
-        adapterEighteen = new ArrayAdapter(this, android.R.layout.simple_list_item_1, listEighteen);
-        eighteenCentury.setAdapter(adapterEighteen);
+        adapterTvorchestvo = new ArrayAdapter(this, android.R.layout.simple_list_item_1, listTvorchestvo);
+        tvorchestvo.setAdapter(adapterTvorchestvo);
 
-        adapterNineteen = new ArrayAdapter(this, android.R.layout.simple_list_item_1, listNineteen);
-        nineteenCentury.setAdapter(adapterNineteen);
+        adapterDiplomati = new ArrayAdapter(this, android.R.layout.simple_list_item_1, listDiplomati);
+        diplomati.setAdapter(adapterDiplomati);
 
-        adapterTwenty = new ArrayAdapter(this, android.R.layout.simple_list_item_1, listTwenty);
-        twentyCentury.setAdapter(adapterTwenty);
+        adapterSamozvanci = new ArrayAdapter(this, android.R.layout.simple_list_item_1, listSamozvanci);
+        samozvanci.setAdapter(adapterSamozvanci);
+
+        adapterZaxvatchiki = new ArrayAdapter(this, android.R.layout.simple_list_item_1, listZaxvatchiki);
+        zaxvatchiki.setAdapter(adapterZaxvatchiki);
     }
 }

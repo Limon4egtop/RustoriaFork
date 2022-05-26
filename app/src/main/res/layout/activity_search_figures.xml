@@ -15,10 +15,10 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Spinner
-        android:id="@+id/chooseCentury1"
+        android:id="@+id/chooseFigure"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:entries="@array/centuries"
+        android:entries="@array/figures"
         android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -35,7 +35,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/chooseCentury1"
+        app:layout_constraintTop_toBottomOf="@+id/chooseFigure"
         app:layout_constraintVertical_bias="0.024"
         tools:ignore="MissingConstraints" />
 
@@ -51,7 +51,7 @@
         tools:ignore="MissingConstraints" />
 
     <ListView
-        android:id="@+id/elevenCentury"
+        android:id="@+id/praviteli"
         android:layout_width="fill_parent"
         android:layout_height="0dp"
         android:layout_gravity="center"
@@ -63,7 +63,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <ListView
-        android:id="@+id/fourteenCentury"
+        android:id="@+id/polkovodci"
         android:layout_width="fill_parent"
         android:layout_height="0dp"
         android:layout_gravity="center"
@@ -75,7 +75,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <ListView
-        android:id="@+id/sixteenCentury"
+        android:id="@+id/duxovenstvo"
         android:layout_width="fill_parent"
         android:layout_height="0dp"
         android:layout_gravity="center"
@@ -87,7 +87,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <ListView
-        android:id="@+id/seventeenCentury"
+        android:id="@+id/knyazia"
         android:layout_width="fill_parent"
         android:layout_height="0dp"
         android:layout_gravity="center"
@@ -99,7 +99,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <ListView
-        android:id="@+id/eighteenCentury"
+        android:id="@+id/tvorchestvo"
         android:layout_width="fill_parent"
         android:layout_height="0dp"
         android:layout_gravity="center"
@@ -111,7 +111,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <ListView
-        android:id="@+id/nineteenCentury"
+        android:id="@+id/diplomati"
         android:layout_width="fill_parent"
         android:layout_height="0dp"
         android:layout_gravity="center"
@@ -123,7 +123,19 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <ListView
-        android:id="@+id/twentyCentury"
+        android:id="@+id/samozvanci"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchView"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ListView
+        android:id="@+id/zaxvatchiki"
         android:layout_width="fill_parent"
         android:layout_height="0dp"
         android:layout_gravity="center"

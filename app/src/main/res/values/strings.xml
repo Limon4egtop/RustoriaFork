@@ -15,6 +15,7 @@
         <item>20 век</item>
     </string-array>
     <string-array name="figures">
+        <item>Все</item>
         <item>Правители</item>
         <item>Полководцы</item>
         <item>Духовенство</item>

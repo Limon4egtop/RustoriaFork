@@ -108,9 +108,6 @@ public class SearchEventsActivity extends AppCompatActivity {
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                /**
-                 * первый аргумент в методе visibilityListItem() - VISIBLE, остальные INVISIBLE
-                 */
                 visibilityListItems(position);
             }
 
