@@ -4,8 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/nice_rus_bq"
     tools:context=".QuizActivity">
+
+    <ImageView
+        android:id="@+id/mainBq"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/nice_rus_bq" />
+
+    <ImageView
+        android:id="@+id/Petr1Bq"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/petr1"
+        android:visibility="invisible"/>
 
     <ImageView
         android:id="@+id/button_back"

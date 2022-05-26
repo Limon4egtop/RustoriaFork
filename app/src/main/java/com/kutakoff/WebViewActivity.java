@@ -200,7 +200,7 @@ public class WebViewActivity extends AppCompatActivity {
                 case "Владислав IV":
                     url = "file:///android_asset/Vladislav_4.html";
                     break;
-                case "поход Игоря Святославовича на половцев":
+                case "Поход Игоря Святославовича на половцев":
                     url = "file:///android_asset/poxod_Igora_Svyatoslavovicha.html";
                     break;
                 case "Судебник Ивана III":
@@ -244,6 +244,54 @@ public class WebViewActivity extends AppCompatActivity {
                     break;
                 case "Липицкая битва":
                     url = "file:///android_asset/Lipeckaya_bitva.html";
+                    break;
+                case "Междоусобная война в Северо-Восточной Руси (1281—1293)":
+                    url = "file:///android_asset/Mejdousobnaya_voina_1281_1293.html";
+                    break;
+                case "Нашествие Едигея":
+                    url = "file:///android_asset/Nashestvie_edigeya.html";
+                    break;
+                case "Шелонская битва(входит в Московско-новгородскую войну)":
+                    url = "file:///android_asset/Shelonskaya_bitva.html";
+                    break;
+                case "Московско-новгородская война (1471)":
+                    url = "file:///android_asset/Moskovsko_novgorodskaya_voina.html";
+                    break;
+                case "Стояние на реке Угре":
+                    url = "file:///android_asset/Stoyanie_na_ugre.html";
+                    break;
+                case "Битва на реке Судоме":
+                    url = "file:///android_asset/Bitva_na_sudome.html";
+                    break;
+                case "Сражение при Листвене":
+                    url = "file:///android_asset/Srajenie_pri_listvene.html";
+                    break;
+                case "Битва на Нежатиной Ниве":
+                    url = "file:///android_asset/Bitva_na_nejatinoy_nive.html";
+                    break;
+                case "Битва на реке Суле":
+                    url = "file:///android_asset/Bitva_na_sule.html";
+                    break;
+                case "Полоцкий поход Мстислава Великого (1127)":
+                    url = "file:///android_asset/Polockiy_poxod_mstislava_velikogo.html";
+                    break;
+                case "Взятие Рязани Батыем":
+                    url = "file:///android_asset/Vzyatie_ryazani_batiem.html";
+                    break;
+                case "Неврюева рать":
+                    url = "file:///android_asset/Nevrueva_rat.html";
+                    break;
+                case "Оборона Киева 1240 года":
+                    url = "file:///android_asset/Oborona_kieva_1240.html";
+                    break;
+                case "Тверское восстание 1327 года":
+                    url = "file:///android_asset/Tverskoe_vosstanie_1327.html";
+                    break;
+                case "Сражение на реке Пьяне":
+                    url = "file:///android_asset/Srajenie_na_piane.html";
+                    break;
+                case "Нашествие Тохтамыша на Москву(1382)":
+                    url = "file:///android_asset/Nashestvie_taxtamisha_1382.html";
                     break;
             }
             WebView myWebView = (WebView) findViewById(R.id.webview);

@@ -16,7 +16,9 @@ import android.widget.Toast;
 public class QuizActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
     ImageView
             main_easy, main_medium, main_hard,
-            second_february_start, krim_easy, krim_medium, krim_hard;
+            second_february_start, krim_easy,
+            krim_medium, krim_hard, mainBq,
+            petr1Bq;
     TextView quizSout;
 
     @Override
@@ -25,6 +27,8 @@ public class QuizActivity extends AppCompatActivity implements AdapterView.OnIte
         setContentView(R.layout.activity_quiz);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED);
         ImageView button_back = findViewById(R.id.button_back);
+        mainBq = findViewById(R.id.mainBq);
+        petr1Bq = findViewById(R.id.Petr1Bq);
         quizSout = findViewById(R.id.quizSout);
 
         main_easy = findViewById(R.id.main_easy);
@@ -73,6 +77,9 @@ public class QuizActivity extends AppCompatActivity implements AdapterView.OnIte
                 krim_easy.setVisibility(View.INVISIBLE);
                 krim_medium.setVisibility(View.INVISIBLE);
                 krim_hard.setVisibility(View.INVISIBLE);
+
+                petr1Bq.setVisibility(View.INVISIBLE);
+                mainBq.setVisibility(View.VISIBLE);
                 break;
             case 1:
                 main_easy.setVisibility(View.INVISIBLE);
@@ -84,6 +91,9 @@ public class QuizActivity extends AppCompatActivity implements AdapterView.OnIte
                 krim_easy.setVisibility(View.INVISIBLE);
                 krim_medium.setVisibility(View.INVISIBLE);
                 krim_hard.setVisibility(View.INVISIBLE);
+
+                petr1Bq.setVisibility(View.INVISIBLE);
+                mainBq.setVisibility(View.VISIBLE);
                 break;
             case 2:
                 main_easy.setVisibility(View.INVISIBLE);
@@ -95,6 +105,9 @@ public class QuizActivity extends AppCompatActivity implements AdapterView.OnIte
                 krim_easy.setVisibility(View.VISIBLE);
                 krim_medium.setVisibility(View.VISIBLE);
                 krim_hard.setVisibility(View.VISIBLE);
+
+                petr1Bq.setVisibility(View.INVISIBLE);
+                mainBq.setVisibility(View.VISIBLE);
                 break;
             case 3:
                 main_easy.setVisibility(View.INVISIBLE);
@@ -106,6 +119,10 @@ public class QuizActivity extends AppCompatActivity implements AdapterView.OnIte
                 krim_easy.setVisibility(View.INVISIBLE);
                 krim_medium.setVisibility(View.INVISIBLE);
                 krim_hard.setVisibility(View.INVISIBLE);
+
+                petr1Bq.setVisibility(View.VISIBLE);
+                mainBq.setVisibility(View.INVISIBLE);
+                break;
         }
         quizSout.setText("Квиз: " + parent.getSelectedItem());
     }
