@@ -11,7 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Hakaton">
-        <activity android:name=".SearchFiguresActivity"></activity>
+        <activity android:name=".SearchFiguresActivity" />
         <activity android:name=".SearchEventsActivity" />
         <activity android:name=".StalingradskayaBitvaQuizActivity" />
         <activity android:name=".ResultQuizActivity" />
@@ -21,6 +21,10 @@
         <activity android:name=".KrimEasyQuizActivity" />
         <activity android:name=".KrimMediumQuizActivity" />
         <activity android:name=".KrimHardQuizActivity" />
+        <activity android:name=".BitvaPriLesnoyQuizActivity" />
+        <activity android:name=".PoltavskayaBitvaQuizActivity" />
+        <activity android:name=".GangutskoeSrajenieQuizActivity" />
+        <activity android:name=".GrengamskoeSrajenieQuizActivity" />
         <activity android:name=".QuizActivity" />
         <activity android:name=".WebViewActivity" />
         <activity android:name=".ChooseActivity" />

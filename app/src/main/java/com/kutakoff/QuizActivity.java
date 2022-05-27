@@ -18,8 +18,10 @@ public class QuizActivity extends AppCompatActivity implements AdapterView.OnIte
             main_easy, main_medium, main_hard,
             second_february_start, krim_easy,
             krim_medium, krim_hard, mainBq,
+            poltavskaya_bitva, grengamskoe_srajenie,
+            gangutskoe_srajenie, bitva_pri_lesnoy,
             petr1Bq;
-    TextView quizSout;
+    TextView chooseQuizText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +31,7 @@ public class QuizActivity extends AppCompatActivity implements AdapterView.OnIte
         ImageView button_back = findViewById(R.id.button_back);
         mainBq = findViewById(R.id.mainBq);
         petr1Bq = findViewById(R.id.Petr1Bq);
-        quizSout = findViewById(R.id.quizSout);
+        chooseQuizText = findViewById(R.id.chooseQuizText);
 
         main_easy = findViewById(R.id.main_easy);
         main_medium = findViewById(R.id.main_medium);
@@ -40,6 +42,11 @@ public class QuizActivity extends AppCompatActivity implements AdapterView.OnIte
         krim_easy = findViewById(R.id.krim_easy);
         krim_medium = findViewById(R.id.krim_medium);
         krim_hard = findViewById(R.id.krim_hard);
+
+        poltavskaya_bitva = findViewById(R.id.poltavskaya_bitva);
+        grengamskoe_srajenie = findViewById(R.id.grengamskoe_srajenie);
+        gangutskoe_srajenie = findViewById(R.id.gangutskoe_srajenie);
+        bitva_pri_lesnoy = findViewById(R.id.bitva_pri_lesnoy);
 
         Spinner spinner = findViewById(R.id.chooseQuiz);
 
@@ -61,6 +68,11 @@ public class QuizActivity extends AppCompatActivity implements AdapterView.OnIte
         krim_easy.setOnClickListener(v -> startActivity(new Intent(QuizActivity.this, KrimEasyQuizActivity.class)));
         krim_medium.setOnClickListener(v -> startActivity(new Intent(QuizActivity.this, KrimMediumQuizActivity.class)));
         krim_hard.setOnClickListener(v -> startActivity(new Intent(QuizActivity.this, KrimHardQuizActivity.class)));
+
+        bitva_pri_lesnoy.setOnClickListener(v -> startActivity(new Intent(QuizActivity.this, BitvaPriLesnoyQuizActivity.class)));
+        poltavskaya_bitva.setOnClickListener(v -> startActivity(new Intent(QuizActivity.this, PoltavskayaBitvaQuizActivity.class)));
+        gangutskoe_srajenie.setOnClickListener(v -> startActivity(new Intent(QuizActivity.this, GangutskoeSrajenieQuizActivity.class)));
+        grengamskoe_srajenie.setOnClickListener(v -> startActivity(new Intent(QuizActivity.this, GrengamskoeSrajenieQuizActivity.class)));
     }
 
     @Override
@@ -78,8 +90,14 @@ public class QuizActivity extends AppCompatActivity implements AdapterView.OnIte
                 krim_medium.setVisibility(View.INVISIBLE);
                 krim_hard.setVisibility(View.INVISIBLE);
 
-                petr1Bq.setVisibility(View.INVISIBLE);
                 mainBq.setVisibility(View.VISIBLE);
+
+                petr1Bq.setVisibility(View.INVISIBLE);
+                petr1Bq.setVisibility(View.INVISIBLE);
+                gangutskoe_srajenie.setVisibility(View.INVISIBLE);
+                poltavskaya_bitva.setVisibility(View.INVISIBLE);
+                grengamskoe_srajenie.setVisibility(View.INVISIBLE);
+                bitva_pri_lesnoy.setVisibility(View.INVISIBLE);
                 break;
             case 1:
                 main_easy.setVisibility(View.INVISIBLE);
@@ -92,8 +110,16 @@ public class QuizActivity extends AppCompatActivity implements AdapterView.OnIte
                 krim_medium.setVisibility(View.INVISIBLE);
                 krim_hard.setVisibility(View.INVISIBLE);
 
-                petr1Bq.setVisibility(View.INVISIBLE);
                 mainBq.setVisibility(View.VISIBLE);
+
+                petr1Bq.setVisibility(View.INVISIBLE);
+                petr1Bq.setVisibility(View.INVISIBLE);
+                gangutskoe_srajenie.setVisibility(View.INVISIBLE);
+                poltavskaya_bitva.setVisibility(View.INVISIBLE);
+                grengamskoe_srajenie.setVisibility(View.INVISIBLE);
+                bitva_pri_lesnoy.setVisibility(View.INVISIBLE);
+
+                chooseQuizText.setVisibility(View.INVISIBLE);
                 break;
             case 2:
                 main_easy.setVisibility(View.INVISIBLE);
@@ -106,8 +132,15 @@ public class QuizActivity extends AppCompatActivity implements AdapterView.OnIte
                 krim_medium.setVisibility(View.VISIBLE);
                 krim_hard.setVisibility(View.VISIBLE);
 
-                petr1Bq.setVisibility(View.INVISIBLE);
                 mainBq.setVisibility(View.VISIBLE);
+
+                petr1Bq.setVisibility(View.INVISIBLE);
+                gangutskoe_srajenie.setVisibility(View.INVISIBLE);
+                poltavskaya_bitva.setVisibility(View.INVISIBLE);
+                grengamskoe_srajenie.setVisibility(View.INVISIBLE);
+                bitva_pri_lesnoy.setVisibility(View.INVISIBLE);
+
+                chooseQuizText.setVisibility(View.INVISIBLE);
                 break;
             case 3:
                 main_easy.setVisibility(View.INVISIBLE);
@@ -120,11 +153,17 @@ public class QuizActivity extends AppCompatActivity implements AdapterView.OnIte
                 krim_medium.setVisibility(View.INVISIBLE);
                 krim_hard.setVisibility(View.INVISIBLE);
 
-                petr1Bq.setVisibility(View.VISIBLE);
                 mainBq.setVisibility(View.INVISIBLE);
+
+                petr1Bq.setVisibility(View.VISIBLE);
+                gangutskoe_srajenie.setVisibility(View.VISIBLE);
+                poltavskaya_bitva.setVisibility(View.VISIBLE);
+                grengamskoe_srajenie.setVisibility(View.VISIBLE);
+                bitva_pri_lesnoy.setVisibility(View.VISIBLE);
+
+                chooseQuizText.setVisibility(View.INVISIBLE);
                 break;
         }
-        quizSout.setText("Квиз: " + parent.getSelectedItem());
     }
 
     @Override
