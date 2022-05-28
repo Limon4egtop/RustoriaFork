@@ -320,14 +320,23 @@ public class WebViewActivity extends AppCompatActivity {
                 case "Прутский поход":
                     url = "file:///android_asset/Prutskiy_poxod.html";
                     break;
-                case "Сражение при Гренгам":
-                    url = "file:///android_asset/Srajenie_pri_grengam.html";
-                    break;
                 case "Отечественная война (1812)":
                     url = "file:///android_asset/Otechestvennaya_voina_1812.html";
                     break;
                 case "Русско-персидская война (1826—1828)":
                     url = "file:///android_asset/Russko_persidskaya_voina.html";
+                    break;
+                case "Битва при Лесной":
+                    url = "file:///android_asset/Battle_of_Lesnaya.html";
+                    break;
+                case "Полтавская битва":
+                    url = "file:///android_asset/Poltavskaya_battle.html";
+                    break;
+                case "Гангутское сражение":
+                    url = "file:///android_asset/Battle_of_Gangutskaya.html";
+                    break;
+                case "Гренгамское сражение":
+                    url = "file:///android_asset/Grengamskoe_battle.html";
                     break;
             }
             WebView myWebView = (WebView) findViewById(R.id.webview);

@@ -69,7 +69,7 @@ public class SearchEventsActivity extends AppCompatActivity {
         ArrayList<String> listNineteen = new ArrayList<>();
         ArrayList<String> listTwenty = new ArrayList<>();
 
-        fillArrayLists(listAll, listEleven, listTwelve, listThirteen,listFourteen, listFifteen, listSixteen, listSeventeen, listEighteen, listNineteen, listTwenty);
+        fillArrayLists(listAll, listEleven, listTwelve, listThirteen, listFourteen, listFifteen, listSixteen, listSeventeen, listEighteen, listNineteen, listTwenty);
         fillAdapters(listAll, listEleven, listTwelve, listThirteen, listFourteen, listFifteen, listSixteen, listSeventeen, listEighteen, listNineteen, listTwenty);
 
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
@@ -133,8 +133,9 @@ public class SearchEventsActivity extends AppCompatActivity {
                 "Взятие Рязани Батыем", "Неврюева рать", "Оборона Киева 1240 года", "Тверское восстание 1327 года",
                 "Сражение на реке Пьяне", "Нашествие Тохтамыша на Москву(1382)", "Московско-новгородская война (1477—1478)",
                 "Битва на реке Ведрошь", "Ливонская война (1558-1583)", "Битва при Молодях", "Плюсское перемирие",
-                "Восстание Болотникова", "Битва при Клушине", "Смоленская война", "Прутский поход", "Сражение при Гренгам",
-                "Отечественная война (1812)", "Русско-персидская война (1826—1828)"));
+                "Восстание Болотникова", "Битва при Клушине", "Смоленская война", "Прутский поход", "Отечественная война (1812)",
+                "Русско-персидская война (1826—1828)", "Битва при Лесной", "Полтавская битва", "Гангутское сражение",
+                "Гренгамское сражение"));
         Collections.sort(all);
 
         elevenCentury.addAll(Arrays.asList("Любечский съезд", "Битва на реке Судоме", "Сражение при Листвене",
@@ -168,7 +169,8 @@ public class SearchEventsActivity extends AppCompatActivity {
                 "Смоленская война"));
         Collections.sort(seventeenCentury);
 
-        eighteenCentury.addAll(Arrays.asList("Северная война", "Прутский поход", "Сражение при Гренгам"));
+        eighteenCentury.addAll(Arrays.asList("Северная война", "Прутский поход", "Битва при Лесной", "Полтавская битва",
+                "Гангутское сражение", "Гренгамское сражение"));
         Collections.sort(eighteenCentury);
 
         nineteenCentury.addAll(Arrays.asList("Битва при Красном", "Взятие Парижа", "Отмена крепостного права",
