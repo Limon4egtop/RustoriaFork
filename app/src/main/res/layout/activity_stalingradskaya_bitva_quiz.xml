@@ -167,6 +167,19 @@
                 app:layout_constraintHorizontal_bias="0.793"
                 app:layout_constraintVertical_bias="0.91" />
 
+            <ListView
+                android:id="@+id/info1"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/info"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -321,6 +334,19 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintHorizontal_bias="0.793"
                 app:layout_constraintVertical_bias="0.91" />
+
+            <ListView
+                android:id="@+id/info2"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/info"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -477,6 +503,19 @@
                 app:layout_constraintHorizontal_bias="0.793"
                 app:layout_constraintVertical_bias="0.91" />
 
+            <ListView
+                android:id="@+id/info3"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/info"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -631,6 +670,19 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintHorizontal_bias="0.793"
                 app:layout_constraintVertical_bias="0.91" />
+
+            <ListView
+                android:id="@+id/info4"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/info"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -787,6 +839,19 @@
                 app:layout_constraintHorizontal_bias="0.793"
                 app:layout_constraintVertical_bias="0.91" />
 
+            <ListView
+                android:id="@+id/info5"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/info"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -942,6 +1007,19 @@
                 app:layout_constraintHorizontal_bias="0.793"
                 app:layout_constraintVertical_bias="0.91" />
 
+            <ListView
+                android:id="@+id/info6"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/info"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -1096,6 +1174,19 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintHorizontal_bias="0.793"
                 app:layout_constraintVertical_bias="0.91" />
+
+            <ListView
+                android:id="@+id/info7"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/info"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -1253,6 +1344,19 @@
                 app:layout_constraintHorizontal_bias="0.793"
                 app:layout_constraintVertical_bias="0.91" />
 
+            <ListView
+                android:id="@+id/info8"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/info"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -1408,6 +1512,19 @@
                 app:layout_constraintHorizontal_bias="0.793"
                 app:layout_constraintVertical_bias="0.91" />
 
+            <ListView
+                android:id="@+id/info9"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/info"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -1562,6 +1679,19 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintHorizontal_bias="0.793"
                 app:layout_constraintVertical_bias="0.91" />
+
+            <ListView
+                android:id="@+id/info10"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/info"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
