@@ -353,6 +353,39 @@ public class WebViewActivity extends AppCompatActivity {
                 case "Восстание Тадеуша Костюшко":
                     url = "file:///android_asset/Vosstanie_Tadeusha_Kostushko.html";
                     break;
+                case "Русско-византийская война (1043)":
+                    url = "file:///android_asset/Russko_vizantiyskaya_war_1043.html";
+                    break;
+                case "Новгородское восстание (1136)":
+                    url = "file:///android_asset/Novgorodskoe_vosstanie_1136.html";
+                    break;
+                case "Битва на реке Сити":
+                    url = "file:///android_asset/Bitva_na_siti.html";
+                    break;
+                case "Пётр II":
+                    url = "file:///android_asset/Petr_2.html";
+                    break;
+                case "Пётр III":
+                    url = "file:///android_asset/Petr_3.html";
+                    break;
+                case "Убийство московского князя Юрия Даниловича":
+                    url = "file:///android_asset/Kill_Yuriy_Danilovich.html";
+                    break;
+                case "Судебник Ивана IV":
+                    url = "file:///android_asset/Sudebnik_Ivana_4_1550.html";
+                    break;
+                case "Русско-турецкая война (1672—1681)":
+                    url = "file:///android_asset/Russko_tureckaya_war_1672_1681.html";
+                    break;
+                case "Война за польское наследство":
+                    url = "file:///android_asset/War_for_polish_nasledstvo.html";
+                    break;
+                case "Восстание декабристов":
+                    url = "file:///android_asset/Vosstanie_dekabristov.html";
+                    break;
+                case "Советско-японская война":
+                    url = "file:///android_asset/Sovetsko_Japanish_war.html";
+                    break;
             }
             WebView myWebView = (WebView) findViewById(R.id.webview);
             myWebView.loadUrl(url);
