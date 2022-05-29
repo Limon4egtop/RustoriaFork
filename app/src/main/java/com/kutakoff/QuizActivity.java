@@ -21,7 +21,7 @@ public class QuizActivity extends AppCompatActivity implements AdapterView.OnIte
             poltavskaya_bitva, grengamskoe_srajenie,
             gangutskoe_srajenie, bitva_pri_lesnoy,
             petr1Bq;
-    TextView chooseQuizText;
+    TextView main_text, petr_1_text, petr_1_text2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,7 +31,9 @@ public class QuizActivity extends AppCompatActivity implements AdapterView.OnIte
         ImageView button_back = findViewById(R.id.button_back);
         mainBq = findViewById(R.id.mainBq);
         petr1Bq = findViewById(R.id.Petr1Bq);
-        chooseQuizText = findViewById(R.id.chooseQuizText);
+        main_text = findViewById(R.id.main_text);
+        petr_1_text = findViewById(R.id.petr_1_text);
+        petr_1_text2 = findViewById(R.id.petr_1_text2);
 
         main_easy = findViewById(R.id.main_easy);
         main_medium = findViewById(R.id.main_medium);
@@ -98,6 +100,11 @@ public class QuizActivity extends AppCompatActivity implements AdapterView.OnIte
                 poltavskaya_bitva.setVisibility(View.INVISIBLE);
                 grengamskoe_srajenie.setVisibility(View.INVISIBLE);
                 bitva_pri_lesnoy.setVisibility(View.INVISIBLE);
+
+                main_text.setVisibility(View.VISIBLE);
+
+                petr_1_text.setVisibility(View.INVISIBLE);
+                petr_1_text2.setVisibility(View.INVISIBLE);
                 break;
             case 1:
                 main_easy.setVisibility(View.INVISIBLE);
@@ -118,6 +125,11 @@ public class QuizActivity extends AppCompatActivity implements AdapterView.OnIte
                 poltavskaya_bitva.setVisibility(View.INVISIBLE);
                 grengamskoe_srajenie.setVisibility(View.INVISIBLE);
                 bitva_pri_lesnoy.setVisibility(View.INVISIBLE);
+
+                main_text.setVisibility(View.INVISIBLE);
+
+                petr_1_text.setVisibility(View.INVISIBLE);
+                petr_1_text2.setVisibility(View.INVISIBLE);
                 break;
             case 2:
                 main_easy.setVisibility(View.INVISIBLE);
@@ -137,6 +149,12 @@ public class QuizActivity extends AppCompatActivity implements AdapterView.OnIte
                 poltavskaya_bitva.setVisibility(View.INVISIBLE);
                 grengamskoe_srajenie.setVisibility(View.INVISIBLE);
                 bitva_pri_lesnoy.setVisibility(View.INVISIBLE);
+
+                main_text.setVisibility(View.VISIBLE);
+
+                petr_1_text.setVisibility(View.INVISIBLE);
+
+                petr_1_text2.setVisibility(View.INVISIBLE);
                 break;
             case 3:
                 main_easy.setVisibility(View.INVISIBLE);
@@ -156,9 +174,14 @@ public class QuizActivity extends AppCompatActivity implements AdapterView.OnIte
                 poltavskaya_bitva.setVisibility(View.VISIBLE);
                 grengamskoe_srajenie.setVisibility(View.VISIBLE);
                 bitva_pri_lesnoy.setVisibility(View.VISIBLE);
+
+                main_text.setVisibility(View.INVISIBLE);
+
+                petr_1_text.setVisibility(View.VISIBLE);
+
+                petr_1_text2.setVisibility(View.VISIBLE);
                 break;
         }
-        chooseQuizText.setText("Квиз: " + parent.getSelectedItem());
     }
 
     @Override
