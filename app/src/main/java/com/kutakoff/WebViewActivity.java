@@ -251,7 +251,7 @@ public class WebViewActivity extends AppCompatActivity {
                 case "Нашествие Едигея":
                     url = "file:///android_asset/Nashestvie_edigeya.html";
                     break;
-                case "Шелонская битва(входит в Московско-новгородскую войну)":
+                case "Шелонская битва":
                     url = "file:///android_asset/Shelonskaya_bitva.html";
                     break;
                 case "Московско-новгородская война (1471)":

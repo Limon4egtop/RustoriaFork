@@ -43,7 +43,7 @@ public class ResultQuizActivity extends AppCompatActivity {
             if (Count.getA() >= 0 && Count.getA() < 3) {
                 compliment = "Попробуй ещё раз!";
             } else if(Count.getA() == 3) {
-                compliment = "А ты неплох!";
+                compliment = "Неплохо!";
             } else if (Count.getA() == 4) {
                 compliment = "Молодец, ты хорошо справился!";
             } else if (Count.getA() == 5) {
