@@ -16,6 +16,7 @@ import android.widget.RadioButton;
 import android.widget.ViewFlipper;
 
 import androidx.annotation.RequiresApi;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
@@ -36,7 +37,6 @@ public class GrengamskoeSrajenieQuizActivity extends AppCompatActivity {
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED);
         setContentView(R.layout.activity_grengamskoe_srajenie_quiz);
         flipper = findViewById(R.id.viewflipper);
-        ;
 
         RadioButton firstCorrect = findViewById(R.id.first_prav);
         RadioButton firstIncorrect_1 = findViewById(R.id.first_neprav);
@@ -188,5 +188,18 @@ public class GrengamskoeSrajenieQuizActivity extends AppCompatActivity {
             intent.putExtras(bundle);
             startActivity(intent, bundle);
         });
+    }
+
+    public void onBackPressed() {
+        new AlertDialog.Builder(this)
+                .setMessage("Вы действительно хотите выйти из квиза? Весь прогресс будет утерян.")
+                .setCancelable(false)
+                .setPositiveButton("Да", (dialog, id) -> {
+                    Count.count = 0;
+                    Count.a = 0;
+                    startActivity(new Intent(GrengamskoeSrajenieQuizActivity.this, QuizActivity.class));
+                })
+                .setNegativeButton("Нет", null)
+                .show();
     }
 }

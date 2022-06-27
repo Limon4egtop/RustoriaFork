@@ -1,6 +1,7 @@
 package com.kutakoff;
 
 import androidx.annotation.RequiresApi;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -232,5 +233,18 @@ public class StalingradskayaBitvaQuizActivity extends AppCompatActivity {
             intent.putExtras(bundle);
             startActivity(intent, bundle);
         });
+    }
+
+    public void onBackPressed() {
+        new AlertDialog.Builder(this)
+                .setMessage("Вы действительно хотите выйти из квиза? Весь прогресс будет утерян.")
+                .setCancelable(false)
+                .setPositiveButton("Да", (dialog, id) -> {
+                    Count.count = 0;
+                    Count.a = 0;
+                    startActivity(new Intent(StalingradskayaBitvaQuizActivity.this, QuizActivity.class));
+                })
+                .setNegativeButton("Нет", null)
+                .show();
     }
 }

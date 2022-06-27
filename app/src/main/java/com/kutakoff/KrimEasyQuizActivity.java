@@ -14,6 +14,7 @@ import android.widget.RadioButton;
 import android.widget.ViewFlipper;
 
 import androidx.annotation.RequiresApi;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class KrimEasyQuizActivity extends AppCompatActivity {
@@ -160,10 +161,16 @@ public class KrimEasyQuizActivity extends AppCompatActivity {
         });
     }
 
-/*    public void onBackPressed() {
+    public void onBackPressed() {
         new AlertDialog.Builder(this)
                 .setMessage("Вы действительно хотите выйти из квиза? Весь прогресс будет утерян.")
                 .setCancelable(false)
-                .setPositiveButton("Да", (dialog, id) -> Count.count = 0).setPositiveButton("Да", (dialog, id) -> Count.a = 0).setPositiveButton("Да", (dialog, id) -> finish()).setNegativeButton("Нет", null).show();
-    }*/
+                .setPositiveButton("Да", (dialog, id) -> {
+                    Count.count = 0;
+                    Count.a = 0;
+                    startActivity(new Intent(KrimEasyQuizActivity.this, QuizActivity.class));
+                })
+                .setNegativeButton("Нет", null)
+                .show();
+    }
 }

@@ -1,7 +1,9 @@
 package com.kutakoff;
 
 import androidx.annotation.RequiresApi;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.content.res.ColorStateList;
@@ -18,6 +20,7 @@ import android.widget.RadioButton;
 import android.widget.ViewFlipper;
 
 import java.util.ArrayList;
+import java.util.concurrent.atomic.AtomicBoolean;
 
 public class MainEasyQuizActivity extends AppCompatActivity {
 
@@ -171,10 +174,16 @@ public class MainEasyQuizActivity extends AppCompatActivity {
         });
     }
 
-/*    public void onBackPressed() {
+    public void onBackPressed() {
         new AlertDialog.Builder(this)
                 .setMessage("Вы действительно хотите выйти из квиза? Весь прогресс будет утерян.")
                 .setCancelable(false)
-                .setPositiveButton("Да", (dialog, id) -> Count.count = 0).setPositiveButton("Да", (dialog, id) -> Count.a = 0).setPositiveButton("Да", (dialog, id) -> finish()).setNegativeButton("Нет", null).show();
-    }*/
+                .setPositiveButton("Да", (dialog, id) -> {
+                    Count.count = 0;
+                    Count.a = 0;
+                    startActivity(new Intent(MainEasyQuizActivity.this, QuizActivity.class));
+                })
+                .setNegativeButton("Нет", null)
+                .show();
+    }
 }
