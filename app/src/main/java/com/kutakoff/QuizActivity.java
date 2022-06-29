@@ -35,6 +35,9 @@ public class QuizActivity extends AppCompatActivity implements AdapterView.OnIte
         petr_1_text = findViewById(R.id.petr_1_text);
         petr_1_text2 = findViewById(R.id.petr_1_text2);
 
+        /**
+         * Объявление квизов
+         */
         main_easy = findViewById(R.id.main_easy);
         main_medium = findViewById(R.id.main_medium);
         main_hard = findViewById(R.id.main_hard);
@@ -60,7 +63,8 @@ public class QuizActivity extends AppCompatActivity implements AdapterView.OnIte
         spinner.setAdapter(adapter);
         spinner.setOnItemSelectedListener(this);
 
-        button_back.setOnClickListener(v -> onBackPressed());
+        button_back.setOnClickListener(v -> startActivity(new Intent(QuizActivity.this, MainActivity.class)));
+
         main_easy.setOnClickListener(v -> startActivity(new Intent(QuizActivity.this, MainEasyQuizActivity.class)));
         main_medium.setOnClickListener(v -> startActivity(new Intent(QuizActivity.this, MainMediumQuizActivity.class)));
         main_hard.setOnClickListener(v -> startActivity(new Intent(QuizActivity.this, MainHardQuizActivity.class)));

@@ -2,7 +2,6 @@ package com.kutakoff;
 
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
-import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
@@ -16,6 +15,8 @@ import android.widget.ViewFlipper;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+
+import static com.kutakoff.MainMethodsClass.*;
 
 public class KrimEasyQuizActivity extends AppCompatActivity {
 
@@ -74,7 +75,7 @@ public class KrimEasyQuizActivity extends AppCompatActivity {
         Count.isSpecialQUiz = true;
 
         start_quiz.setOnClickListener(v -> SwipeRight());
-        button_back.setOnClickListener(v -> onBackPressed());
+        button_back.setOnClickListener(v -> startActivity(new Intent(KrimEasyQuizActivity.this, QuizActivity.class)));
 
         addQuestion(firstCorrect, firstIncorrect_1, firstIncorrect_2, firstCheck, firstButtonNext);
         addQuestion(secondCorrect, secondIncorrect_1, secondIncorrect_2, secondCheck, secondButtonNext);
@@ -97,56 +98,24 @@ public class KrimEasyQuizActivity extends AppCompatActivity {
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     private void addQuestion(RadioButton correct, RadioButton incorrect_1, RadioButton incorrect_2, ImageView check, ImageView button_next) {
-        correct.setOnClickListener(v -> isChecked(correct, check, button_next, incorrect_1, incorrect_2));
-        incorrect_1.setOnClickListener(v -> isChecked(incorrect_1, check, button_next, correct, incorrect_2));
-        incorrect_2.setOnClickListener(v -> isChecked(incorrect_2, check, button_next, incorrect_1, correct));
+        correct.setOnClickListener(v -> is3Checked(correct, check, button_next, incorrect_1, incorrect_2));
+        incorrect_1.setOnClickListener(v -> is3Checked(incorrect_1, check, button_next, correct, incorrect_2));
+        incorrect_2.setOnClickListener(v -> is3Checked(incorrect_2, check, button_next, incorrect_1, correct));
         check.setOnClickListener(v -> check(correct, incorrect_1, incorrect_2, check, button_next));
-    }
-
-    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
-    private void changeTextColor(RadioButton first, RadioButton second) {
-
-        ColorStateList colorStateList = new ColorStateList(
-                new int[][]{
-                        new int[]{-android.R.attr.state_enabled}, // Disabled
-                        new int[]{android.R.attr.state_enabled}   // Enabled
-                },
-                new int[]{
-                        Color.GRAY, // disabled
-                        Color.WHITE   // enabled
-                }
-        );
-
-        first.setEnabled(false);
-        first.setTextColor(Color.GRAY);
-        second.setEnabled(false);
-        second.setTextColor(Color.GRAY);
-        first.setButtonTintList(colorStateList);
-        second.setButtonTintList(colorStateList);
-    }
-
-    private void isChecked(RadioButton choose, ImageView check, ImageView button_next, RadioButton first, RadioButton second) {
-        if (choose.isChecked()) {
-            if (!button_next.isShown()) {
-                check.setVisibility(View.VISIBLE);
-            }
-            first.setChecked(false);
-            second.setChecked(false);
-        }
     }
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     private void check(RadioButton correct, RadioButton incorrect_1, RadioButton incorrect_2, ImageView check, ImageView button_next) {
         if (correct.isChecked()) {
             Count.plussa();
-            changeTextColor(incorrect_1, incorrect_2);
+            change3TextColor(incorrect_1, incorrect_2);
             correct.setBackgroundColor(Color.GREEN);
         } else if (incorrect_1.isChecked()) {
             incorrect_1.setBackgroundColor(Color.RED);
-            changeTextColor(correct, incorrect_2);
+            change3TextColor(correct, incorrect_2);
         } else {
             incorrect_2.setBackgroundColor(Color.RED);
-            changeTextColor(correct, incorrect_1);
+            change3TextColor(correct, incorrect_1);
         }
         check.setVisibility(View.INVISIBLE);
         button_next.setVisibility(View.VISIBLE);

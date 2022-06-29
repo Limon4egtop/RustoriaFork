@@ -6,21 +6,17 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
-import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
-import android.widget.ArrayAdapter;
 import android.widget.ImageView;
-import android.widget.ListView;
 import android.widget.RadioButton;
 import android.widget.ViewFlipper;
 
-import java.util.ArrayList;
-import java.util.concurrent.atomic.AtomicBoolean;
+import static com.kutakoff.MainMethodsClass.*;
 
 public class MainEasyQuizActivity extends AppCompatActivity {
 
@@ -29,7 +25,6 @@ public class MainEasyQuizActivity extends AppCompatActivity {
     Animation animFlipOutForward;
     Animation animFlipInBackward;
     Animation animFlipOutBackward;
-    ArrayAdapter adapterInfo;
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
@@ -46,7 +41,6 @@ public class MainEasyQuizActivity extends AppCompatActivity {
         RadioButton firstIncorrect_2 = findViewById(R.id.first_neprav_2);
         ImageView firstCheck = findViewById(R.id.check);
         ImageView firstButtonNext = findViewById(R.id.firstNext);
-        ListView info1 = findViewById(R.id.info);
 
         RadioButton secondCorrect = findViewById(R.id.second_prav);
         RadioButton secondIncorrect_1 = findViewById(R.id.second_neprav);
@@ -75,13 +69,13 @@ public class MainEasyQuizActivity extends AppCompatActivity {
         Count.isHardQuiz = false;
 
         start_quiz.setOnClickListener(v -> SwipeRight());
-        button_back.setOnClickListener(v -> onBackPressed());
+        button_back.setOnClickListener(v -> startActivity(new Intent(MainEasyQuizActivity.this, QuizActivity.class)));
 
-        addQuestion(firstCorrect, firstIncorrect_1, firstIncorrect_2, firstCheck, firstButtonNext, info1);
-        addQuestion(secondCorrect, secondIncorrect_1, secondIncorrect_2, secondCheck, secondButtonNext, info1);
-        addQuestion(thirdCorrect, thirdIncorrect_1, thirdIncorrect_2, thirdCheck, thirdButtonNext, info1);
-        addQuestion(fourthCorrect, fourthIncorrect_1, fourthIncorrect_2, fourthCheck, fourthButtonNext, info1);
-        addQuestion(fifthCorrect, fifthIncorrect_1, fifthIncorrect_2, fifthCheck, fifthButtonNext, info1);
+        addQuestion(firstCorrect, firstIncorrect_1, firstIncorrect_2, firstCheck, firstButtonNext);
+        addQuestion(secondCorrect, secondIncorrect_1, secondIncorrect_2, secondCheck, secondButtonNext);
+        addQuestion(thirdCorrect, thirdIncorrect_1, thirdIncorrect_2, thirdCheck, thirdButtonNext);
+        addQuestion(fourthCorrect, fourthIncorrect_1, fourthIncorrect_2, fourthCheck, fourthButtonNext);
+        addQuestion(fifthCorrect, fifthIncorrect_1, fifthIncorrect_2, fifthCheck, fifthButtonNext);
 
         animFlipInForward = AnimationUtils.loadAnimation(this, R.anim.flipin);
         animFlipOutForward = AnimationUtils.loadAnimation(this, R.anim.flipout);
@@ -96,70 +90,25 @@ public class MainEasyQuizActivity extends AppCompatActivity {
     }
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
-    private void addQuestion(RadioButton correct, RadioButton incorrect_1, RadioButton incorrect_2, ImageView check, ImageView button_next, ListView info) {
-        correct.setOnClickListener(v -> isChecked(correct, check, button_next, incorrect_1, incorrect_2));
-        incorrect_1.setOnClickListener(v -> isChecked(incorrect_1, check, button_next, correct, incorrect_2));
-        incorrect_2.setOnClickListener(v -> isChecked(incorrect_2, check, button_next, incorrect_1, correct));
-        check.setOnClickListener(v -> check(correct, incorrect_1, incorrect_2, check, button_next, info));
-        ArrayList<String> infoList = new ArrayList<>();
-        infoList.add("Пётр I");
-        adapterInfo = new ArrayAdapter(this, android.R.layout.simple_list_item_1, infoList);
-        info.setAdapter(adapterInfo);
-        info.setOnItemClickListener((parent, view, position, id) -> {
-            Bundle bundle = new Bundle();
-            bundle.putString("name", (String) parent.getItemAtPosition(position));
-            Intent intent = new Intent(MainEasyQuizActivity.this, WebViewActivity.class);
-            intent.putExtras(bundle);
-            startActivity(intent, bundle);
-        });
+    private void addQuestion(RadioButton correct, RadioButton incorrect_1, RadioButton incorrect_2, ImageView check, ImageView button_next) {
+        correct.setOnClickListener(v -> is3Checked(correct, check, button_next, incorrect_1, incorrect_2));
+        incorrect_1.setOnClickListener(v -> is3Checked(incorrect_1, check, button_next, correct, incorrect_2));
+        incorrect_2.setOnClickListener(v -> is3Checked(incorrect_2, check, button_next, incorrect_1, correct));
+        check.setOnClickListener(v -> check(correct, incorrect_1, incorrect_2, check, button_next));
     }
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
-    private void changeTextColor(RadioButton first, RadioButton second) {
-
-        ColorStateList colorStateList = new ColorStateList(
-                new int[][]{
-                        new int[]{-android.R.attr.state_enabled}, // Disabled
-                        new int[]{android.R.attr.state_enabled}   // Enabled
-                },
-                new int[]{
-                        Color.GRAY, // disabled
-                        Color.WHITE   // enabled
-                }
-        );
-
-        first.setEnabled(false);
-        first.setTextColor(Color.GRAY);
-        second.setEnabled(false);
-        second.setTextColor(Color.GRAY);
-        first.setButtonTintList(colorStateList);
-        second.setButtonTintList(colorStateList);
-    }
-
-    private void isChecked(RadioButton choose, ImageView check, ImageView button_next, RadioButton first, RadioButton second) {
-        if (choose.isChecked()) {
-            if (!button_next.isShown()) {
-                check.setVisibility(View.VISIBLE);
-            }
-            first.setChecked(false);
-            second.setChecked(false);
-        }
-    }
-
-    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
-    private void check(RadioButton correct, RadioButton incorrect_1, RadioButton incorrect_2, ImageView check, ImageView button_next, ListView info) {
+    private void check(RadioButton correct, RadioButton incorrect_1, RadioButton incorrect_2, ImageView check, ImageView button_next) {
         if (correct.isChecked()) {
             Count.plussa();
-            changeTextColor(incorrect_1, incorrect_2);
+            change3TextColor(incorrect_1, incorrect_2);
             correct.setBackgroundColor(Color.GREEN);
         } else if (incorrect_1.isChecked()) {
             incorrect_1.setBackgroundColor(Color.RED);
-            changeTextColor(correct, incorrect_2);
-            info.setVisibility(View.VISIBLE);
+            change3TextColor(correct, incorrect_2);
         } else {
             incorrect_2.setBackgroundColor(Color.RED);
-            changeTextColor(correct, incorrect_1);
-            info.setVisibility(View.VISIBLE);
+            change3TextColor(correct, incorrect_1);
         }
         check.setVisibility(View.INVISIBLE);
         button_next.setVisibility(View.VISIBLE);

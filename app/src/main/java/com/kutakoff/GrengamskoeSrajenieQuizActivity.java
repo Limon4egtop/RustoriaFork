@@ -2,7 +2,6 @@ package com.kutakoff;
 
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
-import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
@@ -20,6 +19,8 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
+
+import static com.kutakoff.MainMethodsClass.*;
 
 public class GrengamskoeSrajenieQuizActivity extends AppCompatActivity {
 
@@ -100,67 +101,31 @@ public class GrengamskoeSrajenieQuizActivity extends AppCompatActivity {
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     private void addQuestion(RadioButton correct, RadioButton incorrect_1, RadioButton incorrect_2, RadioButton incorrect_3, ImageView check, ImageView button_next, ListView info) {
-        correct.setOnClickListener(v -> isChecked(correct, check, button_next, incorrect_1, incorrect_2, incorrect_3));
-        incorrect_1.setOnClickListener(v -> isChecked(incorrect_1, check, button_next, correct, incorrect_2, incorrect_3));
-        incorrect_2.setOnClickListener(v -> isChecked(incorrect_2, check, button_next, incorrect_1, incorrect_3, correct));
-        incorrect_3.setOnClickListener(v -> isChecked(incorrect_3, check, button_next, incorrect_1, incorrect_2, correct));
+        correct.setOnClickListener(v -> is4Checked(correct, check, button_next, incorrect_1, incorrect_2, incorrect_3));
+        incorrect_1.setOnClickListener(v -> is4Checked(incorrect_1, check, button_next, correct, incorrect_2, incorrect_3));
+        incorrect_2.setOnClickListener(v -> is4Checked(incorrect_2, check, button_next, incorrect_1, incorrect_3, correct));
+        incorrect_3.setOnClickListener(v -> is4Checked(incorrect_3, check, button_next, incorrect_1, incorrect_2, correct));
         check.setOnClickListener(v -> check(correct, incorrect_1, incorrect_2, incorrect_3, check, button_next, info));
         addButtonInfo(info);
-    }
-
-    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
-    private void changeTextColor(RadioButton first, RadioButton second, RadioButton third) {
-
-        ColorStateList colorStateList = new ColorStateList(
-                new int[][]{
-                        new int[]{-android.R.attr.state_enabled}, // Disabled
-                        new int[]{android.R.attr.state_enabled}   // Enabled
-                },
-                new int[]{
-                        Color.GRAY, // disabled
-                        Color.WHITE   // enabled
-                }
-        );
-
-        first.setEnabled(false);
-        first.setTextColor(Color.GRAY);
-        second.setEnabled(false);
-        second.setTextColor(Color.GRAY);
-        third.setEnabled(false);
-        third.setTextColor(Color.GRAY);
-        first.setButtonTintList(colorStateList);
-        second.setButtonTintList(colorStateList);
-        third.setButtonTintList(colorStateList);
-    }
-
-    private void isChecked(RadioButton choose, ImageView check, ImageView button_next, RadioButton first, RadioButton second, RadioButton third) {
-        if (choose.isChecked()) {
-            if (!button_next.isShown()) {
-                check.setVisibility(View.VISIBLE);
-            }
-            first.setChecked(false);
-            second.setChecked(false);
-            third.setChecked(false);
-        }
     }
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     private void check(RadioButton correct, RadioButton incorrect_1, RadioButton incorrect_2, RadioButton incorrect_3, ImageView check, ImageView button_next, ListView info) {
         if (correct.isChecked()) {
             Count.plussa();
-            changeTextColor(incorrect_1, incorrect_2, incorrect_3);
+            change4TextColor(incorrect_1, incorrect_2, incorrect_3);
             correct.setBackgroundColor(Color.GREEN);
         } else if (incorrect_1.isChecked()) {
             incorrect_1.setBackgroundColor(Color.RED);
-            changeTextColor(correct, incorrect_2, incorrect_3);
+            change4TextColor(correct, incorrect_2, incorrect_3);
             info.setVisibility(View.VISIBLE);
         } else if (incorrect_2.isChecked()) {
             incorrect_2.setBackgroundColor(Color.RED);
-            changeTextColor(correct, incorrect_1, incorrect_3);
+            change4TextColor(correct, incorrect_1, incorrect_3);
             info.setVisibility(View.VISIBLE);
         } else {
             incorrect_3.setBackgroundColor(Color.RED);
-            changeTextColor(correct, incorrect_1, incorrect_2);
+            change4TextColor(correct, incorrect_1, incorrect_2);
             info.setVisibility(View.VISIBLE);
         }
         check.setVisibility(View.INVISIBLE);
