@@ -1,4 +1,4 @@
-package com.kutakoff;
+package com.quizes.petr1;
 
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
@@ -18,11 +18,17 @@ import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.utilitaryClasses.Count;
+import com.kutakoff.QuizActivity;
+import com.kutakoff.R;
+import com.quizes.ResultQuizActivity;
+import com.utilitaryClasses.WebViewActivity;
+
 import java.util.ArrayList;
 
-import static com.kutakoff.MainMethodsClass.*;
+import static com.utilitaryClasses.MainMethodsClass.*;
 
-public class GrengamskoeSrajenieQuizActivity extends AppCompatActivity {
+public class BitvaPriLesnoyQuizActivity extends AppCompatActivity {
 
     ViewFlipper flipper;
     Animation animFlipInForward;
@@ -36,7 +42,7 @@ public class GrengamskoeSrajenieQuizActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED);
-        setContentView(R.layout.activity_grengamskoe_srajenie_quiz);
+        setContentView(R.layout.activity_bitva_pri_lesnoy_quiz);
         flipper = findViewById(R.id.viewflipper);
 
         RadioButton firstCorrect = findViewById(R.id.first_prav);
@@ -119,7 +125,7 @@ public class GrengamskoeSrajenieQuizActivity extends AppCompatActivity {
             incorrect_1.setBackgroundColor(Color.RED);
             change4TextColor(correct, incorrect_2, incorrect_3);
             info.setVisibility(View.VISIBLE);
-        } else if (incorrect_2.isChecked()) {
+        } else if (incorrect_2.isChecked()){
             incorrect_2.setBackgroundColor(Color.RED);
             change4TextColor(correct, incorrect_1, incorrect_3);
             info.setVisibility(View.VISIBLE);
@@ -133,7 +139,7 @@ public class GrengamskoeSrajenieQuizActivity extends AppCompatActivity {
         button_next.setOnClickListener(v1 -> {
             Count.count++;
             if (Count.count == 5) {
-                startActivity(new Intent(GrengamskoeSrajenieQuizActivity.this, ResultQuizActivity.class));
+                startActivity(new Intent(BitvaPriLesnoyQuizActivity.this, ResultQuizActivity.class));
                 Count.count = 0;
             } else {
                 SwipeRight();
@@ -143,13 +149,13 @@ public class GrengamskoeSrajenieQuizActivity extends AppCompatActivity {
 
     private void addButtonInfo(ListView info) {
         ArrayList<String> infoList = new ArrayList<>();
-        infoList.add("Гренгамское сражение");
+        infoList.add("Битва при Лесной");
         adapterInfo = new ArrayAdapter(this, android.R.layout.simple_spinner_item, infoList);
         info.setAdapter(adapterInfo);
         info.setOnItemClickListener((parent, view, position, id) -> {
             Bundle bundle = new Bundle();
             bundle.putString("name", (String) parent.getItemAtPosition(position));
-            Intent intent = new Intent(GrengamskoeSrajenieQuizActivity.this, WebViewActivity.class);
+            Intent intent = new Intent(BitvaPriLesnoyQuizActivity.this, WebViewActivity.class);
             intent.putExtras(bundle);
             startActivity(intent, bundle);
         });
@@ -162,7 +168,7 @@ public class GrengamskoeSrajenieQuizActivity extends AppCompatActivity {
                 .setPositiveButton("Да", (dialog, id) -> {
                     Count.count = 0;
                     Count.a = 0;
-                    startActivity(new Intent(GrengamskoeSrajenieQuizActivity.this, QuizActivity.class));
+                    startActivity(new Intent(BitvaPriLesnoyQuizActivity.this, QuizActivity.class));
                 })
                 .setNegativeButton("Нет", null)
                 .show();

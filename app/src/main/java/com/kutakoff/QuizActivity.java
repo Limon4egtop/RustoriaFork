@@ -13,6 +13,18 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.quizes.staliningradskayaBitva.StalingradskayaBitvaQuizActivity;
+import com.quizes.krim.KrimEasyQuizActivity;
+import com.quizes.krim.KrimHardQuizActivity;
+import com.quizes.krim.KrimMediumQuizActivity;
+import com.quizes.main.MainEasyQuizActivity;
+import com.quizes.main.MainHardQuizActivity;
+import com.quizes.main.MainMediumQuizActivity;
+import com.quizes.petr1.BitvaPriLesnoyQuizActivity;
+import com.quizes.petr1.GangutskoeSrajenieQuizActivity;
+import com.quizes.petr1.GrengamskoeSrajenieQuizActivity;
+import com.quizes.petr1.PoltavskayaBitvaQuizActivity;
+
 public class QuizActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
     ImageView
             main_easy, main_medium, main_hard,
@@ -63,7 +75,7 @@ public class QuizActivity extends AppCompatActivity implements AdapterView.OnIte
         spinner.setAdapter(adapter);
         spinner.setOnItemSelectedListener(this);
 
-        button_back.setOnClickListener(v -> startActivity(new Intent(QuizActivity.this, MainActivity.class)));
+        button_back.setOnClickListener(v -> startActivity(new Intent(QuizActivity.this, ChooseActivity.class)));
 
         main_easy.setOnClickListener(v -> startActivity(new Intent(QuizActivity.this, MainEasyQuizActivity.class)));
         main_medium.setOnClickListener(v -> startActivity(new Intent(QuizActivity.this, MainMediumQuizActivity.class)));

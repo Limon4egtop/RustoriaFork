@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/russian_flag_bq"
-    tools:context=".ResultQuizActivity">
+    tools:context="com.quizes.ResultQuizActivity">
 
     <ImageView
         android:id="@+id/goHome"

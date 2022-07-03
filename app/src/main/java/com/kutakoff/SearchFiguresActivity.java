@@ -13,15 +13,15 @@ import android.widget.SearchView;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.utilitaryClasses.WebViewActivity;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 
-public class SearchFiguresActivity extends AppCompatActivity {
+import static com.utilitaryClasses.MainMethodsClass.*;
 
-    ListView all, praviteli, polkovodci,
-            duxovenstvo, knyazia, tvorchestvo,
-            diplomati, samozvanci, zaxvatchiki;
+public class SearchFiguresActivity extends AppCompatActivity {
 
     ArrayAdapter spinnerAdapter;
     ArrayAdapter adapterAll, adapterPraviteli,
@@ -30,9 +30,9 @@ public class SearchFiguresActivity extends AppCompatActivity {
             adapterDiplomati, adapterSamozvanci,
             adapterZaxvatchiki;
 
-    private static ListView[] listViews;
+    private static final ListView[] listViews = new ListView[9];
 
-    private static ArrayList[] arrayLists;
+    private static final ArrayList[] arrayLists = new ArrayList[9];
 
     private static ArrayAdapter[] arrayAdapters;
 
@@ -41,42 +41,35 @@ public class SearchFiguresActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search_figures);
         SearchView searchView = findViewById(R.id.searchView);
-        Button button = findViewById(R.id.button_back);
+        Button button_back = findViewById(R.id.button_back);
         Spinner spinner = findViewById(R.id.chooseFigure);
 
-        all = findViewById(R.id.all);
-        praviteli = findViewById(R.id.praviteli);
-        polkovodci = findViewById(R.id.polkovodci);
-        duxovenstvo = findViewById(R.id.duxovenstvo);
-        knyazia = findViewById(R.id.knyazia);
-        tvorchestvo = findViewById(R.id.tvorchestvo);
-        diplomati = findViewById(R.id.diplomati);
-        samozvanci = findViewById(R.id.samozvanci);
-        zaxvatchiki = findViewById(R.id.zaxvatchiki);
+        listViews[0] = findViewById(R.id.all);         //все
+        listViews[1] = findViewById(R.id.praviteli);   //правители
+        listViews[2] = findViewById(R.id.polkovodci);  //полководцы
+        listViews[3] = findViewById(R.id.duxovenstvo); //духовенство
+        listViews[4] = findViewById(R.id.knyazia);     //князья
+        listViews[5] = findViewById(R.id.tvorchestvo); //творчество
+        listViews[6] = findViewById(R.id.diplomati);   //дипломаты
+        listViews[7] = findViewById(R.id.samozvanci);  //самозванцы
+        listViews[8] = findViewById(R.id.zaxvatchiki); //захватчики
 
-        ArrayList<String> listAll = new ArrayList<>();
-        ArrayList<String> listPraviteli = new ArrayList<>();
-        ArrayList<String> listPolkovodci = new ArrayList<>();
-        ArrayList<String> listDuxovenstvo = new ArrayList<>();
-        ArrayList<String> listKnyazia = new ArrayList<>();
-        ArrayList<String> listTvorchestvo = new ArrayList<>();
-        ArrayList<String> listDiplomati = new ArrayList<>();
-        ArrayList<String> listSamozvanci = new ArrayList<>();
-        ArrayList<String> listZaxvatchiki = new ArrayList<>();
-
-        listViews = new ListView[]{all, praviteli, polkovodci, duxovenstvo,
-                knyazia, tvorchestvo, diplomati, samozvanci, zaxvatchiki};
-
-        arrayLists = new ArrayList[]{listAll, listPraviteli, listPolkovodci,
-                listDuxovenstvo, listKnyazia, listTvorchestvo, listDiplomati,
-                listSamozvanci, listZaxvatchiki};
+        arrayLists[0] = new ArrayList<>(); //все
+        arrayLists[1] = new ArrayList<>(); //правители
+        arrayLists[2] = new ArrayList<>(); //полководцы
+        arrayLists[3] = new ArrayList<>(); //духовенство
+        arrayLists[4] = new ArrayList<>(); //князья
+        arrayLists[5] = new ArrayList<>(); //творчество
+        arrayLists[6] = new ArrayList<>(); //дипломаты
+        arrayLists[7] = new ArrayList<>(); //самозванцы
+        arrayLists[8] = new ArrayList<>(); //захватчики
 
         arrayAdapters = new ArrayAdapter[]{adapterAll, adapterPraviteli,
                 adapterPolkovodci, adapterDuxovenstvo, adapterKnyazia,
                 adapterTvorchestvo, adapterDiplomati, adapterSamozvanci,
                 adapterZaxvatchiki};
 
-        button.setOnClickListener(v -> onBackPressed());
+        button_back.setOnClickListener(v -> startActivity(new Intent(SearchFiguresActivity.this, ChooseActivity.class)));
 
         fillArrayLists();
         fillAdapters();
@@ -108,37 +101,7 @@ public class SearchFiguresActivity extends AppCompatActivity {
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                /**
-                 * первый аргумент в методе visibilityListItem() - VISIBLE, остальные INVISIBLE
-                 */
-                switch (position) {
-                    case 0:
-                        visibilityListItems(listViews[0], listViews[1], listViews[2], listViews[3], listViews[4], listViews[5], listViews[6], listViews[7], listViews[8]);
-                        break;
-                    case 1:
-                        visibilityListItems(listViews[1], listViews[0], listViews[2], listViews[3], listViews[4], listViews[5], listViews[6], listViews[7], listViews[8]);
-                        break;
-                    case 2:
-                        visibilityListItems(listViews[2], listViews[0], listViews[1], listViews[3], listViews[4], listViews[5], listViews[6], listViews[7], listViews[8]);
-                        break;
-                    case 3:
-                        visibilityListItems(listViews[3], listViews[0], listViews[1], listViews[2], listViews[4], listViews[5], listViews[6], listViews[7], listViews[8]);
-                        break;
-                    case 4:
-                        visibilityListItems(listViews[4], listViews[0], listViews[1], listViews[2], listViews[3], listViews[5], listViews[6], listViews[7], listViews[8]);
-                        break;
-                    case 5:
-                        visibilityListItems(listViews[5], listViews[0], listViews[1], listViews[2], listViews[3], listViews[4], listViews[6], listViews[7], listViews[8]);
-                        break;
-                    case 6:
-                        visibilityListItems(listViews[6], listViews[0], listViews[1], listViews[2], listViews[3], listViews[4], listViews[5], listViews[7], listViews[8]);
-                        break;
-                    case 7:
-                        visibilityListItems(listViews[7], listViews[0], listViews[1], listViews[2], listViews[3], listViews[4], listViews[5], listViews[6], listViews[8]);
-                        break;
-                    case 8:
-                        visibilityListItems(listViews[8], listViews[0], listViews[1], listViews[2], listViews[3], listViews[4], listViews[5], listViews[6], listViews[7]);
-                }
+                visibilityListItems(listViews, position);
             }
 
             @Override
@@ -184,18 +147,6 @@ public class SearchFiguresActivity extends AppCompatActivity {
         for (ArrayList<String> arrayList : arrayLists) {
             Collections.sort(arrayList);
         }
-    }
-
-    private void visibilityListItems(ListView listViewVISIBLE, ListView listView1, ListView listView2, ListView listView3, ListView listView4, ListView listView5, ListView listView6, ListView listView7, ListView listView8) {
-        listViewVISIBLE.setVisibility(View.VISIBLE);
-        listView1.setVisibility(View.INVISIBLE);
-        listView2.setVisibility(View.INVISIBLE);
-        listView3.setVisibility(View.INVISIBLE);
-        listView4.setVisibility(View.INVISIBLE);
-        listView5.setVisibility(View.INVISIBLE);
-        listView6.setVisibility(View.INVISIBLE);
-        listView7.setVisibility(View.INVISIBLE);
-        listView8.setVisibility(View.INVISIBLE);
     }
 
     private void clickableList(ListView listView) {

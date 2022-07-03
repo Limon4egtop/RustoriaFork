@@ -1,10 +1,11 @@
-package com.kutakoff;
+package com.utilitaryClasses;
 
 import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.os.Build;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.RadioButton;
 
 import androidx.annotation.RequiresApi;
@@ -12,7 +13,7 @@ import androidx.annotation.RequiresApi;
 public class MainMethodsClass {
 
     /**
-     * Метод change3TextColor() нужен для смены цвета и кликабельности 3-ёх вариантов
+     * Используется для смены цвета и кликабельности 3-ёх вариантов
      * ответа. Используется в квизах с 3-мя вариантами ответов.
      *
      * @param first  - первый НЕВЫБРАННЫЙ вариант
@@ -39,7 +40,7 @@ public class MainMethodsClass {
 
 
     /**
-     * Метод change4TextColor() нужен для смены цвета и кликабельности 4-ёх вариантов
+     * Используется для смены цвета и кликабельности 4-ёх вариантов
      * ответа. Используется в квизах с 4-мя вариантами ответов.
      *
      * @param first  - первый НЕВЫБРАННЫЙ вариант
@@ -67,13 +68,14 @@ public class MainMethodsClass {
 
 
     /**
-     * Метод нужен для того, чтобы когда пользователь выбирал 1 вариант ответа, остальные
-     * варианты автоматически убирались.
-     * @param choose - выбранный варинат ответа
-     * @param check - кнопка "подтвердить"
+     * Убирает остальные 2 вырианта ответа, кроме выбранного.
+     * Используется для квизов.
+     *
+     * @param choose      - выбранный варинат ответа
+     * @param check       - кнопка "подтвердить"
      * @param button_next - кнопка "дальше"
-     * @param first - вариант ответа, который уберётся
-     * @param second - вариант ответа, который уберётся
+     * @param first       - вариант ответа, который уберётся
+     * @param second      - вариант ответа, который уберётся
      */
     public static void is3Checked(RadioButton choose, ImageView check, ImageView button_next, RadioButton first, RadioButton second) {
         if (choose.isChecked()) {
@@ -87,14 +89,15 @@ public class MainMethodsClass {
 
 
     /**
-     * Метод нужен для того, чтобы когда пользователь выбирал 1 вариант ответа, остальные
-     * варианты автоматически убирались.
-     * @param choose - выбранный варинат ответа
-     * @param check - кнопка "подтвердить"
+     * Убирает остальные 3 вырианта ответа, кроме выбранного.
+     * Используется для квизов.
+     *
+     * @param choose      - выбранный варинат ответа
+     * @param check       - кнопка "подтвердить"
      * @param button_next - кнопка "дальше"
-     * @param first - вариант ответа, который уберётся
-     * @param second - вариант ответа, который уберётся
-     * @param third - вариант ответа, который уберётся
+     * @param first       - вариант ответа, который уберётся
+     * @param second      - вариант ответа, который уберётся
+     * @param third       - вариант ответа, который уберётся
      */
     public static void is4Checked(RadioButton choose, ImageView check, ImageView button_next, RadioButton first, RadioButton second, RadioButton third) {
         if (choose.isChecked()) {
@@ -104,6 +107,24 @@ public class MainMethodsClass {
             first.setChecked(false);
             second.setChecked(false);
             third.setChecked(false);
+        }
+    }
+
+
+    /**
+     * Ставит видимость ListView при выборе подразделов.
+     * Используется в списках деятелей/событий
+     *
+     * @param mass - массив всех ListView
+     * @param num  - номер массива, которы будет VISIBLE.
+     */
+    public static void visibilityListItems(ListView[] mass, int num) {
+        for (int i = 0; i < mass.length; i++) {
+            if (i != num) {
+                mass[i].setVisibility(View.INVISIBLE);
+            } else {
+                mass[num].setVisibility(View.VISIBLE);
+            }
         }
     }
 }

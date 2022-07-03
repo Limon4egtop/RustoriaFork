@@ -1,4 +1,4 @@
-package com.kutakoff;
+package com.quizes;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
@@ -6,6 +6,10 @@ import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.kutakoff.ChooseActivity;
+import com.utilitaryClasses.Count;
+import com.kutakoff.R;
 
 public class ResultQuizActivity extends AppCompatActivity {
 

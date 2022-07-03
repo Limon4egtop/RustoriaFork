@@ -1,4 +1,4 @@
-package com.kutakoff;
+package com.utilitaryClasses;
 
 public class Count {
 

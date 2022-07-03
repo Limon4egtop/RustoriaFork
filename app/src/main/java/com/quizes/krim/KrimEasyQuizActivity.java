@@ -1,4 +1,4 @@
-package com.kutakoff;
+package com.quizes.krim;
 
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
@@ -16,9 +16,14 @@ import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
-import static com.kutakoff.MainMethodsClass.*;
+import com.utilitaryClasses.Count;
+import com.kutakoff.QuizActivity;
+import com.kutakoff.R;
+import com.quizes.ResultQuizActivity;
 
-public class KrimHardQuizActivity extends AppCompatActivity {
+import static com.utilitaryClasses.MainMethodsClass.*;
+
+public class KrimEasyQuizActivity extends AppCompatActivity {
 
     ViewFlipper flipper;
     Animation animFlipInForward;
@@ -31,7 +36,7 @@ public class KrimHardQuizActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED);
-        setContentView(R.layout.activity_krim_hard_quiz);
+        setContentView(R.layout.activity_krim_easy_quiz);
         flipper = findViewById(R.id.viewflipper);
         ImageView start_quiz = findViewById(R.id.start_quiz);
         ImageView button_back = findViewById(R.id.button_back);
@@ -39,56 +44,50 @@ public class KrimHardQuizActivity extends AppCompatActivity {
         RadioButton firstCorrect = findViewById(R.id.first_prav);
         RadioButton firstIncorrect_1 = findViewById(R.id.first_neprav);
         RadioButton firstIncorrect_2 = findViewById(R.id.first_neprav_2);
-        RadioButton firstIncorrect_3 = findViewById(R.id.first_neprav_3);
         ImageView firstCheck = findViewById(R.id.check);
         ImageView firstButtonNext = findViewById(R.id.firstNext);
 
         RadioButton secondCorrect = findViewById(R.id.second_prav);
         RadioButton secondIncorrect_1 = findViewById(R.id.second_neprav);
         RadioButton secondIncorrect_2 = findViewById(R.id.second_neprav_2);
-        RadioButton secondIncorrect_3 = findViewById(R.id.second_neprav_3);
         ImageView secondCheck = findViewById(R.id.check_2);
         ImageView secondButtonNext = findViewById(R.id.secondNext);
 
         RadioButton thirdCorrect = findViewById(R.id.third_prav);
         RadioButton thirdIncorrect_1 = findViewById(R.id.third_neprav);
         RadioButton thirdIncorrect_2 = findViewById(R.id.third_neprav_2);
-        RadioButton thirdIncorrect_3 = findViewById(R.id.third_neprav_3);
         ImageView thirdCheck = findViewById(R.id.check_3);
         ImageView thirdButtonNext = findViewById(R.id.thirdNext);
 
         RadioButton fourthCorrect = findViewById(R.id.fourth_prav);
         RadioButton fourthIncorrect_1 = findViewById(R.id.fourth_neprav);
         RadioButton fourthIncorrect_2 = findViewById(R.id.fourth_neprav_2);
-        RadioButton fourthIncorrect_3 = findViewById(R.id.fourth_neprav_3);
         ImageView fourthCheck = findViewById(R.id.check_4);
         ImageView fourthButtonNext = findViewById(R.id.fourthNext);
 
         RadioButton fifthCorrect = findViewById(R.id.five_prav);
         RadioButton fifthIncorrect_1 = findViewById(R.id.five_neprav);
         RadioButton fifthIncorrect_2 = findViewById(R.id.five_neprav_2);
-        RadioButton fifthIncorrect_3 = findViewById(R.id.five_neprav_3);
         ImageView fifthCheck = findViewById(R.id.check_5);
         ImageView fifthButtonNext = findViewById(R.id.fifthNext);
 
-        RadioButton sixthCorrect = findViewById(R.id.six_prav);
-        RadioButton sixthIncorrect_1 = findViewById(R.id.six_neprav);
-        RadioButton sixthIncorrect_2 = findViewById(R.id.six_neprav_2);
-        RadioButton sixthIncorrect_3 = findViewById(R.id.six_neprav_3);
-        ImageView sixthCheck = findViewById(R.id.check_6);
+        RadioButton sixCorrect = findViewById(R.id.six_prav);
+        RadioButton sixIncorrect_1 = findViewById(R.id.six_neprav);
+        RadioButton sixIncorrect_2 = findViewById(R.id.six_neprav_2);
+        ImageView sixCheck = findViewById(R.id.check_6);
         ImageView sixthButtonNext = findViewById(R.id.sixthNext);
 
         Count.isSpecialQUiz = true;
 
         start_quiz.setOnClickListener(v -> SwipeRight());
-        button_back.setOnClickListener(v -> startActivity(new Intent(KrimHardQuizActivity.this, QuizActivity.class)));
+        button_back.setOnClickListener(v -> startActivity(new Intent(KrimEasyQuizActivity.this, QuizActivity.class)));
 
-        addQuestion(firstCorrect, firstIncorrect_1, firstIncorrect_2, firstIncorrect_3, firstCheck, firstButtonNext);
-        addQuestion(secondCorrect, secondIncorrect_1, secondIncorrect_2, secondIncorrect_3, secondCheck, secondButtonNext);
-        addQuestion(thirdCorrect, thirdIncorrect_1, thirdIncorrect_2, thirdIncorrect_3, thirdCheck, thirdButtonNext);
-        addQuestion(fourthCorrect, fourthIncorrect_1, fourthIncorrect_2, fourthIncorrect_3, fourthCheck, fourthButtonNext);
-        addQuestion(fifthCorrect, fifthIncorrect_1, fifthIncorrect_2, fifthIncorrect_3, fifthCheck, fifthButtonNext);
-        addQuestion(sixthCorrect, sixthIncorrect_1, sixthIncorrect_2, sixthIncorrect_3, sixthCheck, sixthButtonNext);
+        addQuestion(firstCorrect, firstIncorrect_1, firstIncorrect_2, firstCheck, firstButtonNext);
+        addQuestion(secondCorrect, secondIncorrect_1, secondIncorrect_2, secondCheck, secondButtonNext);
+        addQuestion(thirdCorrect, thirdIncorrect_1, thirdIncorrect_2, thirdCheck, thirdButtonNext);
+        addQuestion(fourthCorrect, fourthIncorrect_1, fourthIncorrect_2, fourthCheck, fourthButtonNext);
+        addQuestion(fifthCorrect, fifthIncorrect_1, fifthIncorrect_2, fifthCheck, fifthButtonNext);
+        addQuestion(sixCorrect, sixIncorrect_1, sixIncorrect_2, sixCheck, sixthButtonNext);
 
         animFlipInForward = AnimationUtils.loadAnimation(this, R.anim.flipin);
         animFlipOutForward = AnimationUtils.loadAnimation(this, R.anim.flipout);
@@ -103,36 +102,32 @@ public class KrimHardQuizActivity extends AppCompatActivity {
     }
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
-    private void addQuestion(RadioButton correct, RadioButton incorrect_1, RadioButton incorrect_2, RadioButton incorrect_3, ImageView check, ImageView button_next) {
-        correct.setOnClickListener(v -> is4Checked(correct, check, button_next, incorrect_1, incorrect_2, incorrect_3));
-        incorrect_1.setOnClickListener(v -> is4Checked(incorrect_1, check, button_next, correct, incorrect_2, incorrect_3));
-        incorrect_2.setOnClickListener(v -> is4Checked(incorrect_2, check, button_next, incorrect_1, incorrect_3, correct));
-        incorrect_3.setOnClickListener(v -> is4Checked(incorrect_3, check, button_next, incorrect_1, incorrect_2, correct));
-        check.setOnClickListener(v -> check(correct, incorrect_1, incorrect_2, incorrect_3, check, button_next));
+    private void addQuestion(RadioButton correct, RadioButton incorrect_1, RadioButton incorrect_2, ImageView check, ImageView button_next) {
+        correct.setOnClickListener(v -> is3Checked(correct, check, button_next, incorrect_1, incorrect_2));
+        incorrect_1.setOnClickListener(v -> is3Checked(incorrect_1, check, button_next, correct, incorrect_2));
+        incorrect_2.setOnClickListener(v -> is3Checked(incorrect_2, check, button_next, incorrect_1, correct));
+        check.setOnClickListener(v -> check(correct, incorrect_1, incorrect_2, check, button_next));
     }
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
-    private void check(RadioButton correct, RadioButton incorrect_1, RadioButton incorrect_2, RadioButton incorrect_3, ImageView check, ImageView button_next) {
+    private void check(RadioButton correct, RadioButton incorrect_1, RadioButton incorrect_2, ImageView check, ImageView button_next) {
         if (correct.isChecked()) {
             Count.plussa();
-            change4TextColor(incorrect_1, incorrect_2, incorrect_3);
+            change3TextColor(incorrect_1, incorrect_2);
             correct.setBackgroundColor(Color.GREEN);
         } else if (incorrect_1.isChecked()) {
             incorrect_1.setBackgroundColor(Color.RED);
-            change4TextColor(correct, incorrect_2, incorrect_3);
-        } else if (incorrect_2.isChecked()){
-            incorrect_2.setBackgroundColor(Color.RED);
-            change4TextColor(correct, incorrect_1, incorrect_3);
+            change3TextColor(correct, incorrect_2);
         } else {
-            incorrect_3.setBackgroundColor(Color.RED);
-            change4TextColor(correct, incorrect_1, incorrect_2);
+            incorrect_2.setBackgroundColor(Color.RED);
+            change3TextColor(correct, incorrect_1);
         }
         check.setVisibility(View.INVISIBLE);
         button_next.setVisibility(View.VISIBLE);
         button_next.setOnClickListener(v1 -> {
             Count.count++;
             if (Count.count == 6) {
-                startActivity(new Intent(KrimHardQuizActivity.this, ResultQuizActivity.class));
+                startActivity(new Intent(KrimEasyQuizActivity.this, ResultQuizActivity.class));
                 Count.count = 0;
             } else {
                 SwipeRight();
@@ -147,7 +142,7 @@ public class KrimHardQuizActivity extends AppCompatActivity {
                 .setPositiveButton("Да", (dialog, id) -> {
                     Count.count = 0;
                     Count.a = 0;
-                    startActivity(new Intent(KrimHardQuizActivity.this, QuizActivity.class));
+                    startActivity(new Intent(KrimEasyQuizActivity.this, QuizActivity.class));
                 })
                 .setNegativeButton("Нет", null)
                 .show();
