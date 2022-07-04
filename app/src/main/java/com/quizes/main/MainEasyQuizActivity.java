@@ -72,6 +72,7 @@ public class MainEasyQuizActivity extends AppCompatActivity {
         ImageView fifthButtonNext = findViewById(R.id.fifthNext);
 
         Count.isHardQuiz = false;
+        Count.isSpecialQUiz = false;
 
         start_quiz.setOnClickListener(v -> SwipeRight());
         button_back.setOnClickListener(v -> startActivity(new Intent(MainEasyQuizActivity.this, QuizActivity.class)));

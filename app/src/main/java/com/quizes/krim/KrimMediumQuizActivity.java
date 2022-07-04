@@ -84,6 +84,7 @@ public class KrimMediumQuizActivity extends AppCompatActivity {
         ImageView sixthButtonNext = findViewById(R.id.sixthNext);
 
         Count.isSpecialQUiz = true;
+        Count.isHardQuiz = false;
 
         start_quiz.setOnClickListener(v -> SwipeRight());
         button_back.setOnClickListener(v -> startActivity(new Intent(KrimMediumQuizActivity.this, QuizActivity.class)));

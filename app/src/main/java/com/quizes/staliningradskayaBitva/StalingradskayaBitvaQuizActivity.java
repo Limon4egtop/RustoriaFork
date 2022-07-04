@@ -126,6 +126,7 @@ public class StalingradskayaBitvaQuizActivity extends AppCompatActivity {
         ListView info10 = findViewById(R.id.info10);
 
         Count.isHardQuiz = true;
+        Count.isSpecialQUiz = false;
 
         addQuestion(firstCorrect, firstIncorrect_1, firstIncorrect_2, firstIncorrect_3, firstCheck, firstButtonNext, info1);
         addQuestion(secondCorrect, secondIncorrect_1, secondIncorrect_2, secondIncorrect_3, secondCheck, secondButtonNext, info2);

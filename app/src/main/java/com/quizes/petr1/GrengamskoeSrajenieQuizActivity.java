@@ -86,6 +86,7 @@ public class GrengamskoeSrajenieQuizActivity extends AppCompatActivity {
         ListView info5 = findViewById(R.id.info5);
 
         Count.isHardQuiz = false;
+        Count.isSpecialQUiz = false;
 
         addQuestion(firstCorrect, firstIncorrect_1, firstIncorrect_2, firstIncorrect_3, firstCheck, firstButtonNext, info1);
         addQuestion(secondCorrect, secondIncorrect_1, secondIncorrect_2, secondIncorrect_3, secondCheck, secondButtonNext, info2);

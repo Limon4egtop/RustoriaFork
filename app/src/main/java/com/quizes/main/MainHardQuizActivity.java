@@ -112,6 +112,7 @@ public class MainHardQuizActivity extends AppCompatActivity {
         ImageView tenthButtonNext = findViewById(R.id.tenthNext);
 
         Count.isHardQuiz = true;
+        Count.isSpecialQUiz = false;
 
         start_quiz.setOnClickListener(v -> SwipeRight());
         button_back.setOnClickListener(v -> startActivity(new Intent(MainHardQuizActivity.this, QuizActivity.class)));
