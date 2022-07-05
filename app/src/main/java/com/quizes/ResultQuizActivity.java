@@ -22,24 +22,24 @@ public class ResultQuizActivity extends AppCompatActivity {
         ImageView goHome = findViewById(R.id.goHome);
         String compliment = "";
         if (Count.isHardQuiz) {
-            if (Count.getA() >= 0 && Count.getA() <= 2) {
+            if (Count.getA() >= 0 && Count.getA() <= 3) {
                 compliment = "Попробуй ещё раз!";
-            } else if(Count.getA() >= 3 && Count.getA() <= 5) {
+            } else if(Count.getA() >= 4 && Count.getA() <= 6) {
                 compliment = "Неплохо!";
-            } else if (Count.getA() >= 6 && Count.getA() <= 8) {
+            } else if (Count.getA() == 7 || Count.getA() == 8) {
                 compliment = "Ты хорошо справился!";
             } else if (Count.getA() == 9 || Count.getA() == 10) {
                 compliment = "Ты справился отлично!";
             }
             textResult.setText(compliment + "\nТвой результат: " + Count.getA() + "/10.");
         } else if (Count.isSpecialQUiz) {
-            if (Count.getA() >= 0 && Count.getA() <= 1) {
+            if (Count.getA() >= 0 && Count.getA() <= 2) {
                 compliment = "Попробуй ещё раз!";
-            } else if(Count.getA() >= 2 && Count.getA() <= 3) {
+            } else if(Count.getA() == 3 || Count.getA() == 4) {
                 compliment = "Неплохо!";
-            } else if (Count.getA() == 4) {
+            } else if (Count.getA() == 5) {
                 compliment = "Ты хорошо справился!";
-            } else if (Count.getA() == 5 || Count.getA() == 6) {
+            } else if (Count.getA() == 6) {
                 compliment = "Ты справился отлично!";
             }
             textResult.setText(compliment + "\nТвой результат: " + Count.getA() + "/6.");

@@ -2,7 +2,7 @@
 <CheckedTextView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:text="Квиз: Основной"
-    android:textSize="28sp"
+    android:textSize="40sp"
     android:textStyle="bold"
     android:shadowRadius="10"
     android:shadowDx="1"

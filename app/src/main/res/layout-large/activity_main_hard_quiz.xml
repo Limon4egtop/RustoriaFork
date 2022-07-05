@@ -24,31 +24,31 @@
                 android:background="@drawable/russian_flag_bq" />
 
             <ImageView
-                android:id="@+id/textView"
-                android:layout_width="350dp"
-                android:layout_height="550dp"
+                android:id="@+id/rules"
+                android:layout_width="520dp"
+                android:layout_height="700dp"
                 android:background="@drawable/main_quiz_hard_rules"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.364" />
+                app:layout_constraintVertical_bias="0.45" />
 
             <ImageView
                 android:id="@+id/start_quiz"
-                android:layout_width="150dp"
-                android:layout_height="50dp"
+                android:layout_width="190dp"
+                android:layout_height="62dp"
                 android:background="@drawable/start_quiz"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView"
-                app:layout_constraintVertical_bias="0.356" />
+                app:layout_constraintTop_toBottomOf="@+id/rules"
+                app:layout_constraintVertical_bias="0.50" />
 
             <ImageView
                 android:id="@+id/button_back"
-                android:layout_width="93dp"
-                android:layout_height="66dp"
+                android:layout_width="130dp"
+                android:layout_height="80dp"
                 android:background="@drawable/xakaton_button_back"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -72,7 +72,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:textColor="@color/black"
-                android:textSize="35sp"
+                android:textSize="45sp"
                 android:textStyle="bold"
                 android:shadowRadius="10"
                 android:shadowDx="1"
@@ -90,7 +90,7 @@
                 android:text="Какой из этих языков изобрели братья Кирилл и Мефодий?"
                 android:gravity="center"
                 android:textColor="@color/black"
-                android:textSize="32sp"
+                android:textSize="45sp"
                 android:textStyle="bold"
                 android:shadowRadius="10"
                 android:shadowDx="1"
@@ -100,7 +100,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.078" />
+                app:layout_constraintVertical_bias="0.1" />
 
             <RadioButton
                 android:id="@+id/first_prav"
@@ -109,7 +109,7 @@
                 android:text="Глаголица"
                 android:textColor="@color/white"
                 android:buttonTint="@color/white"
-                android:textSize="28sp"
+                android:textSize="40sp"
                 android:textStyle="bold"
                 android:shadowRadius="10"
                 android:shadowDx="1"
@@ -129,7 +129,7 @@
                 android:text="Суржик"
                 android:textColor="@color/white"
                 android:buttonTint="@color/white"
-                android:textSize="28sp"
+                android:textSize="40sp"
                 android:textStyle="bold"
                 android:shadowRadius="10"
                 android:shadowDx="1"
@@ -149,7 +149,7 @@
                 android:text="Кириллица"
                 android:textColor="@color/white"
                 android:buttonTint="@color/white"
-                android:textSize="28sp"
+                android:textSize="40sp"
                 android:textStyle="bold"
                 android:shadowRadius="10"
                 android:shadowDx="1"
@@ -169,7 +169,7 @@
                 android:text="Церковнославянский"
                 android:textColor="@color/white"
                 android:buttonTint="@color/white"
-                android:textSize="28sp"
+                android:textSize="40sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -180,8 +180,8 @@
 
             <ImageView
                 android:id="@+id/check"
-                android:layout_width="155dp"
-                android:layout_height="50dp"
+                android:layout_width="190dp"
+                android:layout_height="62dp"
                 android:visibility="invisible"
                 android:background="@drawable/accept"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -193,8 +193,8 @@
 
             <ImageView
                 android:id="@+id/firstNext"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
                 android:background="@drawable/button_next"
                 android:visibility="invisible"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -202,7 +202,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintHorizontal_bias="0.793"
-                app:layout_constraintVertical_bias="0.91" />
+                app:layout_constraintVertical_bias="0.93" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -223,7 +223,7 @@
                 android:text="Вопрос №2"
                 android:gravity="center"
                 android:textColor="@color/black"
-                android:textSize="35sp"
+                android:textSize="45sp"
                 android:textStyle="bold"
                 android:shadowRadius="10"
                 android:shadowDx="1"
@@ -241,7 +241,7 @@
                 android:text="Российская империя по своей площади за всю историю государств находится на:"
                 android:gravity="center"
                 android:textColor="@color/black"
-                android:textSize="28sp"
+                android:textSize="40sp"
                 android:textStyle="bold"
                 android:shadowRadius="10"
                 android:shadowDx="1"
@@ -251,7 +251,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.09" />
+                app:layout_constraintVertical_bias="0.1" />
 
             <RadioButton
                 android:id="@+id/second_neprav"
@@ -260,7 +260,7 @@
                 android:text="1 месте"
                 android:textColor="@color/white"
                 android:buttonTint="@color/white"
-                android:textSize="29sp"
+                android:textSize="40sp"
                 android:textStyle="bold"
                 android:shadowRadius="10"
                 android:shadowDx="1"
@@ -280,7 +280,7 @@
                 android:text="2 месте"
                 android:textColor="@color/white"
                 android:buttonTint="@color/white"
-                android:textSize="29sp"
+                android:textSize="40sp"
                 android:textStyle="bold"
                 android:shadowRadius="10"
                 android:shadowDx="1"
@@ -300,7 +300,7 @@
                 android:text="3 месте"
                 android:textColor="@color/white"
                 android:buttonTint="@color/white"
-                android:textSize="29sp"
+                android:textSize="40sp"
                 android:textStyle="bold"
                 android:shadowRadius="10"
                 android:shadowDx="1"
@@ -320,7 +320,7 @@
                 android:text="4 месте"
                 android:textColor="@color/white"
                 android:buttonTint="@color/white"
-                android:textSize="29sp"
+                android:textSize="40sp"
                 android:textStyle="bold"
                 android:shadowRadius="10"
                 android:shadowDx="1"
@@ -335,8 +335,8 @@
 
             <ImageView
                 android:id="@+id/check_2"
-                android:layout_width="155dp"
-                android:layout_height="50dp"
+                android:layout_width="190dp"
+                android:layout_height="62dp"
                 android:background="@drawable/accept"
                 android:visibility="invisible"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -348,8 +348,8 @@
 
             <ImageView
                 android:id="@+id/secondNext"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
                 android:background="@drawable/button_next"
                 android:visibility="invisible"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -357,7 +357,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintHorizontal_bias="0.793"
-                app:layout_constraintVertical_bias="0.91" />
+                app:layout_constraintVertical_bias="0.93" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -378,7 +378,7 @@
                 android:text="Вопрос №3"
                 android:gravity="center"
                 android:textColor="@color/black"
-                android:textSize="35sp"
+                android:textSize="45sp"
                 android:textStyle="bold"
                 android:shadowRadius="10"
                 android:shadowDx="1"
@@ -396,7 +396,7 @@
                 android:text="Аляска была продана США за:"
                 android:gravity="center"
                 android:textColor="@color/black"
-                android:textSize="32sp"
+                android:textSize="45sp"
                 android:textStyle="bold"
                 android:shadowRadius="10"
                 android:shadowDx="1"
@@ -406,7 +406,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.083" />
+                app:layout_constraintVertical_bias="0.1" />
 
             <RadioButton
                 android:id="@+id/third_neprav_2"
@@ -415,7 +415,7 @@
                 android:text="5 млн. долларов"
                 android:textColor="@color/white"
                 android:buttonTint="@color/white"
-                android:textSize="28sp"
+                android:textSize="38sp"
                 android:textStyle="bold"
                 android:shadowRadius="10"
                 android:shadowDx="1"
@@ -435,7 +435,7 @@
                 android:text="6.7 млн. долларов"
                 android:textColor="@color/white"
                 android:buttonTint="@color/white"
-                android:textSize="28sp"
+                android:textSize="38sp"
                 android:textStyle="bold"
                 android:shadowRadius="10"
                 android:shadowDx="1"
@@ -455,7 +455,7 @@
                 android:text=" 7.2 млн. долларов"
                 android:textColor="@color/white"
                 android:buttonTint="@color/white"
-                android:textSize="28sp"
+                android:textSize="38sp"
                 android:textStyle="bold"
                 android:shadowRadius="10"
                 android:shadowDx="1"
@@ -475,7 +475,7 @@
                 android:text="8 млн. долларов"
                 android:textColor="@color/white"
                 android:buttonTint="@color/white"
-                android:textSize="28sp"
+                android:textSize="38sp"
                 android:textStyle="bold"
                 android:shadowRadius="10"
                 android:shadowDx="1"
@@ -490,8 +490,8 @@
 
             <ImageView
                 android:id="@+id/check_3"
-                android:layout_width="155dp"
-                android:layout_height="50dp"
+                android:layout_width="190dp"
+                android:layout_height="62dp"
                 android:visibility="invisible"
                 android:background="@drawable/accept"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -503,8 +503,8 @@
 
             <ImageView
                 android:id="@+id/thirdNext"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
                 android:background="@drawable/button_next"
                 android:visibility="invisible"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -512,7 +512,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintHorizontal_bias="0.793"
-                app:layout_constraintVertical_bias="0.91" />
+                app:layout_constraintVertical_bias="0.93" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -533,7 +533,7 @@
                 android:text="Вопрос №4"
                 android:gravity="center"
                 android:textColor="@color/black"
-                android:textSize="35sp"
+                android:textSize="45sp"
                 android:textStyle="bold"
                 android:shadowRadius="10"
                 android:shadowDx="1"
@@ -551,7 +551,7 @@
                 android:text="Осадное положение в Москве во время ВОВ было введено:"
                 android:gravity="center"
                 android:textColor="@color/black"
-                android:textSize="30sp"
+                android:textSize="45sp"
                 android:textStyle="bold"
                 android:shadowRadius="10"
                 android:shadowDx="1"
@@ -561,7 +561,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.092" />
+                app:layout_constraintVertical_bias="0.1" />
 
             <RadioButton
                 android:id="@+id/fourth_neprav_3"
@@ -570,7 +570,7 @@
                 android:text="22 июня 1941 г."
                 android:textColor="@color/white"
                 android:buttonTint="@color/white"
-                android:textSize="28sp"
+                android:textSize="38sp"
                 android:textStyle="bold"
                 android:shadowRadius="10"
                 android:shadowDx="1"
@@ -590,7 +590,7 @@
                 android:text="9 сентября 1941 г."
                 android:textColor="@color/white"
                 android:buttonTint="@color/white"
-                android:textSize="28sp"
+                android:textSize="38sp"
                 android:textStyle="bold"
                 android:shadowRadius="10"
                 android:shadowDx="1"
@@ -610,7 +610,7 @@
                 android:text="19 октября 1941 г."
                 android:textColor="@color/white"
                 android:buttonTint="@color/white"
-                android:textSize="28sp"
+                android:textSize="38sp"
                 android:textStyle="bold"
                 android:shadowRadius="10"
                 android:shadowDx="1"
@@ -630,7 +630,7 @@
                 android:text="2 ноября 1941 г."
                 android:textColor="@color/white"
                 android:buttonTint="@color/white"
-                android:textSize="28sp"
+                android:textSize="38sp"
                 android:textStyle="bold"
                 android:shadowRadius="10"
                 android:shadowDx="1"
@@ -645,8 +645,8 @@
 
             <ImageView
                 android:id="@+id/check_4"
-                android:layout_width="155dp"
-                android:layout_height="50dp"
+                android:layout_width="190dp"
+                android:layout_height="62dp"
                 android:visibility="invisible"
                 android:background="@drawable/accept"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -658,8 +658,8 @@
 
             <ImageView
                 android:id="@+id/fourthNext"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
                 android:background="@drawable/button_next"
                 android:visibility="invisible"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -667,7 +667,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintHorizontal_bias="0.793"
-                app:layout_constraintVertical_bias="0.91" />
+                app:layout_constraintVertical_bias="0.93" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -688,7 +688,7 @@
                 android:text="Вопрос №5"
                 android:gravity="center"
                 android:textColor="@color/black"
-                android:textSize="35sp"
+                android:textSize="45sp"
                 android:textStyle="bold"
                 android:shadowRadius="10"
                 android:shadowDx="1"
@@ -706,7 +706,7 @@
                 android:gravity="center"
                 android:text="Сколько длилась Бородинская битва 1812 г?"
                 android:textColor="@color/black"
-                android:textSize="30sp"
+                android:textSize="45sp"
                 android:textStyle="bold"
                 android:shadowRadius="10"
                 android:shadowDx="1"
@@ -716,7 +716,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.098" />
+                app:layout_constraintVertical_bias="0.1" />
 
             <RadioButton
                 android:id="@+id/five_neprav_3"
@@ -725,7 +725,7 @@
                 android:text="1 день и 5 часов"
                 android:textColor="@color/white"
                 android:buttonTint="@color/white"
-                android:textSize="28sp"
+                android:textSize="38sp"
                 android:textStyle="bold"
                 android:shadowRadius="10"
                 android:shadowDx="1"
@@ -745,7 +745,7 @@
                 android:text="7 часов"
                 android:textColor="@color/white"
                 android:buttonTint="@color/white"
-                android:textSize="29sp"
+                android:textSize="38sp"
                 android:textStyle="bold"
                 android:shadowRadius="10"
                 android:shadowDx="1"
@@ -765,7 +765,7 @@
                 android:text="12 часов"
                 android:textColor="@color/white"
                 android:buttonTint="@color/white"
-                android:textSize="29sp"
+                android:textSize="38sp"
                 android:textStyle="bold"
                 android:shadowRadius="10"
                 android:shadowDx="1"
@@ -785,7 +785,7 @@
                 android:text="14 часов"
                 android:textColor="@color/white"
                 android:buttonTint="@color/white"
-                android:textSize="29sp"
+                android:textSize="38sp"
                 android:textStyle="bold"
                 android:shadowRadius="10"
                 android:shadowDx="1"
@@ -800,8 +800,8 @@
 
             <ImageView
                 android:id="@+id/check_5"
-                android:layout_width="155dp"
-                android:layout_height="50dp"
+                android:layout_width="190dp"
+                android:layout_height="62dp"
                 android:visibility="invisible"
                 android:background="@drawable/accept"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -813,8 +813,8 @@
 
             <ImageView
                 android:id="@+id/fifthNext"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
                 android:background="@drawable/button_next"
                 android:visibility="invisible"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -822,7 +822,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintHorizontal_bias="0.793"
-                app:layout_constraintVertical_bias="0.91" />
+                app:layout_constraintVertical_bias="0.93" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -843,7 +843,7 @@
                 android:text="Вопрос №6"
                 android:gravity="center"
                 android:textColor="@color/black"
-                android:textSize="35sp"
+                android:textSize="45sp"
                 android:textStyle="bold"
                 android:shadowRadius="10"
                 android:shadowDx="1"
@@ -858,10 +858,10 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Какая дата правления Василия I?"
+                android:text="Дата правления Василия I"
                 android:gravity="center"
                 android:textColor="@color/black"
-                android:textSize="32sp"
+                android:textSize="45sp"
                 android:textStyle="bold"
                 android:shadowRadius="10"
                 android:shadowDx="1"
@@ -871,7 +871,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.093" />
+                app:layout_constraintVertical_bias="0.1" />
 
             <RadioButton
                 android:id="@+id/six_prav"
@@ -880,7 +880,7 @@
                 android:text="1371-1425 гг."
                 android:textColor="@color/white"
                 android:buttonTint="@color/white"
-                android:textSize="28sp"
+                android:textSize="40sp"
                 android:textStyle="bold"
                 android:shadowRadius="10"
                 android:shadowDx="1"
@@ -900,7 +900,7 @@
                 android:text="1425-1462 гг."
                 android:textColor="@color/white"
                 android:buttonTint="@color/white"
-                android:textSize="28sp"
+                android:textSize="40sp"
                 android:textStyle="bold"
                 android:shadowRadius="10"
                 android:shadowDx="1"
@@ -920,7 +920,7 @@
                 android:text="1462-1505 гг."
                 android:textColor="@color/white"
                 android:buttonTint="@color/white"
-                android:textSize="28sp"
+                android:textSize="40sp"
                 android:textStyle="bold"
                 android:shadowRadius="10"
                 android:shadowDx="1"
@@ -940,7 +940,7 @@
                 android:text="1469-1503 гг."
                 android:textColor="@color/white"
                 android:buttonTint="@color/white"
-                android:textSize="28sp"
+                android:textSize="40sp"
                 android:textStyle="bold"
                 android:shadowRadius="10"
                 android:shadowDx="1"
@@ -955,8 +955,8 @@
 
             <ImageView
                 android:id="@+id/check_6"
-                android:layout_width="155dp"
-                android:layout_height="50dp"
+                android:layout_width="190dp"
+                android:layout_height="62dp"
                 android:visibility="invisible"
                 android:background="@drawable/accept"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -968,8 +968,8 @@
 
             <ImageView
                 android:id="@+id/sixthNext"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
                 android:background="@drawable/button_next"
                 android:visibility="invisible"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -977,7 +977,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintHorizontal_bias="0.793"
-                app:layout_constraintVertical_bias="0.91" />
+                app:layout_constraintVertical_bias="0.93" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -998,7 +998,7 @@
                 android:text="Вопрос №7"
                 android:gravity="center"
                 android:textColor="@color/black"
-                android:textSize="35sp"
+                android:textSize="45sp"
                 android:textStyle="bold"
                 android:shadowRadius="10"
                 android:shadowDx="1"
@@ -1016,7 +1016,7 @@
                 android:text="Сколько лет было Николаю II, когда он был убит?"
                 android:gravity="center"
                 android:textColor="@color/black"
-                android:textSize="32sp"
+                android:textSize="45sp"
                 android:textStyle="bold"
                 android:shadowRadius="10"
                 android:shadowDx="1"
@@ -1026,7 +1026,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.098" />
+                app:layout_constraintVertical_bias="0.1" />
 
             <RadioButton
                 android:id="@+id/seven_neprav_2"
@@ -1035,7 +1035,7 @@
                 android:text="45 лет"
                 android:textColor="@color/white"
                 android:buttonTint="@color/white"
-                android:textSize="29sp"
+                android:textSize="40sp"
                 android:textStyle="bold"
                 android:shadowRadius="10"
                 android:shadowDx="1"
@@ -1055,7 +1055,7 @@
                 android:text="50 лет"
                 android:textColor="@color/white"
                 android:buttonTint="@color/white"
-                android:textSize="29sp"
+                android:textSize="40sp"
                 android:textStyle="bold"
                 android:shadowRadius="10"
                 android:shadowDx="1"
@@ -1075,7 +1075,7 @@
                 android:text="55 лет"
                 android:textColor="@color/white"
                 android:buttonTint="@color/white"
-                android:textSize="29sp"
+                android:textSize="40sp"
                 android:textStyle="bold"
                 android:shadowRadius="10"
                 android:shadowDx="1"
@@ -1095,7 +1095,7 @@
                 android:text="60 лет"
                 android:textColor="@color/white"
                 android:buttonTint="@color/white"
-                android:textSize="29sp"
+                android:textSize="40sp"
                 android:textStyle="bold"
                 android:shadowRadius="10"
                 android:shadowDx="1"
@@ -1110,8 +1110,8 @@
 
             <ImageView
                 android:id="@+id/check_7"
-                android:layout_width="155dp"
-                android:layout_height="50dp"
+                android:layout_width="190dp"
+                android:layout_height="62dp"
                 android:visibility="invisible"
                 android:background="@drawable/accept"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -1123,8 +1123,8 @@
 
             <ImageView
                 android:id="@+id/seventhNext"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
                 android:background="@drawable/button_next"
                 android:visibility="invisible"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -1132,7 +1132,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintHorizontal_bias="0.793"
-                app:layout_constraintVertical_bias="0.91" />
+                app:layout_constraintVertical_bias="0.93" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -1153,7 +1153,7 @@
                 android:text="Вопрос №8"
                 android:gravity="center"
                 android:textColor="@color/black"
-                android:textSize="35sp"
+                android:textSize="45sp"
                 android:textStyle="bold"
                 android:shadowRadius="10"
                 android:shadowDx="1"
@@ -1171,7 +1171,7 @@
                 android:text="В Новгородской республике князя не было до:"
                 android:gravity="center"
                 android:textColor="@color/black"
-                android:textSize="30sp"
+                android:textSize="45sp"
                 android:textStyle="bold"
                 android:shadowRadius="10"
                 android:shadowDx="1"
@@ -1181,7 +1181,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.098" />
+                app:layout_constraintVertical_bias="0.1" />
 
             <RadioButton
                 android:id="@+id/eight_neprav_2"
@@ -1190,7 +1190,7 @@
                 android:text="1097 г."
                 android:textColor="@color/white"
                 android:buttonTint="@color/white"
-                android:textSize="29sp"
+                android:textSize="40sp"
                 android:textStyle="bold"
                 android:shadowRadius="10"
                 android:shadowDx="1"
@@ -1210,7 +1210,7 @@
                 android:text="1136 г."
                 android:textColor="@color/white"
                 android:buttonTint="@color/white"
-                android:textSize="29sp"
+                android:textSize="40sp"
                 android:textStyle="bold"
                 android:shadowRadius="10"
                 android:shadowDx="1"
@@ -1230,7 +1230,7 @@
                 android:text="1217 г."
                 android:textColor="@color/white"
                 android:buttonTint="@color/white"
-                android:textSize="29sp"
+                android:textSize="40sp"
                 android:textStyle="bold"
                 android:shadowRadius="10"
                 android:shadowDx="1"
@@ -1250,7 +1250,7 @@
                 android:text="1242 г."
                 android:textColor="@color/white"
                 android:buttonTint="@color/white"
-                android:textSize="29sp"
+                android:textSize="40sp"
                 android:textStyle="bold"
                 android:shadowRadius="10"
                 android:shadowDx="1"
@@ -1265,8 +1265,8 @@
 
             <ImageView
                 android:id="@+id/check_8"
-                android:layout_width="155dp"
-                android:layout_height="50dp"
+                android:layout_width="190dp"
+                android:layout_height="62dp"
                 android:visibility="invisible"
                 android:background="@drawable/accept"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -1278,8 +1278,8 @@
 
             <ImageView
                 android:id="@+id/eightNext"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
                 android:background="@drawable/button_next"
                 android:visibility="invisible"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -1287,7 +1287,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintHorizontal_bias="0.793"
-                app:layout_constraintVertical_bias="0.91" />
+                app:layout_constraintVertical_bias="0.93" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -1308,7 +1308,7 @@
                 android:text="Вопрос №9"
                 android:gravity="center"
                 android:textColor="@color/black"
-                android:textSize="35sp"
+                android:textSize="45sp"
                 android:textStyle="bold"
                 android:shadowRadius="10"
                 android:shadowDx="1"
@@ -1326,7 +1326,7 @@
                 android:text="Дата Медного бунта:"
                 android:gravity="center"
                 android:textColor="@color/black"
-                android:textSize="33sp"
+                android:textSize="50sp"
                 android:textStyle="bold"
                 android:shadowRadius="10"
                 android:shadowDx="1"
@@ -1337,7 +1337,7 @@
                 app:layout_constraintHorizontal_bias="0.496"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.088" />
+                app:layout_constraintVertical_bias="0.1" />
 
             <RadioButton
                 android:id="@+id/nine_neprav_2"
@@ -1346,7 +1346,7 @@
                 android:text="1 июня 1648 г."
                 android:textColor="@color/white"
                 android:buttonTint="@color/white"
-                android:textSize="27sp"
+                android:textSize="38sp"
                 android:textStyle="bold"
                 android:shadowRadius="10"
                 android:shadowDx="1"
@@ -1366,7 +1366,7 @@
                 android:text="25 июля 1662 г."
                 android:textColor="@color/white"
                 android:buttonTint="@color/white"
-                android:textSize="27sp"
+                android:textSize="38sp"
                 android:textStyle="bold"
                 android:shadowRadius="10"
                 android:shadowDx="1"
@@ -1386,7 +1386,7 @@
                 android:text="9 сентября 1663 г."
                 android:textColor="@color/white"
                 android:buttonTint="@color/white"
-                android:textSize="27sp"
+                android:textSize="38sp"
                 android:textStyle="bold"
                 android:shadowRadius="10"
                 android:shadowDx="1"
@@ -1406,7 +1406,7 @@
                 android:text="23 июля 1667 г."
                 android:textColor="@color/white"
                 android:buttonTint="@color/white"
-                android:textSize="27sp"
+                android:textSize="38sp"
                 android:textStyle="bold"
                 android:shadowRadius="10"
                 android:shadowDx="1"
@@ -1421,8 +1421,8 @@
 
             <ImageView
                 android:id="@+id/check_9"
-                android:layout_width="155dp"
-                android:layout_height="50dp"
+                android:layout_width="190dp"
+                android:layout_height="62dp"
                 android:visibility="invisible"
                 android:background="@drawable/accept"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -1434,8 +1434,8 @@
 
             <ImageView
                 android:id="@+id/ninthNext"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
                 android:background="@drawable/button_next"
                 android:visibility="invisible"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -1443,7 +1443,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintHorizontal_bias="0.793"
-                app:layout_constraintVertical_bias="0.91" />
+                app:layout_constraintVertical_bias="0.93" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -1464,7 +1464,7 @@
                 android:text="Вопрос №10"
                 android:gravity="center"
                 android:textColor="@color/black"
-                android:textSize="35sp"
+                android:textSize="45sp"
                 android:textStyle="bold"
                 android:shadowRadius="10"
                 android:shadowDx="1"
@@ -1479,10 +1479,10 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Дата отмены крепостного права:"
+                android:text="Дата отмены крепостного права"
                 android:gravity="center"
                 android:textColor="@color/black"
-                android:textSize="30sp"
+                android:textSize="50sp"
                 android:textStyle="bold"
                 android:shadowRadius="10"
                 android:shadowDx="1"
@@ -1492,7 +1492,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.088" />
+                app:layout_constraintVertical_bias="0.1" />
 
             <RadioButton
                 android:id="@+id/ten_neprav_3"
@@ -1501,7 +1501,7 @@
                 android:text="1853 г."
                 android:textColor="@color/white"
                 android:buttonTint="@color/white"
-                android:textSize="29sp"
+                android:textSize="40sp"
                 android:textStyle="bold"
                 android:shadowRadius="10"
                 android:shadowDx="1"
@@ -1521,7 +1521,7 @@
                 android:text="1858 г."
                 android:textColor="@color/white"
                 android:buttonTint="@color/white"
-                android:textSize="29sp"
+                android:textSize="40sp"
                 android:textStyle="bold"
                 android:shadowRadius="10"
                 android:shadowDx="1"
@@ -1541,7 +1541,7 @@
                 android:text="1861 г."
                 android:textColor="@color/white"
                 android:buttonTint="@color/white"
-                android:textSize="29sp"
+                android:textSize="40sp"
                 android:textStyle="bold"
                 android:shadowRadius="10"
                 android:shadowDx="1"
@@ -1561,7 +1561,7 @@
                 android:text="1865 г."
                 android:textColor="@color/white"
                 android:buttonTint="@color/white"
-                android:textSize="29sp"
+                android:textSize="40sp"
                 android:textStyle="bold"
                 android:shadowRadius="10"
                 android:shadowDx="1"
@@ -1576,8 +1576,8 @@
 
             <ImageView
                 android:id="@+id/check_10"
-                android:layout_width="155dp"
-                android:layout_height="50dp"
+                android:layout_width="190dp"
+                android:layout_height="62dp"
                 android:visibility="invisible"
                 android:background="@drawable/accept"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -1589,8 +1589,8 @@
 
             <ImageView
                 android:id="@+id/tenthNext"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
                 android:background="@drawable/button_next"
                 android:visibility="invisible"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -1598,7 +1598,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintHorizontal_bias="0.793"
-                app:layout_constraintVertical_bias="0.91" />
+                app:layout_constraintVertical_bias="0.93" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

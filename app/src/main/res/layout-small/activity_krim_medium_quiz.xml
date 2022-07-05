@@ -397,7 +397,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Вблизи развалин бывшего Херсонеса заложен город"
+                android:text="Какой город заложен вблизи развалин бывшего Херсонеса?"
                 android:gravity="center"
                 android:textColor="@color/black"
                 android:textSize="24sp"

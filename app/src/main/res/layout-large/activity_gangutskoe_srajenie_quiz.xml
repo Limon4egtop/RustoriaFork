@@ -29,7 +29,7 @@
                 android:text="Вопрос №1"
                 android:gravity="center"
                 android:textColor="@color/black"
-                android:textSize="35sp"
+                android:textSize="45sp"
                 android:textStyle="bold"
                 android:shadowRadius="10"
                 android:shadowDx="1"
@@ -47,7 +47,7 @@
                 android:text="Год, когда произошло сражение"
                 android:gravity="center"
                 android:textColor="@color/black"
-                android:textSize="32sp"
+                android:textSize="45sp"
                 android:textStyle="bold"
                 android:shadowRadius="10"
                 android:shadowDx="1"
@@ -57,7 +57,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.110" />
+                app:layout_constraintVertical_bias="0.1" />
 
             <RadioButton
                 android:id="@+id/first_neprav_3"
@@ -66,7 +66,7 @@
                 android:text="1712 г."
                 android:textColor="@color/white"
                 android:buttonTint="@color/white"
-                android:textSize="30sp"
+                android:textSize="40sp"
                 android:textStyle="bold"
                 android:shadowRadius="10"
                 android:shadowDx="1"
@@ -86,7 +86,7 @@
                 android:text="1713 г."
                 android:textColor="@color/white"
                 android:buttonTint="@color/white"
-                android:textSize="30sp"
+                android:textSize="40sp"
                 android:textStyle="bold"
                 android:shadowRadius="10"
                 android:shadowDx="1"
@@ -106,7 +106,7 @@
                 android:text="1714 г."
                 android:textColor="@color/white"
                 android:buttonTint="@color/white"
-                android:textSize="29sp"
+                android:textSize="40sp"
                 android:textStyle="bold"
                 android:shadowRadius="10"
                 android:shadowDx="1"
@@ -126,7 +126,7 @@
                 android:text="1715 г."
                 android:textColor="@color/white"
                 android:buttonTint="@color/white"
-                android:textSize="30sp"
+                android:textSize="40sp"
                 android:textStyle="bold"
                 android:shadowRadius="10"
                 android:shadowDx="1"
@@ -141,8 +141,8 @@
 
             <ImageView
                 android:id="@+id/check"
-                android:layout_width="155dp"
-                android:layout_height="50dp"
+                android:layout_width="190dp"
+                android:layout_height="62dp"
                 android:visibility="invisible"
                 android:background="@drawable/accept"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -154,8 +154,8 @@
 
             <ImageView
                 android:id="@+id/firstNext"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
                 android:background="@drawable/button_next"
                 android:visibility="invisible"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -163,12 +163,12 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintHorizontal_bias="0.793"
-                app:layout_constraintVertical_bias="0.91" />
+                app:layout_constraintVertical_bias="0.93" />
 
             <ListView
                 android:id="@+id/info1"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
                 android:background="@drawable/info"
                 android:visibility="invisible"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -197,7 +197,7 @@
                 android:gravity="center"
                 android:text="Вопрос №2"
                 android:textColor="@color/black"
-                android:textSize="35sp"
+                android:textSize="45sp"
                 android:textStyle="bold"
                 android:shadowRadius="10"
                 android:shadowDx="1"
@@ -215,7 +215,7 @@
                 android:gravity="center"
                 android:text="Как часть Шведского флота была оттянута на север полуострова?"
                 android:textColor="@color/black"
-                android:textSize="30sp"
+                android:textSize="40sp"
                 android:textStyle="bold"
                 android:shadowRadius="10"
                 android:shadowDx="1"
@@ -225,7 +225,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.095" />
+                app:layout_constraintVertical_bias="0.1" />
 
             <RadioButton
                 android:id="@+id/second_neprav_3"
@@ -234,7 +234,7 @@
                 android:text="Произошла дезинформация, что русский флот вскоре поплывет там"
                 android:textColor="@color/white"
                 android:buttonTint="@color/white"
-                android:textSize="23sp"
+                android:textSize="32sp"
                 android:textStyle="bold"
                 android:shadowRadius="10"
                 android:shadowDx="1"
@@ -245,7 +245,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintHorizontal_bias="0.02"
-                app:layout_constraintVertical_bias="0.37" />
+                app:layout_constraintVertical_bias="0.36" />
 
             <RadioButton
                 android:id="@+id/second_neprav"
@@ -254,7 +254,7 @@
                 android:text="Из-за неслаженности шведского командования"
                 android:textColor="@color/white"
                 android:buttonTint="@color/white"
-                android:textSize="23sp"
+                android:textSize="32sp"
                 android:textStyle="bold"
                 android:shadowRadius="10"
                 android:shadowDx="1"
@@ -265,7 +265,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintHorizontal_bias="0.02"
-                app:layout_constraintVertical_bias="0.46" />
+                app:layout_constraintVertical_bias="0.47" />
 
             <RadioButton
                 android:id="@+id/second_prav"
@@ -274,7 +274,7 @@
                 android:text="Петр I решил, но передумал переместить корабли по суше, а шведы думали, что так и будет"
                 android:textColor="@color/white"
                 android:buttonTint="@color/white"
-                android:textSize="23sp"
+                android:textSize="32sp"
                 android:textStyle="bold"
                 android:shadowRadius="10"
                 android:shadowDx="1"
@@ -285,7 +285,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintHorizontal_bias="0.02"
-                app:layout_constraintVertical_bias="0.58" />
+                app:layout_constraintVertical_bias="0.60" />
 
             <RadioButton
                 android:id="@+id/second_neprav_2"
@@ -294,7 +294,7 @@
                 android:text="Шведы решили оставить часть кораблей в резерве"
                 android:textColor="@color/white"
                 android:buttonTint="@color/white"
-                android:textSize="23sp"
+                android:textSize="32sp"
                 android:textStyle="bold"
                 android:shadowRadius="10"
                 android:shadowDx="1"
@@ -305,12 +305,12 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintHorizontal_bias="0.02"
-                app:layout_constraintVertical_bias="0.69" />
+                app:layout_constraintVertical_bias="0.72" />
 
             <ImageView
                 android:id="@+id/check_2"
-                android:layout_width="155dp"
-                android:layout_height="50dp"
+                android:layout_width="190dp"
+                android:layout_height="62dp"
                 android:visibility="invisible"
                 android:background="@drawable/accept"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -322,8 +322,8 @@
 
             <ImageView
                 android:id="@+id/secondNext"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
                 android:background="@drawable/button_next"
                 android:visibility="invisible"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -331,12 +331,12 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintHorizontal_bias="0.793"
-                app:layout_constraintVertical_bias="0.91" />
+                app:layout_constraintVertical_bias="0.93" />
 
             <ListView
                 android:id="@+id/info2"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
                 android:background="@drawable/info"
                 android:visibility="invisible"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -365,7 +365,7 @@
                 android:text="Вопрос №3"
                 android:gravity="center"
                 android:textColor="@color/black"
-                android:textSize="35sp"
+                android:textSize="45sp"
                 android:textStyle="bold"
                 android:shadowRadius="10"
                 android:shadowDx="1"
@@ -383,7 +383,7 @@
                 android:text="Какая отличительная особенность сражения?"
                 android:gravity="center"
                 android:textColor="@color/black"
-                android:textSize="32sp"
+                android:textSize="40sp"
                 android:textStyle="bold"
                 android:shadowRadius="10"
                 android:shadowDx="1"
@@ -393,7 +393,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.095" />
+                app:layout_constraintVertical_bias="0.1" />
 
             <RadioButton
                 android:id="@+id/third_neprav"
@@ -402,7 +402,7 @@
                 android:text="Победа добыта в строго линейном построении"
                 android:textColor="@color/white"
                 android:buttonTint="@color/white"
-                android:textSize="24sp"
+                android:textSize="32sp"
                 android:textStyle="bold"
                 android:shadowRadius="10"
                 android:shadowDx="1"
@@ -422,7 +422,7 @@
                 android:text="Все решилось в абордажном бою"
                 android:textColor="@color/white"
                 android:buttonTint="@color/white"
-                android:textSize="24sp"
+                android:textSize="32sp"
                 android:textStyle="bold"
                 android:shadowRadius="10"
                 android:shadowDx="1"
@@ -433,7 +433,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintHorizontal_bias="0.02"
-                app:layout_constraintVertical_bias="0.45" />
+                app:layout_constraintVertical_bias="0.46" />
 
             <RadioButton
                 android:id="@+id/third_neprav_3"
@@ -442,7 +442,7 @@
                 android:text="Шведы испугались мощи русского флота и сдались после первой атаки"
                 android:textColor="@color/white"
                 android:buttonTint="@color/white"
-                android:textSize="24sp"
+                android:textSize="32sp"
                 android:textStyle="bold"
                 android:shadowRadius="10"
                 android:shadowDx="1"
@@ -453,7 +453,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintHorizontal_bias="0.02"
-                app:layout_constraintVertical_bias="0.56" />
+                app:layout_constraintVertical_bias="0.545" />
 
             <RadioButton
                 android:id="@+id/third_neprav_2"
@@ -462,7 +462,7 @@
                 android:text="Самое кровопролитное морское сражение за всю российскую историю "
                 android:textColor="@color/white"
                 android:buttonTint="@color/white"
-                android:textSize="24sp"
+                android:textSize="32sp"
                 android:textStyle="bold"
                 android:shadowRadius="10"
                 android:shadowDx="1"
@@ -473,12 +473,12 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintHorizontal_bias="0.02"
-                app:layout_constraintVertical_bias="0.70" />
+                app:layout_constraintVertical_bias="0.685" />
 
             <ImageView
                 android:id="@+id/check_3"
-                android:layout_width="155dp"
-                android:layout_height="50dp"
+                android:layout_width="190dp"
+                android:layout_height="62dp"
                 android:background="@drawable/accept"
                 android:visibility="invisible"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -490,8 +490,8 @@
 
             <ImageView
                 android:id="@+id/thirdNext"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
                 android:background="@drawable/button_next"
                 android:visibility="invisible"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -499,12 +499,12 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintHorizontal_bias="0.793"
-                app:layout_constraintVertical_bias="0.91" />
+                app:layout_constraintVertical_bias="0.93" />
 
             <ListView
                 android:id="@+id/info3"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
                 android:background="@drawable/info"
                 android:visibility="invisible"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -533,7 +533,7 @@
                 android:text="Вопрос №4"
                 android:gravity="center"
                 android:textColor="@color/black"
-                android:textSize="35sp"
+                android:textSize="45sp"
                 android:textStyle="bold"
                 android:shadowRadius="10"
                 android:shadowDx="1"
@@ -551,7 +551,7 @@
                 android:gravity="center"
                 android:text="Значение победы в сражении"
                 android:textColor="@color/black"
-                android:textSize="33sp"
+                android:textSize="45sp"
                 android:textStyle="bold"
                 android:shadowRadius="10"
                 android:shadowDx="1"
@@ -561,7 +561,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.095" />
+                app:layout_constraintVertical_bias="0.1" />
 
             <RadioButton
                 android:id="@+id/fourth_neprav"
@@ -570,7 +570,7 @@
                 android:text="Россия теперь имела полный контроль в Балтийском море"
                 android:textColor="@color/white"
                 android:buttonTint="@color/white"
-                android:textSize="24sp"
+                android:textSize="32sp"
                 android:textStyle="bold"
                 android:shadowRadius="10"
                 android:shadowDx="1"
@@ -590,7 +590,7 @@
                 android:text="Россия полностью контролировала Финский и Ботнический заливы"
                 android:textColor="@color/white"
                 android:buttonTint="@color/white"
-                android:textSize="24sp"
+                android:textSize="32sp"
                 android:textStyle="bold"
                 android:shadowRadius="10"
                 android:shadowDx="1"
@@ -601,7 +601,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintHorizontal_bias="0.02"
-                app:layout_constraintVertical_bias="0.48" />
+                app:layout_constraintVertical_bias="0.47" />
 
             <RadioButton
                 android:id="@+id/fourth_neprav_2"
@@ -610,7 +610,7 @@
                 android:text="Шведский флот полностью капитулировал"
                 android:textColor="@color/white"
                 android:buttonTint="@color/white"
-                android:textSize="24sp"
+                android:textSize="32sp"
                 android:textStyle="bold"
                 android:shadowRadius="10"
                 android:shadowDx="1"
@@ -621,7 +621,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintHorizontal_bias="0.02"
-                app:layout_constraintVertical_bias="0.60" />
+                app:layout_constraintVertical_bias="0.585" />
 
             <RadioButton
                 android:id="@+id/fourth_neprav_3"
@@ -630,7 +630,7 @@
                 android:text="Большинство европейских стран встали на сторону России"
                 android:textColor="@color/white"
                 android:buttonTint="@color/white"
-                android:textSize="24sp"
+                android:textSize="32sp"
                 android:textStyle="bold"
                 android:shadowRadius="10"
                 android:shadowDx="1"
@@ -641,12 +641,12 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintHorizontal_bias="0.02"
-                app:layout_constraintVertical_bias="0.70" />
+                app:layout_constraintVertical_bias="0.695" />
 
             <ImageView
                 android:id="@+id/check_4"
-                android:layout_width="155dp"
-                android:layout_height="50dp"
+                android:layout_width="190dp"
+                android:layout_height="62dp"
                 android:visibility="invisible"
                 android:background="@drawable/accept"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -658,8 +658,8 @@
 
             <ImageView
                 android:id="@+id/fourthNext"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
                 android:background="@drawable/button_next"
                 android:visibility="invisible"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -667,12 +667,12 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintHorizontal_bias="0.793"
-                app:layout_constraintVertical_bias="0.91" />
+                app:layout_constraintVertical_bias="0.93" />
 
             <ListView
                 android:id="@+id/info4"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
                 android:background="@drawable/info"
                 android:visibility="invisible"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -701,7 +701,7 @@
                 android:text="Вопрос №5"
                 android:gravity="center"
                 android:textColor="@color/black"
-                android:textSize="35sp"
+                android:textSize="45sp"
                 android:textStyle="bold"
                 android:shadowRadius="10"
                 android:shadowDx="1"
@@ -719,7 +719,7 @@
                 android:text="Кто по итогу битвы был произведен в вице-адмиралы?"
                 android:gravity="center"
                 android:textColor="@color/black"
-                android:textSize="32sp"
+                android:textSize="40sp"
                 android:textStyle="bold"
                 android:shadowRadius="10"
                 android:shadowDx="1"
@@ -729,7 +729,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.098" />
+                app:layout_constraintVertical_bias="0.1" />
 
             <RadioButton
                 android:id="@+id/five_neprav"
@@ -738,7 +738,7 @@
                 android:text="Апраксин"
                 android:textColor="@color/white"
                 android:buttonTint="@color/white"
-                android:textSize="28sp"
+                android:textSize="40sp"
                 android:textStyle="bold"
                 android:shadowRadius="10"
                 android:shadowDx="1"
@@ -758,7 +758,7 @@
                 android:text="Петр I"
                 android:textColor="@color/white"
                 android:buttonTint="@color/white"
-                android:textSize="28sp"
+                android:textSize="40sp"
                 android:textStyle="bold"
                 android:shadowRadius="10"
                 android:shadowDx="1"
@@ -778,7 +778,7 @@
                 android:text="Голицын"
                 android:textColor="@color/white"
                 android:buttonTint="@color/white"
-                android:textSize="28sp"
+                android:textSize="40sp"
                 android:textStyle="bold"
                 android:shadowRadius="10"
                 android:shadowDx="1"
@@ -798,7 +798,7 @@
                 android:text="Змаевич"
                 android:textColor="@color/white"
                 android:buttonTint="@color/white"
-                android:textSize="28sp"
+                android:textSize="40sp"
                 android:textStyle="bold"
                 android:shadowRadius="10"
                 android:shadowDx="1"
@@ -813,8 +813,8 @@
 
             <ImageView
                 android:id="@+id/check_5"
-                android:layout_width="155dp"
-                android:layout_height="50dp"
+                android:layout_width="190dp"
+                android:layout_height="62dp"
                 android:background="@drawable/accept"
                 android:visibility="invisible"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -826,8 +826,8 @@
 
             <ImageView
                 android:id="@+id/fifthNext"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
                 android:background="@drawable/button_next"
                 android:visibility="invisible"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -835,12 +835,12 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintHorizontal_bias="0.793"
-                app:layout_constraintVertical_bias="0.91" />
+                app:layout_constraintVertical_bias="0.93" />
 
             <ListView
                 android:id="@+id/info5"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
                 android:background="@drawable/info"
                 android:visibility="invisible"
                 app:layout_constraintBottom_toBottomOf="parent"

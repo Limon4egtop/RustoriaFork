@@ -197,7 +197,7 @@ public class SearchEventsActivity extends AppCompatActivity {
 
     private void fillAdapters() {
         for (int i = 0; i < arrayAdapters.length; i++) {
-            arrayAdapters[i] = new ArrayAdapter(this, android.R.layout.simple_list_item_1, arrayLists[i]);
+            arrayAdapters[i] = new ArrayAdapter(this, android.R.layout.simple_expandable_list_item_1, arrayLists[i]);
             centuries[i].setAdapter(arrayAdapters[i]);
         }
     }
