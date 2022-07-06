@@ -452,7 +452,7 @@
                 android:id="@+id/third_prav"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text=" 7.2 млн. долларов"
+                android:text="7.2 млн. долларов"
                 android:textColor="@color/white"
                 android:buttonTint="@color/white"
                 android:textSize="23sp"

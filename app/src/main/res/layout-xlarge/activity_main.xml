@@ -9,8 +9,8 @@
 
     <ImageView
         android:id="@+id/start"
-        android:layout_width="150dp"
-        android:layout_height="50dp"
+        android:layout_width="220dp"
+        android:layout_height="75dp"
         android:background="@drawable/rem_start"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -21,8 +21,8 @@
 
     <ImageView
         android:id="@+id/aboutProject"
-        android:layout_width="150dp"
-        android:layout_height="50dp"
+        android:layout_width="220dp"
+        android:layout_height="75dp"
         android:background="@drawable/about_project"
         android:onClick="goToPresentation"
         app:layout_constraintBottom_toBottomOf="parent"
