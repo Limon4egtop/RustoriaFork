@@ -54,15 +54,15 @@ public class SearchFiguresActivity extends AppCompatActivity {
         listViews[7] = findViewById(R.id.samozvanci);  //самозванцы
         listViews[8] = findViewById(R.id.zaxvatchiki); //захватчики
 
-        arrayLists[0] = new ArrayList<>(); //все
-        arrayLists[1] = new ArrayList<>(); //правители
-        arrayLists[2] = new ArrayList<>(); //полководцы
-        arrayLists[3] = new ArrayList<>(); //духовенство
-        arrayLists[4] = new ArrayList<>(); //князья
-        arrayLists[5] = new ArrayList<>(); //творчество
-        arrayLists[6] = new ArrayList<>(); //дипломаты
-        arrayLists[7] = new ArrayList<>(); //самозванцы
-        arrayLists[8] = new ArrayList<>(); //захватчики
+        arrayLists[0] = new ArrayList<>(); //0 - все
+        arrayLists[1] = new ArrayList<>(); //1 - правители
+        arrayLists[2] = new ArrayList<>(); //2 - полководцы
+        arrayLists[3] = new ArrayList<>(); //3 - духовенство
+        arrayLists[4] = new ArrayList<>(); //4 - князья
+        arrayLists[5] = new ArrayList<>(); //5 - творчество
+        arrayLists[6] = new ArrayList<>(); //6 - дипломаты
+        arrayLists[7] = new ArrayList<>(); //7 - самозванцы
+        arrayLists[8] = new ArrayList<>(); //8 - захватчики
 
         arrayAdapters = new ArrayAdapter[]{adapterAll, adapterPraviteli,
                 adapterPolkovodci, adapterDuxovenstvo, adapterKnyazia,
@@ -111,6 +111,15 @@ public class SearchFiguresActivity extends AppCompatActivity {
     }
 
     private void fillArrayLists() {
+        //0 - все
+        //1 - правители
+        //2 - полководцы
+        //3 - духовенство
+        //4 - князья
+        //5 - творчество
+        //6 - дипломаты
+        //7 - самозванцы
+        //8 - захватчики
         arrayLists[0].addAll(Arrays.asList("Иван Грозный", "Иван III", "Александр III", "Иван Фёдоров", "Георгий Жуков",
                 "Иван I Калита", "Николай II", "Сергий Радонежский", "Лжедмитрий II", "Никита Хрущев",
                 "Елизавета Петровна", "Александр Невский", "Дмитрий Донской", "Климент Ворошилов",
@@ -120,7 +129,8 @@ public class SearchFiguresActivity extends AppCompatActivity {
                 "Михаил Федорович", "Алексей Михайлович", "Борис Годунов", "Лжедмитрий I",
                 "Василий IV", "Федор III", "Федор I", "Филарет", "Василий Голицын", "Ордин-Нащокин",
                 "Михаил Шеин", "Дмитрий Пожарский", "Малюта Скуратов", "Григорий Отрепьев", "Борис Шереметев",
-                "Владислав IV", "Пётр II", "Пётр III"));
+                "Владислав IV", "Пётр II", "Пётр III", "Алексей Басманов", "Михаил Воротынский",
+                "Иван Висковатов", "Федор II", "Федор Головин"));
 
         arrayLists[1].addAll(Arrays.asList("Иван Грозный", "Иван III", "Александр III", "Иван I Калита", "Николай II",
                 "Никита Хрущев", "Елизавета Петровна", "Александр I", "Рюрик", "Олег Вещий", "Игорь Ририкович",
@@ -134,11 +144,11 @@ public class SearchFiguresActivity extends AppCompatActivity {
         arrayLists[3].addAll(Arrays.asList("Сергий Радонежский", "Нестор Летописец", "Филарет"));
 
         arrayLists[4].addAll(Arrays.asList("Александр Невский", "Дмитрий Донской", "Даниил Московский",
-                "Ярополк Святославич", "Святополк Окаянный", "Дмитрий Пожарский"));
+                "Ярополк Святославич", "Святополк Окаянный", "Дмитрий Пожарский", "Михаил Воротынский"));
 
         arrayLists[5].addAll(Arrays.asList("Иван Фёдоров", "Нестор Летописец"));
 
-        arrayLists[6].addAll(Arrays.asList("Ордин-Нащокин", "Борис Шереметев"));
+        arrayLists[6].addAll(Arrays.asList("Ордин-Нащокин", "Борис Шереметев", "Иван Висковатов"));
 
         arrayLists[7].addAll(Arrays.asList("Лжедмитрий I", "Лжедмитрий II"));
 
