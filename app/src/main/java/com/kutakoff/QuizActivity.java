@@ -39,7 +39,7 @@ public class QuizActivity extends AppCompatActivity implements AdapterView.OnIte
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz);
-        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED);
+        setRequestedOrientation (ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         ImageView button_back = findViewById(R.id.button_back);
         mainBq = findViewById(R.id.mainBq);
         petr1Bq = findViewById(R.id.Petr1Bq);

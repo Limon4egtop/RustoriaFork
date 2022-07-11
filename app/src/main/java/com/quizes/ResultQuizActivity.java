@@ -17,7 +17,7 @@ public class ResultQuizActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result_quiz);
-        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED);
+        setRequestedOrientation (ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         TextView textResult = findViewById(R.id.textresult);
         ImageView goHome = findViewById(R.id.goHome);
         String compliment = "";

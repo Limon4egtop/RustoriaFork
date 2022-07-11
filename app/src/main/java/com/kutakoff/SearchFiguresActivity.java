@@ -3,6 +3,7 @@ package com.kutakoff;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -40,6 +41,7 @@ public class SearchFiguresActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search_figures);
+        setRequestedOrientation (ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         SearchView searchView = findViewById(R.id.searchView);
         Button button_back = findViewById(R.id.button_back);
         Spinner spinner = findViewById(R.id.chooseFigure);
@@ -120,11 +122,11 @@ public class SearchFiguresActivity extends AppCompatActivity {
         //6 - дипломаты
         //7 - самозванцы
         //8 - захватчики
-        arrayLists[0].addAll(Arrays.asList("Иван Грозный", "Иван III", "Александр III", "Иван Фёдоров", "Георгий Жуков",
-                "Иван I Калита", "Николай II", "Сергий Радонежский", "Лжедмитрий II", "Никита Хрущев",
-                "Елизавета Петровна", "Александр Невский", "Дмитрий Донской", "Климент Ворошилов",
-                "Нестор Летописец", "Даниил Московский", "Александр I", "Рюрик", "Олег Вещий",
-                "Игорь Ририкович", "Ольга Мудрая", "Святослав Игоревич", "Ярополк Святославич",
+        arrayLists[0].addAll(Arrays.asList("Иван Грозный", "Иван III", "Александр III", "Иван Федоров",
+                "Георгий Жуков", "Иван I Калита", "Николай II", "Сергий Радонежский", "Лжедмитрий II",
+                "Никита Хрущев", "Елизавета Петровна", "Александр Невский", "Дмитрий Донской",
+                "Климент Ворошилов", "Нестор Летописец", "Даниил Московский", "Александр I", "Рюрик",
+                "Олег Вещий", "Игорь Ририкович", "Ольга Мудрая", "Святослав Игоревич", "Ярополк Святославич",
                 "Владимир Святой(Владимир красное солнышко)", "Святополк Окаянный", "Пётр I",
                 "Михаил Федорович", "Алексей Михайлович", "Борис Годунов", "Лжедмитрий I",
                 "Василий IV", "Федор III", "Федор I", "Филарет", "Василий Голицын", "Ордин-Нащокин",
@@ -132,7 +134,8 @@ public class SearchFiguresActivity extends AppCompatActivity {
                 "Владислав IV", "Пётр II", "Пётр III", "Алексей Басманов", "Михаил Воротынский",
                 "Иван Висковатов", "Федор II", "Федор Головин", "Алексей Адашев", "Василий Бутурлин",
                 "Франц Лефорт", "Дмитрий Хворостинин", "Михаил Глинский", "Михаил Скопин-Шуйский",
-                "Борис Морозов", "Артамон Матвеев"));
+                "Борис Морозов", "Артамон Матвеев", "Боброк Волынский", "Федор Ртищев", "Алексей Шеин",
+                "Симеон Бекбулатович", "Никита Зотов", "Федор Мстиславский"));
 
         arrayLists[1].addAll(Arrays.asList("Иван Грозный", "Иван III", "Александр III", "Иван I Калита", "Николай II",
                 "Никита Хрущев", "Елизавета Петровна", "Александр I", "Рюрик", "Олег Вещий", "Игорь Ририкович",
@@ -147,12 +150,13 @@ public class SearchFiguresActivity extends AppCompatActivity {
 
         arrayLists[4].addAll(Arrays.asList("Александр Невский", "Дмитрий Донской", "Даниил Московский",
                 "Ярополк Святославич", "Святополк Окаянный", "Дмитрий Пожарский", "Михаил Воротынский",
-                "Дмитрий Хворостинин", "Михаил Глинский", "Михаил Скопин-Шуйский"));
+                "Дмитрий Хворостинин", "Михаил Глинский", "Михаил Скопин-Шуйский", "Боброк Волынский",
+                "Симеон Бекбулатович", "Федор Мстиславский"));
 
         arrayLists[5].addAll(Arrays.asList("Иван Фёдоров", "Нестор Летописец"));
 
         arrayLists[6].addAll(Arrays.asList("Ордин-Нащокин", "Борис Шереметев", "Иван Висковатов",
-                "Василий Бутурлин"));
+                "Василий Бутурлин", "Никита Зотов"));
 
         arrayLists[7].addAll(Arrays.asList("Лжедмитрий I", "Лжедмитрий II"));
 

@@ -35,7 +35,7 @@ public class KrimEasyQuizActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED);
+        setRequestedOrientation (ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         setContentView(R.layout.activity_krim_easy_quiz);
         flipper = findViewById(R.id.viewflipper);
         ImageView start_quiz = findViewById(R.id.start_quiz);

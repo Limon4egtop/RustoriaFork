@@ -29,7 +29,7 @@ public class WebViewActivity extends AppCompatActivity {
                 case "Александр III":
                     url = "file:///android_asset/Alexander3.html";
                     break;
-                case "Иван Фёдоров":
+                case "Иван Федоров":
                     url = "file:///android_asset/Ivan_Fedorov.html";
                     break;
                 case "Георгий Жуков":
@@ -424,6 +424,24 @@ public class WebViewActivity extends AppCompatActivity {
                     break;
                 case "Артамон Матвеев":
                     url = "file:///android_asset/Artamon_Matveev.html";
+                    break;
+                case "Боброк Волынский":
+                    url = "file:///android_asset/Bobrok_Volinskiy.html";
+                    break;
+                case "Федор Ртищев":
+                    url = "file:///android_asset/Fedor_Rtishev.html";
+                    break;
+                case "Алексей Шеин":
+                    url = "file:///android_asset/Alexey_Shein.html";
+                    break;
+                case "Симеон Бекбулатович":
+                    url = "file:///android_asset/Simeon_Bekbulatovich.html";
+                    break;
+                case "Никита Зотов":
+                    url = "file:///android_asset/Nikita_Zotov.html";
+                    break;
+                case "Федор Мстиславский":
+                    url = "file:///android_asset/Fedor_Mstislavskiy.html";
                     break;
             }
             WebView myWebView = (WebView) findViewById(R.id.webview);

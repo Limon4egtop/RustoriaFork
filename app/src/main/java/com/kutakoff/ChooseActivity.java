@@ -12,7 +12,7 @@ public class ChooseActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_choose);
-        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED);
+        setRequestedOrientation (ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         ImageView deyatels = findViewById(R.id.deyatels);
         ImageView events = findViewById(R.id.events);
         ImageView quiz = findViewById(R.id.quiz);
