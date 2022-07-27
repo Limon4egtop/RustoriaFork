@@ -13,33 +13,27 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.quizes.staliningradskayaBitva.StalingradskayaBitvaQuizActivity;
-import com.quizes.krim.KrimEasyQuizActivity;
-import com.quizes.krim.KrimHardQuizActivity;
-import com.quizes.krim.KrimMediumQuizActivity;
-import com.quizes.main.MainEasyQuizActivity;
-import com.quizes.main.MainHardQuizActivity;
-import com.quizes.main.MainMediumQuizActivity;
-import com.quizes.petr1.BitvaPriLesnoyQuizActivity;
-import com.quizes.petr1.GangutskoeSrajenieQuizActivity;
-import com.quizes.petr1.GrengamskoeSrajenieQuizActivity;
-import com.quizes.petr1.PoltavskayaBitvaQuizActivity;
+import com.quizes.krim.*;
+import com.quizes.main.*;
+import com.quizes.petr1.*;
+import com.quizes.staliningradskayaBitva.*;
 
 public class QuizActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
-    ImageView
+
+    private static ImageView
             main_easy, main_medium, main_hard,
             second_february_start, krim_easy,
             krim_medium, krim_hard, mainBq,
             poltavskaya_bitva, grengamskoe_srajenie,
             gangutskoe_srajenie, bitva_pri_lesnoy,
             petr1Bq;
-    TextView main_text, petr_1_text, petr_1_text2;
+    public static TextView main_text, petr_1_text, petr_1_text2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz);
-        setRequestedOrientation (ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         ImageView button_back = findViewById(R.id.button_back);
         mainBq = findViewById(R.id.mainBq);
         petr1Bq = findViewById(R.id.Petr1Bq);
@@ -65,16 +59,6 @@ public class QuizActivity extends AppCompatActivity implements AdapterView.OnIte
         gangutskoe_srajenie = findViewById(R.id.gangutskoe_srajenie);
         bitva_pri_lesnoy = findViewById(R.id.bitva_pri_lesnoy);
 
-        Spinner spinner = findViewById(R.id.chooseQuiz);
-
-        String selected = spinner.getSelectedItem().toString();
-        Toast.makeText(getApplicationContext(), selected, Toast.LENGTH_SHORT).show();
-
-        ArrayAdapter adapter = ArrayAdapter.createFromResource(this, R.array.quizNames, R.layout.spinner_text);
-        adapter.setDropDownViewResource(R.layout.spinner_dropbox_layout);
-        spinner.setAdapter(adapter);
-        spinner.setOnItemSelectedListener(this);
-
         button_back.setOnClickListener(v -> startActivity(new Intent(QuizActivity.this, ChooseActivity.class)));
 
         main_easy.setOnClickListener(v -> startActivity(new Intent(QuizActivity.this, MainEasyQuizActivity.class)));
@@ -91,6 +75,15 @@ public class QuizActivity extends AppCompatActivity implements AdapterView.OnIte
         poltavskaya_bitva.setOnClickListener(v -> startActivity(new Intent(QuizActivity.this, PoltavskayaBitvaQuizActivity.class)));
         gangutskoe_srajenie.setOnClickListener(v -> startActivity(new Intent(QuizActivity.this, GangutskoeSrajenieQuizActivity.class)));
         grengamskoe_srajenie.setOnClickListener(v -> startActivity(new Intent(QuizActivity.this, GrengamskoeSrajenieQuizActivity.class)));
+
+        Spinner spinner = findViewById(R.id.chooseQuiz);
+        String selected = spinner.getSelectedItem().toString();
+        Toast.makeText(getApplicationContext(), selected, Toast.LENGTH_SHORT).show();
+        ArrayAdapter adapter = ArrayAdapter.createFromResource(this, R.array.quizNames, R.layout.spinner_text);
+        adapter.setDropDownViewResource(R.layout.spinner_dropbox_layout);
+        spinner.setAdapter(adapter);
+        spinner.setOnItemSelectedListener(this);
+
     }
 
     @Override
@@ -98,109 +91,45 @@ public class QuizActivity extends AppCompatActivity implements AdapterView.OnIte
         Toast.makeText(this, parent.getSelectedItem().toString(), Toast.LENGTH_SHORT).show();
         switch (position) {
             case 0:
-                main_easy.setVisibility(View.VISIBLE);
-                main_medium.setVisibility(View.VISIBLE);
-                main_hard.setVisibility(View.VISIBLE);
-
-                second_february_start.setVisibility(View.INVISIBLE);
-
-                krim_easy.setVisibility(View.INVISIBLE);
-                krim_medium.setVisibility(View.INVISIBLE);
-                krim_hard.setVisibility(View.INVISIBLE);
-
-                mainBq.setVisibility(View.VISIBLE);
-
-                petr1Bq.setVisibility(View.INVISIBLE);
-                petr1Bq.setVisibility(View.INVISIBLE);
-                gangutskoe_srajenie.setVisibility(View.INVISIBLE);
-                poltavskaya_bitva.setVisibility(View.INVISIBLE);
-                grengamskoe_srajenie.setVisibility(View.INVISIBLE);
-                bitva_pri_lesnoy.setVisibility(View.INVISIBLE);
-
-                main_text.setVisibility(View.VISIBLE);
-
-                petr_1_text.setVisibility(View.INVISIBLE);
-                petr_1_text2.setVisibility(View.INVISIBLE);
+                visibilityList(View.VISIBLE, View.VISIBLE, View.VISIBLE, View.INVISIBLE, View.INVISIBLE, View.INVISIBLE);
                 break;
             case 1:
-                main_easy.setVisibility(View.INVISIBLE);
-                main_medium.setVisibility(View.INVISIBLE);
-                main_hard.setVisibility(View.INVISIBLE);
-
-                second_february_start.setVisibility(View.VISIBLE);
-
-                krim_easy.setVisibility(View.INVISIBLE);
-                krim_medium.setVisibility(View.INVISIBLE);
-                krim_hard.setVisibility(View.INVISIBLE);
-
-                mainBq.setVisibility(View.VISIBLE);
-
-                petr1Bq.setVisibility(View.INVISIBLE);
-                petr1Bq.setVisibility(View.INVISIBLE);
-                gangutskoe_srajenie.setVisibility(View.INVISIBLE);
-                poltavskaya_bitva.setVisibility(View.INVISIBLE);
-                grengamskoe_srajenie.setVisibility(View.INVISIBLE);
-                bitva_pri_lesnoy.setVisibility(View.INVISIBLE);
-
-                main_text.setVisibility(View.INVISIBLE);
-
-                petr_1_text.setVisibility(View.INVISIBLE);
-                petr_1_text2.setVisibility(View.INVISIBLE);
+                visibilityList(View.INVISIBLE, View.VISIBLE, View.INVISIBLE, View.VISIBLE, View.INVISIBLE, View.INVISIBLE);
                 break;
             case 2:
-                main_easy.setVisibility(View.INVISIBLE);
-                main_medium.setVisibility(View.INVISIBLE);
-                main_hard.setVisibility(View.INVISIBLE);
-
-                second_february_start.setVisibility(View.INVISIBLE);
-
-                krim_easy.setVisibility(View.VISIBLE);
-                krim_medium.setVisibility(View.VISIBLE);
-                krim_hard.setVisibility(View.VISIBLE);
-
-                mainBq.setVisibility(View.VISIBLE);
-
-                petr1Bq.setVisibility(View.INVISIBLE);
-                gangutskoe_srajenie.setVisibility(View.INVISIBLE);
-                poltavskaya_bitva.setVisibility(View.INVISIBLE);
-                grengamskoe_srajenie.setVisibility(View.INVISIBLE);
-                bitva_pri_lesnoy.setVisibility(View.INVISIBLE);
-
-                main_text.setVisibility(View.VISIBLE);
-
-                petr_1_text.setVisibility(View.INVISIBLE);
-
-                petr_1_text2.setVisibility(View.INVISIBLE);
+                visibilityList(View.VISIBLE, View.VISIBLE, View.INVISIBLE, View.INVISIBLE, View.VISIBLE, View.INVISIBLE);
                 break;
             case 3:
-                main_easy.setVisibility(View.INVISIBLE);
-                main_medium.setVisibility(View.INVISIBLE);
-                main_hard.setVisibility(View.INVISIBLE);
-
-                second_february_start.setVisibility(View.INVISIBLE);
-
-                krim_easy.setVisibility(View.INVISIBLE);
-                krim_medium.setVisibility(View.INVISIBLE);
-                krim_hard.setVisibility(View.INVISIBLE);
-
-                mainBq.setVisibility(View.INVISIBLE);
-
-                petr1Bq.setVisibility(View.VISIBLE);
-                gangutskoe_srajenie.setVisibility(View.VISIBLE);
-                poltavskaya_bitva.setVisibility(View.VISIBLE);
-                grengamskoe_srajenie.setVisibility(View.VISIBLE);
-                bitva_pri_lesnoy.setVisibility(View.VISIBLE);
-
-                main_text.setVisibility(View.INVISIBLE);
-
-                petr_1_text.setVisibility(View.VISIBLE);
-
-                petr_1_text2.setVisibility(View.VISIBLE);
+                visibilityList(View.INVISIBLE, View.INVISIBLE, View.INVISIBLE, View.INVISIBLE, View.INVISIBLE, View.VISIBLE);
                 break;
         }
     }
 
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
+    }
+
+    private static void visibilityList(int generalTextVisible, int generalBqVisible, int mainVisible, int stalVisible, int krimVisible, int petr1Visible) {
+        main_easy.setVisibility(mainVisible);
+        main_medium.setVisibility(mainVisible);
+        main_hard.setVisibility(mainVisible);
+
+        second_february_start.setVisibility(stalVisible);
+
+        krim_easy.setVisibility(krimVisible);
+        krim_medium.setVisibility(krimVisible);
+        krim_hard.setVisibility(krimVisible);
+
+        petr1Bq.setVisibility(petr1Visible);
+        petr1Bq.setVisibility(petr1Visible);
+        gangutskoe_srajenie.setVisibility(petr1Visible);
+        poltavskaya_bitva.setVisibility(petr1Visible);
+        grengamskoe_srajenie.setVisibility(petr1Visible);
+        bitva_pri_lesnoy.setVisibility(petr1Visible);
+        petr_1_text.setVisibility(petr1Visible);
+        petr_1_text2.setVisibility(petr1Visible);
+
+        main_text.setVisibility(generalTextVisible);
+        mainBq.setVisibility(generalBqVisible);
     }
 }

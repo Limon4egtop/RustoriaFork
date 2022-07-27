@@ -41,7 +41,7 @@ public class BitvaPriLesnoyQuizActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setRequestedOrientation (ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         setContentView(R.layout.activity_bitva_pri_lesnoy_quiz);
         flipper = findViewById(R.id.viewflipper);
 
@@ -126,7 +126,7 @@ public class BitvaPriLesnoyQuizActivity extends AppCompatActivity {
             incorrect_1.setBackgroundColor(Color.RED);
             change4TextColor(correct, incorrect_2, incorrect_3);
             info.setVisibility(View.VISIBLE);
-        } else if (incorrect_2.isChecked()){
+        } else if (incorrect_2.isChecked()) {
             incorrect_2.setBackgroundColor(Color.RED);
             change4TextColor(correct, incorrect_1, incorrect_3);
             info.setVisibility(View.VISIBLE);
