@@ -109,7 +109,7 @@
         app:layout_constraintHorizontal_bias="0.850"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.300" />
+        app:layout_constraintVertical_bias="0.280" />
 
     <ImageView
         android:id="@+id/main_medium"
@@ -121,7 +121,7 @@
         app:layout_constraintHorizontal_bias="0.850"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.575" />
+        app:layout_constraintVertical_bias="0.555" />
 
     <ImageView
         android:id="@+id/main_hard"
@@ -133,7 +133,7 @@
         app:layout_constraintHorizontal_bias="0.850"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.850" />
+        app:layout_constraintVertical_bias="0.830" />
 
     <ImageView
         android:id="@+id/krim_easy"
@@ -146,7 +146,7 @@
         app:layout_constraintHorizontal_bias="0.850"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.300" />
+        app:layout_constraintVertical_bias="0.280" />
 
     <ImageView
         android:id="@+id/krim_medium"
@@ -159,7 +159,7 @@
         app:layout_constraintHorizontal_bias="0.850"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.575" />
+        app:layout_constraintVertical_bias="0.555" />
 
     <ImageView
         android:id="@+id/krim_hard"
@@ -172,7 +172,7 @@
         app:layout_constraintHorizontal_bias="0.850"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.850" />
+        app:layout_constraintVertical_bias="0.830" />
 
     <ImageView
         android:id="@+id/second_february_start"
