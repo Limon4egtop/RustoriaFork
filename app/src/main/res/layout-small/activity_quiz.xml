@@ -188,6 +188,19 @@
         app:layout_constraintVertical_bias="0.780" />
 
     <ImageView
+        android:id="@+id/borodinskoe_srajenie"
+        android:layout_width="125dp"
+        android:layout_height="40dp"
+        android:background="@drawable/start_quiz"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.830"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.780" />
+
+    <ImageView
         android:id="@+id/poltavskaya_bitva"
         android:layout_width="85dp"
         android:layout_height="85dp"

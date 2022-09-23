@@ -13,6 +13,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.quizes.borodinskoeSrajenie.BorodinskoeSrajenieActivityQuiz;
 import com.quizes.krim.*;
 import com.quizes.main.*;
 import com.quizes.petr1.*;
@@ -22,7 +23,7 @@ public class QuizActivity extends AppCompatActivity implements AdapterView.OnIte
 
     private static ImageView
             main_easy, main_medium, main_hard,
-            second_february_start, krim_easy,
+            second_february_start, borodinskoe_srajenie ,krim_easy,
             krim_medium, krim_hard, mainBq,
             poltavskaya_bitva, grengamskoe_srajenie,
             gangutskoe_srajenie, bitva_pri_lesnoy,
@@ -50,6 +51,8 @@ public class QuizActivity extends AppCompatActivity implements AdapterView.OnIte
 
         second_february_start = findViewById(R.id.second_february_start);
 
+        borodinskoe_srajenie = findViewById(R.id.borodinskoe_srajenie);
+
         krim_easy = findViewById(R.id.krim_easy);
         krim_medium = findViewById(R.id.krim_medium);
         krim_hard = findViewById(R.id.krim_hard);
@@ -66,6 +69,8 @@ public class QuizActivity extends AppCompatActivity implements AdapterView.OnIte
         main_hard.setOnClickListener(v -> startActivity(new Intent(QuizActivity.this, MainHardQuizActivity.class)));
 
         second_february_start.setOnClickListener(v -> startActivity(new Intent(QuizActivity.this, StalingradskayaBitvaQuizActivity.class)));
+
+        borodinskoe_srajenie.setOnClickListener(v -> startActivity(new Intent(QuizActivity.this, BorodinskoeSrajenieActivityQuiz.class)));
 
         krim_easy.setOnClickListener(v -> startActivity(new Intent(QuizActivity.this, KrimEasyQuizActivity.class)));
         krim_medium.setOnClickListener(v -> startActivity(new Intent(QuizActivity.this, KrimMediumQuizActivity.class)));
@@ -91,16 +96,19 @@ public class QuizActivity extends AppCompatActivity implements AdapterView.OnIte
         Toast.makeText(this, parent.getSelectedItem().toString(), Toast.LENGTH_SHORT).show();
         switch (position) {
             case 0:
-                visibilityList(View.VISIBLE, View.VISIBLE, View.VISIBLE, View.INVISIBLE, View.INVISIBLE, View.INVISIBLE);
+                visibilityList(View.VISIBLE, View.VISIBLE, View.VISIBLE, View.INVISIBLE, View.INVISIBLE, View.INVISIBLE, View.INVISIBLE);
                 break;
             case 1:
-                visibilityList(View.INVISIBLE, View.VISIBLE, View.INVISIBLE, View.VISIBLE, View.INVISIBLE, View.INVISIBLE);
+                visibilityList(View.INVISIBLE, View.VISIBLE, View.INVISIBLE, View.VISIBLE, View.INVISIBLE, View.INVISIBLE, View.INVISIBLE);
                 break;
             case 2:
-                visibilityList(View.VISIBLE, View.VISIBLE, View.INVISIBLE, View.INVISIBLE, View.VISIBLE, View.INVISIBLE);
+                visibilityList(View.VISIBLE, View.VISIBLE, View.INVISIBLE, View.INVISIBLE, View.VISIBLE, View.INVISIBLE, View.INVISIBLE);
                 break;
             case 3:
-                visibilityList(View.INVISIBLE, View.INVISIBLE, View.INVISIBLE, View.INVISIBLE, View.INVISIBLE, View.VISIBLE);
+                visibilityList(View.INVISIBLE, View.INVISIBLE, View.INVISIBLE, View.INVISIBLE, View.INVISIBLE, View.VISIBLE, View.INVISIBLE);
+                break;
+            case 4:
+                visibilityList(View.INVISIBLE, View.VISIBLE, View.INVISIBLE, View.INVISIBLE, View.INVISIBLE, View.INVISIBLE, View.VISIBLE);
                 break;
         }
     }
@@ -109,7 +117,7 @@ public class QuizActivity extends AppCompatActivity implements AdapterView.OnIte
     public void onNothingSelected(AdapterView<?> parent) {
     }
 
-    private static void visibilityList(int generalTextVisible, int generalBqVisible, int mainVisible, int stalVisible, int krimVisible, int petr1Visible) {
+    private static void visibilityList(int generalTextVisible, int generalBqVisible, int mainVisible, int stalVisible, int krimVisible, int petr1Visible, int borodVisible) {
         main_easy.setVisibility(mainVisible);
         main_medium.setVisibility(mainVisible);
         main_hard.setVisibility(mainVisible);
@@ -125,6 +133,7 @@ public class QuizActivity extends AppCompatActivity implements AdapterView.OnIte
         gangutskoe_srajenie.setVisibility(petr1Visible);
         poltavskaya_bitva.setVisibility(petr1Visible);
         grengamskoe_srajenie.setVisibility(petr1Visible);
+        borodinskoe_srajenie.setVisibility(borodVisible);
         bitva_pri_lesnoy.setVisibility(petr1Visible);
         petr_1_text.setVisibility(petr1Visible);
         petr_1_text2.setVisibility(petr1Visible);

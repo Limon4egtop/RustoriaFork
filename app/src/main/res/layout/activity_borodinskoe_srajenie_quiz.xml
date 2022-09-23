@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.quizes.staliningradskayaBitva.StalingradskayaBitvaQuizActivity">
+    tools:context="com.quizes.borodinskoeSrajenie.BorodinskoeSrajenieActivityQuiz">
 
     <ViewFlipper
         android:id="@+id/viewflipper"
@@ -44,10 +44,10 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Окончание Сталинградской битвы:"
+                android:text="Дата Бородинского сражения"
                 android:gravity="center"
                 android:textColor="@color/black"
-                android:textSize="32sp"
+                android:textSize="35sp"
                 android:textStyle="bold"
                 android:shadowRadius="10"
                 android:shadowDx="1"
@@ -60,10 +60,10 @@
                 app:layout_constraintVertical_bias="0.09" />
 
             <RadioButton
-                android:id="@+id/first_prav"
+                android:id="@+id/first_neprav_3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="2 февраля 1943 г."
+                android:text="12 июня 1812 г."
                 android:textColor="@color/white"
                 android:buttonTint="@color/white"
                 android:textSize="28sp"
@@ -80,10 +80,10 @@
                 app:layout_constraintVertical_bias="0.37" />
 
             <RadioButton
-                android:id="@+id/first_neprav_3"
+                android:id="@+id/first_prav"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="23 февраля 1943 г."
+                android:text="7 сентября 1812 г."
                 android:textColor="@color/white"
                 android:buttonTint="@color/white"
                 android:textSize="28sp"
@@ -103,7 +103,7 @@
                 android:id="@+id/first_neprav"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="23 августа 1943 г."
+                android:text="2 октября 1812 г."
                 android:textColor="@color/white"
                 android:buttonTint="@color/white"
                 android:textSize="28sp"
@@ -123,7 +123,7 @@
                 android:id="@+id/first_neprav_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="27 января 1944 г."
+                android:text="5 декабря 1812 г. "
                 android:textColor="@color/white"
                 android:buttonTint="@color/white"
                 android:textSize="28sp"
@@ -216,7 +216,7 @@
                 android:text="Немецкое название операции по захвату Сталинграда:"
                 android:gravity="center"
                 android:textColor="@color/black"
-                android:textSize="28sp"
+                android:textSize="31sp"
                 android:textStyle="bold"
                 android:shadowRadius="10"
                 android:shadowDx="1"
@@ -232,7 +232,7 @@
                 android:id="@+id/second_neprav"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Фалль Рот"
+                android:text="Павел I"
                 android:textColor="@color/white"
                 android:buttonTint="@color/white"
                 android:textSize="29sp"
@@ -252,7 +252,7 @@
                 android:id="@+id/second_neprav_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Фалль Гельб"
+                android:text="Екатерина II"
                 android:textColor="@color/white"
                 android:buttonTint="@color/white"
                 android:textSize="29sp"
@@ -272,7 +272,7 @@
                 android:id="@+id/second_prav"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Фалль Блау"
+                android:text="Александр I"
                 android:textColor="@color/white"
                 android:buttonTint="@color/white"
                 android:textSize="29sp"
@@ -292,7 +292,7 @@
                 android:id="@+id/second_neprav_3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Фалль Грюн"
+                android:text="Николай I "
                 android:textColor="@color/white"
                 android:buttonTint="@color/white"
                 android:textSize="29sp"
@@ -381,10 +381,10 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Приказ номер 227 И.В. Сталина в просторечии назывался:"
+                android:text="Главнокомандующий российскими войсками во время сражения"
                 android:gravity="center"
                 android:textColor="@color/black"
-                android:textSize="29sp"
+                android:textSize="31sp"
                 android:textStyle="bold"
                 android:shadowRadius="10"
                 android:shadowDx="1"
@@ -397,13 +397,13 @@
                 app:layout_constraintVertical_bias="0.083" />
 
             <RadioButton
-                android:id="@+id/third_neprav_2"
+                android:id="@+id/third_prav"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Вперед, в атаку!"
+                android:text="М. Кутузов"
                 android:textColor="@color/white"
                 android:buttonTint="@color/white"
-                android:textSize="28sp"
+                android:textSize="29sp"
                 android:textStyle="bold"
                 android:shadowRadius="10"
                 android:shadowDx="1"
@@ -420,10 +420,10 @@
                 android:id="@+id/third_neprav_3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Стоять до последнего!"
+                android:text="М. Барклай-де-Толли"
                 android:textColor="@color/white"
                 android:buttonTint="@color/white"
-                android:textSize="28sp"
+                android:textSize="29sp"
                 android:textStyle="bold"
                 android:shadowRadius="10"
                 android:shadowDx="1"
@@ -440,10 +440,10 @@
                 android:id="@+id/third_neprav"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Всем на фронт!"
+                android:text="П. Багратион"
                 android:textColor="@color/white"
                 android:buttonTint="@color/white"
-                android:textSize="28sp"
+                android:textSize="29sp"
                 android:textStyle="bold"
                 android:shadowRadius="10"
                 android:shadowDx="1"
@@ -457,13 +457,13 @@
                 app:layout_constraintVertical_bias="0.57" />
 
             <RadioButton
-                android:id="@+id/third_prav"
+                android:id="@+id/third_neprav_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Ни шагу назад!"
+                android:text="П. Лихачёв"
                 android:textColor="@color/white"
                 android:buttonTint="@color/white"
-                android:textSize="28sp"
+                android:textSize="29sp"
                 android:textStyle="bold"
                 android:shadowRadius="10"
                 android:shadowDx="1"
@@ -550,9 +550,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Сражений во время Сталинградской битвы не проходило у реки:"
+                android:text="Способ ведения войны, которому придерживалась русская армия"
                 android:textColor="@color/black"
-                android:textSize="29sp"
+                android:textSize="31sp"
                 android:textStyle="bold"
                 android:shadowRadius="10"
                 android:shadowDx="1"
@@ -568,10 +568,10 @@
                 android:id="@+id/fourth_neprav_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Чир"
+                android:text="Быстрые контратаки с флангов"
                 android:textColor="@color/white"
                 android:buttonTint="@color/white"
-                android:textSize="29sp"
+                android:textSize="26sp"
                 android:textStyle="bold"
                 android:shadowRadius="10"
                 android:shadowDx="1"
@@ -582,16 +582,16 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintHorizontal_bias="0.02"
-                app:layout_constraintVertical_bias="0.37" />
+                app:layout_constraintVertical_bias="0.36" />
 
             <RadioButton
-                android:id="@+id/fourth_neprav_3"
+                android:id="@+id/fourth_prav"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Дон"
+                android:text="Истощение противника и ожидание подкреплений"
                 android:textColor="@color/white"
                 android:buttonTint="@color/white"
-                android:textSize="29sp"
+                android:textSize="26sp"
                 android:textStyle="bold"
                 android:shadowRadius="10"
                 android:shadowDx="1"
@@ -602,16 +602,16 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintHorizontal_bias="0.02"
-                app:layout_constraintVertical_bias="0.47" />
+                app:layout_constraintVertical_bias="0.44" />
 
             <RadioButton
                 android:id="@+id/fourth_neprav"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Волга"
+                android:text="Заманивание противника в ловушку с дальнейшем окружением"
                 android:textColor="@color/white"
                 android:buttonTint="@color/white"
-                android:textSize="29sp"
+                android:textSize="26sp"
                 android:textStyle="bold"
                 android:shadowRadius="10"
                 android:shadowDx="1"
@@ -625,13 +625,13 @@
                 app:layout_constraintVertical_bias="0.57" />
 
             <RadioButton
-                android:id="@+id/fourth_prav"
+                android:id="@+id/fourth_neprav_3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Ока"
+                android:text="Максимальная бережность к солдатам"
                 android:textColor="@color/white"
                 android:buttonTint="@color/white"
-                android:textSize="29sp"
+                android:textSize="26sp"
                 android:textStyle="bold"
                 android:shadowRadius="10"
                 android:shadowDx="1"
@@ -642,7 +642,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintHorizontal_bias="0.02"
-                app:layout_constraintVertical_bias="0.67" />
+                app:layout_constraintVertical_bias="0.69" />
 
             <ImageView
                 android:id="@+id/check_4"
@@ -717,10 +717,10 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Какой маршал СССР не принимал непосредственного участия в Сталинградской битве?"
+                android:text="Битва, которая состоялась накануне сражения"
                 android:gravity="center"
                 android:textColor="@color/black"
-                android:textSize="28sp"
+                android:textSize="32sp"
                 android:textStyle="bold"
                 android:shadowRadius="10"
                 android:shadowDx="1"
@@ -736,10 +736,10 @@
                 android:id="@+id/five_neprav_3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="В.И. Чуйков"
+                android:text="Битва под Вязьмой"
                 android:textColor="@color/white"
                 android:buttonTint="@color/white"
-                android:textSize="28sp"
+                android:textSize="29sp"
                 android:textStyle="bold"
                 android:shadowRadius="10"
                 android:shadowDx="1"
@@ -756,10 +756,10 @@
                 android:id="@+id/five_neprav"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="А.И. Ерёменко"
+                android:text="Сражение под Красным"
                 android:textColor="@color/white"
                 android:buttonTint="@color/white"
-                android:textSize="28sp"
+                android:textSize="29sp"
                 android:textStyle="bold"
                 android:shadowRadius="10"
                 android:shadowDx="1"
@@ -773,13 +773,13 @@
                 app:layout_constraintVertical_bias="0.47" />
 
             <RadioButton
-                android:id="@+id/five_prav"
+                android:id="@+id/five_neprav_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="И.С. Конев"
+                android:text="Бой при Медыни"
                 android:textColor="@color/white"
                 android:buttonTint="@color/white"
-                android:textSize="28sp"
+                android:textSize="29sp"
                 android:textStyle="bold"
                 android:shadowRadius="10"
                 android:shadowDx="1"
@@ -793,13 +793,13 @@
                 app:layout_constraintVertical_bias="0.57" />
 
             <RadioButton
-                android:id="@+id/five_neprav_2"
+                android:id="@+id/five_prav"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="К.К. Рокоссовский"
+                android:text="Бой за Шевардинский редут"
                 android:textColor="@color/white"
                 android:buttonTint="@color/white"
-                android:textSize="28sp"
+                android:textSize="29sp"
                 android:textStyle="bold"
                 android:shadowRadius="10"
                 android:shadowDx="1"
@@ -885,10 +885,10 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Название советской контрнаступательной операции в Сталинградскую битву:"
+                android:text="Сколько длилось Бородинское сражение?"
                 android:gravity="center"
                 android:textColor="@color/black"
-                android:textSize="28sp"
+                android:textSize="32sp"
                 android:textStyle="bold"
                 android:shadowRadius="10"
                 android:shadowDx="1"
@@ -901,13 +901,13 @@
                 app:layout_constraintVertical_bias="0.093" />
 
             <RadioButton
-                android:id="@+id/six_neprav_3"
+                android:id="@+id/six_neprav"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Танковый шквал"
+                android:text="6 часов"
                 android:textColor="@color/white"
                 android:buttonTint="@color/white"
-                android:textSize="28sp"
+                android:textSize="29sp"
                 android:textStyle="bold"
                 android:shadowRadius="10"
                 android:shadowDx="1"
@@ -921,13 +921,13 @@
                 app:layout_constraintVertical_bias="0.37" />
 
             <RadioButton
-                android:id="@+id/six_neprav"
+                android:id="@+id/six_prav"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Багратион"
+                android:text="12 часов"
                 android:textColor="@color/white"
                 android:buttonTint="@color/white"
-                android:textSize="28sp"
+                android:textSize="29sp"
                 android:textStyle="bold"
                 android:shadowRadius="10"
                 android:shadowDx="1"
@@ -941,13 +941,13 @@
                 app:layout_constraintVertical_bias="0.47" />
 
             <RadioButton
-                android:id="@+id/six_prav"
+                android:id="@+id/six_neprav_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Уран"
+                android:text="1 день"
                 android:textColor="@color/white"
                 android:buttonTint="@color/white"
-                android:textSize="28sp"
+                android:textSize="29sp"
                 android:textStyle="bold"
                 android:shadowRadius="10"
                 android:shadowDx="1"
@@ -961,13 +961,13 @@
                 app:layout_constraintVertical_bias="0.57" />
 
             <RadioButton
-                android:id="@+id/six_neprav_2"
+                android:id="@+id/six_neprav_3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Шторм"
+                android:text="2 дня"
                 android:textColor="@color/white"
                 android:buttonTint="@color/white"
-                android:textSize="28sp"
+                android:textSize="29sp"
                 android:textStyle="bold"
                 android:shadowRadius="10"
                 android:shadowDx="1"
@@ -1053,10 +1053,10 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Название деблокирующей операции немецкой армии:"
+                android:text="Первые укрепления, на которые пришлась французская атака"
                 android:gravity="center"
                 android:textColor="@color/black"
-                android:textSize="29sp"
+                android:textSize="31sp"
                 android:textStyle="bold"
                 android:shadowRadius="10"
                 android:shadowDx="1"
@@ -1072,7 +1072,7 @@
                 android:id="@+id/seven_neprav_3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Тайфун"
+                android:text="＂Кутузовы шалаши＂"
                 android:textColor="@color/white"
                 android:buttonTint="@color/white"
                 android:textSize="29sp"
@@ -1089,10 +1089,10 @@
                 app:layout_constraintVertical_bias="0.37" />
 
             <RadioButton
-                android:id="@+id/seven_neprav"
+                android:id="@+id/seven_prav"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Реванш"
+                android:text="＂Багратионовы флеши＂"
                 android:textColor="@color/white"
                 android:buttonTint="@color/white"
                 android:textSize="29sp"
@@ -1109,10 +1109,10 @@
                 app:layout_constraintVertical_bias="0.47" />
 
             <RadioButton
-                android:id="@+id/seven_prav"
+                android:id="@+id/seven_neprav"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Винтергевиттер"
+                android:text="＂Бородинские землянки＂"
                 android:textColor="@color/white"
                 android:buttonTint="@color/white"
                 android:textSize="29sp"
@@ -1132,7 +1132,7 @@
                 android:id="@+id/seven_neprav_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Ервольгблокс"
+                android:text="＂Тучковы стены＂"
                 android:textColor="@color/white"
                 android:buttonTint="@color/white"
                 android:textSize="29sp"
@@ -1221,10 +1221,10 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Что не являлось целью немецкой армии во время Сталинградской битвы?"
+                android:text="Название кургана, в боях за который погиб генерал Тучков"
                 android:gravity="center"
                 android:textColor="@color/black"
-                android:textSize="29sp"
+                android:textSize="31sp"
                 android:textStyle="bold"
                 android:shadowRadius="10"
                 android:shadowDx="1"
@@ -1238,13 +1238,13 @@
                 app:layout_constraintVertical_bias="0.085" />
 
             <RadioButton
-                android:id="@+id/eight_neprav_3"
+                android:id="@+id/eight_prav"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Захват города со словом “Сталин”"
+                android:text="Утицкий"
                 android:textColor="@color/white"
                 android:buttonTint="@color/white"
-                android:textSize="25sp"
+                android:textSize="29sp"
                 android:textStyle="bold"
                 android:shadowRadius="10"
                 android:shadowDx="1"
@@ -1255,16 +1255,16 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintHorizontal_bias="0.02"
-                app:layout_constraintVertical_bias="0.35" />
+                app:layout_constraintVertical_bias="0.37" />
 
             <RadioButton
                 android:id="@+id/eight_neprav"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Блокировка Волги"
+                android:text="Ломовицкий"
                 android:textColor="@color/white"
                 android:buttonTint="@color/white"
-                android:textSize="25sp"
+                android:textSize="29sp"
                 android:textStyle="bold"
                 android:shadowRadius="10"
                 android:shadowDx="1"
@@ -1275,16 +1275,16 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintHorizontal_bias="0.02"
-                app:layout_constraintVertical_bias="0.44" />
+                app:layout_constraintVertical_bias="0.47" />
 
             <RadioButton
-                android:id="@+id/eight_prav"
+                android:id="@+id/eight_neprav_3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Дальнейший переезд немецкого генштаба в Сталинград"
+                android:text="Аверин"
                 android:textColor="@color/white"
                 android:buttonTint="@color/white"
-                android:textSize="25sp"
+                android:textSize="29sp"
                 android:textStyle="bold"
                 android:shadowRadius="10"
                 android:shadowDx="1"
@@ -1295,16 +1295,16 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintHorizontal_bias="0.02"
-                app:layout_constraintVertical_bias="0.56" />
+                app:layout_constraintVertical_bias="0.57" />
 
             <RadioButton
                 android:id="@+id/eight_neprav_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Дальнейший поход немцев на Кавказское направление"
+                android:text="Гнездовский"
                 android:textColor="@color/white"
                 android:buttonTint="@color/white"
-                android:textSize="25sp"
+                android:textSize="29sp"
                 android:textStyle="bold"
                 android:shadowRadius="10"
                 android:shadowDx="1"
@@ -1315,7 +1315,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintHorizontal_bias="0.02"
-                app:layout_constraintVertical_bias="0.69" />
+                app:layout_constraintVertical_bias="0.67" />
 
             <ImageView
                 android:id="@+id/check_8"
@@ -1390,7 +1390,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Что было характерно для битв в Сталинграде?"
+                android:text="Как прозвали батарею Раевского?"
                 android:gravity="center"
                 android:textColor="@color/black"
                 android:textSize="31sp"
@@ -1406,13 +1406,13 @@
                 app:layout_constraintVertical_bias="0.088" />
 
             <RadioButton
-                android:id="@+id/nine_neprav_3"
+                android:id="@+id/nine_prav"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Постоянное отступление войск советов на укрепленные рубежи"
+                android:text="＂Могила француской кавалерии＂"
                 android:textColor="@color/white"
                 android:buttonTint="@color/white"
-                android:textSize="25sp"
+                android:textSize="28sp"
                 android:textStyle="bold"
                 android:shadowRadius="10"
                 android:shadowDx="1"
@@ -1423,16 +1423,16 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintHorizontal_bias="0.02"
-                app:layout_constraintVertical_bias="0.36" />
+                app:layout_constraintVertical_bias="0.37" />
 
             <RadioButton
                 android:id="@+id/nine_neprav"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Глухая оборона немцев, после входа в город"
+                android:text="＂Русский кинжал＂"
                 android:textColor="@color/white"
                 android:buttonTint="@color/white"
-                android:textSize="25sp"
+                android:textSize="28sp"
                 android:textStyle="bold"
                 android:shadowRadius="10"
                 android:shadowDx="1"
@@ -1446,13 +1446,13 @@
                 app:layout_constraintVertical_bias="0.492" />
 
             <RadioButton
-                android:id="@+id/nine_prav"
+                android:id="@+id/nine_neprav_3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Бои за каждый клочок земли"
+                android:text="＂Авангард смерти＂"
                 android:textColor="@color/white"
                 android:buttonTint="@color/white"
-                android:textSize="25sp"
+                android:textSize="28sp"
                 android:textStyle="bold"
                 android:shadowRadius="10"
                 android:shadowDx="1"
@@ -1469,10 +1469,10 @@
                 android:id="@+id/nine_neprav_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Отсутсвие попыток немцев форсировать Волгу"
+                android:text="＂Раевские тигры＂"
                 android:textColor="@color/white"
                 android:buttonTint="@color/white"
-                android:textSize="25sp"
+                android:textSize="28sp"
                 android:textStyle="bold"
                 android:shadowRadius="10"
                 android:shadowDx="1"
@@ -1558,10 +1558,10 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Как звали самого известного генерала Германии, сдавшегося во время битвы?"
+                android:text="Потери российской армии в битве"
                 android:gravity="center"
                 android:textColor="@color/black"
-                android:textSize="29sp"
+                android:textSize="31sp"
                 android:textStyle="bold"
                 android:shadowRadius="10"
                 android:shadowDx="1"
@@ -1577,7 +1577,7 @@
                 android:id="@+id/ten_neprav_3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Манштейн"
+                android:text="20 тыс. солдат"
                 android:textColor="@color/white"
                 android:buttonTint="@color/white"
                 android:textSize="29sp"
@@ -1597,7 +1597,7 @@
                 android:id="@+id/ten_neprav"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Фон Бок"
+                android:text="30 тыс. солдат"
                 android:textColor="@color/white"
                 android:buttonTint="@color/white"
                 android:textSize="29sp"
@@ -1617,7 +1617,7 @@
                 android:id="@+id/ten_prav"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Паулюс"
+                android:text="45 тыс. солдат"
                 android:textColor="@color/white"
                 android:buttonTint="@color/white"
                 android:textSize="29sp"
@@ -1637,7 +1637,7 @@
                 android:id="@+id/ten_neprav_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Роммель"
+                android:text="65 тыс. солдат"
                 android:textColor="@color/white"
                 android:buttonTint="@color/white"
                 android:textSize="29sp"

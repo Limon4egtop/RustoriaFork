@@ -11,6 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Hakaton">
+        <activity android:name="com.quizes.borodinskoeSrajenie.BorodinskoeSrajenieActivityQuiz"></activity>
         <activity
             android:name=".SearchFiguresActivity"
             android:screenOrientation="portrait" />
