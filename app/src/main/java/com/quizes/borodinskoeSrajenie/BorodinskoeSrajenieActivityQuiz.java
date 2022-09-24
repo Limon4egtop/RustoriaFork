@@ -193,10 +193,9 @@ public class BorodinskoeSrajenieActivityQuiz extends AppCompatActivity {
         });
     }
 
-//TODO поставить вместо ссылки на Сталинградской Битву, Бородинское Сражение
     private void addButtonInfo(ListView info) {
         ArrayList<String> infoList = new ArrayList<>();
-        infoList.add("Сталинградская битва");
+        infoList.add("Бородинское сражение");
         adapterInfo = new ArrayAdapter(this, android.R.layout.simple_spinner_item, infoList);
         info.setAdapter(adapterInfo);
         info.setOnItemClickListener((parent, view, position, id) -> {
