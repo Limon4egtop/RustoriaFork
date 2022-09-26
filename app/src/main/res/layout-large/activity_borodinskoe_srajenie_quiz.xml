@@ -213,7 +213,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Немецкое название операции по захвату Сталинграда:"
+                android:text="Императором России в тот период времени являлся"
                 android:gravity="center"
                 android:textColor="@color/black"
                 android:textSize="47sp"
