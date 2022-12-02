@@ -21,14 +21,14 @@ import com.quizes.staliningradskayaBitva.*;
 
 public class QuizActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
-    private static ImageView
+    private  ImageView
             main_easy, main_medium, main_hard,
             second_february_start, borodinskoe_srajenie ,krim_easy,
             krim_medium, krim_hard, mainBq,
             poltavskaya_bitva, grengamskoe_srajenie,
             gangutskoe_srajenie, bitva_pri_lesnoy,
             petr1Bq;
-    public static TextView main_text, petr_1_text, petr_1_text2;
+    public TextView main_text, petr_1_text, petr_1_text2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,8 +42,8 @@ public class QuizActivity extends AppCompatActivity implements AdapterView.OnIte
         petr_1_text = findViewById(R.id.petr_1_text);
         petr_1_text2 = findViewById(R.id.petr_1_text2);
 
-        /**
-         * Объявление квизов
+        /*
+          Объявление квизов
          */
         main_easy = findViewById(R.id.main_easy);
         main_medium = findViewById(R.id.main_medium);
@@ -117,7 +117,7 @@ public class QuizActivity extends AppCompatActivity implements AdapterView.OnIte
     public void onNothingSelected(AdapterView<?> parent) {
     }
 
-    private static void visibilityList(int generalTextVisible, int generalBqVisible, int mainVisible, int stalVisible, int krimVisible, int petr1Visible, int borodVisible) {
+    private void visibilityList(int generalTextVisible, int generalBqVisible, int mainVisible, int stalVisible, int krimVisible, int petr1Visible, int borodVisible) {
         main_easy.setVisibility(mainVisible);
         main_medium.setVisibility(mainVisible);
         main_hard.setVisibility(mainVisible);

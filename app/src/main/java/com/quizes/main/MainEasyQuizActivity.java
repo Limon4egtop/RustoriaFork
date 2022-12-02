@@ -4,6 +4,7 @@ import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.animation.ObjectAnimator;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.graphics.Color;
@@ -21,6 +22,9 @@ import com.kutakoff.QuizActivity;
 import com.kutakoff.R;
 import com.quizes.ResultQuizActivity;
 
+import java.util.ArrayList;
+import java.util.Random;
+
 import static com.utilitaryClasses.MainMethodsClass.*;
 
 public class MainEasyQuizActivity extends AppCompatActivity {
@@ -31,11 +35,11 @@ public class MainEasyQuizActivity extends AppCompatActivity {
     Animation animFlipInBackward;
     Animation animFlipOutBackward;
 
-    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
+    @RequiresApi(api = Build.VERSION_CODES.Q)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setRequestedOrientation (ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         setContentView(R.layout.activity_main_easy_quiz);
         flipper = findViewById(R.id.viewflipper);
         ImageView start_quiz = findViewById(R.id.start_quiz);
@@ -73,6 +77,8 @@ public class MainEasyQuizActivity extends AppCompatActivity {
 
         Count.isHardQuiz = false;
         Count.isSpecialQUiz = false;
+
+        //mixQuestions(firstCorrect, firstIncorrect_1, firstIncorrect_2);
 
         start_quiz.setOnClickListener(v -> SwipeRight());
         button_back.setOnClickListener(v -> startActivity(new Intent(MainEasyQuizActivity.this, QuizActivity.class)));
@@ -141,4 +147,26 @@ public class MainEasyQuizActivity extends AppCompatActivity {
                 .setNegativeButton("Нет", null)
                 .show();
     }
+
+/*    //не доделан
+    @RequiresApi(api = Build.VERSION_CODES.Q)
+    private void mixQuestions(RadioButton correct, RadioButton incorrect_1, RadioButton incorrect_2) {
+        ObjectAnimator animation = ObjectAnimator.ofFloat(correct, "translationY",-200);
+        animation.setDuration(2000);
+        animation.start();
+        RadioButton[] radioButtons = {correct, incorrect_1, incorrect_2};
+        String[] texts = {(String) correct.getText(), (String) incorrect_1.getText(), (String) incorrect_2.getText()};
+        int[] IDs = {correct.getId(), incorrect_1.getId(), incorrect_2.getId()};
+        ArrayList<Integer> integers = new ArrayList<>();
+        integers.add(1);
+        integers.add(2);
+        integers.add(3);
+        Random random = new Random();
+        int depen = integers.size() - 1;
+        for (int i = 0; i < integers.size(); i++) {
+            int result = random.nextInt(depen - i);
+            radioButtons[i].setLeftTopRightBottom(radioButtons[integers.get(result)].getLeft(), radioButtons[integers.get(result)].getTop(), radioButtons[integers.get(result)].getRight(), radioButtons[integers.get(result)].getBottom());
+            integers.remove(result);
+        }
+    }*/
 }

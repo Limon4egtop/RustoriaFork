@@ -178,8 +178,8 @@ public class SearchFiguresActivity extends AppCompatActivity {
     }
 
     private void clickableList(ListView listView) {
-        /**
-         * Метод для перехода в HTML
+        /*
+          Метод для перехода в HTML
          */
         listView.setOnItemClickListener((parent, view, position, id) -> {
             Bundle bundle = new Bundle();

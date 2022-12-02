@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.kutakoff.ChooseActivity;
@@ -19,58 +20,51 @@ public class ResultQuizActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result_quiz);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-        TextView textResult = findViewById(R.id.textresult);
+        ProgressBar progressBar = findViewById(R.id.progressBar);
+        TextView textResult = findViewById(R.id.textResult);
         ImageView goHome = findViewById(R.id.goHome);
-        String compliment = "";
-        if (Count.isHardQuiz) {
-            hardQuizResult(compliment, textResult);
-        } else if (Count.isSpecialQUiz) {
-            specialQuizResult(compliment, textResult);
+
+        if (Count.isSpecialQUiz) {
+            switch (Count.getA()) {
+                case 0:
+                    progressBar.setProgress(0);
+                    textResult.setText(0 + "%");
+                    break;
+                case 1:
+                    progressBar.setProgress(17);
+                    textResult.setText(17 + "%");
+                    break;
+                case 2:
+                    progressBar.setProgress(33);
+                    textResult.setText(33 + "%");
+                    break;
+                case 3:
+                    progressBar.setProgress(50);
+                    textResult.setText(50 + "%");
+                    break;
+                case 4:
+                    progressBar.setProgress(66);
+                    textResult.setText(66 + "%");
+                    break;
+                case 5:
+                    progressBar.setProgress(83);
+                    textResult.setText(83 + "%");
+                    break;
+                case 6:
+                    progressBar.setProgress(100);
+                    textResult.setText(100 + "%");
+                    break;
+            }
+        } else if (Count.isHardQuiz) {
+            progressBar.setProgress(Count.getA() * 10);
+            textResult.setText(Count.getA() * 10 + "%");
         } else {
-            easyQuizResult(compliment, textResult);
+            progressBar.setProgress(Count.getA() * 20);
+            textResult.setText(Count.getA() * 20 + "%");
         }
         Count.isHardQuiz = false;
         Count.isSpecialQUiz = false;
         Count.a = 0;
         goHome.setOnClickListener(v -> startActivity(new Intent(ResultQuizActivity.this, ChooseActivity.class)));
-    }
-
-    private static void easyQuizResult(String compliment, TextView textResult) {
-        if (Count.getA() >= 0 && Count.getA() < 3) {
-            compliment = "Попробуй ещё раз!";
-        } else if (Count.getA() == 3) {
-            compliment = "Неплохо!";
-        } else if (Count.getA() == 4) {
-            compliment = "Молодец, ты хорошо справился!";
-        } else if (Count.getA() == 5) {
-            compliment = "Молодец, ты справился отлично!";
-        }
-        textResult.setText(compliment + "\nТвой результат: " + Count.getA() + "/5.");
-    }
-
-    private static void hardQuizResult(String compliment, TextView textResult) {
-        if (Count.getA() >= 0 && Count.getA() <= 3) {
-            compliment = "Попробуй ещё раз!";
-        } else if (Count.getA() >= 4 && Count.getA() <= 6) {
-            compliment = "Неплохо!";
-        } else if (Count.getA() == 7 || Count.getA() == 8) {
-            compliment = "Ты хорошо справился!";
-        } else if (Count.getA() == 9 || Count.getA() == 10) {
-            compliment = "Ты справился отлично!";
-        }
-        textResult.setText(compliment + "\nТвой результат: " + Count.getA() + "/10.");
-    }
-
-    private static void specialQuizResult(String compliment, TextView textResult) {
-        if (Count.getA() >= 0 && Count.getA() <= 2) {
-            compliment = "Попробуй ещё раз!";
-        } else if (Count.getA() == 3 || Count.getA() == 4) {
-            compliment = "Неплохо!";
-        } else if (Count.getA() == 5) {
-            compliment = "Ты хорошо справился!";
-        } else if (Count.getA() == 6) {
-            compliment = "Ты справился отлично!";
-        }
-        textResult.setText(compliment + "\nТвой результат: " + Count.getA() + "/6.");
     }
 }

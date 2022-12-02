@@ -9,27 +9,58 @@
 
     <ImageView
         android:id="@+id/goHome"
-        android:layout_width="63dp"
-        android:layout_height="56dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
         android:background="@drawable/xakaton_home"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textresult"
+        android:id="@+id/text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:shadowColor="@android:color/black"
+        android:text="Ваш результат:"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:shadowRadius="10"
         android:shadowDx="1"
         android:shadowDy="1"
-        android:shadowRadius="10"
-        android:textColor="@color/white"
-        android:textSize="27sp"
-        android:textStyle="bold"
+        android:shadowColor="@android:color/black"
+        app:layout_constraintBottom_toTopOf="@+id/progressBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:indeterminateOnly="false"
+        android:progress="0"
+        android:progressDrawable="@drawable/circle"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="%"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:shadowRadius="10"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowColor="@android:color/black"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toBottomOf="@+id/progressBar"
+        app:layout_constraintEnd_toEndOf="@+id/progressBar"
+        app:layout_constraintStart_toStartOf="@+id/progressBar"
+        app:layout_constraintTop_toTopOf="@+id/progressBar" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -507,7 +507,7 @@ public class WebViewActivity extends AppCompatActivity {
                     url = "file:///android_asset/Fedor_Kon.html";
                     break;
             }
-            WebView myWebView = (WebView) findViewById(R.id.webview);
+            WebView myWebView = findViewById(R.id.webview);
             myWebView.loadUrl(url);
         }
     }
