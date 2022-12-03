@@ -19,6 +19,6 @@ public class ChooseActivity extends AppCompatActivity {
         ImageView quiz = findViewById(R.id.quiz);
         deyatels.setOnClickListener(v -> startActivity(new Intent(ChooseActivity.this, SearchFiguresActivity.class)));
         events.setOnClickListener(v -> startActivity(new Intent(ChooseActivity.this, SearchEventsActivity.class)));
-        quiz.setOnClickListener(v -> startActivity(new Intent(ChooseActivity.this, QuizActivity.class)));
+        quiz.setOnClickListener(v -> startActivity(new Intent(ChooseActivity.this, ChooseQuizActivity.class)));
     }
 }

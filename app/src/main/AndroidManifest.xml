@@ -11,6 +11,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Hakaton">
+        <activity android:name="com.quizes.krim.KrimQuizMenu"></activity>
+        <activity android:name="com.quizes.main.MainQuizMenu" />
+        <activity
+            android:name=".ChooseQuizActivity"
+            android:theme="@style/Theme.Hakaton.NoActionBar" />
         <activity android:name="com.quizes.borodinskoeSrajenie.BorodinskoeSrajenieActivityQuiz" />
         <activity
             android:name=".SearchFiguresActivity"

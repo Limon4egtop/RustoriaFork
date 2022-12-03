@@ -2,16 +2,16 @@ package com.utilitaryClasses;
 
 public class Count {
 
-    public static int count = 0;
-    public static int a;
-    public static boolean isHardQuiz;
-    public static boolean isSpecialQUiz;
+    public static int countOfSkipQuestions = 0;
+    public static int correctAnswers = 0;
+    public static boolean isHardQuiz = false;
+    public static boolean isSpecialQUiz = false;
 
-    public static void plussa() {
-        a++;
+    public static void plusOneCorrectAnswer() {
+        correctAnswers++;
     }
 
-    public static int getA() {
-        return a;
+    public static int getCorrectAnswers() {
+        return correctAnswers;
     }
 }

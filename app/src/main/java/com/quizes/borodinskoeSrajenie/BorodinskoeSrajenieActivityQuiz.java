@@ -18,6 +18,7 @@ import android.widget.ListView;
 import android.widget.RadioButton;
 import android.widget.ViewFlipper;
 
+import com.kutakoff.ChooseQuizActivity;
 import com.kutakoff.QuizActivity;
 import com.kutakoff.R;
 import com.utilitaryClasses.Count;
@@ -126,7 +127,6 @@ public class BorodinskoeSrajenieActivityQuiz extends AppCompatActivity {
         ListView info10 = findViewById(R.id.info10);
 
         Count.isHardQuiz = true;
-        Count.isSpecialQUiz = false;
 
         addQuestion(firstCorrect, firstIncorrect_1, firstIncorrect_2, firstIncorrect_3, firstCheck, firstButtonNext, info1);
         addQuestion(secondCorrect, secondIncorrect_1, secondIncorrect_2, secondIncorrect_3, secondCheck, secondButtonNext, info2);
@@ -164,7 +164,7 @@ public class BorodinskoeSrajenieActivityQuiz extends AppCompatActivity {
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     private void check(RadioButton correct, RadioButton incorrect_1, RadioButton incorrect_2, RadioButton incorrect_3, ImageView check, ImageView button_next, ListView info) {
         if (correct.isChecked()) {
-            Count.plussa();
+            Count.plusOneCorrectAnswer();
             change4TextColor(incorrect_1, incorrect_2, incorrect_3);
             correct.setBackgroundColor(Color.GREEN);
         } else if (incorrect_1.isChecked()) {
@@ -183,10 +183,10 @@ public class BorodinskoeSrajenieActivityQuiz extends AppCompatActivity {
         check.setVisibility(View.INVISIBLE);
         button_next.setVisibility(View.VISIBLE);
         button_next.setOnClickListener(v1 -> {
-            Count.count++;
-            if (Count.count == 10) {
+            Count.countOfSkipQuestions++;
+            if (Count.countOfSkipQuestions == 10) {
                 startActivity(new Intent(BorodinskoeSrajenieActivityQuiz.this, ResultQuizActivity.class));
-                Count.count = 0;
+                Count.countOfSkipQuestions = 0;
             } else {
                 SwipeRight();
             }
@@ -212,9 +212,9 @@ public class BorodinskoeSrajenieActivityQuiz extends AppCompatActivity {
                 .setMessage("Вы действительно хотите выйти из квиза? Весь прогресс будет утерян.")
                 .setCancelable(false)
                 .setPositiveButton("Да", (dialog, id) -> {
-                    Count.count = 0;
-                    Count.a = 0;
-                    startActivity(new Intent(BorodinskoeSrajenieActivityQuiz.this, QuizActivity.class));
+                    Count.countOfSkipQuestions = 0;
+                    Count.correctAnswers = 0;
+                    startActivity(new Intent(BorodinskoeSrajenieActivityQuiz.this, ChooseQuizActivity.class));
                 })
                 .setNegativeButton("Нет", null)
                 .show();

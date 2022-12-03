@@ -18,6 +18,7 @@ import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.kutakoff.ChooseQuizActivity;
 import com.utilitaryClasses.Count;
 import com.kutakoff.QuizActivity;
 import com.kutakoff.R;
@@ -26,7 +27,8 @@ import com.utilitaryClasses.WebViewActivity;
 
 import java.util.ArrayList;
 
-import static com.utilitaryClasses.MainMethodsClass.*;
+import static com.utilitaryClasses.MainMethodsClass.change4TextColor;
+import static com.utilitaryClasses.MainMethodsClass.is4Checked;
 
 public class GrengamskoeSrajenieQuizActivity extends AppCompatActivity {
 
@@ -85,9 +87,6 @@ public class GrengamskoeSrajenieQuizActivity extends AppCompatActivity {
         ImageView fifthButtonNext = findViewById(R.id.fifthNext);
         ListView info5 = findViewById(R.id.info5);
 
-        Count.isHardQuiz = false;
-        Count.isSpecialQUiz = false;
-
         addQuestion(firstCorrect, firstIncorrect_1, firstIncorrect_2, firstIncorrect_3, firstCheck, firstButtonNext, info1);
         addQuestion(secondCorrect, secondIncorrect_1, secondIncorrect_2, secondIncorrect_3, secondCheck, secondButtonNext, info2);
         addQuestion(thirdCorrect, thirdIncorrect_1, thirdIncorrect_2, thirdIncorrect_3, thirdCheck, thirdButtonNext, info3);
@@ -119,7 +118,7 @@ public class GrengamskoeSrajenieQuizActivity extends AppCompatActivity {
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     private void check(RadioButton correct, RadioButton incorrect_1, RadioButton incorrect_2, RadioButton incorrect_3, ImageView check, ImageView button_next, ListView info) {
         if (correct.isChecked()) {
-            Count.plussa();
+            Count.plusOneCorrectAnswer();
             change4TextColor(incorrect_1, incorrect_2, incorrect_3);
             correct.setBackgroundColor(Color.GREEN);
         } else if (incorrect_1.isChecked()) {
@@ -138,10 +137,10 @@ public class GrengamskoeSrajenieQuizActivity extends AppCompatActivity {
         check.setVisibility(View.INVISIBLE);
         button_next.setVisibility(View.VISIBLE);
         button_next.setOnClickListener(v1 -> {
-            Count.count++;
-            if (Count.count == 5) {
+            Count.countOfSkipQuestions++;
+            if (Count.countOfSkipQuestions == 5) {
                 startActivity(new Intent(GrengamskoeSrajenieQuizActivity.this, ResultQuizActivity.class));
-                Count.count = 0;
+                Count.countOfSkipQuestions = 0;
             } else {
                 SwipeRight();
             }
@@ -167,9 +166,9 @@ public class GrengamskoeSrajenieQuizActivity extends AppCompatActivity {
                 .setMessage("Вы действительно хотите выйти из квиза? Весь прогресс будет утерян.")
                 .setCancelable(false)
                 .setPositiveButton("Да", (dialog, id) -> {
-                    Count.count = 0;
-                    Count.a = 0;
-                    startActivity(new Intent(GrengamskoeSrajenieQuizActivity.this, QuizActivity.class));
+                    Count.countOfSkipQuestions = 0;
+                    Count.correctAnswers = 0;
+                    startActivity(new Intent(GrengamskoeSrajenieQuizActivity.this, ChooseQuizActivity.class));
                 })
                 .setNegativeButton("Нет", null)
                 .show();

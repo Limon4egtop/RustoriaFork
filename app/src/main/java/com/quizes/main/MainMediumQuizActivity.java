@@ -16,6 +16,7 @@ import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.kutakoff.ChooseQuizActivity;
 import com.utilitaryClasses.Count;
 import com.kutakoff.QuizActivity;
 import com.kutakoff.R;
@@ -76,11 +77,8 @@ public class MainMediumQuizActivity extends AppCompatActivity {
         ImageView fifthCheck = findViewById(R.id.check_5);
         ImageView fifthButtonNext = findViewById(R.id.fifthNext);
 
-        Count.isHardQuiz = false;
-        Count.isSpecialQUiz = false;
-
         start_quiz.setOnClickListener(v -> SwipeRight());
-        button_back.setOnClickListener(v -> startActivity(new Intent(MainMediumQuizActivity.this, QuizActivity.class)));
+        button_back.setOnClickListener(v -> startActivity(new Intent(MainMediumQuizActivity.this, MainQuizMenu.class)));
 
         addQuestion(firstCorrect, firstIncorrect_1, firstIncorrect_2, firstIncorrect_3, firstCheck, firstButtonNext);
         addQuestion(secondCorrect, secondIncorrect_1, secondIncorrect_2, secondIncorrect_3, secondCheck, secondButtonNext);
@@ -112,7 +110,7 @@ public class MainMediumQuizActivity extends AppCompatActivity {
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     private void check(RadioButton correct, RadioButton incorrect_1, RadioButton incorrect_2, RadioButton incorrect_3, ImageView check, ImageView button_next) {
         if (correct.isChecked()) {
-            Count.plussa();
+            Count.plusOneCorrectAnswer();
             change4TextColor(incorrect_1, incorrect_2, incorrect_3);
             correct.setBackgroundColor(Color.GREEN);
         } else if (incorrect_1.isChecked()) {
@@ -128,10 +126,10 @@ public class MainMediumQuizActivity extends AppCompatActivity {
         check.setVisibility(View.INVISIBLE);
         button_next.setVisibility(View.VISIBLE);
         button_next.setOnClickListener(v1 -> {
-            Count.count++;
-            if (Count.count == 5) {
+            Count.countOfSkipQuestions++;
+            if (Count.countOfSkipQuestions == 5) {
                 startActivity(new Intent(MainMediumQuizActivity.this, ResultQuizActivity.class));
-                Count.count = 0;
+                Count.countOfSkipQuestions = 0;
             } else {
                 SwipeRight();
             }
@@ -143,9 +141,9 @@ public class MainMediumQuizActivity extends AppCompatActivity {
                 .setMessage("Вы действительно хотите выйти из квиза? Весь прогресс будет утерян.")
                 .setCancelable(false)
                 .setPositiveButton("Да", (dialog, id) -> {
-                    Count.count = 0;
-                    Count.a = 0;
-                    startActivity(new Intent(MainMediumQuizActivity.this, QuizActivity.class));
+                    Count.countOfSkipQuestions = 0;
+                    Count.correctAnswers = 0;
+                    startActivity(new Intent(MainMediumQuizActivity.this, MainQuizMenu.class));
                 })
                 .setNegativeButton("Нет", null)
                 .show();

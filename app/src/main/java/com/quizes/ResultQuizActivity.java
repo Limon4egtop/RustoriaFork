@@ -25,7 +25,7 @@ public class ResultQuizActivity extends AppCompatActivity {
         ImageView goHome = findViewById(R.id.goHome);
 
         if (Count.isSpecialQUiz) {
-            switch (Count.getA()) {
+            switch (Count.getCorrectAnswers()) {
                 case 0:
                     progressBar.setProgress(0);
                     textResult.setText(0 + "%");
@@ -56,15 +56,15 @@ public class ResultQuizActivity extends AppCompatActivity {
                     break;
             }
         } else if (Count.isHardQuiz) {
-            progressBar.setProgress(Count.getA() * 10);
-            textResult.setText(Count.getA() * 10 + "%");
+            progressBar.setProgress(Count.getCorrectAnswers() * 10);
+            textResult.setText(Count.getCorrectAnswers() * 10 + "%");
         } else {
-            progressBar.setProgress(Count.getA() * 20);
-            textResult.setText(Count.getA() * 20 + "%");
+            progressBar.setProgress(Count.getCorrectAnswers() * 20);
+            textResult.setText(Count.getCorrectAnswers() * 20 + "%");
         }
         Count.isHardQuiz = false;
         Count.isSpecialQUiz = false;
-        Count.a = 0;
+        Count.correctAnswers = 0;
         goHome.setOnClickListener(v -> startActivity(new Intent(ResultQuizActivity.this, ChooseActivity.class)));
     }
 }
