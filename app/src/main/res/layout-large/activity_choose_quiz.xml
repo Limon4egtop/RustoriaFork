@@ -15,8 +15,8 @@
 
         <ImageView
             android:id="@+id/button_back"
-            android:layout_width="93dp"
-            android:layout_height="73dp"
+            android:layout_width="130dp"
+            android:layout_height="90dp"
             android:background="@drawable/xakaton_button_back"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -27,7 +27,7 @@
             android:layout_height="wrap_content"
             android:text="Выберите квиз"
             android:textColor="@color/black"
-            android:textSize="40sp"
+            android:textSize="55sp"
             android:textStyle="bold"
             android:shadowColor="@android:color/white"
             android:shadowDx="1"
@@ -54,12 +54,12 @@
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/main"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp"
                 android:layout_marginBottom="16dp"
-                app:cardCornerRadius="15dp">
+                app:cardCornerRadius="18dp">
 
                 <ImageView
                     android:layout_width="wrap_content"
@@ -71,12 +71,12 @@
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/krimOfRussia"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp"
                 android:layout_marginBottom="16dp"
-                app:cardCornerRadius="15dp">
+                app:cardCornerRadius="18dp">
 
                 <ImageView
                     android:layout_width="wrap_content"
@@ -88,12 +88,12 @@
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/borodinskoeSrajenie"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp"
                 android:layout_marginBottom="16dp"
-                app:cardCornerRadius="15dp">
+                app:cardCornerRadius="18dp">
 
                 <ImageView
                     android:layout_width="wrap_content"
@@ -105,12 +105,12 @@
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/stalingradskayaBitva"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp"
                 android:layout_marginBottom="16dp"
-                app:cardCornerRadius="15dp">
+                app:cardCornerRadius="18dp">
 
                 <ImageView
                     android:layout_width="wrap_content"
@@ -122,12 +122,12 @@
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/bitvaPriLesnoy"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp"
                 android:layout_marginBottom="16dp"
-                app:cardCornerRadius="15dp">
+                app:cardCornerRadius="18dp">
 
                 <ImageView
                     android:layout_width="wrap_content"
@@ -139,12 +139,12 @@
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/gangutskoeSrajenie"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp"
                 android:layout_marginBottom="16dp"
-                app:cardCornerRadius="15dp">
+                app:cardCornerRadius="18dp">
 
                 <ImageView
                     android:layout_width="wrap_content"
@@ -156,12 +156,12 @@
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/grengamskoeSrajenie"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp"
                 android:layout_marginBottom="16dp"
-                app:cardCornerRadius="15dp">
+                app:cardCornerRadius="18dp">
 
                 <ImageView
                     android:layout_width="wrap_content"
@@ -173,12 +173,12 @@
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/poltavskayaBitva"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp"
                 android:layout_marginBottom="16dp"
-                app:cardCornerRadius="15dp">
+                app:cardCornerRadius="18dp">
 
                 <ImageView
                     android:layout_width="wrap_content"

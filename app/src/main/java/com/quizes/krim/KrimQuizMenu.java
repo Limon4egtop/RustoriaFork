@@ -3,11 +3,11 @@ package com.quizes.krim;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.widget.ImageView;
 
 import com.kutakoff.ChooseQuizActivity;
-import com.kutakoff.QuizActivity;
 import com.kutakoff.R;
 
 public class KrimQuizMenu extends AppCompatActivity {
@@ -16,6 +16,7 @@ public class KrimQuizMenu extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_krim_quiz_menu);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         ImageView krim_easy = findViewById(R.id.krim_easy);
         ImageView krim_medium = findViewById(R.id.krim_medium);
         ImageView krim_hard = findViewById(R.id.krim_hard);

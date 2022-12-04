@@ -1,6 +1,7 @@
 package com.kutakoff;
 
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.widget.ImageView;
 
@@ -26,6 +27,7 @@ public class ChooseQuizActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityChooseQuizBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         CardView main = findViewById(R.id.main);
         main.setOnClickListener(v -> startActivity(new Intent(ChooseQuizActivity.this, MainQuizMenu.class)));
 

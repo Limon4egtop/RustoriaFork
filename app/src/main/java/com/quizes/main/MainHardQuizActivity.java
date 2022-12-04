@@ -16,9 +16,7 @@ import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.kutakoff.ChooseQuizActivity;
 import com.utilitaryClasses.Count;
-import com.kutakoff.QuizActivity;
 import com.kutakoff.R;
 import com.quizes.ResultQuizActivity;
 

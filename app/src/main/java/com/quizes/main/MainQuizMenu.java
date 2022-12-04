@@ -3,12 +3,11 @@ package com.quizes.main;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.widget.ImageView;
 
 import com.kutakoff.ChooseQuizActivity;
-import com.kutakoff.MainActivity;
-import com.kutakoff.QuizActivity;
 import com.kutakoff.R;
 
 public class MainQuizMenu extends AppCompatActivity {
@@ -17,6 +16,7 @@ public class MainQuizMenu extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_quiz_menu);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         ImageView main_easy = findViewById(R.id.main_easy);
         ImageView main_medium = findViewById(R.id.main_medium);
         ImageView main_hard = findViewById(R.id.main_hard);

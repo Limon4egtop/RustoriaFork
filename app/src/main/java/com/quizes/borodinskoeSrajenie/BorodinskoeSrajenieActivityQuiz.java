@@ -19,7 +19,6 @@ import android.widget.RadioButton;
 import android.widget.ViewFlipper;
 
 import com.kutakoff.ChooseQuizActivity;
-import com.kutakoff.QuizActivity;
 import com.kutakoff.R;
 import com.utilitaryClasses.Count;
 import com.utilitaryClasses.WebViewActivity;
