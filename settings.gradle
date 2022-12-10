@@ -1,2 +1,2 @@
-rootProject.name = "Hakaton"
+rootProject.name = "Rustoria"
 include ':app'
