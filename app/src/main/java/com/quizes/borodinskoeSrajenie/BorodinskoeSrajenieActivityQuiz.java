@@ -36,6 +36,7 @@ public class BorodinskoeSrajenieActivityQuiz extends AppCompatActivity {
     Animation animFlipInBackward;
     Animation animFlipOutBackward;
     ArrayAdapter adapterInfo;
+    ImageView button_back;
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
@@ -49,6 +50,7 @@ public class BorodinskoeSrajenieActivityQuiz extends AppCompatActivity {
         RadioButton firstIncorrect_1 = findViewById(R.id.first_neprav);
         RadioButton firstIncorrect_2 = findViewById(R.id.first_neprav_2);
         RadioButton firstIncorrect_3 = findViewById(R.id.first_neprav_3);
+        button_back = findViewById(R.id.button_back);
         ImageView firstCheck = findViewById(R.id.check);
         ImageView firstButtonNext = findViewById(R.id.firstNext);
         ListView info1 = findViewById(R.id.info1);
@@ -128,6 +130,9 @@ public class BorodinskoeSrajenieActivityQuiz extends AppCompatActivity {
         Count.isHardQuiz = true;
 
         addQuestion(firstCorrect, firstIncorrect_1, firstIncorrect_2, firstIncorrect_3, firstCheck, firstButtonNext, info1);
+/*        button_back.setOnClickListener(v -> startActivity(new Intent(BorodinskoeSrajenieActivityQuiz.this, ChooseQuizActivity.class)));
+        firstCheck.setOnClickListener(v -> button_back.setVisibility(View.INVISIBLE));*/
+
         addQuestion(secondCorrect, secondIncorrect_1, secondIncorrect_2, secondIncorrect_3, secondCheck, secondButtonNext, info2);
         addQuestion(thirdCorrect, thirdIncorrect_1, thirdIncorrect_2, thirdIncorrect_3, thirdCheck, thirdButtonNext, info3);
         addQuestion(fourthCorrect, fourthIncorrect_1, fourthIncorrect_2, fourthIncorrect_3, fourthCheck, fourthButtonNext, info4);
@@ -162,6 +167,7 @@ public class BorodinskoeSrajenieActivityQuiz extends AppCompatActivity {
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     private void check(RadioButton correct, RadioButton incorrect_1, RadioButton incorrect_2, RadioButton incorrect_3, ImageView check, ImageView button_next, ListView info) {
+
         if (correct.isChecked()) {
             Count.plusOneCorrectAnswer();
             change4TextColor(incorrect_1, incorrect_2, incorrect_3);

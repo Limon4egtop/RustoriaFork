@@ -23,41 +23,51 @@
                 android:layout_height="match_parent"
                 android:background="@drawable/russian_flag_bq" />
 
+            <ImageView
+                android:id="@+id/button_back"
+                android:layout_width="93dp"
+                android:layout_height="73dp"
+                android:background="@drawable/xakaton_button_back"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
             <TextView
+                android:id="@+id/quest1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Вопрос №1"
                 android:gravity="center"
+                android:shadowColor="@android:color/white"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="10"
+                android:text="Вопрос №1"
                 android:textColor="@color/black"
                 android:textSize="35sp"
                 android:textStyle="bold"
-                android:shadowRadius="10"
-                android:shadowDx="1"
-                android:shadowDy="1"
-                android:shadowColor="@android:color/white"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.01" />
+                app:layout_constraintTop_toTopOf="@+id/button_back"
+                app:layout_constraintVertical_bias="0.025" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Дата Бородинского сражения"
                 android:gravity="center"
+                android:shadowColor="@android:color/white"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="10"
+                android:text="Дата Бородинского сражения"
                 android:textColor="@color/black"
                 android:textSize="35sp"
                 android:textStyle="bold"
-                android:shadowRadius="10"
-                android:shadowDx="1"
-                android:shadowDy="1"
-                android:shadowColor="@android:color/white"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.09" />
+                app:layout_constraintTop_toBottomOf="@+id/quest1"
+                app:layout_constraintVertical_bias="0.0" />
 
             <RadioButton
                 android:id="@+id/first_neprav_3"
