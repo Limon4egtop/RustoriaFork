@@ -8,7 +8,6 @@ import android.widget.ImageView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
-import com.kutakoff.databinding.ActivityChooseQuizBinding;
 import com.quizes.borodinskoeSrajenie.BorodinskoeSrajenieActivityQuiz;
 import com.quizes.krim.KrimQuizMenu;
 import com.quizes.main.MainQuizMenu;
@@ -20,13 +19,9 @@ import com.quizes.staliningradskayaBitva.StalingradskayaBitvaQuizActivity;
 
 public class ChooseQuizActivity extends AppCompatActivity {
 
-    private ActivityChooseQuizBinding binding;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = ActivityChooseQuizBinding.inflate(getLayoutInflater());
-        setContentView(binding.getRoot());
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         CardView main = findViewById(R.id.main);
         main.setOnClickListener(v -> startActivity(new Intent(ChooseQuizActivity.this, MainQuizMenu.class)));

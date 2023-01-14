@@ -19,6 +19,7 @@ import android.widget.RadioButton;
 import android.widget.ViewFlipper;
 
 import com.kutakoff.ChooseQuizActivity;
+import com.kutakoff.MainBottomNavigationActivity;
 import com.utilitaryClasses.Count;
 import com.kutakoff.R;
 import com.utilitaryClasses.WebViewActivity;
@@ -52,6 +53,7 @@ public class StalingradskayaBitvaQuizActivity extends AppCompatActivity {
         RadioButton firstIncorrect_3 = findViewById(R.id.first_neprav_3);
         ImageView firstCheck = findViewById(R.id.check);
         ImageView firstButtonNext = findViewById(R.id.firstNext);
+        ImageView button_back = findViewById(R.id.button_back);
         ListView info1 = findViewById(R.id.info1);
 
         RadioButton secondCorrect = findViewById(R.id.second_prav);
@@ -128,7 +130,8 @@ public class StalingradskayaBitvaQuizActivity extends AppCompatActivity {
 
         Count.isHardQuiz = true;
 
-        addQuestion(firstCorrect, firstIncorrect_1, firstIncorrect_2, firstIncorrect_3, firstCheck, firstButtonNext, info1);
+        addQuestionWithButtonBack(firstCorrect, firstIncorrect_1, firstIncorrect_2, firstIncorrect_3, firstCheck, firstButtonNext, info1, button_back);
+        button_back.setOnClickListener(v -> startActivity(new Intent(StalingradskayaBitvaQuizActivity.this, MainBottomNavigationActivity.class)));
         addQuestion(secondCorrect, secondIncorrect_1, secondIncorrect_2, secondIncorrect_3, secondCheck, secondButtonNext, info2);
         addQuestion(thirdCorrect, thirdIncorrect_1, thirdIncorrect_2, thirdIncorrect_3, thirdCheck, thirdButtonNext, info3);
         addQuestion(fourthCorrect, fourthIncorrect_1, fourthIncorrect_2, fourthIncorrect_3, fourthCheck, fourthButtonNext, info4);
@@ -158,6 +161,19 @@ public class StalingradskayaBitvaQuizActivity extends AppCompatActivity {
         incorrect_2.setOnClickListener(v -> is4Checked(incorrect_2, check, button_next, incorrect_1, incorrect_3, correct));
         incorrect_3.setOnClickListener(v -> is4Checked(incorrect_3, check, button_next, incorrect_1, incorrect_2, correct));
         check.setOnClickListener(v -> check(correct, incorrect_1, incorrect_2, incorrect_3, check, button_next, info));
+        addButtonInfo(info);
+    }
+
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
+    private void addQuestionWithButtonBack(RadioButton correct, RadioButton incorrect_1, RadioButton incorrect_2, RadioButton incorrect_3, ImageView check, ImageView button_next, ListView info, ImageView button_back) {
+        correct.setOnClickListener(v -> is4Checked(correct, check, button_next, incorrect_1, incorrect_2, incorrect_3));
+        incorrect_1.setOnClickListener(v -> is4Checked(incorrect_1, check, button_next, correct, incorrect_2, incorrect_3));
+        incorrect_2.setOnClickListener(v -> is4Checked(incorrect_2, check, button_next, incorrect_1, incorrect_3, correct));
+        incorrect_3.setOnClickListener(v -> is4Checked(incorrect_3, check, button_next, incorrect_1, incorrect_2, correct));
+        check.setOnClickListener(v -> {
+            check(correct, incorrect_1, incorrect_2, incorrect_3, check, button_next, info);
+            button_back.setVisibility(View.INVISIBLE);
+        });
         addButtonInfo(info);
     }
 
@@ -214,7 +230,7 @@ public class StalingradskayaBitvaQuizActivity extends AppCompatActivity {
                 .setPositiveButton("Да", (dialog, id) -> {
                     Count.countOfSkipQuestions = 0;
                     Count.correctAnswers = 0;
-                    startActivity(new Intent(StalingradskayaBitvaQuizActivity.this, ChooseQuizActivity.class));
+                    startActivity(new Intent(StalingradskayaBitvaQuizActivity.this, MainBottomNavigationActivity.class));
                 })
                 .setNegativeButton("Нет", null)
                 .show();

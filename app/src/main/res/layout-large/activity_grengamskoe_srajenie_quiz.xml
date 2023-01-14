@@ -23,6 +23,14 @@
                 android:layout_height="match_parent"
                 android:background="@drawable/russian_flag_bq" />
 
+            <ImageView
+                android:id="@+id/button_back"
+                android:layout_width="130dp"
+                android:layout_height="90dp"
+                android:background="@drawable/xakaton_button_back"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

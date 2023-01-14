@@ -19,6 +19,7 @@ import android.widget.RadioButton;
 import android.widget.ViewFlipper;
 
 import com.kutakoff.ChooseQuizActivity;
+import com.kutakoff.MainBottomNavigationActivity;
 import com.kutakoff.R;
 import com.utilitaryClasses.Count;
 import com.utilitaryClasses.WebViewActivity;
@@ -129,9 +130,8 @@ public class BorodinskoeSrajenieActivityQuiz extends AppCompatActivity {
 
         Count.isHardQuiz = true;
 
-        addQuestion(firstCorrect, firstIncorrect_1, firstIncorrect_2, firstIncorrect_3, firstCheck, firstButtonNext, info1);
-/*        button_back.setOnClickListener(v -> startActivity(new Intent(BorodinskoeSrajenieActivityQuiz.this, ChooseQuizActivity.class)));
-        firstCheck.setOnClickListener(v -> button_back.setVisibility(View.INVISIBLE));*/
+        addQuestionWithButtonBack(firstCorrect, firstIncorrect_1, firstIncorrect_2, firstIncorrect_3, firstCheck, firstButtonNext, info1, button_back);
+        button_back.setOnClickListener(v -> startActivity(new Intent(BorodinskoeSrajenieActivityQuiz.this, MainBottomNavigationActivity.class)));
 
         addQuestion(secondCorrect, secondIncorrect_1, secondIncorrect_2, secondIncorrect_3, secondCheck, secondButtonNext, info2);
         addQuestion(thirdCorrect, thirdIncorrect_1, thirdIncorrect_2, thirdIncorrect_3, thirdCheck, thirdButtonNext, info3);
@@ -162,6 +162,19 @@ public class BorodinskoeSrajenieActivityQuiz extends AppCompatActivity {
         incorrect_2.setOnClickListener(v -> is4Checked(incorrect_2, check, button_next, incorrect_1, incorrect_3, correct));
         incorrect_3.setOnClickListener(v -> is4Checked(incorrect_3, check, button_next, incorrect_1, incorrect_2, correct));
         check.setOnClickListener(v -> check(correct, incorrect_1, incorrect_2, incorrect_3, check, button_next, info));
+        addButtonInfo(info);
+    }
+
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
+    private void addQuestionWithButtonBack(RadioButton correct, RadioButton incorrect_1, RadioButton incorrect_2, RadioButton incorrect_3, ImageView check, ImageView button_next, ListView info, ImageView button_back) {
+        correct.setOnClickListener(v -> is4Checked(correct, check, button_next, incorrect_1, incorrect_2, incorrect_3));
+        incorrect_1.setOnClickListener(v -> is4Checked(incorrect_1, check, button_next, correct, incorrect_2, incorrect_3));
+        incorrect_2.setOnClickListener(v -> is4Checked(incorrect_2, check, button_next, incorrect_1, incorrect_3, correct));
+        incorrect_3.setOnClickListener(v -> is4Checked(incorrect_3, check, button_next, incorrect_1, incorrect_2, correct));
+        check.setOnClickListener(v -> {
+            check(correct, incorrect_1, incorrect_2, incorrect_3, check, button_next, info);
+            button_back.setVisibility(View.INVISIBLE);
+        });
         addButtonInfo(info);
     }
 
@@ -219,7 +232,7 @@ public class BorodinskoeSrajenieActivityQuiz extends AppCompatActivity {
                 .setPositiveButton("Да", (dialog, id) -> {
                     Count.countOfSkipQuestions = 0;
                     Count.correctAnswers = 0;
-                    startActivity(new Intent(BorodinskoeSrajenieActivityQuiz.this, ChooseQuizActivity.class));
+                    startActivity(new Intent(BorodinskoeSrajenieActivityQuiz.this, MainBottomNavigationActivity.class));
                 })
                 .setNegativeButton("Нет", null)
                 .show();

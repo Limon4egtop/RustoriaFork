@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.widget.ImageView;
 
 import com.kutakoff.ChooseQuizActivity;
+import com.kutakoff.MainBottomNavigationActivity;
 import com.kutakoff.R;
 
 public class MainQuizMenu extends AppCompatActivity {
@@ -25,6 +26,6 @@ public class MainQuizMenu extends AppCompatActivity {
         main_hard.setOnClickListener(v -> startActivity(new Intent(MainQuizMenu.this, MainHardQuizActivity.class)));
 
         ImageView button_back = findViewById(R.id.button_back);
-        button_back.setOnClickListener(v -> startActivity(new Intent(MainQuizMenu.this, ChooseQuizActivity.class)));
+        button_back.setOnClickListener(v -> startActivity(new Intent(MainQuizMenu.this, MainBottomNavigationActivity.class)));
     }
 }

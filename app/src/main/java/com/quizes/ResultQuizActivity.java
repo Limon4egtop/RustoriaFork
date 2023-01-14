@@ -10,6 +10,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.kutakoff.ChooseActivity;
+import com.kutakoff.MainBottomNavigationActivity;
 import com.utilitaryClasses.Count;
 import com.kutakoff.R;
 
@@ -65,6 +66,6 @@ public class ResultQuizActivity extends AppCompatActivity {
         Count.isHardQuiz = false;
         Count.isSpecialQUiz = false;
         Count.correctAnswers = 0;
-        goHome.setOnClickListener(v -> startActivity(new Intent(ResultQuizActivity.this, ChooseActivity.class)));
+        goHome.setOnClickListener(v -> startActivity(new Intent(ResultQuizActivity.this, MainBottomNavigationActivity.class)));
     }
 }
