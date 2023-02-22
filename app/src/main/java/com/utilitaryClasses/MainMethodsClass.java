@@ -3,12 +3,15 @@ package com.utilitaryClasses;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.os.Build;
+import android.util.DisplayMetrics;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.RadioButton;
 
 import androidx.annotation.RequiresApi;
+import androidx.cardview.widget.CardView;
 
 public class MainMethodsClass {
 
@@ -126,5 +129,18 @@ public class MainMethodsClass {
                 mass[num].setVisibility(View.VISIBLE);
             }
         }
+    }
+
+    /**
+     * МЕТОД ТОЛЬКО ДЛЯ КЛАССОВ: MainBottomNavigationActivity, Events, Deyatels
+     * Даёт размёр для CardView нижней панели
+     * @param displayMetrics - Размер экрана
+     * @param cardView - сам cardView
+     */
+    public static void setBottomCardViewSize(DisplayMetrics displayMetrics, CardView cardView) {
+        ViewGroup.LayoutParams layoutParams = cardView.getLayoutParams();
+        int universalParam = displayMetrics.widthPixels / 7;
+        layoutParams.height = universalParam;
+        layoutParams.width = universalParam;
     }
 }

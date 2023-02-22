@@ -18,8 +18,7 @@ import android.widget.ListView;
 import android.widget.RadioButton;
 import android.widget.ViewFlipper;
 
-import com.kutakoff.ChooseQuizActivity;
-import com.kutakoff.MainBottomNavigationActivity;
+import com.kutakoff.Quizzes;
 import com.kutakoff.R;
 import com.utilitaryClasses.Count;
 import com.utilitaryClasses.WebViewActivity;
@@ -131,7 +130,7 @@ public class BorodinskoeSrajenieActivityQuiz extends AppCompatActivity {
         Count.isHardQuiz = true;
 
         addQuestionWithButtonBack(firstCorrect, firstIncorrect_1, firstIncorrect_2, firstIncorrect_3, firstCheck, firstButtonNext, info1, button_back);
-        button_back.setOnClickListener(v -> startActivity(new Intent(BorodinskoeSrajenieActivityQuiz.this, MainBottomNavigationActivity.class)));
+        button_back.setOnClickListener(v -> startActivity(new Intent(BorodinskoeSrajenieActivityQuiz.this, Quizzes.class)));
 
         addQuestion(secondCorrect, secondIncorrect_1, secondIncorrect_2, secondIncorrect_3, secondCheck, secondButtonNext, info2);
         addQuestion(thirdCorrect, thirdIncorrect_1, thirdIncorrect_2, thirdIncorrect_3, thirdCheck, thirdButtonNext, info3);
@@ -232,7 +231,7 @@ public class BorodinskoeSrajenieActivityQuiz extends AppCompatActivity {
                 .setPositiveButton("Да", (dialog, id) -> {
                     Count.countOfSkipQuestions = 0;
                     Count.correctAnswers = 0;
-                    startActivity(new Intent(BorodinskoeSrajenieActivityQuiz.this, MainBottomNavigationActivity.class));
+                    startActivity(new Intent(BorodinskoeSrajenieActivityQuiz.this, Quizzes.class));
                 })
                 .setNegativeButton("Нет", null)
                 .show();

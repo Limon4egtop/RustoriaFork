@@ -13,7 +13,7 @@
         android:theme="@style/Theme.Hakaton">
         <activity android:name=".Deyatels"></activity>
         <activity android:name=".Events" />
-        <activity android:name=".MainBottomNavigationActivity">
+        <activity android:name=".Quizzes">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

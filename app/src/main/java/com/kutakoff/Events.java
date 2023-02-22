@@ -1,13 +1,14 @@
 package com.kutakoff;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.MenuItem;
+import android.util.DisplayMetrics;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.utilitaryClasses.MainMethodsClass;
 
 public class Events extends AppCompatActivity {
 
@@ -18,28 +19,23 @@ public class Events extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_events);
 
-        bottomNavigationView = findViewById(R.id.bottom_navigation);
-        bottomNavigationView.setSelectedItemId(R.id.navigation_events);
+        DisplayMetrics displayMetrics = new DisplayMetrics();
+        getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
 
-        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                switch (item.getItemId()) {
-                    case R.id.navigation_quizzes:
-                        Intent intentQ = new Intent(Events.this, MainBottomNavigationActivity.class);
-                        intentQ.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-                        startActivity(intentQ);
-                        return true;
-                    case R.id.navigation_deyatels:
-                        Intent intentD = new Intent(Events.this, Deyatels.class);
-                        intentD.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-                        startActivity(intentD);
-                        return true;
-                    case R.id.navigation_events:
-                        return true;
-                }
-                return false;
-            }
-        });
+        /**
+         * Переключение на квизы|события|деятели
+         */
+        CardView quizzes = findViewById(R.id.quizzes);
+        quizzes.setOnClickListener(v -> startActivity(new Intent(Events.this, Quizzes.class)));
+
+        CardView events = findViewById(R.id.events);
+
+        CardView deyatels = findViewById(R.id.deyatels);
+        deyatels.setOnClickListener(v -> startActivity(new Intent(Events.this, Deyatels.class)));
+
+        CardView[] bottomCardViews = {quizzes, events, deyatels};
+        for (CardView cardView : bottomCardViews) {
+            MainMethodsClass.setBottomCardViewSize(displayMetrics, cardView);
+        }
     }
 }

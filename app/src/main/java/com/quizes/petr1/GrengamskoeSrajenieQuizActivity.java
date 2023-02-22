@@ -18,8 +18,7 @@ import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.kutakoff.ChooseQuizActivity;
-import com.kutakoff.MainBottomNavigationActivity;
+import com.kutakoff.Quizzes;
 import com.utilitaryClasses.Count;
 import com.kutakoff.R;
 import com.quizes.ResultQuizActivity;
@@ -89,7 +88,7 @@ public class GrengamskoeSrajenieQuizActivity extends AppCompatActivity {
         ListView info5 = findViewById(R.id.info5);
 
         addQuestionWithButtonBack(firstCorrect, firstIncorrect_1, firstIncorrect_2, firstIncorrect_3, firstCheck, firstButtonNext, info1, button_back);
-        button_back.setOnClickListener(v -> startActivity(new Intent(GrengamskoeSrajenieQuizActivity.this, MainBottomNavigationActivity.class)));
+        button_back.setOnClickListener(v -> startActivity(new Intent(GrengamskoeSrajenieQuizActivity.this, Quizzes.class)));
         addQuestion(secondCorrect, secondIncorrect_1, secondIncorrect_2, secondIncorrect_3, secondCheck, secondButtonNext, info2);
         addQuestion(thirdCorrect, thirdIncorrect_1, thirdIncorrect_2, thirdIncorrect_3, thirdCheck, thirdButtonNext, info3);
         addQuestion(fourthCorrect, fourthIncorrect_1, fourthIncorrect_2, fourthIncorrect_3, fourthCheck, fourthButtonNext, info4);
@@ -183,7 +182,7 @@ public class GrengamskoeSrajenieQuizActivity extends AppCompatActivity {
                 .setPositiveButton("Да", (dialog, id) -> {
                     Count.countOfSkipQuestions = 0;
                     Count.correctAnswers = 0;
-                    startActivity(new Intent(GrengamskoeSrajenieQuizActivity.this, MainBottomNavigationActivity.class));
+                    startActivity(new Intent(GrengamskoeSrajenieQuizActivity.this, Quizzes.class));
                 })
                 .setNegativeButton("Нет", null)
                 .show();
