@@ -4,17 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/smugl_bq"
+    android:background="@drawable/update_bq"
     android:fitsSystemWindows="true"
     tools:context=".ChooseQuizActivity">
 
     <androidx.core.widget.NestedScrollView
         android:id="@+id/scrollView"
         android:layout_width="wrap_content"
-        android:layout_height="500dp"
+        android:layout_height="0dp"
         android:overScrollMode="never"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/bottomButtons"
         app:layout_constraintTop_toBottomOf="@id/upper_bq">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -177,15 +178,15 @@
                 android:id="@+id/quizzes"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:cardCornerRadius="15dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/events"
                 app:layout_constraintStart_toStartOf="parent">
 
                 <ImageView
+                    android:id="@+id/quizzesImage"
                     android:layout_width="75dp"
                     android:layout_height="75dp"
-                    android:background="@drawable/main_update" />
+                    android:background="@drawable/update_quizzes" />
 
             </androidx.cardview.widget.CardView>
 
@@ -193,15 +194,15 @@
                 android:id="@+id/events"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:cardCornerRadius="15dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent">
 
                 <ImageView
+                    android:id="@+id/eventsImage"
                     android:layout_width="75dp"
                     android:layout_height="75dp"
-                    android:background="@drawable/main_update" />
+                    android:background="@drawable/update_events" />
 
             </androidx.cardview.widget.CardView>
 
@@ -209,15 +210,15 @@
                 android:id="@+id/deyatels"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:cardCornerRadius="15dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/events">
 
                 <ImageView
+                    android:id="@+id/deyatelsImage"
                     android:layout_width="75dp"
                     android:layout_height="75dp"
-                    android:background="@drawable/main_update" />
+                    android:background="@drawable/update_deyatels" />
 
             </androidx.cardview.widget.CardView>
 

@@ -64,20 +64,23 @@ public class Quizzes extends AppCompatActivity {
          * Переключение на квизы|события|деятели
          */
         CardView quizzes = findViewById(R.id.quizzes);
+        ImageView quizzesImage = findViewById(R.id.quizzesImage);
 
         CardView events = findViewById(R.id.events);
-        events.setOnClickListener(v -> startActivity(new Intent(Quizzes.this, Events.class)));
+        events.setOnClickListener(v -> startActivity(new Intent(Quizzes.this, Events.class).addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION)));
+        ImageView eventsImage = findViewById(R.id.eventsImage);
 
         CardView deyatels = findViewById(R.id.deyatels);
-        deyatels.setOnClickListener(v -> startActivity(new Intent(Quizzes.this, Deyatels.class)));
+        deyatels.setOnClickListener(v -> startActivity(new Intent(Quizzes.this, Deyatels.class).addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION)));
+        ImageView deyatelsImage = findViewById(R.id.deyatelsImage);
 
         CardView[] bottomCardViews = {quizzes, events, deyatels};
-        for (CardView cardView : bottomCardViews) {
-            MainMethodsClass.setBottomCardViewSize(displayMetrics, cardView);
+        ImageView[] bottomImageViews = {quizzesImage, eventsImage, deyatelsImage};
+        for (int i = 0; i < bottomCardViews.length; i++) {
+            MainMethodsClass.setBottomCardAndImageViewViewSize(displayMetrics, bottomCardViews[i], bottomImageViews[i]);
         }
 
         setUpperBqSize(displayMetrics);
-        setScrollViewSize(displayMetrics, scrollView);
         for (CardView cardView : cardViews) {
             setCardViewSize(displayMetrics, cardView);
         }
@@ -87,15 +90,6 @@ public class Quizzes extends AppCompatActivity {
         int universalParam = displayMetrics.widthPixels / 2 - 80;
         layoutParams.height = universalParam;
         layoutParams.width = universalParam;
-    }
-
-    private void setScrollViewSize(DisplayMetrics displayMetrics, NestedScrollView scrollView) {
-        CardView bottomCardView = findViewById(R.id.quizzes);
-        ImageView upper_bq = findViewById(R.id.upper_bq);
-        ViewGroup.LayoutParams scrollViewLayoutParams = scrollView.getLayoutParams();
-        ViewGroup.LayoutParams upper_bqParams = upper_bq.getLayoutParams();
-        ViewGroup.LayoutParams bottomCardViewParams = bottomCardView.getLayoutParams();
-        scrollViewLayoutParams.height = displayMetrics.heightPixels - upper_bqParams.height - bottomCardViewParams.height - displayMetrics.heightPixels / 20;
     }
 
     private void setUpperBqSize(DisplayMetrics displayMetrics) {

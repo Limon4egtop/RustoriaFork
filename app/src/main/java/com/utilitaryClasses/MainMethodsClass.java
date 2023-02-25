@@ -137,10 +137,13 @@ public class MainMethodsClass {
      * @param displayMetrics - Размер экрана
      * @param cardView - сам cardView
      */
-    public static void setBottomCardViewSize(DisplayMetrics displayMetrics, CardView cardView) {
-        ViewGroup.LayoutParams layoutParams = cardView.getLayoutParams();
+    public static void setBottomCardAndImageViewViewSize(DisplayMetrics displayMetrics, CardView cardView, ImageView imageView) {
+        ViewGroup.LayoutParams cardViewParams = cardView.getLayoutParams();
+        ViewGroup.LayoutParams imageViewParams = imageView.getLayoutParams();
         int universalParam = displayMetrics.widthPixels / 7;
-        layoutParams.height = universalParam;
-        layoutParams.width = universalParam;
+        cardViewParams.height = universalParam;
+        cardViewParams.width = universalParam;
+        imageViewParams.height = universalParam;
+        imageViewParams.width = universalParam;
     }
 }

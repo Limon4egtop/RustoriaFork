@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/nice_rus_bq"
+    android:background="@drawable/update_bq"
     tools:context="com.quizes.krim.KrimQuizMenu">
 
 
@@ -57,7 +57,7 @@
         android:background="@drawable/rem_easy"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.850"
+        app:layout_constraintHorizontal_bias="0.250"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.280" />
@@ -81,7 +81,7 @@
         android:background="@drawable/rem_hard"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.850"
+        app:layout_constraintHorizontal_bias="0.250"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.830" />
