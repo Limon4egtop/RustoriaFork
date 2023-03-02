@@ -1,0 +1,187 @@
+<resources>
+    <string-array name="allDeyatels">
+        <item>Александр I</item>
+        <item>Александр III</item>
+        <item>Александр Невский</item>
+        <item>Алексей Адашев</item>
+        <item>Алексей Басманов</item>
+        <item>Алексей Михайлович</item>
+        <item>Алексей Шеин</item>
+        <item>Андрей Виниус</item>
+        <item>Андрей Дубенский</item>
+        <item>Андрей Лызлов</item>
+        <item>Артамон Матвеев</item>
+        <item>Боброк Волынский</item>
+        <item>Богдан Бельский</item>
+        <item>Борис Годунов</item>
+        <item>Борис Голицын</item>
+        <item>Борис Морозов</item>
+        <item>Борис Шереметев</item>
+        <item>Василий IV</item>
+        <item>Василий Бутурлин</item>
+        <item>Василий Голицын</item>
+        <item>Владимир Святой(Владимир красное солнышко)</item>
+        <item>Владислав IV</item>
+        <item>Георгий Жуков</item>
+        <item>Григорий Отрепьев</item>
+        <item>Даниил Московский</item>
+        <item>Даниил Холмский</item>
+        <item>Дмитрий Донской</item>
+        <item>Дмитрий Пожарский</item>
+        <item>Дмитрий Трубецкой</item>
+        <item>Дмитрий Хворостинин</item>
+        <item>Елизавета Петровна</item>
+        <item>Иван I Калита</item>
+        <item>Иван III</item>
+        <item>Иван Байбаков</item>
+        <item>Иван Брюховецкий</item>
+        <item>Иван Висковатов</item>
+        <item>Иван Грозный</item>
+        <item>Иван Федоров</item>
+        <item>Иван Хованский</item>
+        <item>Иван Шишкин</item>
+        <item>Игорь Ририкович</item>
+        <item>Климент Ворошилов</item>
+        <item>Лжедмитрий I</item>
+        <item>Лжедмитрий II</item>
+        <item>Малюта Скуратов</item>
+        <item>Михаил Воротынский</item>
+        <item>Михаил Глинский</item>
+        <item>Михаил Кутузов</item>
+        <item>Михаил Скопин-Шуйский</item>
+        <item>Михаил Федорович</item>
+        <item>Михаил Шеин</item>
+        <item>Нестор Летописец</item>
+        <item>Никита Захарьин-Юрьев</item>
+        <item>Никита Зотов</item>
+        <item>Никита Одоевский</item>
+        <item>Никита Хрущев</item>
+        <item>Николай II</item>
+        <item>Олег Вещий</item>
+        <item>Ольга Мудрая</item>
+        <item>Ордин-Нащокин</item>
+        <item>Пётр I</item>
+        <item>Пётр II</item>
+        <item>Пётр III</item>
+        <item>Роман Захарьин-Кошкин</item>
+        <item>Рюрик</item>
+        <item>Святополк Окаянный</item>
+        <item>Святослав Игоревич</item>
+        <item>Сергий Радонежский</item>
+        <item>Симеон Бекбулатович</item>
+        <item>Федор I</item>
+        <item>Федор II</item>
+        <item>Федор III</item>
+        <item>Федор Головин</item>
+        <item>Федор Конь</item>
+        <item>Федор Мстиславский</item>
+        <item>Федор Ртищев</item>
+        <item>Филарет</item>
+        <item>Франц Лефорт</item>
+        <item>Ярополк Святославич</item>
+    </string-array>
+
+    <string-array name="praviteli">
+        <item>Александр I</item>
+        <item>Александр III</item>
+        <item>Алексей Михайлович</item>
+        <item>Борис Годунов</item>
+        <item>Василий IV</item>
+        <item>Владимир Святой(Владимир красное солнышко)</item>
+        <item>Елизавета Петровна</item>
+        <item>Иван I Калита</item>
+        <item>Иван III</item>
+        <item>Иван Грозный</item>
+        <item>Игорь Ририкович</item>
+        <item>Михаил Федорович</item>
+        <item>Никита Хрущев</item>
+        <item>Николай II</item>
+        <item>Олег Вещий</item>
+        <item>Ольга Мудрая</item>
+        <item>Пётр I</item>
+        <item>Пётр II</item>
+        <item>Пётр III</item>
+        <item>Рюрик</item>
+        <item>Святослав Игоревич</item>
+        <item>Федор I</item>
+        <item>Федор II</item>
+        <item>Федор III</item>
+    </string-array>
+
+    <string-array name="polkovodci">
+        <item>Александр Невский</item>
+        <item>Борис Шереметев</item>
+        <item>Георгий Жуков</item>
+        <item>Дмитрий Донской</item>
+        <item>Дмитрий Пожарский</item>
+        <item>Климент Ворошилов</item>
+        <item>Малюта Скуратов</item>
+        <item>Михаил Кутузов</item>
+        <item>Михаил Шеин</item>
+        <item>Франц Лефорт</item>
+    </string-array>
+
+    <string-array name="duxovenstvo">
+        <item>Нестор Летописец</item>
+        <item>Сергий Радонежский</item>
+        <item>Филарет</item>
+    </string-array>
+
+    <string-array name="knyazia">
+        <item>Александр Невский</item>
+        <item>Боброк Волынский</item>
+        <item>Борис Голицын</item>
+        <item>Даниил Московский</item>
+        <item>Даниил Холмский</item>
+        <item>Дмитрий Донской</item>
+        <item>Дмитрий Пожарский</item>
+        <item>Дмитрий Трубецкой</item>
+        <item>Дмитрий Хворостинин</item>
+        <item>Иван Хованский</item>
+        <item>Михаил Воротынский</item>
+        <item>Михаил Глинский</item>
+        <item>Михаил Скопин-Шуйский</item>
+        <item>Никита Одоевский</item>
+        <item>Святополк Окаянный</item>
+        <item>Симеон Бекбулатович</item>
+        <item>Федор Мстиславский</item>
+        <item>Ярополк Святославич</item>
+    </string-array>
+
+    <string-array name="iskusstvo">
+        <item>Андрей Лызлов</item>
+        <item>Иван Федоров</item>
+        <item>Иван Шишкин</item>
+        <item>Нестор Летописец</item>
+        <item>Никита Зотов</item>
+        <item>Федор Конь</item>
+    </string-array>
+
+    <string-array name="diplomati">
+        <item>Алексей Адашев</item>
+        <item>Алексей Басманов</item>
+        <item>Андрей Виниус</item>
+        <item>Артамон Матвеев</item>
+        <item>Богдан Бельский</item>
+        <item>Борис Морозов</item>
+        <item>Борис Шереметев</item>
+        <item>Василий Бутурлин</item>
+        <item>Иван Байбаков</item>
+        <item>Иван Висковатов</item>
+        <item>Никита Захарьин-Юрьев</item>
+        <item>Никита Зотов</item>
+        <item>Ордин-Нащокин</item>
+        <item>Федор Головин</item>
+        <item>Федор Ртищев</item>
+    </string-array>
+
+    <string-array name="samozvanci">
+        <item>Лжедмитрий I</item>
+        <item>Лжедмитрий II</item>
+    </string-array>
+
+    <string-array name="zaxvatchiki">
+        <item>Владислав IV</item>
+        <item>Симеон Бекбулатович</item>
+    </string-array>
+</resources>
