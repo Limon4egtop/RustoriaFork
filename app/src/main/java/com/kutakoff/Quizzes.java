@@ -1,13 +1,17 @@
 package com.kutakoff;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
-import androidx.core.widget.NestedScrollView;
 
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
+import android.graphics.PorterDuff;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
+import android.view.MotionEvent;
+import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
@@ -23,13 +27,12 @@ import com.utilitaryClasses.MainMethodsClass;
 
 public class Quizzes extends AppCompatActivity {
 
+    @RequiresApi(api = Build.VERSION_CODES.P)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quizzes);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-
-        NestedScrollView scrollView = findViewById(R.id.scrollView);
 
         CardView main = findViewById(R.id.main);
         main.setOnClickListener(v -> startActivity(new Intent(Quizzes.this, MainQuizMenu.class)));
@@ -57,9 +60,6 @@ public class Quizzes extends AppCompatActivity {
 
         CardView[] cardViews = {main, krimOfRussia, borodinskoeSrajenie, stalingradskayaBitva, bitvaPriLesnoy, gangutskoeSrajenie, grengamskoeSrajenie, poltavskayaBitva};
 
-        DisplayMetrics displayMetrics = new DisplayMetrics();
-        getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
-
         /**
          * Переключение на квизы|события|деятели
          */
@@ -74,10 +74,12 @@ public class Quizzes extends AppCompatActivity {
         deyatels.setOnClickListener(v -> startActivity(new Intent(Quizzes.this, Deyatels.class).addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION)));
         ImageView deyatelsImage = findViewById(R.id.deyatelsImage);
 
+        DisplayMetrics displayMetrics = new DisplayMetrics();
+        getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
         CardView[] bottomCardViews = {quizzes, events, deyatels};
         ImageView[] bottomImageViews = {quizzesImage, eventsImage, deyatelsImage};
         for (int i = 0; i < bottomCardViews.length; i++) {
-            MainMethodsClass.setBottomCardAndImageViewViewSize(displayMetrics, bottomCardViews[i], bottomImageViews[i]);
+            MainMethodsClass.setBottomPanelSize(displayMetrics, bottomCardViews[i], bottomImageViews[i]);
         }
 
         setUpperBqSize(displayMetrics);

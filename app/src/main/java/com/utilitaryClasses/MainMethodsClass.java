@@ -90,7 +90,6 @@ public class MainMethodsClass {
         }
     }
 
-
     /**
      * Убирает остальные 3 вырианта ответа, кроме выбранного.
      * Используется для квизов.
@@ -113,7 +112,6 @@ public class MainMethodsClass {
         }
     }
 
-
     /**
      * Ставит видимость ListView при выборе подразделов.
      * Используется в списках деятелей/событий
@@ -132,12 +130,12 @@ public class MainMethodsClass {
     }
 
     /**
-     * МЕТОД ТОЛЬКО ДЛЯ КЛАССОВ: MainBottomNavigationActivity, Events, Deyatels
+     * МЕТОД ТОЛЬКО ДЛЯ КЛАССОВ: Quizzes, Events, Deyatels
      * Даёт размёр для CardView нижней панели
      * @param displayMetrics - Размер экрана
-     * @param cardView - сам cardView
+     * @param cardView - кардвью, который будет изменён
      */
-    public static void setBottomCardAndImageViewViewSize(DisplayMetrics displayMetrics, CardView cardView, ImageView imageView) {
+    public static void setBottomPanelSize(DisplayMetrics displayMetrics, CardView cardView, ImageView imageView) {
         ViewGroup.LayoutParams cardViewParams = cardView.getLayoutParams();
         ViewGroup.LayoutParams imageViewParams = imageView.getLayoutParams();
         int universalParam = displayMetrics.widthPixels / 7;
@@ -145,5 +143,18 @@ public class MainMethodsClass {
         cardViewParams.width = universalParam;
         imageViewParams.height = universalParam;
         imageViewParams.width = universalParam;
+    }
+
+    /**
+     * Метод позваляет задать размёр изображению с кнопкой в зависимости от экорана.
+     * @param displayMetrics - рахмер экрана
+     * @param imageView - картинка, которая будет изменена
+     */
+    public static void setImageViewSize(ImageView imageView, DisplayMetrics displayMetrics) {
+        ViewGroup.LayoutParams imageViewParams = imageView.getLayoutParams();
+        int universalParam = displayMetrics.widthPixels / 3;
+        imageViewParams.width = universalParam;
+        imageViewParams.height = universalParam;
+
     }
 }

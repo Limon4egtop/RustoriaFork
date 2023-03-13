@@ -27,16 +27,7 @@
             android:name="com.quizes.main.MainQuizMenu"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ChooseQuizActivity"
-            android:screenOrientation="portrait" />
-        <activity
             android:name="com.quizes.borodinskoeSrajenie.BorodinskoeSrajenieActivityQuiz"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".SearchFiguresActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".SearchEventsActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name="com.quizes.staliningradskayaBitva.StalingradskayaBitvaQuizActivity"
@@ -75,12 +66,6 @@
             android:name="com.quizes.petr1.GrengamskoeSrajenieQuizActivity"
             android:screenOrientation="portrait" />
         <activity android:name="com.utilitaryClasses.WebViewActivity" />
-        <activity
-            android:name=".ChooseActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".MainActivity"
-            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

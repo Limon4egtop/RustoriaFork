@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/update_bq"
     android:fitsSystemWindows="true"
-    tools:context=".ChooseQuizActivity">
+    tools:context=".Quizzes">
 
     <androidx.core.widget.NestedScrollView
         android:id="@+id/scrollView"

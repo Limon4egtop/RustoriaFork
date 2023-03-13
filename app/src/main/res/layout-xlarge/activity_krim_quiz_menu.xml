@@ -4,36 +4,35 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/nice_rus_bq"
+    android:background="@drawable/update_quiz_bq"
     tools:context="com.quizes.krim.KrimQuizMenu">
-
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Крым России"
-        android:textColor="@color/black"
-        android:textSize="55sp"
-        android:textStyle="bold"
-        android:shadowColor="@android:color/white"
-        android:shadowDx="1"
-        android:shadowDy="1"
-        android:shadowRadius="10"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.75"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/button_back"
-        android:layout_width="140dp"
-        android:layout_height="100dp"
+        android:layout_width="93dp"
+        android:layout_height="73dp"
         android:background="@drawable/xakaton_button_back"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/main_text"
+        android:id="@+id/krim_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:shadowColor="@android:color/white"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="10"
+        android:text="Крым России"
+        android:textColor="@color/black"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/choose"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:shadowColor="@android:color/white"
@@ -42,48 +41,42 @@
         android:shadowRadius="10"
         android:text="Выбери сложность"
         android:textColor="@color/black"
-        android:textSize="60sp"
+        android:textSize="55sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.127" />
+        app:layout_constraintTop_toBottomOf="@+id/krim_text" />
 
     <ImageView
         android:id="@+id/krim_easy"
-        android:layout_width="190dp"
-        android:layout_height="190dp"
+        android:layout_width="220dp"
+        android:layout_height="220dp"
         android:background="@drawable/rem_easy"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/krim_medium"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.850"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.280" />
+        app:layout_constraintTop_toBottomOf="@id/choose" />
 
     <ImageView
         android:id="@+id/krim_medium"
-        android:layout_width="190dp"
-        android:layout_height="190dp"
+        android:layout_width="220dp"
+        android:layout_height="220dp"
         android:background="@drawable/rem_sred"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/krim_hard"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.850"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.555" />
+        app:layout_constraintTop_toBottomOf="@id/krim_easy"
+        app:layout_constraintVertical_bias="0.1" />
 
     <ImageView
         android:id="@+id/krim_hard"
-        android:layout_width="190dp"
-        android:layout_height="190dp"
+        android:layout_width="220dp"
+        android:layout_height="220dp"
         android:background="@drawable/rem_hard"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.850"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.830" />
+        app:layout_constraintTop_toBottomOf="@id/krim_medium"
+        app:layout_constraintVertical_bias="0.1" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

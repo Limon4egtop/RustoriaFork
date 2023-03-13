@@ -40,22 +40,23 @@ public class Events extends AppCompatActivity {
          * Переключение на квизы|события|деятели
          */
         CardView quizzes = findViewById(R.id.quizzes);
-        quizzes.setOnClickListener(v -> startActivity(new Intent(Events.this, Quizzes.class).addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION)));
         ImageView quizzesImage = findViewById(R.id.quizzesImage);
 
         CardView events = findViewById(R.id.events);
         ImageView eventsImage = findViewById(R.id.eventsImage);
 
         CardView deyatels = findViewById(R.id.deyatels);
-        deyatels.setOnClickListener(v -> startActivity(new Intent(Events.this, Deyatels.class).addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION)));
         ImageView deyatelsImage = findViewById(R.id.deyatelsImage);
+
+        quizzes.setOnClickListener(v -> startActivity(new Intent(Events.this, Quizzes.class).addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION)));
+        deyatels.setOnClickListener(v -> startActivity(new Intent(Events.this, Deyatels.class).addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION)));
 
         DisplayMetrics displayMetrics = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
         CardView[] bottomCardViews = {quizzes, events, deyatels};
         ImageView[] bottomImageViews = {quizzesImage, eventsImage, deyatelsImage};
         for (int i = 0; i < bottomCardViews.length; i++) {
-            MainMethodsClass.setBottomCardAndImageViewViewSize(displayMetrics, bottomCardViews[i], bottomImageViews[i]);
+            MainMethodsClass.setBottomPanelSize(displayMetrics, bottomCardViews[i], bottomImageViews[i]);
         }
 
         centuries[0] = findViewById(R.id.all);
