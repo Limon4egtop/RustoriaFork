@@ -1,6 +1,7 @@
 <resources>
     <string-array name="allDeyatels">
         <item>Александр I</item>
+        <item>Александр II</item>
         <item>Александр III</item>
         <item>Александр Невский</item>
         <item>Алексей Адашев</item>
@@ -83,6 +84,7 @@
 
     <string-array name="praviteli">
         <item>Александр I</item>
+        <item>Александр II</item>
         <item>Александр III</item>
         <item>Алексей Михайлович</item>
         <item>Борис Годунов</item>

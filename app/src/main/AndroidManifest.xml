@@ -11,12 +11,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Hakaton">
-        <activity android:name=".Deyatels" />
-        <activity android:name=".Events" />
-        <activity android:name=".Quizzes">
+        <activity
+            android:name=".Deyatels"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity android:name=".Events"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity android:name=".Quizzes"
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
