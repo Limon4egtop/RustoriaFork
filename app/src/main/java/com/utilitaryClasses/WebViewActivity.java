@@ -74,7 +74,7 @@ public class WebViewActivity extends AppCompatActivity {
                 case "Отмена крепостного права":
                     url = "file:///android_asset/Krepost_Pravo.html";
                     break;
-                case "Гражданская война 1917-1922 гг.":
+                case "Гражданская война 1917—1922 гг.":
                     url = "file:///android_asset/Grazhdanskaya_War.html";
                     break;
                 case "Курская битва":
@@ -299,7 +299,7 @@ public class WebViewActivity extends AppCompatActivity {
                 case "Битва на реке Ведрошь":
                     url = "file:///android_asset/Bitva_na_vedrosh.html";
                     break;
-                case "Ливонская война (1558-1583)":
+                case "Ливонская война (1558—1583)":
                     url = "file:///android_asset/Livonskaya_bitva.html";
                     break;
                 case "Битва при Молодях":
@@ -347,7 +347,7 @@ public class WebViewActivity extends AppCompatActivity {
                 case "Соляной бунт":
                     url = "file:///android_asset/Solt_bunt.html";
                     break;
-                case "Русско-турецкая война (1735-1739)":
+                case "Русско-турецкая война (1735—1739)":
                     url = "file:///android_asset/Russko_tureckaya_war_1735_1739.html";
                     break;
                 case "Восстание Тадеуша Костюшко":
@@ -494,7 +494,7 @@ public class WebViewActivity extends AppCompatActivity {
                 case "Новгородский погром":
                     url = "file:///android_asset/Novgorodskiy_Pogrom.html";
                     break;
-                case "Польское восстание (1830-1831)":
+                case "Польское восстание (1830—1831)":
                     url = "file:///android_asset/Polskoe_Vosstanie.html";
                     break;
                 case "Крымская война":
@@ -526,6 +526,15 @@ public class WebViewActivity extends AppCompatActivity {
                     break;
                 case "Земский собор":
                     url = "file:///android_asset/Zemskiy_sobor.html";
+                    break;
+                case "Стоглавый собор":
+                    url = "file:///android_asset/Stoglaviy_sobor.html";
+                    break;
+                case "Медный бунт":
+                    url = "file:///android_asset/Medniy_bunt.html";
+                    break;
+                case "Соловецкое восстание(сидение)":
+                    url = "file:///android_asset/Soloveckoe_vosstanie.html";
                     break;
             }
             WebView myWebView = findViewById(R.id.webview);
