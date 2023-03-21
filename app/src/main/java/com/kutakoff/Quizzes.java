@@ -23,6 +23,7 @@ import com.quizes.petr1.GangutskoeSrajenieQuizActivity;
 import com.quizes.petr1.GrengamskoeSrajenieQuizActivity;
 import com.quizes.petr1.PoltavskayaBitvaQuizActivity;
 import com.quizes.staliningradskayaBitva.StalingradskayaBitvaQuizActivity;
+import com.quizes.zaschitnikiOtechestva.ZaschitnikiOtechestvaQuizActivity;
 import com.utilitaryClasses.MainMethodsClass;
 
 public class Quizzes extends AppCompatActivity {
@@ -33,6 +34,9 @@ public class Quizzes extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quizzes);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+
+        CardView zaschitnikiOtechestva = findViewById(R.id.zaschitnikiOtechestva);
+        zaschitnikiOtechestva.setOnClickListener(v -> startActivity(new Intent(Quizzes.this, ZaschitnikiOtechestvaQuizActivity.class)));
 
         CardView main = findViewById(R.id.main);
         main.setOnClickListener(v -> startActivity(new Intent(Quizzes.this, MainQuizMenu.class)));
@@ -58,7 +62,7 @@ public class Quizzes extends AppCompatActivity {
         CardView poltavskayaBitva = findViewById(R.id.poltavskayaBitva);
         poltavskayaBitva.setOnClickListener(v -> startActivity(new Intent(Quizzes.this, PoltavskayaBitvaQuizActivity.class)));
 
-        CardView[] cardViews = {main, krimOfRussia, borodinskoeSrajenie, stalingradskayaBitva, bitvaPriLesnoy, gangutskoeSrajenie, grengamskoeSrajenie, poltavskayaBitva};
+        CardView[] cardViews = {zaschitnikiOtechestva, main, krimOfRussia, borodinskoeSrajenie, stalingradskayaBitva, bitvaPriLesnoy, gangutskoeSrajenie, grengamskoeSrajenie, poltavskayaBitva};
 
         /**
          * Переключение на квизы|события|деятели

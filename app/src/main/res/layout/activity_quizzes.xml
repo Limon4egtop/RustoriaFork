@@ -37,6 +37,22 @@
                 app:layout_constraintTop_toTopOf="@id/constraint">
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/zaschitnikiOtechestva"
+                    android:layout_width="160dp"
+                    android:layout_height="160dp"
+                    app:cardCornerRadius="15dp" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Защитники отечества"
+                    android:textStyle="bold"
+                    android:textSize="35sp"
+                    android:textColor="@color/black" />
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
                     android:id="@+id/main"
                     android:layout_width="160dp"
                     android:layout_height="160dp"

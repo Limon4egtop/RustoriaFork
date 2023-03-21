@@ -29,6 +29,9 @@
             android:name="com.quizes.krim.KrimQuizMenu"
             android:screenOrientation="portrait" />
         <activity
+            android:name="com.quizes.zaschitnikiOtechestva.ZaschitnikiOtechestvaQuizActivity"
+            android:screenOrientation="portrait" />
+        <activity
             android:name="com.quizes.main.MainQuizMenu"
             android:screenOrientation="portrait" />
         <activity
