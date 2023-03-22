@@ -24,6 +24,7 @@ import com.quizes.petr1.GrengamskoeSrajenieQuizActivity;
 import com.quizes.petr1.PoltavskayaBitvaQuizActivity;
 import com.quizes.staliningradskayaBitva.StalingradskayaBitvaQuizActivity;
 import com.quizes.zaschitnikiOtechestva.ZaschitnikiOtechestvaQuizActivity;
+import com.utilitaryClasses.Count;
 import com.utilitaryClasses.MainMethodsClass;
 
 public class Quizzes extends AppCompatActivity {
@@ -36,7 +37,18 @@ public class Quizzes extends AppCompatActivity {
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
         CardView zaschitnikiOtechestva = findViewById(R.id.zaschitnikiOtechestva);
-        zaschitnikiOtechestva.setOnClickListener(v -> startActivity(new Intent(Quizzes.this, ZaschitnikiOtechestvaQuizActivity.class)));
+        ImageView notification = findViewById(R.id.notification);
+        if (!Count.isNotificationOpen) {
+            notification.setVisibility(View.VISIBLE);
+        }
+        zaschitnikiOtechestva.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Quizzes.this, ZaschitnikiOtechestvaQuizActivity.class));
+                notification.setVisibility(View.INVISIBLE);
+                Count.isNotificationOpen = true;
+            }
+        });
 
         CardView main = findViewById(R.id.main);
         main.setOnClickListener(v -> startActivity(new Intent(Quizzes.this, MainQuizMenu.class)));

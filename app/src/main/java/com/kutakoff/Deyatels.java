@@ -22,7 +22,7 @@ import static com.utilitaryClasses.MainMethodsClass.visibilityListItems;
 
 public class Deyatels extends AppCompatActivity {
 
-    private static final ListView[] listViews = new ListView[9];
+    private static final ListView[] listViews = new ListView[10];
     private final String[][] entriesList = new String[listViews.length][];
 
     private static ArrayAdapter[] arrayAdapters;
@@ -30,7 +30,7 @@ public class Deyatels extends AppCompatActivity {
             adapterPolkovodci, adapterDuxovenstvo,
             adapterKnyazia, adapterIskusstvo,
             adapterDiplomati, adapterSamozvanci,
-            adapterZaxvatchiki;
+            adapterZaxvatchiki, adapterHeroOfSVO;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,6 +69,7 @@ public class Deyatels extends AppCompatActivity {
         listViews[6] = findViewById(R.id.diplomati);   //дипломаты
         listViews[7] = findViewById(R.id.samozvanci);  //самозванцы
         listViews[8] = findViewById(R.id.zaxvatchiki); //захватчики
+        listViews[9] = findViewById(R.id.heroOfSvo); //захватчики
 
         entriesList[0] = getResources().getStringArray(R.array.allDeyatels);
         entriesList[1] = getResources().getStringArray(R.array.praviteli);
@@ -79,11 +80,12 @@ public class Deyatels extends AppCompatActivity {
         entriesList[6] = getResources().getStringArray(R.array.diplomati);
         entriesList[7] = getResources().getStringArray(R.array.samozvanci);
         entriesList[8] = getResources().getStringArray(R.array.zaxvatchiki);
+        entriesList[9] = getResources().getStringArray(R.array.hero_of_SVO);
 
         arrayAdapters = new ArrayAdapter[]{adapterAll, adapterPraviteli,
                 adapterPolkovodci, adapterDuxovenstvo, adapterKnyazia,
                 adapterIskusstvo, adapterDiplomati, adapterSamozvanci,
-                adapterZaxvatchiki};
+                adapterZaxvatchiki, adapterHeroOfSVO};
 
         fillAdapters();
 

@@ -54,6 +54,7 @@ public class ZaschitnikiOtechestvaQuizActivity extends AppCompatActivity {
         ImageView firstButtonNext = findViewById(R.id.firstNext);
         ImageView button_back = findViewById(R.id.button_back);
         ListView info1 = findViewById(R.id.info1);
+        addButtonInfo(info1, "Александр Суворов");
 
         RadioButton secondCorrect = findViewById(R.id.second_prav);
         RadioButton secondIncorrect_1 = findViewById(R.id.second_neprav);
@@ -62,6 +63,7 @@ public class ZaschitnikiOtechestvaQuizActivity extends AppCompatActivity {
         ImageView secondCheck = findViewById(R.id.check_2);
         ImageView secondButtonNext = findViewById(R.id.secondNext);
         ListView info2 = findViewById(R.id.info2);
+        addButtonInfo(info2, "День защитника Отечества");
 
         RadioButton thirdCorrect = findViewById(R.id.third_prav);
         RadioButton thirdIncorrect_1 = findViewById(R.id.third_neprav);
@@ -70,6 +72,7 @@ public class ZaschitnikiOtechestvaQuizActivity extends AppCompatActivity {
         ImageView thirdCheck = findViewById(R.id.check_3);
         ImageView thirdButtonNext = findViewById(R.id.thirdNext);
         ListView info3 = findViewById(R.id.info3);
+        addButtonInfo(info3, "День защитника Отечества");
 
         RadioButton fourthCorrect = findViewById(R.id.fourth_prav);
         RadioButton fourthIncorrect_1 = findViewById(R.id.fourth_neprav);
@@ -78,6 +81,7 @@ public class ZaschitnikiOtechestvaQuizActivity extends AppCompatActivity {
         ImageView fourthCheck = findViewById(R.id.check_4);
         ImageView fourthButtonNext = findViewById(R.id.fourthNext);
         ListView info4 = findViewById(R.id.info4);
+        addButtonInfo(info4, "День защитника Отечества");
 
         RadioButton fifthCorrect = findViewById(R.id.five_prav);
         RadioButton fifthIncorrect_1 = findViewById(R.id.five_neprav);
@@ -86,6 +90,7 @@ public class ZaschitnikiOtechestvaQuizActivity extends AppCompatActivity {
         ImageView fifthCheck = findViewById(R.id.check_5);
         ImageView fifthButtonNext = findViewById(R.id.fifthNext);
         ListView info5 = findViewById(R.id.info5);
+        addButtonInfo(info5, "Павел Нахимов");
 
         RadioButton sixthCorrect = findViewById(R.id.six_prav);
         RadioButton sixthIncorrect_1 = findViewById(R.id.six_neprav);
@@ -94,6 +99,7 @@ public class ZaschitnikiOtechestvaQuizActivity extends AppCompatActivity {
         ImageView sixthCheck = findViewById(R.id.check_6);
         ImageView sixthButtonNext = findViewById(R.id.sixthNext);
         ListView info6 = findViewById(R.id.info6);
+        addButtonInfo(info6, "Александр III");
 
         RadioButton seventhCorrect = findViewById(R.id.seven_prav);
         RadioButton seventhIncorrect_1 = findViewById(R.id.seven_neprav);
@@ -102,6 +108,7 @@ public class ZaschitnikiOtechestvaQuizActivity extends AppCompatActivity {
         ImageView seventhCheck = findViewById(R.id.check_7);
         ImageView seventhButtonNext = findViewById(R.id.seventhNext);
         ListView info7 = findViewById(R.id.info7);
+        addButtonInfo(info7, "Бои за Мариуполь");
 
         RadioButton eightCorrect = findViewById(R.id.eight_prav);
         RadioButton eightIncorrect_1 = findViewById(R.id.eight_neprav);
@@ -110,6 +117,7 @@ public class ZaschitnikiOtechestvaQuizActivity extends AppCompatActivity {
         ImageView eightCheck = findViewById(R.id.check_8);
         ImageView eightButtonNext = findViewById(R.id.eightNext);
         ListView info8 = findViewById(R.id.info8);
+        addButtonInfo(info8, "Оборона Севастополя");
 
         RadioButton ninthCorrect = findViewById(R.id.nine_prav);
         RadioButton ninthIncorrect_1 = findViewById(R.id.nine_neprav);
@@ -118,6 +126,7 @@ public class ZaschitnikiOtechestvaQuizActivity extends AppCompatActivity {
         ImageView ninthCheck = findViewById(R.id.check_9);
         ImageView ninthButtonNext = findViewById(R.id.ninthNext);
         ListView info9 = findViewById(R.id.info9);
+        addButtonInfo(info9, "Специальная военная операция");
 
         RadioButton tenthCorrect = findViewById(R.id.ten_prav);
         RadioButton tenthIncorrect_1 = findViewById(R.id.ten_neprav);
@@ -126,6 +135,7 @@ public class ZaschitnikiOtechestvaQuizActivity extends AppCompatActivity {
         ImageView tenthCheck = findViewById(R.id.check_10);
         ImageView tenthButtonNext = findViewById(R.id.tenthNext);
         ListView info10 = findViewById(R.id.info10);
+        addButtonInfo(info10, "Владимир Жога");
 
         Count.isHardQuiz = true;
 
@@ -160,7 +170,6 @@ public class ZaschitnikiOtechestvaQuizActivity extends AppCompatActivity {
         incorrect_2.setOnClickListener(v -> is4Checked(incorrect_2, check, button_next, incorrect_1, incorrect_3, correct));
         incorrect_3.setOnClickListener(v -> is4Checked(incorrect_3, check, button_next, incorrect_1, incorrect_2, correct));
         check.setOnClickListener(v -> check(correct, incorrect_1, incorrect_2, incorrect_3, check, button_next, info));
-        addButtonInfo(info);
     }
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
@@ -173,7 +182,6 @@ public class ZaschitnikiOtechestvaQuizActivity extends AppCompatActivity {
             check(correct, incorrect_1, incorrect_2, incorrect_3, check, button_next, info);
             button_back.setVisibility(View.INVISIBLE);
         });
-        addButtonInfo(info);
     }
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
@@ -208,10 +216,10 @@ public class ZaschitnikiOtechestvaQuizActivity extends AppCompatActivity {
         });
     }
 
-    private void addButtonInfo(ListView info) {
+    private void addButtonInfo(ListView info, String event) {
         ArrayList<String> infoList = new ArrayList<>();
-        infoList.add("Сталинградская битва");
-        adapterInfo = new ArrayAdapter(this, android.R.layout.simple_spinner_item, infoList);
+        infoList.add(event);
+            adapterInfo = new ArrayAdapter(this, android.R.layout.simple_spinner_item, infoList);
         info.setAdapter(adapterInfo);
         info.setOnItemClickListener((parent, view, position, id) -> {
             Bundle bundle = new Bundle();

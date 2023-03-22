@@ -536,6 +536,27 @@ public class WebViewActivity extends AppCompatActivity {
                 case "Соловецкое восстание(сидение)":
                     url = "file:///android_asset/Soloveckoe_vosstanie.html";
                     break;
+                case "Оборона Севастополя":
+                    url = "file:///android_asset/Oborona_sevastopolya.html";
+                    break;
+                case "Александр Суворов":
+                    url = "file:///android_asset/Alexander_Suvorov.html";
+                    break;
+                case "Павел Нахимов":
+                    url = "file:///android_asset/Pavel_Naximov.html";
+                    break;
+                case "Бои за Мариуполь":
+                    url = "file:///android_asset/Bitva_za_mariupol.html";
+                    break;
+                case "Специальная военная операция":
+                    url = "file:///android_asset/SVO.html";
+                    break;
+                case "Владимир Жога":
+                    url = "file:///android_asset/Vladimir_Zhoga.html";
+                    break;
+                case "День защитника Отечества":
+                    url = "file:///android_asset/Day_zaschitnika_otechestva.html";
+                    break;
             }
             WebView myWebView = findViewById(R.id.webview);
             myWebView.loadUrl(url);

@@ -13,6 +13,7 @@
         <item>18 век</item>
         <item>19 век</item>
         <item>20 век</item>
+        <item>СВО</item>
     </string-array>
     <string-array name="figures">
         <item>Все</item>
@@ -24,6 +25,7 @@
         <item>Дипломаты</item>
         <item>Самозванцы</item>
         <item>Захватчики</item>
+        <item>Герои СВО</item>
     </string-array>
     <string-array name="quizNames">
         <item>Основной</item>

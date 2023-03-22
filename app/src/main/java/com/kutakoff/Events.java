@@ -22,14 +22,14 @@ import static com.utilitaryClasses.MainMethodsClass.visibilityListItems;
 
 public class Events extends AppCompatActivity {
 
-    private static final ListView[] centuries = new ListView[11]; //all && 11-20
+    private static final ListView[] centuries = new ListView[12]; //all && 11-20
     private final String[][] entriesList = new String[centuries.length][];
 
     private static ArrayAdapter[] arrayAdapters;
     ArrayAdapter spinnerAdapter, adapterAll, adapterEleven, adapterTwelve,
     adapterThirteen, adapterFourteen, adapterFifteen,
     adapterSixteen, adapterSeventeen, adapterEighteen,
-    adapterNineteen, adapterTwenty;
+    adapterNineteen, adapterTwenty, adapterSVO;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,6 +70,7 @@ public class Events extends AppCompatActivity {
         centuries[8] = findViewById(R.id.eighteenCentury);
         centuries[9] = findViewById(R.id.nineteenCentury);
         centuries[10] = findViewById(R.id.twentyCentury);
+        centuries[11] = findViewById(R.id.SVO);
 
         entriesList[0] = getResources().getStringArray(R.array.allEvents);
         entriesList[1] = getResources().getStringArray(R.array.century11);
@@ -82,11 +83,12 @@ public class Events extends AppCompatActivity {
         entriesList[8] = getResources().getStringArray(R.array.century18);
         entriesList[9] = getResources().getStringArray(R.array.century19);
         entriesList[10] = getResources().getStringArray(R.array.century20);
+        entriesList[11] = getResources().getStringArray(R.array.СВО);
 
         arrayAdapters = new ArrayAdapter[]{adapterAll, adapterEleven, adapterTwelve,
                 adapterThirteen, adapterFourteen, adapterFifteen,
                 adapterSixteen, adapterSeventeen, adapterEighteen,
-                adapterNineteen, adapterTwenty};
+                adapterNineteen, adapterTwenty, adapterSVO};
 
         fillAdapters();
 

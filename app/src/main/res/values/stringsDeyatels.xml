@@ -4,8 +4,10 @@
         <item>Александр II</item>
         <item>Александр III</item>
         <item>Александр Невский</item>
+        <item>Александр Суворов</item>
         <item>Алексей Адашев</item>
         <item>Алексей Басманов</item>
+        <item>Алексей Михайлович</item>
         <item>Алексей Михайлович</item>
         <item>Алексей Шеин</item>
         <item>Андрей Виниус</item>
@@ -21,6 +23,7 @@
         <item>Василий IV</item>
         <item>Василий Бутурлин</item>
         <item>Василий Голицын</item>
+        <item>Владимир Жога</item>
         <item>Владимир Святой(Владимир красное солнышко)</item>
         <item>Владислав IV</item>
         <item>Георгий Жуков</item>
@@ -61,6 +64,7 @@
         <item>Олег Вещий</item>
         <item>Ольга Мудрая</item>
         <item>Ордин-Нащокин</item>
+        <item>Павел Нахимов</item>
         <item>Пётр I</item>
         <item>Пётр II</item>
         <item>Пётр III</item>
@@ -112,7 +116,9 @@
 
     <string-array name="polkovodci">
         <item>Александр Невский</item>
+        <item>Александр Суворов</item>
         <item>Борис Шереметев</item>
+        <item>Владимир Жога</item>
         <item>Георгий Жуков</item>
         <item>Дмитрий Донской</item>
         <item>Дмитрий Пожарский</item>
@@ -120,6 +126,7 @@
         <item>Малюта Скуратов</item>
         <item>Михаил Кутузов</item>
         <item>Михаил Шеин</item>
+        <item>Павел Нахимов</item>
         <item>Франц Лефорт</item>
     </string-array>
 
@@ -185,5 +192,9 @@
     <string-array name="zaxvatchiki">
         <item>Владислав IV</item>
         <item>Симеон Бекбулатович</item>
+    </string-array>
+
+    <string-array name="hero_of_SVO">
+        <item>Владимир Жога</item>
     </string-array>
 </resources>
