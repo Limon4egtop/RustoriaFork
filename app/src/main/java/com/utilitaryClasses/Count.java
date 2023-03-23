@@ -1,6 +1,8 @@
 package com.utilitaryClasses;
 
 public class Count {
+    public static int markCount = 0;
+
     public static boolean isNotificationOpen = false;
 
     public static int countOfSkipQuestions = 0;
